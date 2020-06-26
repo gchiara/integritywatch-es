@@ -32,7 +32,7 @@ var vuedata = {
   showShare: true,
   showAllCharts: true,
   chartMargin: 40,
-  travelFilter: 'all',
+  modalShowTable: 'a',
   charts: {
     map: {
       title: 'Map',
@@ -213,44 +213,48 @@ var calcPieSize = function(divId) {
 };
 var resizeGraphs = function() {
   for (var c in charts) {
-    var sizes = calcPieSize(charts[c].divId);
-    var newWidth = recalcWidth(charts[c].divId);
-    var charsLength = recalcCharsLength(newWidth);
-    if(charts[c].type == 'row'){
-      charts[c].chart.width(newWidth);
-      charts[c].chart.label(function (d) {
-        var thisKey = d.key;
-        if(thisKey.indexOf('###') > -1){
-          thisKey = thisKey.split('###')[0];
-        }
-        if(thisKey.length > charsLength){
-          return thisKey.substring(0,charsLength) + '...';
-        }
-        return thisKey;
-      })
-      charts[c].chart.redraw();
-    } else if(charts[c].type == 'bar') {
-      charts[c].chart.width(newWidth);
-      charts[c].chart.rescale();
-      charts[c].chart.redraw();
-    } else if(charts[c].type == 'pie') {
-      charts[c].chart
-        .width(sizes.width)
-        .height(sizes.height)
-        .cy(sizes.cy)
-        .innerRadius(sizes.innerRadius)
-        .radius(sizes.radius)
-        .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
-          var thisKey = d.name;
+    if((c == 'vehicles') && vuedata.showAllCharts == false){
+      
+    } else {
+      var sizes = calcPieSize(charts[c].divId);
+      var newWidth = recalcWidth(charts[c].divId);
+      var charsLength = recalcCharsLength(newWidth);
+      if(charts[c].type == 'row'){
+        charts[c].chart.width(newWidth);
+        charts[c].chart.label(function (d) {
+          var thisKey = d.key;
+          if(thisKey.indexOf('###') > -1){
+            thisKey = thisKey.split('###')[0];
+          }
           if(thisKey.length > charsLength){
-            return thisKey.substring(0, charsLength) + '...';
+            return thisKey.substring(0,charsLength) + '...';
           }
           return thisKey;
-        }));
-      charts[c].chart.redraw();
-    } else if(charts[c].type == 'cloud') {
-      charts[c].chart.size(recalcWidthWordcloud());
-      charts[c].chart.redraw();
+        })
+        charts[c].chart.redraw();
+      } else if(charts[c].type == 'bar') {
+        charts[c].chart.width(newWidth);
+        charts[c].chart.rescale();
+        charts[c].chart.redraw();
+      } else if(charts[c].type == 'pie') {
+        charts[c].chart
+          .width(sizes.width)
+          .height(sizes.height)
+          .cy(sizes.cy)
+          .innerRadius(sizes.innerRadius)
+          .radius(sizes.radius)
+          .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
+            var thisKey = d.name;
+            if(thisKey.length > charsLength){
+              return thisKey.substring(0, charsLength) + '...';
+            }
+            return thisKey;
+          }));
+        charts[c].chart.redraw();
+      } else if(charts[c].type == 'cloud') {
+        charts[c].chart.size(recalcWidthWordcloud());
+        charts[c].chart.redraw();
+      }
     }
   }
 };
@@ -293,12 +297,12 @@ function calcIncomeTot(el, type) {
       thisAmt = d.deposits_value_clean;
     }
     if(thisAmt) {
-      var amt = parseFloat(thisAmt.replace(".","").replace(",",".").replace(" €","").trim());
+      //var amt = parseFloat(thisAmt.replace(".","").replace(",",".").replace(" €","").trim());
+      var amt = parseFloat(thisAmt.replace(",","").replace(" €","").trim());
       tot += amt;
     }
   });
-  console.log(tot);
-  return tot;
+  return tot.toFixed(2);
 }
 function calcIncomeRange(amt, type) {
   var range = "Sin rentas";
@@ -361,7 +365,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
       //Check if name exists in diputados, if name doesn't exists, add it 
       //Check if type esists, if it doesn't, create type array
       //Push entry to type array (only push non keys): loop through keys and if value not null, add key and value to entry
-      var cleanName = d.full_name.trim();
+      var cleanName = d.unique_id.trim();
       var cleanCategory = d.category_declaration.trim();
       if(!declarations[cleanName]) {
         declarations[cleanName]  = {};
@@ -372,19 +376,29 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
       if(!declarations[cleanName][cleanCategory]) {
         declarations[cleanName][cleanCategory] = [];
       }
+      if(!declarations[cleanName]['comments']) {
+        declarations[cleanName]['comments']  = [];
+      }
       var newEntry = {};
       for (var key in d) {
-        if(key !== "full_name" && key !== "category_declaration" && key !== "electoral_disctrict" && d[key] !== null && d[key] !== "") {
+        if(key !== "unique_id" && key !== "full_name" && key !== "category_declaration" && key !== "electoral_disctrict" && key !== "comments" && d[key] !== null && d[key] !== "") {
           newEntry[key] = d[key].trim();
         }
       }
       declarations[cleanName][cleanCategory].push(newEntry);
+      //Sort comments
+      if(d.comments && d.comments !== "") {
+        declarations[cleanName]['comments'].push(d.comments);
+        console.log(d.comments);
+        console.log(declarations[cleanName]['comments']);
+      }
+      
     });
     //Loop through list, get declaration and do calculations for charts
     _.each(diputados, function (d) {
       d.declaration = {};
-      if(declarations[d.full_name]) {
-        d.declaration = declarations[d.full_name];
+      if(declarations[d.unique_id]) {
+        d.declaration = declarations[d.unique_id];
       }
       //Income Tot and Range
       d.declaration.incomeTot = 0;
@@ -422,7 +436,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
     //Set dc main vars. The second crossfilter is used to handle the travels stacked bar chart.
     var ndx = crossfilter(diputados);
     var searchDimension = ndx.dimension(function (d) {
-        var entryString = d['Partija'] + ' ' + d['Dāvinātājs'];
+        var entryString = d.full_name + ' ' + d.unique_id + ' ' + d.political_group;
         return entryString.toLowerCase();
     });
 
@@ -486,7 +500,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         .cy(sizes.cy)
         .innerRadius(sizes.innerRadius)
         .radius(sizes.radius)
-        .cap(5)
+        .cap(10)
         .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
           var thisKey = d.name;
           if(thisKey.length > 40){
@@ -523,7 +537,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         .cy(sizes.cy)
         .innerRadius(sizes.innerRadius)
         .radius(sizes.radius)
-        .cap(5)
+        .cap(10)
         .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
           var thisKey = d.name;
           if(thisKey.length > 40){
@@ -560,7 +574,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         .cy(sizes.cy)
         .innerRadius(sizes.innerRadius)
         .radius(sizes.radius)
-        .cap(5)
+        .cap(10)
         .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
           var thisKey = d.name;
           if(thisKey.length > 40){
@@ -597,7 +611,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         .cy(sizes.cy)
         .innerRadius(sizes.innerRadius)
         .radius(sizes.radius)
-        .cap(5)
+        .cap(10)
         .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
           var thisKey = d.name;
           if(thisKey.length > 40){
@@ -634,7 +648,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         .cy(sizes.cy)
         .innerRadius(sizes.innerRadius)
         .radius(sizes.radius)
-        .cap(5)
+        .cap(10)
         .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
           var thisKey = d.name;
           if(thisKey.length > 40){
@@ -832,6 +846,14 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
     //Hide loader
     vuedata.loader = false;
 
+    //Toggle last charts functionality and fix for responsiveness
+    vuedata.showAllCharts = false;
+    $('#charts-toggle-btn').click(function(){
+      if(vuedata.showAllCharts){
+        resizeGraphs();
+      }
+    })
+
     //COUNTERS
     //Main counter
     var all = ndx.groupAll();
@@ -879,7 +901,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         }).length;
       }})
       .renderlet(function (chart) {
-        $(".nbincome").text(income);
+        $(".nbincome").text(income.toFixed(2));
       });
       counter.render();
     }

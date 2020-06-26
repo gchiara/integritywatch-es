@@ -46744,7 +46744,11 @@ var _Loader = _interopRequireDefault(require("./components/Loader.vue"));
 
 var _ChartHeader = _interopRequireDefault(require("./components/ChartHeader.vue"));
 
+var _vuedata;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 window.jQuery = _jquery.default;
 window.$ = _jquery.default;
@@ -46756,7 +46760,7 @@ require('datatables.net-dt')(window, $);
 window.underscore = _underscore.default;
 window._ = _underscore.default;
 // Data object - is also used by Vue
-var vuedata = {
+var vuedata = (_vuedata = {
   page: 'tabA',
   loader: true,
   readMore: false,
@@ -46764,7 +46768,7 @@ var vuedata = {
   showShare: true,
   showAllCharts: true,
   chartMargin: 40,
-  travelFilter: 'all',
+  modalShowTable: 'a',
   charts: {
     map: {
       title: 'Map',
@@ -46804,34 +46808,31 @@ var vuedata = {
   selectedElement: {
     "P": "",
     "Sub": ""
+  }
+}, _defineProperty(_vuedata, "modalShowTable", ''), _defineProperty(_vuedata, "colors", {
+  generic: ["#3b95d0", "#4081ae", "#406a95", "#395a75"],
+  default1: "#2b90b8",
+  default2: "#449188",
+  incomeRange: {
+    "> 100.000€": "#0d506b",
+    "50.001€ - 100.000€": "#1d7598",
+    "10.001€ - 50.000€": "#2b90b8",
+    "5.001 - 10.000€": "#3aa2cb",
+    "1.001 - 5.000€": "#47afd8",
+    "1€ - 1.000€": "#55bbe4",
+    "Sin rentas": "#ccc",
+    "Sin participationes": "#ccc",
+    "Sin deudas": "#ccc"
   },
-  modalShowTable: '',
-  colors: {
-    generic: ["#3b95d0", "#4081ae", "#406a95", "#395a75"],
-    default1: "#2b90b8",
-    default2: "#449188",
-    incomeRange: {
-      "> 100.000€": "#0d506b",
-      "50.001€ - 100.000€": "#1d7598",
-      "10.001€ - 50.000€": "#2b90b8",
-      "5.001 - 10.000€": "#3aa2cb",
-      "1.001 - 5.000€": "#47afd8",
-      "1€ - 1.000€": "#55bbe4",
-      "Sin rentas": "#ccc",
-      "Sin participationes": "#ccc",
-      "Sin deudas": "#ccc"
-    },
-    propertiesRange: {
-      "> 20": "#0d506b",
-      "10 - 20": "#2b90b8",
-      "5 - 10": "#3aa2cb",
-      "1 - 5": "#55bbe4",
-      "Sin bienes inmuebles": "#ccc",
-      "Sin vehículos": "#ccc"
-    }
-  } //Set vue components and Vue app
-
-};
+  propertiesRange: {
+    "> 20": "#0d506b",
+    "10 - 20": "#2b90b8",
+    "5 - 10": "#3aa2cb",
+    "1 - 5": "#55bbe4",
+    "Sin bienes inmuebles": "#ccc",
+    "Sin vehículos": "#ccc"
+  }
+}), _vuedata); //Set vue components and Vue app
 
 _vue.default.component('chart-header', _ChartHeader.default);
 
@@ -46951,44 +46952,46 @@ var calcPieSize = function calcPieSize(divId) {
 
 var resizeGraphs = function resizeGraphs() {
   for (var c in charts) {
-    var sizes = calcPieSize(charts[c].divId);
-    var newWidth = recalcWidth(charts[c].divId);
-    var charsLength = recalcCharsLength(newWidth);
+    if (c == 'vehicles' && vuedata.showAllCharts == false) {} else {
+      var sizes = calcPieSize(charts[c].divId);
+      var newWidth = recalcWidth(charts[c].divId);
+      var charsLength = recalcCharsLength(newWidth);
 
-    if (charts[c].type == 'row') {
-      charts[c].chart.width(newWidth);
-      charts[c].chart.label(function (d) {
-        var thisKey = d.key;
+      if (charts[c].type == 'row') {
+        charts[c].chart.width(newWidth);
+        charts[c].chart.label(function (d) {
+          var thisKey = d.key;
 
-        if (thisKey.indexOf('###') > -1) {
-          thisKey = thisKey.split('###')[0];
-        }
+          if (thisKey.indexOf('###') > -1) {
+            thisKey = thisKey.split('###')[0];
+          }
 
-        if (thisKey.length > charsLength) {
-          return thisKey.substring(0, charsLength) + '...';
-        }
+          if (thisKey.length > charsLength) {
+            return thisKey.substring(0, charsLength) + '...';
+          }
 
-        return thisKey;
-      });
-      charts[c].chart.redraw();
-    } else if (charts[c].type == 'bar') {
-      charts[c].chart.width(newWidth);
-      charts[c].chart.rescale();
-      charts[c].chart.redraw();
-    } else if (charts[c].type == 'pie') {
-      charts[c].chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
-        var thisKey = d.name;
+          return thisKey;
+        });
+        charts[c].chart.redraw();
+      } else if (charts[c].type == 'bar') {
+        charts[c].chart.width(newWidth);
+        charts[c].chart.rescale();
+        charts[c].chart.redraw();
+      } else if (charts[c].type == 'pie') {
+        charts[c].chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+          var thisKey = d.name;
 
-        if (thisKey.length > charsLength) {
-          return thisKey.substring(0, charsLength) + '...';
-        }
+          if (thisKey.length > charsLength) {
+            return thisKey.substring(0, charsLength) + '...';
+          }
 
-        return thisKey;
-      }));
-      charts[c].chart.redraw();
-    } else if (charts[c].type == 'cloud') {
-      charts[c].chart.size(recalcWidthWordcloud());
-      charts[c].chart.redraw();
+          return thisKey;
+        }));
+        charts[c].chart.redraw();
+      } else if (charts[c].type == 'cloud') {
+        charts[c].chart.size(recalcWidthWordcloud());
+        charts[c].chart.redraw();
+      }
     }
   }
 }; //Add commas to thousands
@@ -47039,13 +47042,13 @@ function calcIncomeTot(el, type) {
     }
 
     if (thisAmt) {
-      var amt = parseFloat(thisAmt.replace(".", "").replace(",", ".").replace(" €", "").trim());
+      //var amt = parseFloat(thisAmt.replace(".","").replace(",",".").replace(" €","").trim());
+      var amt = parseFloat(thisAmt.replace(",", "").replace(" €", "").trim());
       tot += amt;
     }
   });
 
-  console.log(tot);
-  return tot;
+  return tot.toFixed(2);
 }
 
 function calcIncomeRange(amt, type) {
@@ -47119,7 +47122,7 @@ for (var i = 0; i < 5; i++) {
       //Check if name exists in diputados, if name doesn't exists, add it 
       //Check if type esists, if it doesn't, create type array
       //Push entry to type array (only push non keys): loop through keys and if value not null, add key and value to entry
-      var cleanName = d.full_name.trim();
+      var cleanName = d.unique_id.trim();
       var cleanCategory = d.category_declaration.trim();
 
       if (!declarations[cleanName]) {
@@ -47134,23 +47137,33 @@ for (var i = 0; i < 5; i++) {
         declarations[cleanName][cleanCategory] = [];
       }
 
+      if (!declarations[cleanName]['comments']) {
+        declarations[cleanName]['comments'] = [];
+      }
+
       var newEntry = {};
 
       for (var key in d) {
-        if (key !== "full_name" && key !== "category_declaration" && key !== "electoral_disctrict" && d[key] !== null && d[key] !== "") {
+        if (key !== "unique_id" && key !== "full_name" && key !== "category_declaration" && key !== "electoral_disctrict" && key !== "comments" && d[key] !== null && d[key] !== "") {
           newEntry[key] = d[key].trim();
         }
       }
 
-      declarations[cleanName][cleanCategory].push(newEntry);
+      declarations[cleanName][cleanCategory].push(newEntry); //Sort comments
+
+      if (d.comments && d.comments !== "") {
+        declarations[cleanName]['comments'].push(d.comments);
+        console.log(d.comments);
+        console.log(declarations[cleanName]['comments']);
+      }
     }); //Loop through list, get declaration and do calculations for charts
 
 
     _.each(diputados, function (d) {
       d.declaration = {};
 
-      if (declarations[d.full_name]) {
-        d.declaration = declarations[d.full_name];
+      if (declarations[d.unique_id]) {
+        d.declaration = declarations[d.unique_id];
       } //Income Tot and Range
 
 
@@ -47195,7 +47208,7 @@ for (var i = 0; i < 5; i++) {
 
     var ndx = crossfilter(diputados);
     var searchDimension = ndx.dimension(function (d) {
-      var entryString = d['Partija'] + ' ' + d['Dāvinātājs'];
+      var entryString = d.full_name + ' ' + d.unique_id + ' ' + d.political_group;
       return entryString.toLowerCase();
     }); //CHART 2
 
@@ -47250,7 +47263,7 @@ for (var i = 0; i < 5; i++) {
         return 1;
       });
       var sizes = calcPieSize(charts.income.divId);
-      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(5).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
         var thisKey = d.name;
 
         if (thisKey.length > 40) {
@@ -47277,7 +47290,7 @@ for (var i = 0; i < 5; i++) {
         return 1;
       });
       var sizes = calcPieSize(charts.properties.divId);
-      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(5).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
         var thisKey = d.name;
 
         if (thisKey.length > 40) {
@@ -47304,7 +47317,7 @@ for (var i = 0; i < 5; i++) {
         return 1;
       });
       var sizes = calcPieSize(charts.financial.divId);
-      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(5).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
         var thisKey = d.name;
 
         if (thisKey.length > 40) {
@@ -47331,7 +47344,7 @@ for (var i = 0; i < 5; i++) {
         return 1;
       });
       var sizes = calcPieSize(charts.debt.divId);
-      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(5).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
         var thisKey = d.name;
 
         if (thisKey.length > 40) {
@@ -47358,7 +47371,7 @@ for (var i = 0; i < 5; i++) {
         return 1;
       });
       var sizes = calcPieSize(charts.vehicles.divId);
-      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(5).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
         var thisKey = d.name;
 
         if (thisKey.length > 40) {
@@ -47546,7 +47559,14 @@ for (var i = 0; i < 5; i++) {
     createTable();
     $('.dataTables_wrapper').append($('.dataTables_length')); //Hide loader
 
-    vuedata.loader = false; //COUNTERS
+    vuedata.loader = false; //Toggle last charts functionality and fix for responsiveness
+
+    vuedata.showAllCharts = false;
+    $('#charts-toggle-btn').click(function () {
+      if (vuedata.showAllCharts) {
+        resizeGraphs();
+      }
+    }); //COUNTERS
     //Main counter
 
     var all = ndx.groupAll();
@@ -47591,7 +47611,7 @@ for (var i = 0; i < 5; i++) {
           }).length;
         }
       }).renderlet(function (chart) {
-        $(".nbincome").text(income);
+        $(".nbincome").text(income.toFixed(2));
       });
       counter.render();
     }

@@ -23,7 +23,7 @@
               <!-- INFO -->
               <div class="col-md-8 chart-col" v-if="showInfo">
                 <div class="boxed-container description-container">
-                  <h1>Integrity Warch Espana</h1>
+                  <h1>Integrity Warch España</h1>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu rutrum libero. Duis id maximus sem. Morbi ullamcorper ipsum sed turpis iaculis, non aliquam libero lacinia. Etiam sagittis volutpat lectus vitae molestie. Proin lacinia dui quis feugiat sagittis. Quisque maximus odio at dapibus interdum. Integer eu nisl ex. Nullam lobortis condimentum sapien. Phasellus scelerisque magna elit, in feugiat mi maximus ut. <a href="./about.php">Read more</a>.</p>
                   <i class="material-icons close-btn" @click="showInfo = false">close</i>
                 </div>
@@ -33,7 +33,7 @@
           <!-- CHARTS FIRST ROW -->
           <div class="col-md-6 chart-col">
             <div class="boxed-container chart-container tab_a_1">
-              
+              <chart-header :title="charts.map.title" :info="charts.map.info" ></chart-header>
             </div>
           </div>
           <div class="col-md-6 chart-col">
@@ -67,8 +67,12 @@
               <div class="chart-inner" id="debt_chart"></div>
             </div>
           </div>
+          <!-- TOGGLE BUTTONS FOR 3RD ROW -->
+          <div class="col-md-12 toggle-btn-container">
+            <button class="toggle-btn" id="charts-toggle-btn" @click="showAllCharts = !showAllCharts">Otro gráphicos</button>
+          </div>
           <!-- CHARTS THIRD ROW - TOGGLABLE -->
-          <div class="col-md-3 chart-col">
+          <div class="col-md-3 chart-col" v-show="showAllCharts">
             <div class="boxed-container chart-container tab_a_7">
               <chart-header :title="charts.vehicles.title" :info="charts.vehicles.info" ></chart-header>
               <div class="chart-inner" id="vehicles_chart"></div>
@@ -117,7 +121,119 @@
                   <div class="col-md-12">
                     <div class="details-line" v-if="selectedElement.declaration"><span class="details-line-title">Circonscripción:</span> {{ selectedElement.declaration.electoral_disctrict }}</div>
                     <div class="details-line"><span class="details-line-title">Biografía:</span> <a :href="selectedElement.congress_page" target="_blank">{{ selectedElement.congress_page }}</a></div>
-                    <div class="details-line" v-if="selectedElement.declaration"><span class="details-line-title">Cantidad pagada IPRF:</span> {{ selectedElement.declaration["cantidad pagada por irpf"][0].taxes_value }}</div>
+                    <div class="details-line" v-if="selectedElement.declaration && selectedElement.declaration['cantidad pagada por irpf']"><span class="details-line-title">Cantidad pagada IPRF:</span> {{ selectedElement.declaration["cantidad pagada por irpf"][0].taxes_value }}</div>
+                  </div>
+                  <div class="col-md-12">
+                    <!-- Divider -->
+                    <div class="modal-divider"></div>
+                    <div class="details-tables-buttons">
+                      <button @click="modalShowTable = 'a'">RENTAS PERCIBIDAS</button>
+                      <button @click="modalShowTable = 'b'">BIENES PATRIMONIALES</button>
+                      <button @click="modalShowTable = 'c'">DEPOSITOS</button>
+                      <button @click="modalShowTable = 'd'">OTRO BIENES O DERECHO</button>
+                      <button @click="modalShowTable = 'e'">VEHÍCULOS, EMBARCACIONES Y AERONAVES</button>
+                      <button @click="modalShowTable = 'f'">DEUDAS Y OBLIGACIONES PATRIMONIALES</button>
+                      <button @click="modalShowTable = 'g'">OBSERVACIONES</button>
+                    </div>
+                    <!-- Sub-Table 1 -->
+                    <div v-show="modalShowTable == 'a'">
+                      <div class="modal-table-title">RENTAS PERCIBIDAS</div>
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.rentas && selectedElement.declaration.rentas.length > 0">
+                        <thead><tr><th>PROCENDIA</th><th>CONCEPTO</th><th>SALDO</th></tr></thead>
+                        <tbody>
+                          <tr v-for="el in selectedElement.declaration.rentas">
+                            <td>{{ el.income_category }}</td>
+                            <td>{{ el.income_description}}</td>
+                            <td>{{ el.income_value_clean }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="modal-table-else" v-else>/</div>
+                    </div>
+                    <!-- Sub-Table 2 -->
+                    <div v-show="modalShowTable == 'b'">
+                      <div class="modal-table-title">BIENES PATRIMONIALES</div>
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration['bienes patrimoniales'] && selectedElement.declaration['bienes patrimoniales'].length > 0">
+                        <thead><tr><th>TIPO DE BIENES</th><th>CLASE Y CARACTERISTICAS</th><th>SITUACION</th><th>FECHA DE ADQUISICION</th><th>DERECHO Y TITULO</th></tr></thead>
+                        <tbody>
+                          <tr v-for="el in selectedElement.declaration['bienes patrimoniales']">
+                            <td>{{ el.property_category }}</td>
+                            <td>{{ el.property_description }}</td>
+                            <td>{{ el.property_location }}</td>
+                            <td>{{ el.property_date }}</td>
+                            <td>{{ el.property_legal }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="modal-table-else" v-else>/</div>
+                    </div>
+                    <!-- Sub-Table 3 -->
+                    <div v-show="modalShowTable == 'c'">
+                      <div class="modal-table-title">DEPOSITOS</div>
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.depositos && selectedElement.declaration.depositos.length > 0">
+                        <thead><tr><th>DESCRIPCION</th><th>SALDO</th></tr></thead>
+                        <tbody>
+                          <tr v-for="el in selectedElement.declaration.depositos">
+                            <td>{{ el.deposits_description }}</td>
+                            <td>{{ el.deposits_value_clean }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="modal-table-else" v-else>/</div>
+                    </div>
+                    <!-- Sub-Table 4 -->
+                    <div v-show="modalShowTable == 'd'">
+                      <div class="modal-table-title">OTRO BIENES O DERECHO</div>
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration['otros bienes o derechos'] && selectedElement.declaration['otros bienes o derechos'].length > 0">
+                        <thead><tr><th>CLASE</th><th>DESCRIPCION</th><th>VALOR</th></tr></thead>
+                        <tbody>
+                          <tr v-for="el in selectedElement.declaration['otros bienes o derechos']">
+                            <td>{{ el.other_financial_category }}</td>
+                            <td>{{ el.other_financial_description }}</td>
+                            <td>{{ el.other_financial_clean }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="modal-table-else" v-else>/</div>
+                    </div>
+                    <!-- Sub-Table 5 -->
+                    <div v-show="modalShowTable == 'e'">
+                      <div class="modal-table-title">VEHÍCULOS, EMBARCACIONES Y AERONAVES</div>
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration['vehículos'] && selectedElement.declaration['vehículos'].length > 0">
+                        <thead><tr><th>DESCRIPCION</th><th>FECHA DE ADQUISICION</th></tr></thead>
+                        <tbody>
+                          <tr v-for="el in selectedElement.declaration['vehículos']">
+                            <td>{{ el.vehicles_description }}</td>
+                            <td>{{ el.vehicles_date }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="modal-table-else" v-else>/</div>
+                    </div>
+                    <!-- Sub-Table 6 -->
+                    <div v-show="modalShowTable == 'f'">
+                      <div class="modal-table-title">DEUDAS Y OBLIGACIONES PATRIMONIALES</div>
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.deudas && selectedElement.declaration.deudas.length > 0">
+                        <thead><tr><th>PRESTAMOS</th><th>FECHA DE CONCESION</th><th>IMPORTE CONCIDO</th><th>SALDO PENDIENTE</th></tr></thead>
+                        <tbody>
+                          <tr v-for="el in selectedElement.declaration.deudas">
+                            <td>{{ el.debt_institution }}</td>
+                            <td>{{ el.debt_date }}</td>
+                            <td>{{ el.debt_amount }}</td>
+                            <td>{{ el.debt_amount_remain }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="modal-table-else" v-else>/</div>
+                    </div>
+                    <!-- Sub-Table 7 -->
+                    <div v-show="modalShowTable == 'g'">
+                      <div class="modal-table-title">OBSERVACIONES</div>
+                      <div class="modal-section-container" v-if="selectedElement.declaration && selectedElement.declaration.comments.length > 0">
+                        <div v-for="el in selectedElement.declaration.comments">{{el}}</div>
+                      </div>
+                      <div class="modal-section-container" v-else>/</div>
+                    </div>
                   </div>
                 </div>
               </div>

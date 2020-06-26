@@ -430,16 +430,16 @@ div.dc-html-legend {
   height: 500px;
 }
 .chart-container.tab_a_3 {
-  height: 500px;
+  height: 530px;
 }
 .chart-container.tab_a_4 {
-  height: 500px;
+  height: 530px;
 }
 .chart-container.tab_a_5 {
-  height: 500px;
+  height: 530px;
 }
 .chart-container.tab_a_6 {
-  height: 500px;
+  height: 530px;
 }
 .chart-container.tab_a_7 {
   height: 520px;
@@ -583,8 +583,11 @@ div.dc-html-legend {
     display: none;
   }
 }
+.footer-bar .footer-counts .count-box.count-box-income {
+  width: 180px;
+}
 @media only screen and (max-width: 1280px) {
-  .footer-bar .footer-counts .count-box.count-box-lobbyists, .footer-bar .footer-counts .count-box.count-box-institutions {
+  .footer-bar .footer-counts .count-box.count-box-income {
     display: none;
   }
 }
@@ -601,7 +604,7 @@ div.dc-html-legend {
 }
 .footer-bar .footer-counts .count-box .filter-count {
   color: #fff;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 400;
   display: block;
   margin: 7px auto 10px auto;
@@ -1023,6 +1026,9 @@ table.dataTable tbody tr:hover {
   background: #eee;
   margin: 30px -25px;
 }
+#detailsModal .modal-section-container {
+  text-align: left;
+}
 #detailsModal .modal-table-title {
   font-weight: 600;
   text-align: left;
@@ -1129,18 +1135,18 @@ table.dataTable tbody tr:hover {
   background: #fafafa;
 }
 .chart-header .chart-title[data-v-f08932] {
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
   color: #020c10;
 }
 @media only screen and (max-width: 1400px) {
 .chart-header .chart-title[data-v-f08932] {
-    font-size: 18px;
+    font-size: 16px;
 }
 }
 @media only screen and (max-width: 1250px) {
 .chart-header .chart-title[data-v-f08932] {
-    font-size: 16px;
+    font-size: 15px;
 }
 }
 @media only screen and (max-width: 767px) {

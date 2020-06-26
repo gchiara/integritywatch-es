@@ -45,9 +45,9 @@
             <div id="contact" class="panel-collapse">
               <div class="panel-body">
               <p>
-                <strong>Transparency International Lithuania</strong><br /><br />
+                <strong>Transparency International Spain</strong><br /><br />
                 Address here<br /><br />
-                Email: <a href="mailto:info@transparency.lt">info@transparency.lt</a><br />
+                Email: <a href="mailto:info@transparency.lt">info@transparency.es</a><br />
                 Tel: 123
               </p>
             </div>
