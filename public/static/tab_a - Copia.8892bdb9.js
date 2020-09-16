@@ -46719,7 +46719,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"C:/Users/ElaineG/AppData/Local/Yarn/config/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"tab_a.js":[function(require,module,exports) {
+},{"_css_loader":"C:/Users/ElaineG/AppData/Local/Yarn/config/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"tab_a - Copia.js":[function(require,module,exports) {
 "use strict";
 
 var _jquery = _interopRequireDefault(require("jquery"));
@@ -46744,7 +46744,7 @@ var _Loader = _interopRequireDefault(require("./components/Loader.vue"));
 
 var _ChartHeader = _interopRequireDefault(require("./components/ChartHeader.vue"));
 
-var _provinces, _vuedata;
+var _vuedata;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46813,52 +46813,7 @@ var vuedata = (_vuedata = {
     "P": "",
     "Sub": ""
   }
-}, _defineProperty(_vuedata, "modalShowTable", ''), _defineProperty(_vuedata, "provinces", (_provinces = {
-  "A CORUÑA": "A Coruña",
-  "A CORUÑA/CONGRESO": "A Coruña",
-  "a coruña": "A Coruña",
-  "A CORUÑA": "A Coruña",
-  "ÁLAVA": "Araba/Álava",
-  "Álava": "Araba/Álava",
-  "ÁLAVA": "Araba/Álava",
-  "ÁLAVA-ARABA": "Araba/Álava",
-  "ALBACETE": "Albacete",
-  "ALBACETE / CONGRESO": "Albacete",
-  "ALICANTE": "Alacant/Alicante",
-  "ALMERIA": "Almería",
-  "ALMERÍA": "Almería",
-  "ASTURIAS": "Asturias",
-  "AUSTURIES": "Asturias",
-  "ÁVILA": "Ávila",
-  "Ávila": "Ávila",
-  "BADAJOZ": "Badajoz",
-  "BARCELONA": "Barcelona",
-  "Bizkaia": "Bizkaia/Vizcaya",
-  "bizkaia": "Bizkaia/Vizcaya",
-  "BIZKAIA": "Bizkaia/Vizcaya",
-  "bonos": "Bonos",
-  "BURGOS": "Burgos",
-  "Burgos": "Burgos",
-  "CÁCERES": "Cáceres",
-  "CADIZ": "Cádiz",
-  "CÁDIZ": "Cádiz",
-  "CÁDlZ": "Cádiz",
-  "CANTABRIA": "Cantabria",
-  "CASTELLÓ": "Castelló/Castellón",
-  "CASTELLON": "Castelló/Castellón",
-  "castellón": "Castelló/Castellón",
-  "CEUTA": "Ceuta",
-  "CIUDAD REAL": "Ciudad Real",
-  "CORDOBA": "Córdoba",
-  "CÓRDOBA": "Córdoba",
-  "CÓRDOBA": "Córdoba",
-  "CORDOBNCONGRESOSA": "Córdoba",
-  "CORUÑA": "La Coruña",
-  "CUENCA": "Cuenca",
-  "ELCHE (ALICANTE)": "Alicante",
-  "GIPUZKOA": "Gipuzkoa/Guipúzcoa",
-  "Gipuzkoa": "Gipuzkoa/Guipúzcoa"
-}, _defineProperty(_provinces, "Gipuzkoa", "Gipuzkoa/Guipúzcoa"), _defineProperty(_provinces, "GIRONA", "Girona"), _defineProperty(_provinces, "GRANADA", "Granada"), _defineProperty(_provinces, "GUADALAJARA", "Guadalajara"), _defineProperty(_provinces, "HUELVA", "Huelva"), _defineProperty(_provinces, "HUESCA", "Huesca"), _defineProperty(_provinces, "ILLES BALEARS", "Illes Balears"), _defineProperty(_provinces, "ISLAS BALEARES", "Illes Balears"), _defineProperty(_provinces, "JAEN", "Jaén"), _defineProperty(_provinces, "JAÉN", "Jaén"), _defineProperty(_provinces, "LA CORUÑA", "La Coruña"), _defineProperty(_provinces, "LA RIOJA", "La Rioja"), _defineProperty(_provinces, "LAS PALMAS", "Las Palmas"), _defineProperty(_provinces, "LEON", "León"), _defineProperty(_provinces, "LEÓN", "León"), _defineProperty(_provinces, "LLEIDA", "Lleida"), _defineProperty(_provinces, "LUGO", "Lugo"), _defineProperty(_provinces, "MADRID", "Madrid"), _defineProperty(_provinces, "MALAGA", "Málaga"), _defineProperty(_provinces, "MÁLAGA", "Málaga"), _defineProperty(_provinces, "MÁLAGA", "Málaga"), _defineProperty(_provinces, "MELILLA", "Melilla"), _defineProperty(_provinces, "MURCIA", "Murcia"), _defineProperty(_provinces, "NAVARRA", "Navarra"), _defineProperty(_provinces, "OURENSE", "Ourense"), _defineProperty(_provinces, "Ourense", "Ourense"), _defineProperty(_provinces, "PALENCIA", "Palencia"), _defineProperty(_provinces, "PONTEVEDRA", "Pontevedra"), _defineProperty(_provinces, "pontevedra", "Pontevedra"), _defineProperty(_provinces, "PROVINCIA DE CADIZ", "Cádiz"), _defineProperty(_provinces, "SALAMANCA", "Salamanca"), _defineProperty(_provinces, "Salamanca", "Salamanca"), _defineProperty(_provinces, "SANTA CRUZ DE TENERIFE", "Santa Cruz de Tenerife"), _defineProperty(_provinces, "Santa Cruz de Tenerife", "Santa Cruz de Tenerife"), _defineProperty(_provinces, "santa cruz de tenerife", "Santa Cruz de Tenerife"), _defineProperty(_provinces, "SANTANDER", "Santander"), _defineProperty(_provinces, "SEGOVIA", "Segovia"), _defineProperty(_provinces, "SEVILLA", "Sevilla"), _defineProperty(_provinces, "Soria", "Soria"), _defineProperty(_provinces, "SORIA", "Soria"), _defineProperty(_provinces, "T arragona", "Tarragona"), _defineProperty(_provinces, "TARRAGONA", "Tarragona"), _defineProperty(_provinces, "TERUEL", "Teruel"), _defineProperty(_provinces, "TINAJEROS (ALBACETE)", "Albacete"), _defineProperty(_provinces, "TOLEDO", "Toledo"), _defineProperty(_provinces, "VALENCIA", "València/Valencia"), _defineProperty(_provinces, "VALLADOLID", "Valladolid"), _defineProperty(_provinces, "VIZCAYA", "Bizkaia/Vizcaya"), _defineProperty(_provinces, "ZAMORA", "Zamora"), _defineProperty(_provinces, "ZARAGOZA", "Zaragoza"), _defineProperty(_provinces, "Zaragoza", "Zaragoza"), _provinces)), _defineProperty(_vuedata, "colors", {
+}, _defineProperty(_vuedata, "modalShowTable", ''), _defineProperty(_vuedata, "colors", {
   generic: ["#3b95d0", "#4081ae", "#406a95", "#395a75"],
   default1: "#2b90b8",
   default2: "#449188",
@@ -46884,18 +46839,6 @@ var vuedata = (_vuedata = {
   gender: {
     "F": "#1d7598",
     "M": "#55bbe4"
-  },
-  groups: {
-    "GS": "#E9202C",
-    "GVOX": "#63BE21",
-    "GV  EAJ-PNV": "#ddd",
-    "GEH Bildu": "#96F350",
-    "GP": "#0BB2FF",
-    "GPlu": "#0DDF81",
-    "GCs": "#008000",
-    "GCUP-EC-GC": "#672F6C",
-    "GR": "#FFB232",
-    "GMx": "#A2A9B1"
   }
 }), _vuedata); //Set vue components and Vue app
 
@@ -46935,11 +46878,6 @@ $(function () {
 }); //Charts
 
 var charts = {
-  map: {
-    chart: dc.geoChoroplethChart("#map_chart"),
-    type: 'map',
-    divId: 'map_chart'
-  },
   groups: {
     chart: dc.rowChart("#groups_chart"),
     type: 'row',
@@ -47228,6 +47166,8 @@ for (var i = 0; i < 5; i++) {
 
       if (d.comments && d.comments !== "") {
         declarations[cleanName]['comments'].push(d.comments);
+        console.log(d.comments);
+        console.log(declarations[cleanName]['comments']);
       }
     }); //Loop through list, get declaration and do calculations for charts
 
@@ -47237,17 +47177,6 @@ for (var i = 0; i < 5; i++) {
 
       if (declarations[d.unique_id]) {
         d.declaration = declarations[d.unique_id];
-      } //Get province
-
-
-      d.province = "";
-
-      if (d.declaration && d.declaration.electoral_disctrict) {
-        d.province = vuedata.provinces[d.declaration.electoral_disctrict.trim()];
-
-        if (!d.province) {
-          console.log(d.province + " - " + d.declaration.electoral_disctrict);
-        }
       } //Income Tot and Range
 
 
@@ -47284,8 +47213,9 @@ for (var i = 0; i < 5; i++) {
       if (d.declaration.depositos) {
         d.declaration.depositsTot = calcIncomeTot(d.declaration.depositos, 'deposits');
       }
-    }); //Set totals for custom counters
+    });
 
+    console.log(diputados); //Set totals for custom counters
 
     $('.count-box-income .total-count').html(totIncome); //Set dc main vars. The second crossfilter is used to handle the travels stacked bar chart.
 
@@ -47293,65 +47223,7 @@ for (var i = 0; i < 5; i++) {
     var searchDimension = ndx.dimension(function (d) {
       var entryString = d.full_name + ' ' + d.unique_id + ' ' + d.political_group;
       return entryString.toLowerCase();
-    }); //MAP CHART
-
-    var createMapChart = function createMapChart() {
-      (0, _d3Request.json)('./data/spain-provinces.geo.json', function (err, jsonmap) {
-        //jsonmap.features
-        var mapProvinces = [];
-
-        _.each(jsonmap.features, function (p) {
-          if (mapProvinces.indexOf(p.properties.name) == -1) {
-            mapProvinces.push(p.properties.name);
-          }
-        });
-
-        console.log(mapProvinces);
-        var chart = charts.map.chart;
-        var width = recalcWidth(charts.map.divId);
-        var mapDimension = ndx.dimension(function (d) {
-          return d.province;
-          return "ff";
-
-          if (d.province && mapProvinces.indexOf(d.province) > -1) {
-            return d.province;
-          } //return "ff";
-          //return d.province;
-
-        });
-        var group = mapDimension.group().reduceSum(function (d) {
-          return 1;
-        }); //var prov = topojson.feature(jsonmap, jsonmap.objects["spain-provinces"]).features;
-
-        var scale = width * 3;
-        var translate = [width + 140, -40];
-
-        if (window.innerWidth <= 678) {
-          scale = width * 3.2;
-          translate = [width - 30, 270];
-        }
-
-        var projection = d3.geoMercator().center([11, 45]).scale(scale).translate(translate);
-        var centered;
-
-        function clicked(d) {}
-
-        chart.width(width).height(function (d) {
-          return window.innerWidth <= 678 ? 500 : 800;
-        }).dimension(mapDimension).group(group).projection(projection).colors(d3.scaleQuantize().range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"])).colorDomain([1, 20]).colorCalculator(function (d) {
-          return d == 0 ? '#eee' : chart.colors()(d);
-        }) //.overlayGeoJson(prov, "province", function (d) { console.log(d); return d.properties.name; })
-        //objects - spain-provinces
-        .overlayGeoJson(jsonmap.features, 'province', function (d) {
-          //console.log(d.properties.name);
-          return d.properties.name;
-        }).title(function (d) {
-          return d.key; //return  _.find(dpt, function (m) {return m.properties.code==d.key}).properties.nom + ': ' + d.value + ' parlementaires';
-        }).on('renderlet', function (chart) {});
-        chart.render();
-      });
-    }; //CHART 2
-
+    }); //CHART 2
 
     var createGroupsChart = function createGroupsChart() {
       var chart = charts.groups.chart;
@@ -47389,8 +47261,6 @@ for (var i = 0; i < 5; i++) {
         return d.key;
       }).title(function (d) {
         return d.key + ': ' + d.value.toFixed(2);
-      }).colorCalculator(function (d, i) {
-        return vuedata.colors.groups[d.key.trim()];
       }).elasticX(true).xAxis().ticks(4); //chart.xAxis().tickFormat(numberFormat);
 
       chart.render();
@@ -47666,6 +47536,8 @@ for (var i = 0; i < 5; i++) {
       $('#dc-data-table tbody').on('click', 'tr', function () {
         var data = datatable.DataTable().row(this).data();
         vuedata.selectedElement = data;
+        console.log(data);
+        console.log(vuedata.selectedElement);
         $('#detailsModal').modal();
       });
     }; //REFRESH TABLE
@@ -47727,7 +47599,6 @@ for (var i = 0; i < 5; i++) {
       resetGraphs();
     }); //Render charts
 
-    createMapChart();
     createGroupsChart();
     createIncomeChart();
     createPropertiesChart();
@@ -47830,7 +47701,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51247" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58557" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -48005,4 +47876,4 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/ElaineG/AppData/Local/Yarn/config/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","tab_a.js"], null)
+},{}]},{},["C:/Users/ElaineG/AppData/Local/Yarn/config/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","tab_a - Copia.js"], null)

@@ -46719,12 +46719,12 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"C:/Users/ElaineG/AppData/Local/Yarn/config/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"tab_a.js":[function(require,module,exports) {
+},{"_css_loader":"C:/Users/ElaineG/AppData/Local/Yarn/config/global/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"tab_b.js":[function(require,module,exports) {
 "use strict";
 
 var _jquery = _interopRequireDefault(require("jquery"));
 
-var _underscore = _interopRequireDefault(require("underscore"));
+var _underscore = _interopRequireWildcard(require("underscore"));
 
 require("../public/vendor/js/popper.min.js");
 
@@ -46744,7 +46744,9 @@ var _Loader = _interopRequireDefault(require("./components/Loader.vue"));
 
 var _ChartHeader = _interopRequireDefault(require("./components/ChartHeader.vue"));
 
-var _provinces, _vuedata;
+var _vuedata;
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46761,7 +46763,7 @@ window.underscore = _underscore.default;
 window._ = _underscore.default;
 // Data object - is also used by Vue
 var vuedata = (_vuedata = {
-  page: 'tabA',
+  page: 'tabB',
   loader: true,
   readMore: false,
   showInfo: true,
@@ -46772,35 +46774,35 @@ var vuedata = (_vuedata = {
   charts: {
     map: {
       title: 'Mapa',
-      info: 'Provincias. Haga clic en la Provincia que le interese para ver el número de Diputados por Provincias elegidos para la XIV Legislatura.'
+      info: 'Provincias. Haga clic en la Provincia que le interese para ver el número de Senadores por Provincias elegidos para la XIV Legislatura.'
     },
     groups: {
       title: 'Grupos Parlementarios',
-      info: 'Distribución de Diputados según los grupos parlamentarios del Congreso. Haga clic en los diferentes grupos para ver el número de Diputados por cada grupo.'
+      info: 'Distribución de Senadores según los grupos parlamentarios del Senado. Haga clic en los diferentes grupos para ver el número de Senadores por cada grupo.'
     },
     income: {
       title: 'Rentas Percibidas',
-      info: 'Distribución de Diputados según el valor de rentas percibidas. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
+      info: 'Distribución de Senadores según el valor de rentas percibidas. Haga clic en los diferentes rangos y valores para ver el número de Senadores incluidos.'
     },
     properties: {
       title: 'Cantidad the bienes inmuebles',
-      info: 'Distribución de Diputados según la cantidad de bienes inmuebles. Haga clic en los diferentes valores de cantidad para ver el número de Diputados incluidos.'
+      info: 'Distribución de Senadores según la cantidad de bienes inmuebles. Haga clic en los diferentes valores de cantidad para ver el número de Senadores incluidos.'
     },
     financial: {
-      title: 'Valor de las acciones y participaciones',
-      info: 'Distribución de Diputados según el valor de participaciones financieras. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
+      title: 'Cantidad de acciones y participaciones',
+      info: 'Distribución de Senadores según la cantidad de participaciones financieras. Haga clic en los diferentes valores de cantidad para ver el número de Senadores incluidos.'
     },
     debt: {
-      title: 'Valor de deudas y obligaciones patrimoniales',
-      info: 'Distribución de Diputados según el valor de deudas y obligaciones patrimoniales. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
+      title: 'Valor de deudas y obligaciones patrimoniales (saldo pendiente)',
+      info: 'Distribución de Senadores según el valor de participaciones financieras. Haga clic en los diferentes rangos y valores para ver el número de Senadores incluidos.'
     },
     vehicles: {
       title: 'Cantidad de vehículos, embarcaciones y aeronaves',
-      info: 'Distribución de Diputados según la cantidad de vehículos, embarcaciones y aeronaves. Haga clic en los diferentes valores de cantidad para ver el número de Diputados incluidos.'
+      info: 'Distribución de Senadores según la cantidad de vehículos, embarcaciones y aeronaves. Haga clic en los diferentes valores de cantidad para ver el número de Senadores incluidos.'
     },
     gender: {
       title: 'Género',
-      info: 'Porcentaje de mujeres y hombres según la composición del Congreso de los Diputados.'
+      info: 'Porcentaje de mujeres y hombres según la composición del Senado.'
     },
     mainTable: {
       chart: null,
@@ -46813,52 +46815,84 @@ var vuedata = (_vuedata = {
     "P": "",
     "Sub": ""
   }
-}, _defineProperty(_vuedata, "modalShowTable", ''), _defineProperty(_vuedata, "provinces", (_provinces = {
-  "A CORUÑA": "A Coruña",
-  "A CORUÑA/CONGRESO": "A Coruña",
-  "a coruña": "A Coruña",
-  "A CORUÑA": "A Coruña",
-  "ÁLAVA": "Araba/Álava",
-  "Álava": "Araba/Álava",
-  "ÁLAVA": "Araba/Álava",
-  "ÁLAVA-ARABA": "Araba/Álava",
-  "ALBACETE": "Albacete",
-  "ALBACETE / CONGRESO": "Albacete",
-  "ALICANTE": "Alacant/Alicante",
-  "ALMERIA": "Almería",
-  "ALMERÍA": "Almería",
-  "ASTURIAS": "Asturias",
-  "AUSTURIES": "Asturias",
-  "ÁVILA": "Ávila",
-  "Ávila": "Ávila",
-  "BADAJOZ": "Badajoz",
-  "BARCELONA": "Barcelona",
-  "Bizkaia": "Bizkaia/Vizcaya",
-  "bizkaia": "Bizkaia/Vizcaya",
-  "BIZKAIA": "Bizkaia/Vizcaya",
-  "bonos": "Bonos",
-  "BURGOS": "Burgos",
-  "Burgos": "Burgos",
-  "CÁCERES": "Cáceres",
-  "CADIZ": "Cádiz",
-  "CÁDIZ": "Cádiz",
-  "CÁDlZ": "Cádiz",
-  "CANTABRIA": "Cantabria",
-  "CASTELLÓ": "Castelló/Castellón",
-  "CASTELLON": "Castelló/Castellón",
-  "castellón": "Castelló/Castellón",
-  "CEUTA": "Ceuta",
-  "CIUDAD REAL": "Ciudad Real",
-  "CORDOBA": "Córdoba",
-  "CÓRDOBA": "Córdoba",
-  "CÓRDOBA": "Córdoba",
-  "CORDOBNCONGRESOSA": "Córdoba",
-  "CORUÑA": "La Coruña",
-  "CUENCA": "Cuenca",
-  "ELCHE (ALICANTE)": "Alicante",
-  "GIPUZKOA": "Gipuzkoa/Guipúzcoa",
-  "Gipuzkoa": "Gipuzkoa/Guipúzcoa"
-}, _defineProperty(_provinces, "Gipuzkoa", "Gipuzkoa/Guipúzcoa"), _defineProperty(_provinces, "GIRONA", "Girona"), _defineProperty(_provinces, "GRANADA", "Granada"), _defineProperty(_provinces, "GUADALAJARA", "Guadalajara"), _defineProperty(_provinces, "HUELVA", "Huelva"), _defineProperty(_provinces, "HUESCA", "Huesca"), _defineProperty(_provinces, "ILLES BALEARS", "Illes Balears"), _defineProperty(_provinces, "ISLAS BALEARES", "Illes Balears"), _defineProperty(_provinces, "JAEN", "Jaén"), _defineProperty(_provinces, "JAÉN", "Jaén"), _defineProperty(_provinces, "LA CORUÑA", "La Coruña"), _defineProperty(_provinces, "LA RIOJA", "La Rioja"), _defineProperty(_provinces, "LAS PALMAS", "Las Palmas"), _defineProperty(_provinces, "LEON", "León"), _defineProperty(_provinces, "LEÓN", "León"), _defineProperty(_provinces, "LLEIDA", "Lleida"), _defineProperty(_provinces, "LUGO", "Lugo"), _defineProperty(_provinces, "MADRID", "Madrid"), _defineProperty(_provinces, "MALAGA", "Málaga"), _defineProperty(_provinces, "MÁLAGA", "Málaga"), _defineProperty(_provinces, "MÁLAGA", "Málaga"), _defineProperty(_provinces, "MELILLA", "Melilla"), _defineProperty(_provinces, "MURCIA", "Murcia"), _defineProperty(_provinces, "NAVARRA", "Navarra"), _defineProperty(_provinces, "OURENSE", "Ourense"), _defineProperty(_provinces, "Ourense", "Ourense"), _defineProperty(_provinces, "PALENCIA", "Palencia"), _defineProperty(_provinces, "PONTEVEDRA", "Pontevedra"), _defineProperty(_provinces, "pontevedra", "Pontevedra"), _defineProperty(_provinces, "PROVINCIA DE CADIZ", "Cádiz"), _defineProperty(_provinces, "SALAMANCA", "Salamanca"), _defineProperty(_provinces, "Salamanca", "Salamanca"), _defineProperty(_provinces, "SANTA CRUZ DE TENERIFE", "Santa Cruz de Tenerife"), _defineProperty(_provinces, "Santa Cruz de Tenerife", "Santa Cruz de Tenerife"), _defineProperty(_provinces, "santa cruz de tenerife", "Santa Cruz de Tenerife"), _defineProperty(_provinces, "SANTANDER", "Santander"), _defineProperty(_provinces, "SEGOVIA", "Segovia"), _defineProperty(_provinces, "SEVILLA", "Sevilla"), _defineProperty(_provinces, "Soria", "Soria"), _defineProperty(_provinces, "SORIA", "Soria"), _defineProperty(_provinces, "T arragona", "Tarragona"), _defineProperty(_provinces, "TARRAGONA", "Tarragona"), _defineProperty(_provinces, "TERUEL", "Teruel"), _defineProperty(_provinces, "TINAJEROS (ALBACETE)", "Albacete"), _defineProperty(_provinces, "TOLEDO", "Toledo"), _defineProperty(_provinces, "VALENCIA", "València/Valencia"), _defineProperty(_provinces, "VALLADOLID", "Valladolid"), _defineProperty(_provinces, "VIZCAYA", "Bizkaia/Vizcaya"), _defineProperty(_provinces, "ZAMORA", "Zamora"), _defineProperty(_provinces, "ZARAGOZA", "Zaragoza"), _defineProperty(_provinces, "Zaragoza", "Zaragoza"), _provinces)), _defineProperty(_vuedata, "colors", {
+}, _defineProperty(_vuedata, "modalShowTable", ''), _defineProperty(_vuedata, "provinces", {
+  "Girona": "Cataluña",
+  "Valladolid": "Castilla y León",
+  "Lleida": "Aragón",
+  "Barcelona": "Cataluña",
+  "Menorca": "Islas Baleares",
+  "Tarragona": "Cataluña",
+  "Melilla": "Ceuta y Melilla",
+  "Salamanca": "Castilla y León",
+  "Soria": "Castilla y León",
+  "Badajoz": "Extremadura",
+  "Cáceres": "Extremadura",
+  "Albacete": "Castilla-La Mancha",
+  "Huelva": "Andalucía",
+  "Palencia": "Castilla y León",
+  "Lugo": "Galicia",
+  "Navarra": "Comunidad Foral de Navarra",
+  "Cádiz": "Andalucía",
+  "Parlamento de Cataluña": "Cataluña",
+  "Gipuzkoa": "País Vasco",
+  "Córdoba": "Andalucía",
+  "Málaga": "Andalucía",
+  "La Palma": "",
+  "Pontevedra": "Galicia",
+  "Parlamento de Canarias": "",
+  "La Rioja": "La Rioja",
+  "Cantabria": "Cantabria",
+  "Parlamento de La Rioja": "La Rioja",
+  "Alicante/Alacant": "Comunidad Valenciana",
+  "Ávila": "Castilla y León",
+  "Ceuta": "Ceuta y Melilla",
+  "Junta General del Principado de Asturias": "Principado de Asturias",
+  "Parlamento de las Illes Balears": "Islas Baleares",
+  "Parlamento de Andalucía": "Andalucía",
+  "Parlamento de Navarra": "Comunidad Foral de Navarra",
+  "Asamblea de Madrid": "Comunidad de Madrid",
+  "Asamblea de Extremadura": "Extremadura",
+  "Corts Valencianes": "Comunidad Valenciana",
+  "Cortes de Aragón": "Aragón",
+  "Parlamento de Cantabria": "Cantabria",
+  "Cuenca": "Castilla-La Mancha",
+  "A Coruña": "Galicia",
+  "Cortes de Castilla-La Mancha": "Castilla-La Mancha",
+  "Asturias": "Principado de Asturias",
+  "Toledo": "Castilla-La Mancha",
+  "Tenerife": "",
+  "León": "Castilla y León",
+  "Segovia": "Castilla y León",
+  "Parlamento Vasco": "País Vasco",
+  "Guadalajara": "Castilla-La Mancha",
+  "Valencia/València": "Comunidad Valenciana",
+  "Cortes de Castilla y León": "Castilla y León",
+  "La Gomera": "",
+  "Ourense": "Galicia",
+  "Murcia": "Región de Murcia",
+  "Jaén": "Andalucía",
+  "Sevilla": "Andalucía",
+  "Burgos": "Castilla y León",
+  "Zamora": "Castilla y León",
+  "Madrid": "Comunidad de Madrid",
+  "Almería": "Andalucía",
+  "Ciudad Real": "Castilla-La Mancha",
+  "Castellón/Castelló": "Comunidad Valenciana",
+  "Bizkaia": "País Vasco",
+  "Araba/Álava": "País Vasco",
+  "Granada": "Andalucía",
+  "Teruel": "Aragón",
+  "Fuerteventura": "",
+  "Gran Canaria": "",
+  "Zaragoza": "Aragón",
+  "Parlamento de Galicia": "Galicia",
+  "Mallorca": "Islas Baleares",
+  "Lanzarote": "",
+  "Asamblea Regional de Murcia": "Región de Murcia",
+  "Huesca": "Aragón",
+  "El Hierro": "",
+  "Eivissa-Formentera": "Islas Baleares"
+}), _defineProperty(_vuedata, "colors", {
   generic: ["#3b95d0", "#4081ae", "#406a95", "#395a75"],
   default1: "#2b90b8",
   default2: "#449188",
@@ -46879,23 +46913,25 @@ var vuedata = (_vuedata = {
     "5 - 10": "#3aa2cb",
     "1 - 5": "#55bbe4",
     "Sin bienes inmuebles": "#ccc",
-    "Sin vehículos": "#ccc"
+    "Sin vehículos": "#ccc",
+    "Sin participationes": "#ccc"
   },
   gender: {
     "F": "#1d7598",
-    "M": "#55bbe4"
+    "M": "#55bbe4",
+    "": "#ccc"
   },
   groups: {
-    "GS": "#E9202C",
-    "GVOX": "#63BE21",
-    "GV  EAJ-PNV": "#ddd",
-    "GEH Bildu": "#96F350",
-    "GP": "#0BB2FF",
-    "GPlu": "#0DDF81",
-    "GCs": "#008000",
-    "GCUP-EC-GC": "#672F6C",
-    "GR": "#FFB232",
-    "GMx": "#A2A9B1"
+    "ESQUERRA REPUBLICANA-EUSKAL HERRIA BILDU": "#FFDC67",
+    "MIXTO": "#797979",
+    "POPULAR": "#0BB2FF",
+    "SOCIALISTA": "#E2001A",
+    "VASCO": "#19AA63",
+    "IZQUIERDA CONFEDERAL": "#794877",
+    "CIUDADANOS": "#606060",
+    "NACIONALISTA EN EL SEANDO JUNTS PER CATALUNYA-COALICIÓN CANARIA / PARTIDO NACIONALISTA CANARIO": "#FF2EEE",
+    "": "#bbb",
+    "N/A": "#bbb"
   }
 }), _vuedata); //Set vue components and Vue app
 
@@ -47097,34 +47133,53 @@ jQuery.extend(jQuery.fn.dataTableExt.oSort, {
     return a < b ? 1 : a > b ? -1 : 0;
   }
 });
+/*
+function cleanCurrency(valString) {
+    //Clean end of string from € .-
+    valString = valString.replace("€","").replace(".-","").trim();
+    //If the value has slashes in it, split the values and add them
+    if(valString.indexOf("/") > -1) {
+      console.log(valString);
+      var splitVals = valString.split("/");
+      var summedVals = 0;
+      _.each(splitVals, function(x) {
+        summedVals += parseFloat(x);
+      });
+    }
 
+    //Remove special chars and then if there was a dot or comma before the last 2 digits, add dot for decimals
+    var result = valString.replace(/[^0-9]/g, '');
+    if (/[',\.]\d{2}$/.test(valString)) {
+        result = result.replace(/(\d{2})$/, '.$1');
+    }
+    if(isNaN(parseFloat(result))) {
+      console.log(result);
+    }
+    return parseFloat(result);
+}
 function calcIncomeTot(el, type) {
   var tot = 0;
-
   _.each(el, function (d) {
-    var thisAmt = d.income_value_clean;
-
-    if (type == 'financial') {
-      thisAmt = d.other_financial_clean;
+    var thisAmt = null;
+    if(type == 'income') {
+      thisAmt = cleanCurrency(d.euros);
     }
-
-    if (type == 'debt') {
-      thisAmt = d.debt_amount_remain;
+    if(type == 'deposits') {
+      thisAmt = cleanCurrency(d.saldo);
     }
-
-    if (type == 'deposits') {
-      thisAmt = d.deposits_value_clean;
+    if(type == 'debt') {
+      thisAmt = cleanCurrency(d.saldo_pendiente);
     }
-
-    if (thisAmt) {
-      //var amt = parseFloat(thisAmt.replace(".","").replace(",",".").replace(" €","").trim());
-      var amt = parseFloat(thisAmt.replace(",", "").replace(" €", "").trim());
-      tot += amt;
+    if(type == 'financial') {
+      thisAmt = cleanCurrency(d.valor);
+    }
+    if(thisAmt && !isNaN(thisAmt)) {
+      tot += thisAmt;
     }
   });
-
   return tot.toFixed(2);
 }
+*/
 
 function calcIncomeRange(amt, type) {
   var range = "Sin rentas";
@@ -47163,6 +47218,10 @@ function calcPropertiesRange(el, type) {
     range = "Sin vehículos";
   }
 
+  if (type == "financial") {
+    range = "Sin participationes";
+  }
+
   if (el && el.length > 0) {
     if (el.length > 20) {
       range = "> 20";
@@ -47187,619 +47246,595 @@ for (var i = 0; i < 5; i++) {
 } //Load data and generate charts
 
 
-(0, _d3Request.csv)('./data/tab_a/d_declarations.csv?' + randomPar, function (err, declarationsTable) {
-  (0, _d3Request.csv)('./data/tab_a/diputados_list.csv?' + randomPar, function (err, diputados) {
-    //Loop through data to aply fixes and calculations
-    var totIncome = 0;
-    var declarations = {}; //Loop through data to apply fixes
+(0, _d3Request.json)('./data/tab_b/senators.json?' + randomPar, function (err, senators) {
+  (0, _d3Request.csv)('./data/tab_b/groups.csv?' + randomPar, function (err, senatorsGroups) {
+    (0, _d3Request.csv)('./data/tab_b/clean_values.csv?' + randomPar, function (err, amountsData) {
+      //Loop through data to aply fixes and calculations
+      var totIncome = 0;
+      var declarations = {};
+      var areas = []; //Loop through data to apply fixes
 
-    _.each(declarationsTable, function (d) {
-      //Check if name exists in diputados, if name doesn't exists, add it 
-      //Check if type esists, if it doesn't, create type array
-      //Push entry to type array (only push non keys): loop through keys and if value not null, add key and value to entry
-      var cleanName = d.unique_id.trim();
-      var cleanCategory = d.category_declaration.trim();
-
-      if (!declarations[cleanName]) {
-        declarations[cleanName] = {};
-      }
-
-      if (d.electoral_disctrict !== null && d.electoral_disctrict !== "") {
-        declarations[cleanName]['electoral_disctrict'] = d.electoral_disctrict;
-      }
-
-      if (!declarations[cleanName][cleanCategory]) {
-        declarations[cleanName][cleanCategory] = [];
-      }
-
-      if (!declarations[cleanName]['comments']) {
-        declarations[cleanName]['comments'] = [];
-      }
-
-      var newEntry = {};
-
-      for (var key in d) {
-        if (key !== "unique_id" && key !== "full_name" && key !== "category_declaration" && key !== "electoral_disctrict" && key !== "comments" && d[key] !== null && d[key] !== "") {
-          newEntry[key] = d[key].trim();
-        }
-      }
-
-      declarations[cleanName][cleanCategory].push(newEntry); //Sort comments
-
-      if (d.comments && d.comments !== "") {
-        declarations[cleanName]['comments'].push(d.comments);
-      }
-    }); //Loop through list, get declaration and do calculations for charts
+      _.each(senators, function (d) {
+        if (areas.indexOf(d.details.circunscripcion) == -1) {
+          areas.push(d.details.circunscripcion);
+        } //Get province/area
 
 
-    _.each(diputados, function (d) {
-      d.declaration = {};
+        d.province = "";
 
-      if (declarations[d.unique_id]) {
-        d.declaration = declarations[d.unique_id];
-      } //Get province
+        if (d.details && d.details.circunscripcion) {
+          d.province = vuedata.provinces[d.details.circunscripcion.trim()];
 
-
-      d.province = "";
-
-      if (d.declaration && d.declaration.electoral_disctrict) {
-        d.province = vuedata.provinces[d.declaration.electoral_disctrict.trim()];
-
-        if (!d.province) {
-          console.log(d.province + " - " + d.declaration.electoral_disctrict);
-        }
-      } //Income Tot and Range
-
-
-      d.declaration.incomeTot = 0;
-
-      if (d.declaration.rentas) {
-        d.declaration.incomeTot = calcIncomeTot(d.declaration.rentas, 'income');
-      }
-
-      d.declaration.incomeRange = calcIncomeRange(d.declaration.incomeTot, 'income'); //Properties
-
-      d.declaration.propertiesRange = calcPropertiesRange(d.declaration["bienes patrimoniales"], 'properties'); //Financial participations Tot and Range
-
-      d.declaration.financialTot = 0;
-
-      if (d.declaration["otros bienes o derechos"]) {
-        d.declaration.financialTot = calcIncomeTot(d.declaration["otros bienes o derechos"], 'financial');
-      }
-
-      d.declaration.financialRange = calcIncomeRange(d.declaration.financialTot, 'financial'); //Debt Tot and Range
-
-      d.declaration.debtTot = 0;
-
-      if (d.declaration.deudas) {
-        d.declaration.debtTot = calcIncomeTot(d.declaration.deudas, 'debt');
-      }
-
-      d.declaration.debtRange = calcIncomeRange(d.declaration.debtTot, 'debt'); //Vehicles
-
-      d.declaration.vehiclesRange = calcPropertiesRange(d.declaration["vehículos"], 'vehicles'); //Deposits Tot
-
-      d.declaration.depositsTot = 0;
-
-      if (d.declaration.depositos) {
-        d.declaration.depositsTot = calcIncomeTot(d.declaration.depositos, 'deposits');
-      }
-    }); //Set totals for custom counters
-
-
-    $('.count-box-income .total-count').html(totIncome); //Set dc main vars. The second crossfilter is used to handle the travels stacked bar chart.
-
-    var ndx = crossfilter(diputados);
-    var searchDimension = ndx.dimension(function (d) {
-      var entryString = d.full_name + ' ' + d.unique_id + ' ' + d.political_group;
-      return entryString.toLowerCase();
-    }); //MAP CHART
-
-    var createMapChart = function createMapChart() {
-      (0, _d3Request.json)('./data/spain-provinces.geo.json', function (err, jsonmap) {
-        //jsonmap.features
-        var mapProvinces = [];
-
-        _.each(jsonmap.features, function (p) {
-          if (mapProvinces.indexOf(p.properties.name) == -1) {
-            mapProvinces.push(p.properties.name);
+          if (!d.province) {
+            console.log(d.province + " - " + d.details.circunscripcion);
           }
+        } //Find groups data
+
+
+        d.group = "";
+        d.gender = "";
+        d.groupData = _.find(senatorsGroups, function (a) {
+          return a.Name == d.name;
         });
 
-        console.log(mapProvinces);
-        var chart = charts.map.chart;
-        var width = recalcWidth(charts.map.divId);
-        var mapDimension = ndx.dimension(function (d) {
-          return d.province;
-          return "ff";
+        if (d.groupData) {
+          d.group = d.groupData.Group;
+          d.gender = d.groupData.Gender;
+        } //Find rentas, depositos and deudas with fixed amounts, then calc totals and ranges
 
-          if (d.province && mapProvinces.indexOf(d.province) > -1) {
+
+        d.fixedRentas = _.filter(amountsData, function (a) {
+          return a.name == d.name && a.type.trim() == "rentas";
+        });
+        d.fixedDepositos = _.filter(amountsData, function (a) {
+          return a.name == d.name && a.type.trim() == "depositos";
+        });
+        d.fixedDeudas = _.filter(amountsData, function (a) {
+          return a.name == d.name && a.type.trim() == "deudas";
+        });
+        d.incomeTot = 0;
+        d.depositsTot = 0;
+        d.debtTot = 0;
+
+        _.each(d.fixedRentas, function (a) {
+          d.incomeTot += parseFloat(a.value);
+        });
+
+        _.each(d.fixedDepositos, function (a) {
+          d.depositsTot += parseFloat(a.value);
+        });
+
+        _.each(d.fixedDeudas, function (a) {
+          d.debtTot += parseFloat(a.value);
+        });
+
+        d.incomeRange = calcIncomeRange(d.incomeTot, 'income');
+        d.depositsRange = calcIncomeRange(d.depositsTot, 'deposits');
+        d.debtRange = calcIncomeRange(d.debtTot, 'debt'); //Financial: count entries instead of value sum
+
+        d.financialNumRange = calcPropertiesRange(d.otros_bienes, 'financial'); //Properties
+
+        d.propertiesRange = calcPropertiesRange(d.bienes, 'properties'); //Otros bienes
+
+        d.otherPropertiesRange = calcPropertiesRange(d.otros_bienes, 'other_properties'); //Vehicles
+
+        d.vehiclesRange = calcPropertiesRange(d.vehiculos, 'vehicles');
+      });
+
+      console.log(areas); //Set totals for custom counters
+
+      $('.count-box-income .total-count').html(totIncome); //Set dc main vars. The second crossfilter is used to handle the travels stacked bar chart.
+
+      var ndx = crossfilter(senators);
+      var searchDimension = ndx.dimension(function (d) {
+        var entryString = d.name;
+        return entryString.toLowerCase();
+      }); //MAP CHART
+
+      var createMapChart = function createMapChart() {
+        (0, _d3Request.json)('./data/spain-comunidad.json', function (err, jsonmap) {
+          var mapProvinces = [];
+
+          _.each(jsonmap.objects.ESP_adm1.geometries, function (p) {
+            if (mapProvinces.indexOf(p.properties.NAME_1) == -1) {
+              mapProvinces.push(p.properties.NAME_1);
+            }
+          });
+
+          var chart = charts.map.chart;
+          var width = recalcWidth(charts.map.divId);
+          var mapDimension = ndx.dimension(function (d) {
             return d.province;
-          } //return "ff";
-          //return d.province;
+            return "ff";
 
+            if (d.province && mapProvinces.indexOf(d.province) > -1) {
+              return d.province;
+            } //return "ff";
+            //return d.province;
+
+          });
+          var group = mapDimension.group().reduceSum(function (d) {
+            return 1;
+          }); //var prov = topojson.feature(jsonmap, jsonmap.objects["spain-provinces"]).features;
+
+          var area = topojson.feature(jsonmap, jsonmap.objects.ESP_adm1).features;
+          var scale = width * 3;
+          var translate = [width + 140, -40];
+
+          if (window.innerWidth <= 678) {
+            scale = width * 3.2;
+            translate = [width - 30, 270];
+          }
+
+          var projection = d3.geoMercator().center([11, 45]).scale(scale).translate(translate);
+          var centered;
+
+          function clicked(d) {}
+
+          chart.width(width).height(function (d) {
+            return window.innerWidth <= 678 ? 500 : 800;
+          }).dimension(mapDimension).group(group).projection(projection).colors(d3.scaleQuantize().range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"])).colorDomain([1, 20]).colorCalculator(function (d) {
+            return d == 0 ? '#eee' : chart.colors()(d);
+          }).overlayGeoJson(area, 'comunidad', function (d) {
+            return d.properties.NAME_1;
+          }).title(function (d) {
+            return d.key;
+          }).on('renderlet', function (chart) {});
+          chart.render();
         });
-        var group = mapDimension.group().reduceSum(function (d) {
+      }; //CHART 2
+
+
+      var createGroupsChart = function createGroupsChart() {
+        var chart = charts.groups.chart;
+        var dimension = ndx.dimension(function (d) {
+          return d.group;
+        });
+        var group = dimension.group().reduceSum(function (d) {
           return 1;
-        }); //var prov = topojson.feature(jsonmap, jsonmap.objects["spain-provinces"]).features;
-
-        var scale = width * 3;
-        var translate = [width + 140, -40];
-
-        if (window.innerWidth <= 678) {
-          scale = width * 3.2;
-          translate = [width - 30, 270];
-        }
-
-        var projection = d3.geoMercator().center([11, 45]).scale(scale).translate(translate);
-        var centered;
-
-        function clicked(d) {}
-
-        chart.width(width).height(function (d) {
-          return window.innerWidth <= 678 ? 500 : 800;
-        }).dimension(mapDimension).group(group).projection(projection).colors(d3.scaleQuantize().range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"])).colorDomain([1, 20]).colorCalculator(function (d) {
-          return d == 0 ? '#eee' : chart.colors()(d);
-        }) //.overlayGeoJson(prov, "province", function (d) { console.log(d); return d.properties.name; })
-        //objects - spain-provinces
-        .overlayGeoJson(jsonmap.features, 'province', function (d) {
-          //console.log(d.properties.name);
-          return d.properties.name;
-        }).title(function (d) {
-          return d.key; //return  _.find(dpt, function (m) {return m.properties.code==d.key}).properties.nom + ': ' + d.value + ' parlementaires';
-        }).on('renderlet', function (chart) {});
-        chart.render();
-      });
-    }; //CHART 2
-
-
-    var createGroupsChart = function createGroupsChart() {
-      var chart = charts.groups.chart;
-      var dimension = ndx.dimension(function (d) {
-        return d.political_group;
-      });
-      var group = dimension.group().reduceSum(function (d) {
-        return 1;
-      });
-
-      var filteredGroup = function (source_group) {
-        return {
-          all: function all() {
-            return source_group.top(100).filter(function (d) {
-              return d.value != 0;
-            });
-          }
-        };
-      }(group);
-
-      var width = recalcWidth(charts.groups.divId);
-      var charsLength = recalcCharsLength(width);
-      chart.width(width).height(420).margins({
-        top: 0,
-        left: 0,
-        right: 10,
-        bottom: 20
-      }).group(filteredGroup).dimension(dimension).colorCalculator(function (d, i) {
-        return vuedata.colors.default1;
-      }).label(function (d) {
-        if (d.key && d.key.length > charsLength) {
-          return d.key.substring(0, charsLength) + '...';
-        }
-
-        return d.key;
-      }).title(function (d) {
-        return d.key + ': ' + d.value.toFixed(2);
-      }).colorCalculator(function (d, i) {
-        return vuedata.colors.groups[d.key.trim()];
-      }).elasticX(true).xAxis().ticks(4); //chart.xAxis().tickFormat(numberFormat);
-
-      chart.render();
-    }; //CHART 3
-
-
-    var createIncomeChart = function createIncomeChart() {
-      var chart = charts.income.chart;
-      var dimension = ndx.dimension(function (d) {
-        return d.declaration.incomeRange;
-      });
-      var group = dimension.group().reduceSum(function (d) {
-        return 1;
-      });
-      var order = ['Sin rentas', '1€ - 1.000€', '1.001 - 5.000€', '5.001 - 10.000€', '10.001€ - 50.000€', '50.001€ - 100.000€', '> 100.000€'];
-      var sizes = calcPieSize(charts.income.divId);
-      chart.width(sizes.width).height(sizes.height).ordering(function (d) {
-        return order.indexOf(d.key);
-      }).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
-        var thisKey = d.name;
-
-        if (thisKey.length > 40) {
-          return thisKey.substring(0, 40) + '...';
-        }
-
-        return thisKey;
-      })).title(function (d) {
-        var thisKey = d.key;
-        return thisKey + ': ' + d.value;
-      }).dimension(dimension).colorCalculator(function (d, i) {
-        return vuedata.colors.incomeRange[d.key];
-      }).group(group);
-      chart.render();
-    }; //CHART 4
-
-
-    var createPropertiesChart = function createPropertiesChart() {
-      var chart = charts.properties.chart;
-      var dimension = ndx.dimension(function (d) {
-        return d.declaration.propertiesRange;
-      });
-      var group = dimension.group().reduceSum(function (d) {
-        return 1;
-      });
-      var order = ['Sin bienes inmuebles', '1 - 5', '5 - 10', '10 - 20'];
-      var sizes = calcPieSize(charts.properties.divId);
-      chart.width(sizes.width).height(sizes.height).ordering(function (d) {
-        return order.indexOf(d.key);
-      }).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
-        var thisKey = d.name;
-
-        if (thisKey.length > 40) {
-          return thisKey.substring(0, 40) + '...';
-        }
-
-        return thisKey;
-      })).title(function (d) {
-        var thisKey = d.key;
-        return thisKey + ': ' + d.value;
-      }).dimension(dimension).colorCalculator(function (d, i) {
-        return vuedata.colors.propertiesRange[d.key];
-      }).group(group);
-      chart.render();
-    }; //CHART 5
-
-
-    var createFinancialParticipationsChart = function createFinancialParticipationsChart() {
-      var chart = charts.financial.chart;
-      var dimension = ndx.dimension(function (d) {
-        return d.declaration.financialRange;
-      });
-      var group = dimension.group().reduceSum(function (d) {
-        return 1;
-      });
-      var order = ['Sin participationes', '1€ - 1.000€', '1.001 - 5.000€', '5.001 - 10.000€', '10.001€ - 50.000€', '50.001€ - 100.000€', '> 100.000€'];
-      var sizes = calcPieSize(charts.financial.divId);
-      chart.width(sizes.width).height(sizes.height).ordering(function (d) {
-        return order.indexOf(d.key);
-      }).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
-        var thisKey = d.name;
-
-        if (thisKey.length > 40) {
-          return thisKey.substring(0, 40) + '...';
-        }
-
-        return thisKey;
-      })).title(function (d) {
-        var thisKey = d.key;
-        return thisKey + ': ' + d.value;
-      }).dimension(dimension).colorCalculator(function (d, i) {
-        return vuedata.colors.incomeRange[d.key];
-      }).group(group);
-      chart.render();
-    }; //CHART 6
-
-
-    var createDebtChart = function createDebtChart() {
-      var chart = charts.debt.chart;
-      var dimension = ndx.dimension(function (d) {
-        return d.declaration.debtRange;
-      });
-      var group = dimension.group().reduceSum(function (d) {
-        return 1;
-      });
-      var order = ['Sin deudas', '1€ - 1.000€', '1.001 - 5.000€', '5.001 - 10.000€', '10.001€ - 50.000€', '50.001€ - 100.000€', '> 100.000€'];
-      var sizes = calcPieSize(charts.debt.divId);
-      chart.width(sizes.width).height(sizes.height).ordering(function (d) {
-        return order.indexOf(d.key);
-      }).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
-        var thisKey = d.name;
-
-        if (thisKey.length > 40) {
-          return thisKey.substring(0, 40) + '...';
-        }
-
-        return thisKey;
-      })).title(function (d) {
-        var thisKey = d.key;
-        return thisKey + ': ' + d.value;
-      }).dimension(dimension).colorCalculator(function (d, i) {
-        return vuedata.colors.incomeRange[d.key];
-      }).group(group);
-      chart.render();
-    }; //CHART 7
-
-
-    var createVehiclesChart = function createVehiclesChart() {
-      var chart = charts.vehicles.chart;
-      var dimension = ndx.dimension(function (d) {
-        return d.declaration.vehiclesRange;
-      });
-      var group = dimension.group().reduceSum(function (d) {
-        return 1;
-      });
-      var order = ['Sin vehículos', '1 - 5', '5 - 10', '10 - 20', '> 20'];
-      var sizes = calcPieSize(charts.vehicles.divId);
-      chart.width(sizes.width).height(sizes.height).ordering(function (d) {
-        return order.indexOf(d.key);
-      }).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
-        var thisKey = d.name;
-
-        if (thisKey.length > 40) {
-          return thisKey.substring(0, 40) + '...';
-        }
-
-        return thisKey;
-      })).title(function (d) {
-        var thisKey = d.key;
-        return thisKey + ': ' + d.value;
-      }).dimension(dimension).colorCalculator(function (d, i) {
-        return vuedata.colors.propertiesRange[d.key];
-      }).group(group);
-      chart.render();
-    }; //CHART 8
-
-
-    var createGenderChart = function createGenderChart() {
-      var chart = charts.gender.chart;
-      var dimension = ndx.dimension(function (d) {
-        return d.gender;
-      });
-      var group = dimension.group().reduceSum(function (d) {
-        return 1;
-      });
-      var sizes = calcPieSize(charts.gender.divId);
-      chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
-        var thisKey = d.name;
-
-        if (thisKey.length > 40) {
-          return thisKey.substring(0, 40) + '...';
-        }
-
-        return thisKey;
-      })).title(function (d) {
-        var thisKey = d.key;
-        return thisKey + ': ' + d.value;
-      }).dimension(dimension).colorCalculator(function (d, i) {
-        return vuedata.colors.gender[d.key];
-      }).group(group);
-      chart.render();
-    }; //TABLE
-
-
-    var createTable = function createTable() {
-      var count = 0;
-      charts.mainTable.chart = $("#dc-data-table").dataTable({
-        "columnDefs": [{
-          "searchable": false,
-          "orderable": false,
-          "targets": 0,
-          data: function data(row, type, val, meta) {
-            return count;
-          }
-        }, {
-          "searchable": false,
-          "orderable": true,
-          "targets": 1,
-          "defaultContent": "N/D",
-          "data": function data(d) {
-            return d.full_name;
-          }
-        }, {
-          "searchable": false,
-          "orderable": true,
-          "targets": 2,
-          "defaultContent": "N/D",
-          "data": function data(d) {
-            return d.political_group;
-          }
-        }, {
-          "searchable": false,
-          "orderable": true,
-          "targets": 3,
-          "defaultContent": "N/D",
-          "data": function data(d) {
-            return d.declaration.incomeTot;
-          }
-        }, {
-          "searchable": false,
-          "orderable": true,
-          "targets": 4,
-          "defaultContent": "N/D",
-          "data": function data(d) {
-            if (d.declaration["bienes patrimoniales"]) {
-              return d.declaration["bienes patrimoniales"].length;
-            }
-
-            return "N/D";
-          }
-        }, {
-          "searchable": false,
-          "orderable": true,
-          "targets": 5,
-          "defaultContent": "N/D",
-          "data": function data(d) {
-            return d.declaration.depositsTot;
-          }
-        }, {
-          "searchable": false,
-          "orderable": true,
-          "targets": 6,
-          "defaultContent": "N/D",
-          "data": function data(d) {
-            if (d.declaration["otros bienes o derechos"]) {
-              return d.declaration["otros bienes o derechos"].length;
-            }
-
-            return "N/D";
-          }
-        }],
-        "iDisplayLength": 25,
-        "bPaginate": true,
-        "bLengthChange": true,
-        "bFilter": false,
-        "order": [[1, "desc"]],
-        "bSort": true,
-        "bInfo": true,
-        "bAutoWidth": false,
-        "bDeferRender": true,
-        "aaData": searchDimension.top(Infinity),
-        "bDestroy": true
-      });
-      var datatable = charts.mainTable.chart;
-      datatable.on('draw.dt', function () {
-        var PageInfo = $('#dc-data-table').DataTable().page.info();
-        datatable.DataTable().column(0, {
-          page: 'current'
-        }).nodes().each(function (cell, i) {
-          cell.innerHTML = i + 1 + PageInfo.start;
         });
-      });
-      datatable.DataTable().draw();
-      $('#dc-data-table tbody').on('click', 'tr', function () {
-        var data = datatable.DataTable().row(this).data();
-        vuedata.selectedElement = data;
-        $('#detailsModal').modal();
-      });
-    }; //REFRESH TABLE
 
-
-    function RefreshTable() {
-      dc.events.trigger(function () {
-        var alldata = searchDimension.top(Infinity);
-        charts.mainTable.chart.fnClearTable();
-        charts.mainTable.chart.fnAddData(alldata);
-        charts.mainTable.chart.fnDraw();
-      });
-    } //SEARCH INPUT FUNCTIONALITY
-
-
-    var typingTimer;
-    var doneTypingInterval = 1000;
-    var $input = $("#search-input");
-    $input.on('keyup', function () {
-      clearTimeout(typingTimer);
-      typingTimer = setTimeout(doneTyping, doneTypingInterval);
-    });
-    $input.on('keydown', function () {
-      clearTimeout(typingTimer);
-    });
-
-    function doneTyping() {
-      var s = $input.val().toLowerCase();
-      searchDimension.filter(function (d) {
-        return d.indexOf(s) !== -1;
-      });
-      throttle();
-      var throttleTimer;
-
-      function throttle() {
-        window.clearTimeout(throttleTimer);
-        throttleTimer = window.setTimeout(function () {
-          dc.redrawAll();
-          RefreshTable();
-        }, 250);
-      }
-    } //Reset charts
-
-
-    var resetGraphs = function resetGraphs() {
-      for (var c in charts) {
-        if (charts[c].type !== 'table' && charts[c].chart.hasFilter()) {
-          charts[c].chart.filterAll();
-        }
-      }
-
-      searchDimension.filter(null);
-      $('#search-input').val('');
-      dc.redrawAll();
-      RefreshTable();
-    };
-
-    $('.reset-btn').click(function () {
-      resetGraphs();
-    }); //Render charts
-
-    createMapChart();
-    createGroupsChart();
-    createIncomeChart();
-    createPropertiesChart();
-    createFinancialParticipationsChart();
-    createDebtChart();
-    createVehiclesChart();
-    createGenderChart();
-    createTable();
-    $('.dataTables_wrapper').append($('.dataTables_length')); //Hide loader
-
-    vuedata.loader = false; //Toggle last charts functionality and fix for responsiveness
-
-    vuedata.showAllCharts = false;
-    $('#charts-toggle-btn').click(function () {
-      if (vuedata.showAllCharts) {
-        resizeGraphs();
-      }
-    }); //COUNTERS
-    //Main counter
-
-    var all = ndx.groupAll();
-    var counter = dc.dataCount('.dc-data-count').dimension(ndx).group(all);
-    counter.render(); //Update datatables
-
-    counter.on("renderlet.resetall", function (c) {
-      RefreshTable();
-    }); //Custom counters
-
-    function drawCustomCounters() {
-      var dim = ndx.dimension(function (d) {
-        return d.full_name;
-      });
-      var group = dim.group().reduce(function (p, d) {
-        p.nb += 1;
-        p.income += d.declaration.incomeTot;
-        return p;
-      }, function (p, d) {
-        p.nb -= 1;
-        p.income -= d.declaration.incomeTot;
-        return p;
-      }, function (p, d) {
-        return {
-          nb: 0,
-          income: 0
-        };
-      });
-      group.order(function (p) {
-        return p.nb;
-      });
-      var income = 0;
-      var counter = dc.dataCount(".count-box-income").dimension(group).group({
-        value: function value() {
-          income = 0;
-          return group.all().filter(function (kv) {
-            if (kv.value.nb > 0) {
-              income += +kv.value.income;
+        var filteredGroup = function (source_group) {
+          return {
+            all: function all() {
+              return source_group.top(100).filter(function (d) {
+                return d.value != 0;
+              });
             }
+          };
+        }(group);
 
-            return kv.value.nb > 0;
-          }).length;
-        }
-      }).renderlet(function (chart) {
-        $(".nbincome").text(income.toFixed(2));
+        var width = recalcWidth(charts.groups.divId);
+        var charsLength = recalcCharsLength(width);
+        chart.width(width).height(420).margins({
+          top: 0,
+          left: 0,
+          right: 10,
+          bottom: 20
+        }).group(filteredGroup).dimension(dimension).colorCalculator(function (d, i) {
+          return vuedata.colors.default1;
+        }).label(function (d) {
+          if (d.key && d.key.length > charsLength) {
+            return d.key.substring(0, charsLength) + '...';
+          }
+
+          return d.key;
+        }).title(function (d) {
+          return d.key + ': ' + d.value.toFixed(2);
+        }).colorCalculator(function (d, i) {
+          return vuedata.colors.groups[d.key.trim()];
+        }).elasticX(true).xAxis().ticks(4); //chart.xAxis().tickFormat(numberFormat);
+
+        chart.render();
+      }; //CHART 3
+
+
+      var createIncomeChart = function createIncomeChart() {
+        var chart = charts.income.chart;
+        var dimension = ndx.dimension(function (d) {
+          return d.incomeRange;
+        });
+        var group = dimension.group().reduceSum(function (d) {
+          return 1;
+        });
+        var order = ['Sin rentas', '1€ - 1.000€', '1.001 - 5.000€', '5.001 - 10.000€', '10.001€ - 50.000€', '50.001€ - 100.000€', '> 100.000€'];
+        var sizes = calcPieSize(charts.income.divId);
+        chart.width(sizes.width).height(sizes.height).ordering(function (d) {
+          return order.indexOf(d.key);
+        }).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+          var thisKey = d.name;
+
+          if (thisKey.length > 40) {
+            return thisKey.substring(0, 40) + '...';
+          }
+
+          return thisKey;
+        })).title(function (d) {
+          var thisKey = d.key;
+          return thisKey + ': ' + d.value;
+        }).dimension(dimension).colorCalculator(function (d, i) {
+          return vuedata.colors.incomeRange[d.key];
+        }).group(group);
+        chart.render();
+      }; //CHART 4
+
+
+      var createPropertiesChart = function createPropertiesChart() {
+        var chart = charts.properties.chart;
+        var dimension = ndx.dimension(function (d) {
+          return d.propertiesRange;
+        });
+        var group = dimension.group().reduceSum(function (d) {
+          return 1;
+        });
+        var order = ['Sin bienes inmuebles', '1 - 5', '5 - 10', '10 - 20'];
+        var sizes = calcPieSize(charts.properties.divId);
+        chart.width(sizes.width).height(sizes.height).ordering(function (d) {
+          return order.indexOf(d.key);
+        }).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+          var thisKey = d.name;
+
+          if (thisKey.length > 40) {
+            return thisKey.substring(0, 40) + '...';
+          }
+
+          return thisKey;
+        })).title(function (d) {
+          var thisKey = d.key;
+          return thisKey + ': ' + d.value;
+        }).dimension(dimension).colorCalculator(function (d, i) {
+          return vuedata.colors.propertiesRange[d.key];
+        }).group(group);
+        chart.render();
+      }; //CHART 5
+
+
+      var createFinancialParticipationsChart = function createFinancialParticipationsChart() {
+        var chart = charts.financial.chart;
+        var dimension = ndx.dimension(function (d) {
+          //return d.financialRange;
+          return d.financialNumRange;
+        });
+        var group = dimension.group().reduceSum(function (d) {
+          return 1;
+        });
+        var order = ['Sin participationes', '1 - 5', '5 - 10', '10 - 20']; //var order = ['Sin participationes','1€ - 1.000€','1.001 - 5.000€','5.001 - 10.000€','10.001€ - 50.000€','50.001€ - 100.000€','> 100.000€'];
+
+        var sizes = calcPieSize(charts.financial.divId);
+        chart.width(sizes.width).height(sizes.height).ordering(function (d) {
+          return order.indexOf(d.key);
+        }).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+          var thisKey = d.name;
+
+          if (thisKey.length > 40) {
+            return thisKey.substring(0, 40) + '...';
+          }
+
+          return thisKey;
+        })).title(function (d) {
+          var thisKey = d.key;
+          return thisKey + ': ' + d.value;
+        }).dimension(dimension).colorCalculator(function (d, i) {
+          return vuedata.colors.propertiesRange[d.key];
+        }).group(group);
+        chart.render();
+      }; //CHART 6
+
+
+      var createDebtChart = function createDebtChart() {
+        var chart = charts.debt.chart;
+        var dimension = ndx.dimension(function (d) {
+          return d.debtRange;
+        });
+        var group = dimension.group().reduceSum(function (d) {
+          return 1;
+        });
+        var order = ['Sin deudas', '1€ - 1.000€', '1.001 - 5.000€', '5.001 - 10.000€', '10.001€ - 50.000€', '50.001€ - 100.000€', '> 100.000€'];
+        var sizes = calcPieSize(charts.debt.divId);
+        chart.width(sizes.width).height(sizes.height).ordering(function (d) {
+          return order.indexOf(d.key);
+        }).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+          var thisKey = d.name;
+
+          if (thisKey.length > 40) {
+            return thisKey.substring(0, 40) + '...';
+          }
+
+          return thisKey;
+        })).title(function (d) {
+          var thisKey = d.key;
+          return thisKey + ': ' + d.value;
+        }).dimension(dimension).colorCalculator(function (d, i) {
+          return vuedata.colors.incomeRange[d.key];
+        }).group(group);
+        chart.render();
+      }; //CHART 7
+
+
+      var createVehiclesChart = function createVehiclesChart() {
+        var chart = charts.vehicles.chart;
+        var dimension = ndx.dimension(function (d) {
+          return d.vehiclesRange;
+        });
+        var group = dimension.group().reduceSum(function (d) {
+          return 1;
+        });
+        var order = ['Sin vehículos', '1 - 5', '5 - 10', '10 - 20', '> 20'];
+        var sizes = calcPieSize(charts.vehicles.divId);
+        chart.width(sizes.width).height(sizes.height).ordering(function (d) {
+          return order.indexOf(d.key);
+        }).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+          var thisKey = d.name;
+
+          if (thisKey.length > 40) {
+            return thisKey.substring(0, 40) + '...';
+          }
+
+          return thisKey;
+        })).title(function (d) {
+          var thisKey = d.key;
+          return thisKey + ': ' + d.value;
+        }).dimension(dimension).colorCalculator(function (d, i) {
+          return vuedata.colors.propertiesRange[d.key];
+        }).group(group);
+        chart.render();
+      }; //CHART 8
+
+
+      var createGenderChart = function createGenderChart() {
+        var chart = charts.gender.chart;
+        var dimension = ndx.dimension(function (d) {
+          return d.gender;
+        });
+        var group = dimension.group().reduceSum(function (d) {
+          return 1;
+        });
+        var sizes = calcPieSize(charts.gender.divId);
+        chart.width(sizes.width).height(sizes.height).cy(sizes.cy).innerRadius(sizes.innerRadius).radius(sizes.radius).cap(10).legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function (d) {
+          var thisKey = d.name;
+
+          if (thisKey.length > 40) {
+            return thisKey.substring(0, 40) + '...';
+          }
+
+          return thisKey;
+        })).title(function (d) {
+          var thisKey = d.key;
+          return thisKey + ': ' + d.value;
+        }).dimension(dimension).colorCalculator(function (d, i) {
+          return vuedata.colors.gender[d.key];
+        }).group(group);
+        chart.render();
+      }; //TABLE
+
+
+      var createTable = function createTable() {
+        var count = 0;
+        charts.mainTable.chart = $("#dc-data-table").dataTable({
+          "columnDefs": [{
+            "searchable": false,
+            "orderable": false,
+            "targets": 0,
+            data: function data(row, type, val, meta) {
+              return count;
+            }
+          }, {
+            "searchable": false,
+            "orderable": true,
+            "targets": 1,
+            "defaultContent": "N/D",
+            "data": function data(d) {
+              return d.name;
+            }
+          }, {
+            "searchable": false,
+            "orderable": true,
+            "targets": 2,
+            "defaultContent": "N/D",
+            "data": function data(d) {
+              return "";
+            }
+          }, {
+            "searchable": false,
+            "orderable": true,
+            "targets": 3,
+            "defaultContent": "N/D",
+            "data": function data(d) {
+              return d.incomeTot;
+            }
+          }, {
+            "searchable": false,
+            "orderable": true,
+            "targets": 4,
+            "defaultContent": "N/D",
+            "data": function data(d) {
+              if (d.bienes) {
+                return d.bienes.length;
+              }
+
+              return "N/D";
+            }
+          }, {
+            "searchable": false,
+            "orderable": true,
+            "targets": 5,
+            "defaultContent": "N/D",
+            "data": function data(d) {
+              return d.depositsTot;
+            }
+          }, {
+            "searchable": false,
+            "orderable": true,
+            "targets": 6,
+            "defaultContent": "N/D",
+            "data": function data(d) {
+              if (d.otros_bienes) {
+                return d.otros_bienes.length;
+              }
+
+              return "N/D";
+            }
+          }],
+          "iDisplayLength": 25,
+          "bPaginate": true,
+          "bLengthChange": true,
+          "bFilter": false,
+          "order": [[1, "desc"]],
+          "bSort": true,
+          "bInfo": true,
+          "bAutoWidth": false,
+          "bDeferRender": true,
+          "aaData": searchDimension.top(Infinity),
+          "bDestroy": true
+        });
+        var datatable = charts.mainTable.chart;
+        datatable.on('draw.dt', function () {
+          var PageInfo = $('#dc-data-table').DataTable().page.info();
+          datatable.DataTable().column(0, {
+            page: 'current'
+          }).nodes().each(function (cell, i) {
+            cell.innerHTML = i + 1 + PageInfo.start;
+          });
+        });
+        datatable.DataTable().draw();
+        $('#dc-data-table tbody').on('click', 'tr', function () {
+          var data = datatable.DataTable().row(this).data();
+          vuedata.selectedElement = data;
+          $('#detailsModal').modal();
+        });
+      }; //REFRESH TABLE
+
+
+      function RefreshTable() {
+        dc.events.trigger(function () {
+          var alldata = searchDimension.top(Infinity);
+          charts.mainTable.chart.fnClearTable();
+          charts.mainTable.chart.fnAddData(alldata);
+          charts.mainTable.chart.fnDraw();
+        });
+      } //SEARCH INPUT FUNCTIONALITY
+
+
+      var typingTimer;
+      var doneTypingInterval = 1000;
+      var $input = $("#search-input");
+      $input.on('keyup', function () {
+        clearTimeout(typingTimer);
+        typingTimer = setTimeout(doneTyping, doneTypingInterval);
       });
-      counter.render();
-    }
+      $input.on('keydown', function () {
+        clearTimeout(typingTimer);
+      });
 
-    drawCustomCounters(); //Window resize function
+      function doneTyping() {
+        var s = $input.val().toLowerCase();
+        searchDimension.filter(function (d) {
+          return d.indexOf(s) !== -1;
+        });
+        throttle();
+        var throttleTimer;
 
-    window.onresize = function (event) {
-      resizeGraphs();
-    };
+        function throttle() {
+          window.clearTimeout(throttleTimer);
+          throttleTimer = window.setTimeout(function () {
+            dc.redrawAll();
+            RefreshTable();
+          }, 250);
+        }
+      } //Reset charts
+
+
+      var resetGraphs = function resetGraphs() {
+        for (var c in charts) {
+          if (charts[c].type !== 'table' && charts[c].chart.hasFilter()) {
+            charts[c].chart.filterAll();
+          }
+        }
+
+        searchDimension.filter(null);
+        $('#search-input').val('');
+        dc.redrawAll();
+        RefreshTable();
+      };
+
+      $('.reset-btn').click(function () {
+        resetGraphs();
+      }); //Render charts
+
+      createMapChart();
+      createGroupsChart();
+      createIncomeChart();
+      createPropertiesChart();
+      createFinancialParticipationsChart();
+      createDebtChart();
+      createVehiclesChart();
+      createGenderChart();
+      createTable();
+      $('.dataTables_wrapper').append($('.dataTables_length')); //Hide loader
+
+      vuedata.loader = false; //Toggle last charts functionality and fix for responsiveness
+
+      vuedata.showAllCharts = false;
+      $('#charts-toggle-btn').click(function () {
+        if (vuedata.showAllCharts) {
+          resizeGraphs();
+        }
+      }); //COUNTERS
+      //Main counter
+
+      var all = ndx.groupAll();
+      var counter = dc.dataCount('.dc-data-count').dimension(ndx).group(all);
+      counter.render(); //Update datatables
+
+      counter.on("renderlet.resetall", function (c) {
+        RefreshTable();
+      }); //Custom counters
+
+      function drawCustomCounters() {
+        var dim = ndx.dimension(function (d) {
+          return d.name;
+        });
+        var group = dim.group().reduce(function (p, d) {
+          p.nb += 1;
+          p.income += d.incomeTot;
+          return p;
+        }, function (p, d) {
+          p.nb -= 1;
+          p.income -= d.incomeTot;
+          return p;
+        }, function (p, d) {
+          return {
+            nb: 0,
+            income: 0
+          };
+        });
+        group.order(function (p) {
+          return p.nb;
+        });
+        var income = 0;
+        var counter = dc.dataCount(".count-box-income").dimension(group).group({
+          value: function value() {
+            income = 0;
+            return group.all().filter(function (kv) {
+              if (kv.value.nb > 0) {
+                income += +kv.value.income;
+              }
+
+              return kv.value.nb > 0;
+            }).length;
+          }
+        }).renderlet(function (chart) {
+          $(".nbincome").text(income.toFixed(2));
+        });
+        counter.render();
+      }
+
+      drawCustomCounters(); //Window resize function
+
+      window.onresize = function (event) {
+        resizeGraphs();
+      };
+    });
   });
 });
 },{"jquery":"../node_modules/jquery/dist/jquery.js","datatables.net":"../node_modules/datatables.net/js/jquery.dataTables.js","datatables.net-dt":"../node_modules/datatables.net-dt/js/dataTables.dataTables.js","underscore":"../node_modules/underscore/underscore.js","../public/vendor/js/popper.min.js":"../public/vendor/js/popper.min.js","../public/vendor/js/bootstrap.min.js":"../public/vendor/js/bootstrap.min.js","d3-request":"../node_modules/d3-request/index.js","../public/vendor/css/bootstrap.min.css":"../public/vendor/css/bootstrap.min.css","../public/vendor/css/dc.css":"../public/vendor/css/dc.css","/scss/main.scss":"scss/main.scss","vue":"../node_modules/vue/dist/vue.esm.js","./components/Loader.vue":"components/Loader.vue","./components/ChartHeader.vue":"components/ChartHeader.vue"}],"C:/Users/ElaineG/AppData/Local/Yarn/config/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -48005,4 +48040,4 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/ElaineG/AppData/Local/Yarn/config/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","tab_a.js"], null)
+},{}]},{},["C:/Users/ElaineG/AppData/Local/Yarn/config/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","tab_b.js"], null)

@@ -26,6 +26,13 @@ Vue.component('chart-header', ChartHeader);
 
 new Vue({
   el: '#app',
+  data() {
+    return {
+      name: '',
+      description: '',
+      output: ''
+    };
+  },
   methods: {
     getUrlParameter(sParam) {
       var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -38,11 +45,30 @@ new Vue({
             return sParameterName[1] === undefined ? true : sParameterName[1]
         }
       }
-    },
+    }
   },
   mounted () {
     if(this.getUrlParameter('section') == 4 ){
       $('#collapse4').addClass('show');
     }
   }
+});
+
+
+$("#contactForm").submit(function(e) {
+
+  e.preventDefault(); // avoid to execute the actual submit of the form.
+
+  var form = $(this);
+  var url = form.attr('action');
+  console.log(form.serialize());
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: form.serialize(), // serializes the form's elements.
+    success: function(data)
+    {
+        alert(data); // show response from the php script.
+    }
+  });
 });

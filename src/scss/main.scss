@@ -189,7 +189,10 @@ $color_lobby: #449188;
     height: 530px;
   }
   &.tab_a_7 {
-    height: 520px;
+    height: 500px;
+  }
+  &.tab_a_8 {
+    height: 500px;
   }
   &.tab_b_1 {
     height: 505px;
@@ -836,3 +839,23 @@ table.dataTable tbody tr:hover {
   }
 }
 
+/* CONTACT FORM */
+.form-container {
+  background: #eee;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 600px;
+  .form-submit-btn {
+    color: #fff;
+    background: #3d95d1;
+    border-radius: 2px;
+    &:hover {
+      background: #2d75b1;
+    }
+  }
+}
+
+.comunidad path, .province path {
+  stroke-width: 1px;
+  stroke: #fff;
+}

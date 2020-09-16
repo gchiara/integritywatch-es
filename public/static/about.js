@@ -46767,6 +46767,13 @@ _vue.default.component('chart-header', _ChartHeader.default);
 
 new _vue.default({
   el: '#app',
+  data: function data() {
+    return {
+      name: '',
+      description: '',
+      output: ''
+    };
+  },
   methods: {
     getUrlParameter: function getUrlParameter(sParam) {
       var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -46788,6 +46795,22 @@ new _vue.default({
       $('#collapse4').addClass('show');
     }
   }
+});
+$("#contactForm").submit(function (e) {
+  e.preventDefault(); // avoid to execute the actual submit of the form.
+
+  var form = $(this);
+  var url = form.attr('action');
+  console.log(form.serialize());
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: form.serialize(),
+    // serializes the form's elements.
+    success: function success(data) {
+      alert(data); // show response from the php script.
+    }
+  });
 });
 },{"jquery":"../node_modules/jquery/dist/jquery.js","datatables.net":"../node_modules/datatables.net/js/jquery.dataTables.js","datatables.net-dt":"../node_modules/datatables.net-dt/js/dataTables.dataTables.js","underscore":"../node_modules/underscore/underscore.js","../public/vendor/js/popper.min.js":"../public/vendor/js/popper.min.js","../public/vendor/js/bootstrap.min.js":"../public/vendor/js/bootstrap.min.js","d3-request":"../node_modules/d3-request/index.js","../public/vendor/css/bootstrap.min.css":"../public/vendor/css/bootstrap.min.css","../public/vendor/css/dc.css":"../public/vendor/css/dc.css","/scss/main.scss":"scss/main.scss","/scss/about.scss":"scss/about.scss","vue":"../node_modules/vue/dist/vue.esm.js","./components/Loader.vue":"components/Loader.vue","./components/ChartHeader.vue":"components/ChartHeader.vue"}],"C:/Users/ElaineG/AppData/Local/Yarn/config/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -46817,7 +46840,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55330" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51247" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

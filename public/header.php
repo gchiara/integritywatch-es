@@ -15,7 +15,7 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Otra versiones
+        Otras versiones
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="https://www.integritywatch.eu/" target="_blank">EU</a>
@@ -27,6 +27,12 @@
       </li>
       <li class="nav-item">
         <a href="./about.php" class="nav-link">Sobre Integrity Watch</a>
+      </li>
+      <li class="nav-item">
+        <a href="./normativa.php" class="nav-link">Normativa aplicable</a>
+      </li>
+      <li class="nav-item">
+        <a href="./contacts.php" class="nav-link">Contáctenos</a>
       </li>
       <li class="nav-item">
         <i class="material-icons nav-link icon-btn info-btn" @click="showInfo = !showInfo">info</i>

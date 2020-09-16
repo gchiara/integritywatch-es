@@ -1104,11 +1104,6 @@ table.dataTable tbody tr:hover {
 }
 .form-container .form-submit-btn:hover {
   background: #2d75b1;
-}
-
-.comunidad path, .province path {
-  stroke-width: 1px;
-  stroke: #fff;
 }.overlay[data-v-373dfb] {
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 10001;

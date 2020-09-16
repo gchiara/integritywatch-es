@@ -4,7 +4,7 @@ window.$ = jquery;
 require( 'datatables.net' )( window, $ )
 require( 'datatables.net-dt' )( window, $ )
 
-import underscore from 'underscore';
+import underscore, { indexOf } from 'underscore';
 window.underscore = underscore;
 window._ = underscore;
 
@@ -25,7 +25,7 @@ import ChartHeader from './components/ChartHeader.vue';
 // Data object - is also used by Vue
 
 var vuedata = {
-  page: 'tabA',
+  page: 'tabB',
   loader: true,
   readMore: false,
   showInfo: true,
@@ -36,35 +36,35 @@ var vuedata = {
   charts: {
     map: {
       title: 'Mapa',
-      info: 'Provincias. Haga clic en la Provincia que le interese para ver el número de Diputados por Provincias elegidos para la XIV Legislatura.'
+      info: 'Provincias. Haga clic en la Provincia que le interese para ver el número de Senadores por Provincias elegidos para la XIV Legislatura.'
     },
     groups: {
       title: 'Grupos Parlementarios',
-      info: 'Distribución de Diputados según los grupos parlamentarios del Congreso. Haga clic en los diferentes grupos para ver el número de Diputados por cada grupo.'
+      info: 'Distribución de Senadores según los grupos parlamentarios del Senado. Haga clic en los diferentes grupos para ver el número de Senadores por cada grupo.'
     },
     income: {
       title: 'Rentas Percibidas',
-      info: 'Distribución de Diputados según el valor de rentas percibidas. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
+      info: 'Distribución de Senadores según el valor de rentas percibidas. Haga clic en los diferentes rangos y valores para ver el número de Senadores incluidos.'
     },
     properties: {
       title: 'Cantidad the bienes inmuebles',
-      info: 'Distribución de Diputados según la cantidad de bienes inmuebles. Haga clic en los diferentes valores de cantidad para ver el número de Diputados incluidos.'
+      info: 'Distribución de Senadores según la cantidad de bienes inmuebles. Haga clic en los diferentes valores de cantidad para ver el número de Senadores incluidos.'
     },
     financial: {
-      title: 'Valor de las acciones y participaciones',
-      info: 'Distribución de Diputados según el valor de participaciones financieras. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
+      title: 'Cantidad de acciones y participaciones',
+      info: 'Distribución de Senadores según la cantidad de participaciones financieras. Haga clic en los diferentes valores de cantidad para ver el número de Senadores incluidos.'
     },
     debt: {
-      title: 'Valor de deudas y obligaciones patrimoniales',
-      info: 'Distribución de Diputados según el valor de deudas y obligaciones patrimoniales. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
+      title: 'Valor de deudas y obligaciones patrimoniales (saldo pendiente)',
+      info: 'Distribución de Senadores según el valor de participaciones financieras. Haga clic en los diferentes rangos y valores para ver el número de Senadores incluidos.'
     },
     vehicles: {
       title: 'Cantidad de vehículos, embarcaciones y aeronaves',
-      info: 'Distribución de Diputados según la cantidad de vehículos, embarcaciones y aeronaves. Haga clic en los diferentes valores de cantidad para ver el número de Diputados incluidos.'
+      info: 'Distribución de Senadores según la cantidad de vehículos, embarcaciones y aeronaves. Haga clic en los diferentes valores de cantidad para ver el número de Senadores incluidos.'
     },
     gender: {
       title: 'Género',
-      info: 'Porcentaje de mujeres y hombres según la composición del Congreso de los Diputados.'
+      info: 'Porcentaje de mujeres y hombres según la composición del Senado.'
     },
     mainTable: {
       chart: null,
@@ -76,101 +76,82 @@ var vuedata = {
   selectedElement: { "P": "", "Sub": ""},
   modalShowTable: '',
   provinces: {
-    "A CORUÑA": "A Coruña",
-    "A CORUÑA/CONGRESO": "A Coruña",
-    "a coruña": "A Coruña",
-    "A CORUÑA": "A Coruña",
-    "ÁLAVA": "Araba/Álava",
-    "Álava": "Araba/Álava",
-    "ÁLAVA": "Araba/Álava",
-    "ÁLAVA-ARABA": "Araba/Álava",
-    "ALBACETE": "Albacete",
-    "ALBACETE / CONGRESO": "Albacete",
-    "ALICANTE": "Alacant/Alicante",
-    "ALMERIA": "Almería",
-    "ALMERÍA": "Almería",
-    "ASTURIAS": "Asturias",
-    "AUSTURIES": "Asturias",
-    "ÁVILA": "Ávila",
-    "Ávila": "Ávila",
-    "BADAJOZ": "Badajoz",
-    "BARCELONA": "Barcelona",
-    "Bizkaia": "Bizkaia/Vizcaya",
-    "bizkaia": "Bizkaia/Vizcaya",
-    "BIZKAIA": "Bizkaia/Vizcaya",
-    "bonos": "Bonos",
-    "BURGOS": "Burgos",
-    "Burgos": "Burgos",
-    "CÁCERES": "Cáceres",
-    "CADIZ": "Cádiz",
-    "CÁDIZ": "Cádiz",
-    "CÁDlZ": "Cádiz",
-    "CANTABRIA": "Cantabria",
-    "CASTELLÓ": "Castelló/Castellón",
-    "CASTELLON": "Castelló/Castellón",
-    "castellón": "Castelló/Castellón",
-    "CEUTA": "Ceuta",
-    "CIUDAD REAL": "Ciudad Real",
-    "CORDOBA": "Córdoba",
-    "CÓRDOBA": "Córdoba",
-    "CÓRDOBA": "Córdoba",
-    "CORDOBNCONGRESOSA": "Córdoba",
-    "CORUÑA": "La Coruña",
-    "CUENCA": "Cuenca",
-    "ELCHE (ALICANTE)": "Alicante",
-    "GIPUZKOA": "Gipuzkoa/Guipúzcoa",
-    "Gipuzkoa": "Gipuzkoa/Guipúzcoa",
-    "Gipuzkoa": "Gipuzkoa/Guipúzcoa",
-    "GIRONA": "Girona",
-    "GRANADA": "Granada",
-    "GUADALAJARA": "Guadalajara",
-    "HUELVA": "Huelva",
-    "HUESCA": "Huesca",
-    "ILLES BALEARS": "Illes Balears",
-    "ISLAS BALEARES": "Illes Balears",
-    "JAEN": "Jaén",
-    "JAÉN": "Jaén",
-    "LA CORUÑA": "La Coruña",
-    "LA RIOJA": "La Rioja",
-    "LAS PALMAS": "Las Palmas",
-    "LEON": "León",
-    "LEÓN": "León",
-    "LLEIDA": "Lleida",
-    "LUGO": "Lugo",
-    "MADRID": "Madrid",
-    "MALAGA": "Málaga",
-    "MÁLAGA": "Málaga",
-    "MÁLAGA": "Málaga",
-    "MELILLA": "Melilla",
-    "MURCIA": "Murcia",
-    "NAVARRA": "Navarra",
-    "OURENSE": "Ourense",
-    "Ourense": "Ourense",
-    "PALENCIA": "Palencia",
-    "PONTEVEDRA": "Pontevedra",
-    "pontevedra": "Pontevedra",
-    "PROVINCIA DE CADIZ": "Cádiz",
-    "SALAMANCA": "Salamanca",
-    "Salamanca": "Salamanca",
-    "SANTA CRUZ DE TENERIFE": "Santa Cruz de Tenerife",
-    "Santa Cruz de Tenerife": "Santa Cruz de Tenerife",
-    "santa cruz de tenerife": "Santa Cruz de Tenerife",
-    "SANTANDER": "Santander",
-    "SEGOVIA": "Segovia",
-    "SEVILLA": "Sevilla",
-    "Soria": "Soria",
-    "SORIA": "Soria",
-    "T arragona": "Tarragona",
-    "TARRAGONA": "Tarragona",
-    "TERUEL": "Teruel",
-    "TINAJEROS (ALBACETE)": "Albacete",
-    "TOLEDO": "Toledo",
-    "VALENCIA": "València/Valencia",
-    "VALLADOLID": "Valladolid",
-    "VIZCAYA": "Bizkaia/Vizcaya",
-    "ZAMORA": "Zamora",
-    "ZARAGOZA": "Zaragoza",
-    "Zaragoza": "Zaragoza"
+    "Girona": "Cataluña",
+    "Valladolid": "Castilla y León",
+    "Lleida": "Aragón",
+    "Barcelona": "Cataluña",
+    "Menorca": "Islas Baleares",
+    "Tarragona": "Cataluña",
+    "Melilla": "Ceuta y Melilla",
+    "Salamanca": "Castilla y León",
+    "Soria": "Castilla y León",
+    "Badajoz": "Extremadura",
+    "Cáceres": "Extremadura",
+    "Albacete": "Castilla-La Mancha",
+    "Huelva": "Andalucía",
+    "Palencia": "Castilla y León",
+    "Lugo": "Galicia",
+    "Navarra": "Comunidad Foral de Navarra",
+    "Cádiz": "Andalucía",
+    "Parlamento de Cataluña": "Cataluña",
+    "Gipuzkoa": "País Vasco",
+    "Córdoba": "Andalucía",
+    "Málaga": "Andalucía",
+    "La Palma": "",
+    "Pontevedra": "Galicia",
+    "Parlamento de Canarias": "",	
+    "La Rioja": "La Rioja",
+    "Cantabria": "Cantabria",
+    "Parlamento de La Rioja": "La Rioja",
+    "Alicante/Alacant": "Comunidad Valenciana",
+    "Ávila": "Castilla y León",
+    "Ceuta": "Ceuta y Melilla",
+    "Junta General del Principado de Asturias": "Principado de Asturias",
+    "Parlamento de las Illes Balears": "Islas Baleares",
+    "Parlamento de Andalucía": "Andalucía",
+    "Parlamento de Navarra": "Comunidad Foral de Navarra",
+    "Asamblea de Madrid": "Comunidad de Madrid",
+    "Asamblea de Extremadura": "Extremadura",
+    "Corts Valencianes": "Comunidad Valenciana",
+    "Cortes de Aragón": "Aragón",
+    "Parlamento de Cantabria": "Cantabria",
+    "Cuenca": "Castilla-La Mancha",
+    "A Coruña": "Galicia",
+    "Cortes de Castilla-La Mancha": "Castilla-La Mancha",
+    "Asturias": "Principado de Asturias",
+    "Toledo": "Castilla-La Mancha",
+    "Tenerife": "",
+    "León": "Castilla y León",
+    "Segovia": "Castilla y León",
+    "Parlamento Vasco": "País Vasco",
+    "Guadalajara": "Castilla-La Mancha",
+    "Valencia/València": "Comunidad Valenciana",
+    "Cortes de Castilla y León": "Castilla y León",
+    "La Gomera": "",
+    "Ourense": "Galicia",
+    "Murcia": "Región de Murcia",
+    "Jaén": "Andalucía",
+    "Sevilla": "Andalucía",
+    "Burgos": "Castilla y León",
+    "Zamora": "Castilla y León",
+    "Madrid": "Comunidad de Madrid",
+    "Almería": "Andalucía",
+    "Ciudad Real": "Castilla-La Mancha",
+    "Castellón/Castelló": "Comunidad Valenciana",
+    "Bizkaia": "País Vasco",
+    "Araba/Álava": "País Vasco",
+    "Granada": "Andalucía",
+    "Teruel": "Aragón",
+    "Fuerteventura": "",
+    "Gran Canaria": "",
+    "Zaragoza": "Aragón",
+    "Parlamento de Galicia": "Galicia",
+    "Mallorca": "Islas Baleares",
+    "Lanzarote": "",
+    "Asamblea Regional de Murcia": "Región de Murcia",
+    "Huesca": "Aragón",
+    "El Hierro": "",
+    "Eivissa-Formentera": "Islas Baleares"
   },
   colors: {
     generic: ["#3b95d0", "#4081ae", "#406a95", "#395a75" ],
@@ -193,23 +174,25 @@ var vuedata = {
       "5 - 10": "#3aa2cb",
       "1 - 5": "#55bbe4",
       "Sin bienes inmuebles": "#ccc",
-      "Sin vehículos": "#ccc"
+      "Sin vehículos": "#ccc",
+      "Sin participationes": "#ccc"
     },
     gender: {
       "F": "#1d7598",
-      "M": "#55bbe4"
+      "M": "#55bbe4",
+      "": "#ccc"
     },
     groups: {
-      "GS":"#E9202C",
-      "GVOX":"#63BE21",
-      "GV  EAJ-PNV":"#ddd",
-      "GEH Bildu":"#96F350",
-      "GP":"#0BB2FF",
-      "GPlu":"#0DDF81",
-      "GCs":"#008000",
-      "GCUP-EC-GC":"#672F6C",
-      "GR":"#FFB232",
-      "GMx":"#A2A9B1"
+      "ESQUERRA REPUBLICANA-EUSKAL HERRIA BILDU":"#FFDC67",
+      "MIXTO":"#797979",
+      "POPULAR":"#0BB2FF",
+      "SOCIALISTA":"#E2001A",
+      "VASCO":"#19AA63",
+      "IZQUIERDA CONFEDERAL":"#794877",
+      "CIUDADANOS":"#606060",
+      "NACIONALISTA EN EL SEANDO JUNTS PER CATALUNYA-COALICIÓN CANARIA / PARTIDO NACIONALISTA CANARIO":"#FF2EEE",
+      "":"#bbb",
+      "N/A":"#bbb"
     }
   }
 }
@@ -410,27 +393,54 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
   }
 });
 
+/*
+function cleanCurrency(valString) {
+    //Clean end of string from € .-
+    valString = valString.replace("€","").replace(".-","").trim();
+    //If the value has slashes in it, split the values and add them
+    if(valString.indexOf("/") > -1) {
+      console.log(valString);
+      var splitVals = valString.split("/");
+      var summedVals = 0;
+      _.each(splitVals, function(x) {
+        summedVals += parseFloat(x);
+      });
+    }
+
+    //Remove special chars and then if there was a dot or comma before the last 2 digits, add dot for decimals
+    var result = valString.replace(/[^0-9]/g, '');
+    if (/[',\.]\d{2}$/.test(valString)) {
+        result = result.replace(/(\d{2})$/, '.$1');
+    }
+    if(isNaN(parseFloat(result))) {
+      console.log(result);
+    }
+    return parseFloat(result);
+}
 function calcIncomeTot(el, type) {
   var tot = 0;
   _.each(el, function (d) {
-    var thisAmt = d.income_value_clean;
-    if(type == 'financial') {
-      thisAmt = d.other_financial_clean;
-    }
-    if(type == 'debt') {
-      thisAmt = d.debt_amount_remain;
+    var thisAmt = null;
+    if(type == 'income') {
+      thisAmt = cleanCurrency(d.euros);
     }
     if(type == 'deposits') {
-      thisAmt = d.deposits_value_clean;
+      thisAmt = cleanCurrency(d.saldo);
     }
-    if(thisAmt) {
-      //var amt = parseFloat(thisAmt.replace(".","").replace(",",".").replace(" €","").trim());
-      var amt = parseFloat(thisAmt.replace(",","").replace(" €","").trim());
-      tot += amt;
+    if(type == 'debt') {
+      thisAmt = cleanCurrency(d.saldo_pendiente);
+    }
+    if(type == 'financial') {
+      thisAmt = cleanCurrency(d.valor);
+    }
+    if(thisAmt && !isNaN(thisAmt)) {
+      tot += thisAmt;
     }
   });
   return tot.toFixed(2);
 }
+*/
+
 function calcIncomeRange(amt, type) {
   var range = "Sin rentas";
   if(type == 'financial') {
@@ -461,6 +471,9 @@ function calcPropertiesRange(el, type) {
   if(type == "vehicles") {
     range = "Sin vehículos";
   }
+  if(type == "financial") {
+    range = "Sin participationes";
+  }
   if(el && el.length > 0) {
     if(el.length > 20) {
       range = "> 20";
@@ -482,107 +495,84 @@ for ( var i = 0; i < 5; i++ ) {
   randomPar += randomCharacters.charAt(Math.floor(Math.random() * randomCharacters.length));
 }
 //Load data and generate charts
-csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => {
-  csv('./data/tab_a/diputados_list.csv?' + randomPar, (err, diputados) => {
+json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
+  csv('./data/tab_b/groups.csv?' + randomPar, (err, senatorsGroups) => {
+    csv('./data/tab_b/clean_values.csv?' + randomPar, (err, amountsData) => {
     //Loop through data to aply fixes and calculations
     var totIncome = 0;
     var declarations = {};
+    var areas = [];
     //Loop through data to apply fixes
-    _.each(declarationsTable, function (d) {
-      //Check if name exists in diputados, if name doesn't exists, add it 
-      //Check if type esists, if it doesn't, create type array
-      //Push entry to type array (only push non keys): loop through keys and if value not null, add key and value to entry
-      var cleanName = d.unique_id.trim();
-      var cleanCategory = d.category_declaration.trim();
-      if(!declarations[cleanName]) {
-        declarations[cleanName]  = {};
+    _.each(senators, function (d) {
+      if(areas.indexOf(d.details.circunscripcion) == -1) {
+        areas.push(d.details.circunscripcion);
       }
-      if(d.electoral_disctrict !== null && d.electoral_disctrict !== "") {
-        declarations[cleanName]['electoral_disctrict'] = d.electoral_disctrict;
-      }
-      if(!declarations[cleanName][cleanCategory]) {
-        declarations[cleanName][cleanCategory] = [];
-      }
-      if(!declarations[cleanName]['comments']) {
-        declarations[cleanName]['comments']  = [];
-      }
-      var newEntry = {};
-      for (var key in d) {
-        if(key !== "unique_id" && key !== "full_name" && key !== "category_declaration" && key !== "electoral_disctrict" && key !== "comments" && d[key] !== null && d[key] !== "") {
-          newEntry[key] = d[key].trim();
-        }
-      }
-      declarations[cleanName][cleanCategory].push(newEntry);
-      //Sort comments
-      if(d.comments && d.comments !== "") {
-        declarations[cleanName]['comments'].push(d.comments);
-      }
-      
-    });
-    //Loop through list, get declaration and do calculations for charts
-    _.each(diputados, function (d) {
-      d.declaration = {};
-      if(declarations[d.unique_id]) {
-        d.declaration = declarations[d.unique_id];
-      }
-      //Get province
+      //Get province/area
       d.province = "";
-      if(d.declaration && d.declaration.electoral_disctrict) {
-        d.province = vuedata.provinces[d.declaration.electoral_disctrict.trim()];
+      if(d.details && d.details.circunscripcion) {
+        d.province = vuedata.provinces[d.details.circunscripcion.trim()];
         if(!d.province) {
-          console.log(d.province + " - " + d.declaration.electoral_disctrict);
+          console.log(d.province + " - " + d.details.circunscripcion);
         }
       }
-      //Income Tot and Range
-      d.declaration.incomeTot = 0;
-      if(d.declaration.rentas) {
-        d.declaration.incomeTot = calcIncomeTot(d.declaration.rentas, 'income');
+      //Find groups data
+      d.group = "";
+      d.gender = "";
+      d.groupData = _.find(senatorsGroups, function(a){ return a.Name == d.name});
+      if(d.groupData) {
+        d.group = d.groupData.Group;
+        d.gender = d.groupData.Gender;
       }
-      d.declaration.incomeRange = calcIncomeRange(d.declaration.incomeTot, 'income');
+      //Find rentas, depositos and deudas with fixed amounts, then calc totals and ranges
+      d.fixedRentas = _.filter(amountsData, function(a){ return a.name == d.name && a.type.trim() == "rentas"});
+      d.fixedDepositos = _.filter(amountsData, function(a){ return a.name == d.name && a.type.trim() == "depositos"});
+      d.fixedDeudas = _.filter(amountsData, function(a){ return a.name == d.name && a.type.trim() == "deudas"});
+      d.incomeTot = 0;
+      d.depositsTot = 0;
+      d.debtTot = 0;
+      _.each(d.fixedRentas, function (a) {
+        d.incomeTot += parseFloat(a.value);
+      });
+      _.each(d.fixedDepositos, function (a) {
+        d.depositsTot += parseFloat(a.value);
+      });
+      _.each(d.fixedDeudas, function (a) {
+        d.debtTot += parseFloat(a.value);
+      });
+      d.incomeRange = calcIncomeRange(d.incomeTot, 'income');
+      d.depositsRange = calcIncomeRange(d.depositsTot, 'deposits');
+      d.debtRange = calcIncomeRange(d.debtTot, 'debt');
+      //Financial: count entries instead of value sum
+      d.financialNumRange = calcPropertiesRange(d.otros_bienes, 'financial');
       //Properties
-      d.declaration.propertiesRange = calcPropertiesRange(d.declaration["bienes patrimoniales"], 'properties');
-      //Financial participations Tot and Range
-      d.declaration.financialTot = 0;
-      if(d.declaration["otros bienes o derechos"]) {
-        d.declaration.financialTot = calcIncomeTot(d.declaration["otros bienes o derechos"], 'financial');
-      }
-      d.declaration.financialRange = calcIncomeRange(d.declaration.financialTot, 'financial');
-      //Debt Tot and Range
-      d.declaration.debtTot = 0;
-      if(d.declaration.deudas) {
-        d.declaration.debtTot = calcIncomeTot(d.declaration.deudas, 'debt');
-      }
-      d.declaration.debtRange = calcIncomeRange(d.declaration.debtTot, 'debt');
+      d.propertiesRange = calcPropertiesRange(d.bienes, 'properties');
+      //Otros bienes
+      d.otherPropertiesRange = calcPropertiesRange(d.otros_bienes, 'other_properties');
       //Vehicles
-      d.declaration.vehiclesRange = calcPropertiesRange(d.declaration["vehículos"], 'vehicles');
-      //Deposits Tot
-      d.declaration.depositsTot = 0;
-      if(d.declaration.depositos) {
-        d.declaration.depositsTot = calcIncomeTot(d.declaration.depositos, 'deposits');
-      }
+      d.vehiclesRange = calcPropertiesRange(d.vehiculos, 'vehicles');
     });
+
+    console.log(areas);
 
     //Set totals for custom counters
     $('.count-box-income .total-count').html(totIncome);
 
     //Set dc main vars. The second crossfilter is used to handle the travels stacked bar chart.
-    var ndx = crossfilter(diputados);
+    var ndx = crossfilter(senators);
     var searchDimension = ndx.dimension(function (d) {
-        var entryString = d.full_name + ' ' + d.unique_id + ' ' + d.political_group;
+        var entryString = d.name;
         return entryString.toLowerCase();
     });
 
     //MAP CHART
     var createMapChart = function() {
-      json('./data/spain-provinces.geo.json', (err, jsonmap) => {
-        //jsonmap.features
+      json('./data/spain-comunidad.json', (err, jsonmap) => {
         var mapProvinces = [];
-        _.each(jsonmap.features, function (p) {
-          if(mapProvinces.indexOf(p.properties.name) == -1) {
-            mapProvinces.push(p.properties.name);
+        _.each(jsonmap.objects.ESP_adm1.geometries, function (p) {
+          if(mapProvinces.indexOf(p.properties.NAME_1) == -1) {
+            mapProvinces.push(p.properties.NAME_1);
           }
         });
-        console.log(mapProvinces);
         var chart = charts.map.chart;
         var width = recalcWidth(charts.map.divId);
         var mapDimension = ndx.dimension(function (d) {
@@ -596,6 +586,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         });
         var group = mapDimension.group().reduceSum(function (d) { return 1; });
         //var prov = topojson.feature(jsonmap, jsonmap.objects["spain-provinces"]).features;
+        var area = topojson.feature(jsonmap, jsonmap.objects.ESP_adm1).features;
         var scale = width*3;
         var translate = [width + 140, -40];
         if(window.innerWidth <= 678) {
@@ -619,15 +610,11 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
           .colors(d3.scaleQuantize().range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]))
           .colorDomain([1, 20])
           .colorCalculator(function (d) { return d == 0 ? '#eee' : chart.colors()(d);})
-          //.overlayGeoJson(prov, "province", function (d) { console.log(d); return d.properties.name; })
-          //objects - spain-provinces
-          .overlayGeoJson(jsonmap.features, 'province', function(d) {
-            //console.log(d.properties.name);
-            return d.properties.name;
+          .overlayGeoJson(area, 'comunidad', function(d) {
+            return d.properties.NAME_1;
           })
           .title(function (d) {
             return d.key
-            //return  _.find(dpt, function (m) {return m.properties.code==d.key}).properties.nom + ': ' + d.value + ' parlementaires';
           })
           .on('renderlet', function(chart) {});
         chart.render();
@@ -639,7 +626,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
     var createGroupsChart = function() {
       var chart = charts.groups.chart;
       var dimension = ndx.dimension(function (d) {
-        return d.political_group;
+        return d.group;
       });
       var group = dimension.group().reduceSum(function (d) {
           return 1;
@@ -686,7 +673,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
     var createIncomeChart = function() {
       var chart = charts.income.chart;
       var dimension = ndx.dimension(function (d) {
-        return d.declaration.incomeRange;
+        return d.incomeRange;
       });
       var group = dimension.group().reduceSum(function (d) { 
         return 1; 
@@ -725,7 +712,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
     var createPropertiesChart = function() {
       var chart = charts.properties.chart;
       var dimension = ndx.dimension(function (d) {
-        return d.declaration.propertiesRange;
+        return d.propertiesRange;
       });
       var group = dimension.group().reduceSum(function (d) { 
         return 1; 
@@ -764,12 +751,14 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
     var createFinancialParticipationsChart = function() {
       var chart = charts.financial.chart;
       var dimension = ndx.dimension(function (d) {
-        return d.declaration.financialRange;
+        //return d.financialRange;
+        return d.financialNumRange;
       });
       var group = dimension.group().reduceSum(function (d) { 
         return 1; 
       });
-      var order = ['Sin participationes','1€ - 1.000€','1.001 - 5.000€','5.001 - 10.000€','10.001€ - 50.000€','50.001€ - 100.000€','> 100.000€'];
+      var order = ['Sin participationes','1 - 5','5 - 10','10 - 20'];
+      //var order = ['Sin participationes','1€ - 1.000€','1.001 - 5.000€','5.001 - 10.000€','10.001€ - 50.000€','50.001€ - 100.000€','> 100.000€'];
       var sizes = calcPieSize(charts.financial.divId);
       chart
         .width(sizes.width)
@@ -792,7 +781,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         })
         .dimension(dimension)
         .colorCalculator(function(d, i) {
-          return vuedata.colors.incomeRange[d.key];
+          return vuedata.colors.propertiesRange[d.key];
         })
         .group(group);
 
@@ -803,7 +792,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
     var createDebtChart = function() {
       var chart = charts.debt.chart;
       var dimension = ndx.dimension(function (d) {
-        return d.declaration.debtRange;
+        return d.debtRange;
       });
       var group = dimension.group().reduceSum(function (d) { 
         return 1; 
@@ -842,7 +831,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
     var createVehiclesChart = function() {
       var chart = charts.vehicles.chart;
       var dimension = ndx.dimension(function (d) {
-        return d.declaration.vehiclesRange;
+        return d.vehiclesRange;
       });
       var group = dimension.group().reduceSum(function (d) { 
         return 1; 
@@ -933,7 +922,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
             "targets": 1,
             "defaultContent":"N/D",
             "data": function(d) {
-              return d.full_name;
+              return d.name;
             }
           },
           {
@@ -942,7 +931,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
             "targets": 2,
             "defaultContent":"N/D",
             "data": function(d) {
-              return d.political_group;
+              return "";
             }
           },
           {
@@ -951,7 +940,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
             "targets": 3,
             "defaultContent":"N/D",
             "data": function(d) {
-              return d.declaration.incomeTot;
+              return d.incomeTot;
             }
           },
           {
@@ -960,8 +949,8 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
             "targets": 4,
             "defaultContent":"N/D",
             "data": function(d) {
-              if(d.declaration["bienes patrimoniales"]) {
-                return d.declaration["bienes patrimoniales"].length;
+              if(d.bienes) {
+                return d.bienes.length;
               }
               return "N/D";
             }
@@ -972,7 +961,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
             "targets": 5,
             "defaultContent":"N/D",
             "data": function(d) {
-              return d.declaration.depositsTot;
+              return d.depositsTot;
             }
           },
           {
@@ -981,8 +970,8 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
             "targets": 6,
             "defaultContent":"N/D",
             "data": function(d) {
-              if(d.declaration["otros bienes o derechos"]){
-                return d.declaration["otros bienes o derechos"].length;
+              if(d.otros_bienes){
+                return d.otros_bienes.length;
               }
               return "N/D";
             }
@@ -1108,17 +1097,17 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
     //Custom counters
     function drawCustomCounters() {
       var dim = ndx.dimension (function(d) {
-        return d.full_name;
+        return d.name;
       });
       var group = dim.group().reduce(
         function(p,d) {  
           p.nb +=1;
-          p.income += d.declaration.incomeTot;
+          p.income += d.incomeTot;
           return p;
         },
         function(p,d) {  
           p.nb -=1;
-          p.income -= d.declaration.incomeTot;
+          p.income -= d.incomeTot;
           return p;
         },
         function(p,d) {  
@@ -1151,5 +1140,6 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
     window.onresize = function(event) {
       resizeGraphs();
     };
-  })
-})
+  });
+});
+});

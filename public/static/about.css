@@ -442,7 +442,10 @@ div.dc-html-legend {
   height: 530px;
 }
 .chart-container.tab_a_7 {
-  height: 520px;
+  height: 500px;
+}
+.chart-container.tab_a_8 {
+  height: 500px;
 }
 .chart-container.tab_b_1 {
   height: 505px;
@@ -1085,6 +1088,27 @@ table.dataTable tbody tr:hover {
   .tabA .chart-table td:nth-child(3), .tabA .chart-table td:nth-child(7), .tabA .chart-table td:nth-child(8), .tabA .chart-table th:nth-child(3), .tabA .chart-table th:nth-child(7), .tabA .chart-table th:nth-child(8) {
     display: none;
   }
+}
+
+/* CONTACT FORM */
+.form-container {
+  background: #eee;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.form-container .form-submit-btn {
+  color: #fff;
+  background: #3d95d1;
+  border-radius: 2px;
+}
+.form-container .form-submit-btn:hover {
+  background: #2d75b1;
+}
+
+.comunidad path, .province path {
+  stroke-width: 1px;
+  stroke: #fff;
 }.container {
   padding: 30px 0;
   padding-bottom: 50px;
