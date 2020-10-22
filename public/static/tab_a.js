@@ -47394,7 +47394,7 @@ for (var i = 0; i < 5; i++) {
 
       var ndx = crossfilter(diputados);
       var searchDimension = ndx.dimension(function (d) {
-        var entryString = d.full_name + ' ' + d.unique_id + ' ' + d.political_group + ' ' + d.political_group_IW;
+        var entryString = d.full_name + ' ' + d.unique_id + ' ' + d.political_group + ' ' + d.political_group_IW + ' province:' + d.province;
         return entryString.toLowerCase();
       }); //MAP CHART
 
@@ -47875,8 +47875,27 @@ for (var i = 0; i < 5; i++) {
             RefreshTable();
           }, 250);
         }
-      } //Reset charts
+      } //Canaries button
 
+
+      $('#canaries').click(function () {
+        $(this).addClass('active');
+        var p1 = 'province:las palmas';
+        var p2 = 'province:santa cruz de tenerife';
+        searchDimension.filter(function (d) {
+          if (d.indexOf(p1) > -1 || d.indexOf(p2) > -1) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+        dc.redrawAll();
+        RefreshTable();
+        $('#map_chart svg .layer0 .departement').each(function (i) {
+          $(this).removeClass('selected');
+          $(this).addClass('deselected');
+        });
+      }); //Reset charts
 
       var resetGraphs = function resetGraphs() {
         for (var c in charts) {
@@ -47889,6 +47908,7 @@ for (var i = 0; i < 5; i++) {
         $('#search-input').val('');
         dc.redrawAll();
         RefreshTable();
+        $('#canaries').removeClass('active');
       };
 
       $('.reset-btn').click(function () {

@@ -1215,6 +1215,32 @@ table.dataTable tbody tr:hover {
 .last-update {
   padding: 0 15px;
   font-size: 13px;
+}
+
+#map_chart {
+  margin-top: -50px;
+}
+
+.map-buttons {
+  text-align: right;
+  padding: 10px 20px 0 20px;
+  z-index: 10;
+  height: 50px;
+}
+.map-buttons button {
+  border: none;
+  color: #fff;
+  display: inline-block;
+  margin: 5px 0px 50px 5px;
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #3b95d0;
+  cursor: pointer;
+}
+.map-buttons button.active {
+  background: #2a7aae;
 }.overlay[data-v-373dfb] {
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 10001;

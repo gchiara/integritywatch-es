@@ -105,9 +105,9 @@ var vuedata = {
     "Gipuzkoa": "País Vasco",
     "Córdoba": "Andalucía",
     "Málaga": "Andalucía",
-    "La Palma": "",
+    "La Palma": "La Palma",
     "Pontevedra": "Galicia",
-    "Parlamento de Canarias": "",	
+    "Parlamento de Canarias": "Parlamento de Canarias",	
     "La Rioja": "La Rioja",
     "Cantabria": "Cantabria",
     "Parlamento de La Rioja": "La Rioja",
@@ -128,7 +128,7 @@ var vuedata = {
     "Cortes de Castilla-La Mancha": "Castilla-La Mancha",
     "Asturias": "Principado de Asturias",
     "Toledo": "Castilla-La Mancha",
-    "Tenerife": "",
+    "Tenerife": "Tenerife",
     "León": "Castilla y León",
     "Segovia": "Castilla y León",
     "Parlamento Vasco": "País Vasco",
@@ -150,8 +150,8 @@ var vuedata = {
     "Araba/Álava": "País Vasco",
     "Granada": "Andalucía",
     "Teruel": "Aragón",
-    "Fuerteventura": "",
-    "Gran Canaria": "",
+    "Fuerteventura": "Fuerteventura",
+    "Gran Canaria": "Gran Canaria",
     "Zaragoza": "Aragón",
     "Parlamento de Galicia": "Galicia",
     "Mallorca": "Islas Baleares",
@@ -571,10 +571,8 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
         var totIncome = 0;
         var declarations = {};
         var areas = [];
-        console.log(senators);
         //Loop through data to apply fixes
         _.each(senators, function (d) {
-          console.log(d);
           //Get photo
           d.photoInfo = _.find(photosData, function(a){ return a.name.trim() == d.name.trim()});
           //Get province/area
@@ -648,7 +646,7 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
         //Set dc main vars. The second crossfilter is used to handle the travels stacked bar chart.
         var ndx = crossfilter(senators);
         var searchDimension = ndx.dimension(function (d) {
-            var entryString = d.name;
+            var entryString = d.name + ' province:'+d.province;
             return entryString.toLowerCase();
         });
 
@@ -1217,6 +1215,25 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
             }, 250);
           }
         }
+
+        //Canaries button
+        $('#canaries').click(function () {
+          $(this).addClass('active');
+          var cProvinces = ['gran canaria','la palma','parlamento de canarias','tenerife','fuerteventura'];
+          searchDimension.filter(function (d) { 
+            var match = false;
+            _.each(cProvinces, function (i) {
+              if(d.indexOf('province:'+i) > -1) { match = true; }
+            });
+            return match;
+          });
+          dc.redrawAll();
+          RefreshTable();
+          $('#map_chart svg .layer0 .departement').each(function(i) {
+            $(this).removeClass('selected');
+            $(this).addClass('deselected');
+          });
+        });
 
         //Reset charts
         var resetGraphs = function() {

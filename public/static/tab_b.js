@@ -46845,9 +46845,9 @@ var vuedata = (_vuedata = {
   "Gipuzkoa": "País Vasco",
   "Córdoba": "Andalucía",
   "Málaga": "Andalucía",
-  "La Palma": "",
+  "La Palma": "La Palma",
   "Pontevedra": "Galicia",
-  "Parlamento de Canarias": "",
+  "Parlamento de Canarias": "Parlamento de Canarias",
   "La Rioja": "La Rioja",
   "Cantabria": "Cantabria",
   "Parlamento de La Rioja": "La Rioja",
@@ -46868,7 +46868,7 @@ var vuedata = (_vuedata = {
   "Cortes de Castilla-La Mancha": "Castilla-La Mancha",
   "Asturias": "Principado de Asturias",
   "Toledo": "Castilla-La Mancha",
-  "Tenerife": "",
+  "Tenerife": "Tenerife",
   "León": "Castilla y León",
   "Segovia": "Castilla y León",
   "Parlamento Vasco": "País Vasco",
@@ -46890,8 +46890,8 @@ var vuedata = (_vuedata = {
   "Araba/Álava": "País Vasco",
   "Granada": "Andalucía",
   "Teruel": "Aragón",
-  "Fuerteventura": "",
-  "Gran Canaria": "",
+  "Fuerteventura": "Fuerteventura",
+  "Gran Canaria": "Gran Canaria",
   "Zaragoza": "Aragón",
   "Parlamento de Galicia": "Galicia",
   "Mallorca": "Islas Baleares",
@@ -47323,12 +47323,10 @@ for (var i = 0; i < 5; i++) {
         //Loop through data to aply fixes and calculations
         var totIncome = 0;
         var declarations = {};
-        var areas = [];
-        console.log(senators); //Loop through data to apply fixes
+        var areas = []; //Loop through data to apply fixes
 
         _.each(senators, function (d) {
-          console.log(d); //Get photo
-
+          //Get photo
           d.photoInfo = _.find(photosData, function (a) {
             return a.name.trim() == d.name.trim();
           }); //Get province/area
@@ -47422,7 +47420,7 @@ for (var i = 0; i < 5; i++) {
 
         var ndx = crossfilter(senators);
         var searchDimension = ndx.dimension(function (d) {
-          var entryString = d.name;
+          var entryString = d.name + ' province:' + d.province;
           return entryString.toLowerCase();
         }); //MAP CHART
 
@@ -47907,8 +47905,30 @@ for (var i = 0; i < 5; i++) {
               RefreshTable();
             }, 250);
           }
-        } //Reset charts
+        } //Canaries button
 
+
+        $('#canaries').click(function () {
+          $(this).addClass('active');
+          var cProvinces = ['gran canaria', 'la palma', 'parlamento de canarias', 'tenerife', 'fuerteventura'];
+          searchDimension.filter(function (d) {
+            var match = false;
+
+            _.each(cProvinces, function (i) {
+              if (d.indexOf('province:' + i) > -1) {
+                match = true;
+              }
+            });
+
+            return match;
+          });
+          dc.redrawAll();
+          RefreshTable();
+          $('#map_chart svg .layer0 .departement').each(function (i) {
+            $(this).removeClass('selected');
+            $(this).addClass('deselected');
+          });
+        }); //Reset charts
 
         var resetGraphs = function resetGraphs() {
           for (var c in charts) {

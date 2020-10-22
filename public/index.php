@@ -36,6 +36,9 @@
           <div class="col-md-6 chart-col">
             <div class="boxed-container chart-container tab_a_1">
               <chart-header :title="charts.map.title" :info="charts.map.info" ></chart-header>
+              <div class="map-buttons">
+                <button id="canaries">Canary Islands</button>
+              </div>
               <div class="chart-inner" id="map_chart"></div>
             </div>
           </div>
