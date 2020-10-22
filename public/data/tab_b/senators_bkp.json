@@ -3,214 +3,6 @@
         "bienes": [
             {
                 "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "VIVIENDA",
-                "derecho_titulo": "GANANCIAL - compra venta",
-                "fecha": "1994",
-                "situacion": "BILBAO"
-            },
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "VIVIENDA",
-                "derecho_titulo": "GANANCIAL - COMPRA - VENTA",
-                "fecha": "2003",
-                "situacion": "CANTABRIA"
-            },
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "PLAZA DE APARCAMIENTO",
-                "derecho_titulo": "PLENO DOMINIO (Concesión administrativa 50 años)",
-                "fecha": "1993",
-                "situacion": "BARAKALDO"
-            }
-        ],
-        "cantidad_pagada_por_irpf": "10.887,14 €",
-        "depositos": [
-            {
-                "depositos": "SALDO CUENTAS CORRIENTES A 26/09/2020",
-                "saldo": "55.879"
-            }
-        ],
-        "details": {
-            "circunscripcion": "Parlamento Vasco",
-            "estado_civil": "CASADO",
-            "fecha_eleccion": "24 de septiembre de 2020",
-            "fecha_entrada": "29/09/2020",
-            "regimen_matrimonial": "GANANCIALES"
-        },
-        "deudas": [
-            {
-                "fecha": "",
-                "importe_concedido": "",
-                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
-                "saldo_pendiente": ""
-            }
-        ],
-        "name": "ANTONIO JULIÁN RODRÍGUEZ ESQUERDO",
-        "otros": [],
-        "otros_bienes": [],
-        "rentas": [],
-        "vehiculos": [
-            {
-                "descripcion": "NISSAN QASHQAI",
-                "fecha": "2018"
-            },
-            {
-                "descripcion": "SEAT IBIZA TDI",
-                "fecha": "2007"
-            }
-        ]
-    },
-    {
-        "bienes": [
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "Vivienda",
-                "derecho_titulo": "Pleno dominio de la mitad indivisa./Autoconstruccion",
-                "fecha": "1999",
-                "situacion": "Vandellòs"
-            },
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "Piso",
-                "derecho_titulo": "Pleno dominio de la mitad indivisa./Compraventa.",
-                "fecha": "2000",
-                "situacion": "Espot"
-            },
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "Piso",
-                "derecho_titulo": "Pleno dominio del 100% del inmueble./Compraventa.",
-                "fecha": "2004",
-                "situacion": "Tarragona"
-            }
-        ],
-        "cantidad_pagada_por_irpf": "9106,46 €",
-        "depositos": [
-            {
-                "depositos": "- Depósito a largo plazo - Cuentas corrientes en diferentes entidades bancarias",
-                "saldo": "25.000,00 14.326,00"
-            }
-        ],
-        "details": {
-            "circunscripcion": "Parlamento de Cataluña",
-            "estado_civil": "CASADA",
-            "fecha_eleccion": "21 de mayo de 2020",
-            "fecha_entrada": "26/05/2020",
-            "regimen_matrimonial": "SEPARACIÓN DE BIENES"
-        },
-        "deudas": [
-            {
-                "fecha": "08/07/1999",
-                "importe_concedido": "96.161,94",
-                "prestamos": "Préstamo hipotecario concedido por el Banco BBVA",
-                "saldo_pendiente": "19.397,14"
-            },
-            {
-                "fecha": "15/06/2004",
-                "importe_concedido": "192.000",
-                "prestamos": "Préstamo hipotecario concedido por el Banco Bankia",
-                "saldo_pendiente": "7.131,10"
-            },
-            {
-                "fecha": "",
-                "importe_concedido": "",
-                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
-                "saldo_pendiente": ""
-            }
-        ],
-        "name": "ASSUMPCIÓ CASTELLVÍ AUVÍ",
-        "otros": [
-            {
-                "descripcion": "Planes de pensiones",
-                "valor": "24.223,00"
-            }
-        ],
-        "otros_bienes": [],
-        "rentas": [
-            {
-                "concepto": "Ajuntament de Vandellòs i l'Hospitalet de l'Infant",
-                "euros": "2822,16",
-                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
-            },
-            {
-                "concepto": "Consejera de l Consell Comarcal del Baix Camp",
-                "euros": "214,5",
-                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
-            },
-            {
-                "concepto": "",
-                "euros": "71,32",
-                "procedencia": "Intereses  o  rendimientos  de  cuentas,  depósitos  y  activos  financieros"
-            }
-        ],
-        "vehiculos": [
-            {
-                "descripcion": "FORD  FIESTA",
-                "fecha": "30/03/2017"
-            }
-        ]
-    },
-    {
-        "bienes": [
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "Vivienda con 2 plazas de garaje y trastero",
-                "derecho_titulo": "Pleno dominio, compra venta",
-                "fecha": "2011",
-                "situacion": "Bermeo (Bizkaia)"
-            },
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "Garaje",
-                "derecho_titulo": "Pleno dominio, compra venta",
-                "fecha": "2006",
-                "situacion": "Bermeo (Bizkaia)"
-            }
-        ],
-        "cantidad_pagada_por_irpf": "8.343,57 €",
-        "depositos": [
-            {
-                "depositos": "Kutxabank cuenta corriente ING cuenta corriente Fondo de inversión EPSV",
-                "saldo": "8.273,77 10.366,28 508,88 9.329,60"
-            }
-        ],
-        "details": {
-            "circunscripcion": "Parlamento Vasco",
-            "estado_civil": "54.184",
-            "fecha_eleccion": "24 de septiembre de 2020",
-            "fecha_entrada": "30/09/2020",
-            "regimen_matrimonial": "SOLTERA"
-        },
-        "deudas": [
-            {
-                "fecha": "26/09/2011",
-                "importe_concedido": "270.000",
-                "prestamos": "Hipoteca kutxabank",
-                "saldo_pendiente": "185.054,97"
-            },
-            {
-                "fecha": "",
-                "importe_concedido": "",
-                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
-                "saldo_pendiente": ""
-            }
-        ],
-        "name": "IDURRE BIDEGUREN GABANTXO",
-        "otros": [],
-        "otros_bienes": [],
-        "rentas": [
-            {
-                "concepto": "Nómina administración pública",
-                "euros": "46.905,23",
-                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
-            }
-        ],
-        "vehiculos": []
-    },
-    {
-        "bienes": [
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
                 "clase": "Ninguno.",
                 "derecho_titulo": "",
                 "fecha": "",
@@ -416,7 +208,7 @@
             {
                 "concepto": "IMPUTACION DE RENTAS DE INMUEBLES",
                 "euros": "26,78",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -660,12 +452,12 @@
             {
                 "concepto": "CURSOS Y CONFERENCIAS",
                 "euros": "4349,50",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "ACTIVIDADES PROFESIONALES",
                 "euros": "13640,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -791,7 +583,7 @@
             {
                 "concepto": "ALQUILERES",
                 "euros": "2.404,90",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -874,7 +666,7 @@
             {
                 "concepto": "Bienes inmuebles/rentas de inmmuebles a disposición de sus titulares arrendados o cedidos a terceros: Alquiler vivienda Declaración IRPF 2017",
                 "euros": "16.800.-",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -1435,7 +1227,7 @@
             {
                 "concepto": "ARRENDAMIENTO APARTAMENTO",
                 "euros": "5.400 ANUALES",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -1527,22 +1319,22 @@
             {
                 "concepto": "ASISTENCIAS CONSEJO O.A.R.",
                 "euros": "499€",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "ASITENCIAS CONSEJO MERCABADAJOZ",
                 "euros": "475€",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "RENDIMIENTO OPERACIONES SEGUROS",
                 "euros": "664,85€",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "GANANCIA PATRIMONIAL TRANSMISION DERECHOS SUSCRIPCIÓN",
                 "euros": "4,43€",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -1742,7 +1534,7 @@
             {
                 "concepto": "",
                 "euros": "0,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -1816,7 +1608,7 @@
             {
                 "concepto": "Arrendamiento de viviendas",
                 "euros": "13200",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -1922,7 +1714,7 @@
             {
                 "concepto": "ALQUILER VIVIENDA",
                 "euros": "10.800 EUROS",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -1994,7 +1786,7 @@
             {
                 "concepto": "Rendimiento de capital inmobiliario por el 0'08 % de titularidad de propiedad mancomunal (Ejercicio 2018)",
                 "euros": "7'17 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -2269,7 +2061,7 @@
             {
                 "concepto": "Actividades económicas",
                 "euros": "7.022,69",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -2494,17 +2286,17 @@
             {
                 "concepto": "ALQUILER DE INMUEBLES",
                 "euros": "20.400,00 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "IMPUTACIONES INMOBILIARIAS",
                 "euros": "3.318,14 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "CAPITAL INMOBILIARIO - RENDIMIENTO NETO",
                 "euros": "14.557,66 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -2861,17 +2653,17 @@
             {
                 "concepto": "ALQUILER VIVIENDA MADRID",
                 "euros": "1.200 / MES",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "ALQUILER LOCAL MARBELLA (MALAGA)",
                 "euros": "1.200 / MES",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "ALQUILER VACACIONAL VIVIENDA BENAHAVIS (MALAGA)",
                 "euros": "850 / MES (APROX)",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -3093,7 +2885,7 @@
             {
                 "concepto": "ARRENDAMIENTO DE VIVIENDA (2018). (Casilla 0089 Declaración IRPF)",
                 "euros": "3777,39.-",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -3162,12 +2954,12 @@
             {
                 "concepto": "ALQUILER APARTAMENTO SAN CRISTOBAL DE LA LAGUNA",
                 "euros": "2.550",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "ALQUILER APARTAMENTO DE TAZACORTE",
                 "euros": "6.000",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -3782,7 +3574,7 @@
             {
                 "concepto": "Arrendamiento parcial de vivienda",
                 "euros": "1.800",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -4041,7 +3833,7 @@
             {
                 "concepto": "Venta de Manzanas D.O.P. Asturias.",
                 "euros": "2.769,97",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -4240,7 +4032,7 @@
             {
                 "concepto": "INDEMNIZACIÓN GASTOS DE REPRESENTACIÓN CIUDADANOS-PARTIDO DE LA CIUDADANÍA",
                 "euros": "3000",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -4363,12 +4155,12 @@
             {
                 "concepto": "-Pensión por viudedad",
                 "euros": "9.485,84",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "-Pensión incapacidad",
                 "euros": "26.992,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -4661,7 +4453,7 @@
             {
                 "concepto": "NINGUNA",
                 "euros": "",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -4733,13 +4525,89 @@
             {
                 "concepto": "Ingresos Integros Capital Inmobiliario",
                 "euros": "2.700",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
             {
                 "descripcion": "Volkswagen Passat 2.0",
                 "fecha": "2002"
+            }
+        ]
+    },
+    {
+        "bienes": [
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "PISO EN ASTURIAS",
+                "derecho_titulo": "50% PROPIEDAD COMPRAVENTA",
+                "fecha": "2008",
+                "situacion": "ASTURIAS"
+            },
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "PLAZA DE GARAJE",
+                "derecho_titulo": "50% PROPIEDAD COMPRAVENTA",
+                "fecha": "2005",
+                "situacion": "MADRID"
+            }
+        ],
+        "cantidad_pagada_por_irpf": "23378,06 €",
+        "depositos": [
+            {
+                "depositos": "SALDO CUENTAS Y DEPÓSITOS",
+                "saldo": "45000"
+            }
+        ],
+        "details": {
+            "circunscripcion": "Asamblea de Madrid",
+            "estado_civil": "CASADO",
+            "fecha_eleccion": "10 de julio de 2019",
+            "fecha_entrada": "12/11/2019",
+            "regimen_matrimonial": "SEPARACIÓN DE BIENES"
+        },
+        "deudas": [
+            {
+                "fecha": "10/2018",
+                "importe_concedido": "100000",
+                "prestamos": "HIPOTECA VIVIENDA EN ASTURIAS",
+                "saldo_pendiente": "60000"
+            },
+            {
+                "fecha": "",
+                "importe_concedido": "",
+                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
+                "saldo_pendiente": ""
+            }
+        ],
+        "name": "DAVID ERGUIDO CANO",
+        "otros": [],
+        "otros_bienes": [],
+        "rentas": [
+            {
+                "concepto": "Sueldo Ayuntamiento de Madrid Vocal asesor del Grupo Municipal",
+                "euros": "80709",
+                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
+            },
+            {
+                "concepto": "",
+                "euros": "36,18",
+                "procedencia": "Dividendos  y  participación  en  beneficios  de  sociedades,  comunidades  o  entidades  de  cualquier clase"
+            },
+            {
+                "concepto": "",
+                "euros": "27,60",
+                "procedencia": "Intereses  o  rendimientos  de  cuentas,  depósitos  y  activos  financieros"
+            }
+        ],
+        "vehiculos": [
+            {
+                "descripcion": "VOLVO XC 60",
+                "fecha": "08/2012"
+            },
+            {
+                "descripcion": "YAMAHA NMAX",
+                "fecha": "08/2012"
             }
         ]
     },
@@ -4827,17 +4695,17 @@
             {
                 "concepto": "Cursos y conferencias",
                 "euros": "300,00 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "Actividades profesionales",
                 "euros": "400,00 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "Rendimientos del capital inmobiliario",
                 "euros": "272,87 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -5139,7 +5007,7 @@
             {
                 "concepto": "",
                 "euros": "0",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -5544,7 +5412,7 @@
             {
                 "concepto": "Arrendamientos",
                 "euros": "2700",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -6038,7 +5906,7 @@
             {
                 "concepto": "RENTA ALQUILER PISO",
                 "euros": "3.000",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -6166,7 +6034,7 @@
             {
                 "concepto": "INGRESOS PROCEDENTES DE ARRENDAMIENTO DE INMUEBLE,",
                 "euros": "3800",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -6487,6 +6355,79 @@
         "bienes": [
             {
                 "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "Vivienda",
+                "derecho_titulo": "Ganancial Compraventa",
+                "fecha": "09/2000",
+                "situacion": "Sevilla"
+            },
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "Zona Comun adherida a la vivienda",
+                "derecho_titulo": "Ganancial Compraventa",
+                "fecha": "06/2003",
+                "situacion": "Sevilla"
+            }
+        ],
+        "cantidad_pagada_por_irpf": "1750 €",
+        "depositos": [
+            {
+                "depositos": "cuenta corriente",
+                "saldo": "877,78"
+            }
+        ],
+        "details": {
+            "circunscripcion": "Parlamento de Andalucía",
+            "estado_civil": "CASADA",
+            "fecha_eleccion": "10 de noviembre de 2019",
+            "fecha_entrada": "18/11/2019",
+            "regimen_matrimonial": "GANANCIALES"
+        },
+        "deudas": [
+            {
+                "fecha": "2000",
+                "importe_concedido": "60000",
+                "prestamos": "Prestamo Hipotecario concedido por banco Bankinter",
+                "saldo_pendiente": "24.500"
+            },
+            {
+                "fecha": "15/06/2018",
+                "importe_concedido": "17900",
+                "prestamos": "Prestamo personal concedido por BBVA",
+                "saldo_pendiente": "16000"
+            },
+            {
+                "fecha": "",
+                "importe_concedido": "",
+                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
+                "saldo_pendiente": ""
+            }
+        ],
+        "name": "MARÍA MAR HORMIGO LEÓN",
+        "otros": [],
+        "otros_bienes": [],
+        "rentas": [
+            {
+                "concepto": "Rendimiento neto",
+                "euros": "18246,61",
+                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
+            },
+            {
+                "concepto": "Intereses de cuentas",
+                "euros": "4,59",
+                "procedencia": "Intereses  o  rendimientos  de  cuentas,  depósitos  y  activos  financieros"
+            }
+        ],
+        "vehiculos": [
+            {
+                "descripcion": "Mazda Cx3",
+                "fecha": "Mayo/2018"
+            }
+        ]
+    },
+    {
+        "bienes": [
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
                 "clase": "piso con garaje y trastero en Puertollano",
                 "derecho_titulo": "pleno dominio compra venta",
                 "fecha": "2004",
@@ -6705,12 +6646,12 @@
             {
                 "concepto": "RENTAS DE ALQUILERES",
                 "euros": "6.000,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "CONFERENCIAS Y RETRIBUCIONES POR CONFERENCIAS",
                 "euros": "1.254,12",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -7239,6 +7180,99 @@
         "bienes": [
             {
                 "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "VIVIENDA, TRASTERO Y GARAJE",
+                "derecho_titulo": "PLENO DOMINIO, COMPRAVENTA",
+                "fecha": "23/03/2006",
+                "situacion": "GIPUZKOA"
+            },
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "VIVENDA, TRASTERO Y GARAJE",
+                "derecho_titulo": "PLENO DOMINIO, COMPRAVENTA",
+                "fecha": "06/11/2007",
+                "situacion": "HUESCA"
+            },
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "VIVIENDA Y GARAJE",
+                "derecho_titulo": "NUDA PROPIEDAD. (50%) RECIBIDO POR HERENCIA",
+                "fecha": "18/03/2015",
+                "situacion": "GIPUZKOA"
+            },
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "GARAJE",
+                "derecho_titulo": "NUDA PROPIEDAD (50%). RECIBIDO POR HERENCIA",
+                "fecha": "18/03/2015",
+                "situacion": "GIPUZKOA"
+            }
+        ],
+        "cantidad_pagada_por_irpf": "33.743,46 €",
+        "depositos": [
+            {
+                "depositos": "CUENTA CORRIENTE Y CUENTA DE FONDO FONDOS VARIOS",
+                "saldo": "30.000 447.105,92"
+            }
+        ],
+        "details": {
+            "circunscripcion": "Parlamento Vasco",
+            "estado_civil": "CASADO",
+            "fecha_eleccion": "15 de diciembre de 2016",
+            "fecha_entrada": "19/11/2019",
+            "regimen_matrimonial": "GANANCIALES"
+        },
+        "deudas": [
+            {
+                "fecha": "23/03/2006",
+                "importe_concedido": "180.000",
+                "prestamos": "HIPOTECA COMPRA VIVIENDA A FAVOR DE KUTXA",
+                "saldo_pendiente": "94.160,38"
+            },
+            {
+                "fecha": "31/10/2007",
+                "importe_concedido": "180.000",
+                "prestamos": "HIPOTECA COMPRA VIVIENDA A FAVOR DE KUTXA",
+                "saldo_pendiente": "105.664,08"
+            },
+            {
+                "fecha": "",
+                "importe_concedido": "",
+                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
+                "saldo_pendiente": ""
+            }
+        ],
+        "name": "JOKIN BILDARRATZ SORRON",
+        "otros": [
+            {
+                "descripcion": "PLAN DE PENSIONES; FECHA DE APERTURA: 27/11/2006",
+                "valor": "40.665,89"
+            }
+        ],
+        "otros_bienes": [
+            {
+                "clase": "Sociedades  participadas  en  mas  de  un  5%  por  otras  sociedades  o  entidades  que  sean propiedad, en todo o en  parte,  del  parlamentario  declarante.",
+                "descripcion": "1.250 ACCIONES NOMINATIVAS DE SOCIEDAD MERCANTIL (por un valor de 183.862,50 Euros)",
+                "valor": ""
+            }
+        ],
+        "rentas": [
+            {
+                "concepto": "",
+                "euros": "24.717,58",
+                "procedencia": "Dividendos  y  participación  en  beneficios  de  sociedades,  comunidades  o  entidades  de  cualquier clase"
+            }
+        ],
+        "vehiculos": [
+            {
+                "descripcion": "VEHÍCULO. A3. BLANCO",
+                "fecha": "ENERO 2017"
+            }
+        ]
+    },
+    {
+        "bienes": [
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
                 "clase": "Vivenda habitual en Marchamalo",
                 "derecho_titulo": "PLENO DOMINIO AUTOPROMOCIÓN",
                 "fecha": "11/1999",
@@ -7327,7 +7361,7 @@
             {
                 "concepto": "Arrendamiento de vivienda (piso)",
                 "euros": "3600",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -7422,7 +7456,7 @@
             {
                 "concepto": "ARRENDAMIENTO DE VIVIENDA",
                 "euros": "2.250",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -7596,6 +7630,53 @@
                 "fecha": "Julio-2005"
             }
         ]
+    },
+    {
+        "bienes": [],
+        "cantidad_pagada_por_irpf": "35.958,20 €",
+        "depositos": [
+            {
+                "depositos": "Cuenta corriente",
+                "saldo": "262.680,19"
+            }
+        ],
+        "details": {
+            "circunscripcion": "Parlamento de Andalucía",
+            "estado_civil": "CASADO",
+            "fecha_eleccion": "7 de febrero de 2019",
+            "fecha_entrada": "19/11/2019",
+            "regimen_matrimonial": "SEPARACIÓN DE BIENES"
+        },
+        "deudas": [
+            {
+                "fecha": "",
+                "importe_concedido": "",
+                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
+                "saldo_pendiente": ""
+            }
+        ],
+        "name": "FRANCISCO JOSÉ CARRILLO GUERRERO",
+        "otros": [],
+        "otros_bienes": [
+            {
+                "clase": "Deuda  pública, obligaciones,  bonos,  certificados  de  depósito,  pagarés,  y  demás  valores equivalentes.   y  participaciones  Acciones  en  todo  tipo  de  sociedades,  entidades  con  valor  económico  y cooperativas.",
+                "descripcion": "La Fábrica de Discursos S.L. (31% del total).",
+                "valor": "20.000"
+            }
+        ],
+        "rentas": [
+            {
+                "concepto": "Rendimientos del trabajo",
+                "euros": "3.359.50",
+                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
+            },
+            {
+                "concepto": "Rendimientos de actividades económicas",
+                "euros": "100.823.03",
+                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
+            }
+        ],
+        "vehiculos": []
     },
     {
         "bienes": [],
@@ -7849,7 +7930,7 @@
             {
                 "concepto": "Alquiler piso Vigo 2019 (Desde Enero hasta octubre de 2019) al 50% por gananciales",
                 "euros": "2.755€",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -7932,7 +8013,7 @@
             {
                 "concepto": "PLAN DE PENSIONES",
                 "euros": "22.174,74",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -8007,7 +8088,7 @@
             {
                 "concepto": "ayuda Pac",
                 "euros": "709,95",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -8191,7 +8272,7 @@
             {
                 "concepto": "Associació Catalana de Municipis",
                 "euros": "720",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -8827,7 +8908,7 @@
             {
                 "concepto": "ARRENDAMIENTOS DE VIVIENDAS (IRPF 2018)",
                 "euros": "4.384,10",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -9259,7 +9340,7 @@
             {
                 "concepto": "FONDO DE PENSIONES DE LOS DIPUTADOS EUROPEOS",
                 "euros": "13.895,28",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -9409,7 +9490,7 @@
             {
                 "concepto": "Suma de rendimientos netos reducidos del capital inmobiliario",
                 "euros": "1.183,60",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -9489,6 +9570,96 @@
             {
                 "descripcion": "AUDI A4 SEGUNDA MANO",
                 "fecha": "2018"
+            }
+        ]
+    },
+    {
+        "bienes": [
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "PISO VIVIENDA",
+                "derecho_titulo": "PLENO DOMINIO- COMPRAVENTA",
+                "fecha": "2009",
+                "situacion": "OURENSE"
+            },
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "LOCAL OFICINAS",
+                "derecho_titulo": "PLENO DOMINIO- COMPRAVENTA",
+                "fecha": "2005",
+                "situacion": "OURENSE"
+            },
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "BAJO COMERCIAL",
+                "derecho_titulo": "PLENO DOMINIO - COMPRAVENTA",
+                "fecha": "2018",
+                "situacion": "OURENSE"
+            }
+        ],
+        "cantidad_pagada_por_irpf": "4.660,70 €",
+        "depositos": [
+            {
+                "depositos": "CUENTAS CORRIENTES/PLAZO",
+                "saldo": "697.000€"
+            }
+        ],
+        "details": {
+            "circunscripcion": "Ourense",
+            "estado_civil": "432",
+            "fecha_eleccion": "10 de noviembre de 2019",
+            "fecha_entrada": "19/11/2019",
+            "regimen_matrimonial": "SOLTERO"
+        },
+        "deudas": [
+            {
+                "fecha": "01.04.2018",
+                "importe_concedido": "37.250",
+                "prestamos": "PRESTAMO HIPOTECARIO",
+                "saldo_pendiente": "29.527"
+            },
+            {
+                "fecha": "",
+                "importe_concedido": "",
+                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
+                "saldo_pendiente": ""
+            }
+        ],
+        "name": "JUAN CARLOS FRANCISCO RIVERA",
+        "otros": [],
+        "otros_bienes": [
+            {
+                "clase": "Deuda  pública, obligaciones,  bonos,  certificados  de  depósito,  pagarés,  y  demás  valores equivalentes.   y  participaciones  Acciones  en  todo  tipo  de  sociedades,  entidades  con  valor  económico  y cooperativas.",
+                "descripcion": "ACCIONES RETRILO - 20000 ACCIONES",
+                "valor": "20.000"
+            }
+        ],
+        "rentas": [
+            {
+                "concepto": "ACTIVIDADES ECONOMICAS",
+                "euros": "22.726,10",
+                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
+            },
+            {
+                "concepto": "DIVIDENDOS EMPRESARIALES RETRILO S.L - NETOS",
+                "euros": "8.100,00",
+                "procedencia": "Dividendos  y  participación  en  beneficios  de  sociedades,  comunidades  o  entidades  de  cualquier clase"
+            },
+            {
+                "concepto": "INTERESES  CUENTAS BANCOS - NETOS",
+                "euros": "650,00",
+                "procedencia": "Intereses  o  rendimientos  de  cuentas,  depósitos  y  activos  financieros"
+            },
+            {
+                "concepto": "ARRENDAMIENTOS INMUEBLES -NETOS",
+                "euros": "5.250,00",
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
+            }
+        ],
+        "vehiculos": [
+            {
+                "descripcion": "AUDI Q5",
+                "fecha": "2009"
             }
         ]
     },
@@ -9633,7 +9804,7 @@
             {
                 "concepto": "Arrendamiento plaza de aparcamiento",
                 "euros": "660 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -9838,7 +10009,7 @@
             {
                 "concepto": "RENTAS ALQUILER INMUEBLE HUELVA",
                 "euros": "2700 €/AÑO",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -10276,7 +10447,7 @@
             {
                 "concepto": "ALQUILER LOCAL",
                 "euros": "8.759,30",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -10360,7 +10531,7 @@
             {
                 "concepto": "ARRENDAMIENTO VIVIENDAS",
                 "euros": "32.095",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -10442,12 +10613,12 @@
             {
                 "concepto": "ALQUILER PISO PROPIEDAD (50%)",
                 "euros": "6.600,00€",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "CLASES CESINE",
                 "euros": "775",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -10817,7 +10988,7 @@
             {
                 "concepto": "ARRENDAMIENTO DE INMUEBLE",
                 "euros": "2100",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -10978,7 +11149,7 @@
             {
                 "concepto": "Imputación de rentas derivadas de la posesión de inmuebles",
                 "euros": "3.375,77",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -11402,7 +11573,7 @@
             {
                 "concepto": "ALQUILER INMUEBLES",
                 "euros": "1.174,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -11467,17 +11638,17 @@
             {
                 "concepto": "rendimiento de actividad económica 1",
                 "euros": "13526,79",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "rendimiento de actividad económica 2",
                 "euros": "9039,18",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "rendimiento de actividad económica 3",
                 "euros": "36241,71",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -11710,13 +11881,74 @@
             {
                 "concepto": "Rendimientos de capital inmobiliario en régimen de atribución de rentas",
                 "euros": "2232,41",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
             {
                 "descripcion": "Vehículo Volkswagen Passat",
                 "fecha": "2008"
+            }
+        ]
+    },
+    {
+        "bienes": [
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "VIVIENDA",
+                "derecho_titulo": "GANANCIAL - compra venta",
+                "fecha": "1994",
+                "situacion": "BILBAO"
+            },
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "VIVIENDA",
+                "derecho_titulo": "GANANCIAL - COMPRA - VENTA",
+                "fecha": "2003",
+                "situacion": "CANTABRIA"
+            },
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "PLAZA DE APARCAMIENTO",
+                "derecho_titulo": "PLENO DOMINIO (Concesión administrativa 50 años)",
+                "fecha": "1993",
+                "situacion": "BARAKALDO"
+            }
+        ],
+        "cantidad_pagada_por_irpf": "10.178,08 €",
+        "depositos": [
+            {
+                "depositos": "SALDO CUENTAS CORRIENTES A 09/05/2019",
+                "saldo": "20.476,50 €"
+            }
+        ],
+        "details": {
+            "circunscripcion": "Parlamento Vasco",
+            "estado_civil": "CASADO",
+            "fecha_eleccion": "19 de diciembre de 2016",
+            "fecha_entrada": "20/11/2019",
+            "regimen_matrimonial": "GANANCIALES"
+        },
+        "deudas": [
+            {
+                "fecha": "",
+                "importe_concedido": "",
+                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
+                "saldo_pendiente": ""
+            }
+        ],
+        "name": "ANTONIO JULIÁN RODRÍGUEZ ESQUERDO",
+        "otros": [],
+        "otros_bienes": [],
+        "rentas": [],
+        "vehiculos": [
+            {
+                "descripcion": "NISSAN QASHQAI",
+                "fecha": "2018"
+            },
+            {
+                "descripcion": "SEAT IBIZA TDI",
+                "fecha": "2007"
             }
         ]
     },
@@ -11789,7 +12021,7 @@
             {
                 "concepto": "ALQUILER DE OFICINA",
                 "euros": "6240",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -11856,7 +12088,7 @@
             {
                 "concepto": "ARENDAMIENTO APARTAMENTO.",
                 "euros": "2400",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -12537,7 +12769,7 @@
             {
                 "concepto": "COBROS DE PLAN DE PENSIONES",
                 "euros": "7.200 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -12749,7 +12981,7 @@
             {
                 "concepto": "Arrendamientos inmuebles",
                 "euros": "3543,33",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -13198,7 +13430,7 @@
             {
                 "concepto": "Actividad profesional médica (Asisa y Alcuneza)(Ingresos netos excluidos gastos profesionales)",
                 "euros": "19.047,26",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -13641,7 +13873,7 @@
             {
                 "concepto": "AGRICULTURA",
                 "euros": "34.644,74 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -14173,7 +14405,7 @@
             {
                 "concepto": "Centro de estudios Garrigues",
                 "euros": "847,77",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -14351,12 +14583,12 @@
             {
                 "concepto": "Suma de imputaciones de rentas inmobiliarias",
                 "euros": "1.100,98",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "Rendimiento actividades agrarias",
                 "euros": "3.034,71",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -14373,6 +14605,63 @@
                 "fecha": "1980-1990"
             }
         ]
+    },
+    {
+        "bienes": [
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "Vivienda con 2 plazas de garaje y trastero",
+                "derecho_titulo": "Pleno dominio, compra venta",
+                "fecha": "2011",
+                "situacion": "Bermeo (Bizkaia)"
+            },
+            {
+                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
+                "clase": "Garaje",
+                "derecho_titulo": "Pleno dominio, compra venta",
+                "fecha": "2006",
+                "situacion": "Bermeo (Bizkaia)"
+            }
+        ],
+        "cantidad_pagada_por_irpf": "11.796,32 €",
+        "depositos": [
+            {
+                "depositos": "Kutxabank cuenta corriente Fondo de inversión EPSV",
+                "saldo": "4.745,16 492,34 9.130,74"
+            }
+        ],
+        "details": {
+            "circunscripcion": "Parlamento Vasco",
+            "estado_civil": "646",
+            "fecha_eleccion": "30 de mayo de 2019",
+            "fecha_entrada": "21/11/2019",
+            "regimen_matrimonial": "SOLTERA"
+        },
+        "deudas": [
+            {
+                "fecha": "26/09/2011",
+                "importe_concedido": "270.000",
+                "prestamos": "Hipoteca kutxabank",
+                "saldo_pendiente": "195.097,69"
+            },
+            {
+                "fecha": "",
+                "importe_concedido": "",
+                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
+                "saldo_pendiente": ""
+            }
+        ],
+        "name": "IDURRE BIDEGUREN GABANTXO",
+        "otros": [],
+        "otros_bienes": [],
+        "rentas": [
+            {
+                "concepto": "Nómina administración pública",
+                "euros": "57.591,80",
+                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
+            }
+        ],
+        "vehiculos": []
     },
     {
         "bienes": [
@@ -14467,7 +14756,7 @@
             {
                 "concepto": "ARRENDAMIENTO DE INMUEBLES",
                 "euros": "14885",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -15075,7 +15364,7 @@
             {
                 "concepto": "Venta de Uva en Denominación de Origen Ribeiro",
                 "euros": "378,97",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -15274,7 +15563,7 @@
             {
                 "concepto": "ALQUILER",
                 "euros": "567,45",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -15435,7 +15724,7 @@
             {
                 "concepto": "ALQUILER DE VIVIENDA REGIMEN GANACIALES",
                 "euros": "4.200",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -15547,7 +15836,7 @@
             {
                 "concepto": "ALQUILER VIVIENDA PARTICULAR - CASTELLÓN",
                 "euros": "4.000,00 €",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -15676,7 +15965,7 @@
             {
                 "concepto": "Ayudas reforestación año 2018",
                 "euros": "306,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -16423,7 +16712,7 @@
             {
                 "concepto": "Arrendamiento vivienda",
                 "euros": "3.134,06",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -16555,7 +16844,7 @@
             {
                 "concepto": "Intereses en especie",
                 "euros": "13,36",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -16782,7 +17071,7 @@
             {
                 "concepto": "Rendimientos de capital inmobiliario",
                 "euros": "4411,62",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -16925,12 +17214,12 @@
             {
                 "concepto": "Cursos, Conferencias y Actividades profesionales",
                 "euros": "1184,41 euros",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "Ingresos por Alquiler de pisos (50%)",
                 "euros": "8605 euros",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -17081,7 +17370,7 @@
             {
                 "concepto": "Concejal Ayuntamiento de Asteasu - Dietas por asistencia a reuniones",
                 "euros": "2.214,51",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -17430,12 +17719,12 @@
             {
                 "concepto": "Rendimiento atribuible de actividad agrícola",
                 "euros": "356,04",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "Rendimiento neto arrendamiento inmuebles",
                 "euros": "12.107,96",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -17595,7 +17884,7 @@
             {
                 "concepto": "ARRENDAMIENTO DE BIENES INMUEBLES",
                 "euros": "15.552",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -17989,7 +18278,7 @@
             {
                 "concepto": "INGRESOS POR ARRENDAMIENTOS VIVIENDA",
                 "euros": "3.780,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -18444,12 +18733,12 @@
             {
                 "concepto": "Alquiler anual de inmueble (Madrid)",
                 "euros": "7.200,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "Alquiler anual de inmueble (Budapest)",
                 "euros": "7.200,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -18574,7 +18863,7 @@
             {
                 "concepto": "ARRENDAMIENTO DE BIENES INMUEBLES",
                 "euros": "4.200",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -18788,7 +19077,7 @@
             {
                 "concepto": "Alquiler de piso en propiedad",
                 "euros": "3040,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -19339,7 +19628,7 @@
             {
                 "concepto": "Ventas acciones cotizadas",
                 "euros": "71,13",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -19442,7 +19731,7 @@
             {
                 "concepto": "",
                 "euros": "0",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -19600,12 +19889,12 @@
             {
                 "concepto": "GANACIA PATRIMONIAL, VENTA DE ACCIONES NEGOCIADAS EN MERCADOS SECUNDARIOS",
                 "euros": "2.525,17",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "GANANCIA PATRIMONIAL VENTA INMUEBLES",
                 "euros": "27.450,08",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -19682,12 +19971,12 @@
             {
                 "concepto": "Conferencais, mesas redondas, etc",
                 "euros": "250",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "Partido Popular",
                 "euros": "48.000",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": []
@@ -20173,7 +20462,7 @@
             {
                 "concepto": "RENDIMIENTO CAPITAL INMOBILIARIO",
                 "euros": "69,86",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -20238,7 +20527,7 @@
             {
                 "concepto": "Premios",
                 "euros": "1.234,57",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -20639,7 +20928,7 @@
             {
                 "concepto": "ALQUILER LOCAL EN VILLAFRANCA DE LOS BARROS ( 1/3 PROPIEDAD)",
                 "euros": "2894,91",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -20745,17 +21034,17 @@
             {
                 "concepto": "Alquiler 2 oficinas en Valencia",
                 "euros": "15.552,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "50% alquiler Vivienda residencial en Naquera (Valencia)",
                 "euros": "3.600,00",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             },
             {
                 "concepto": "Cdad. de Propietarios Barón de Carcer - Valencia",
                 "euros": "325,86",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -21065,7 +21354,7 @@
             {
                 "concepto": "ALQUILER VIVIENDA RURAL",
                 "euros": "1268,67",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
+                "procedencia": "OTRAS rentas o percepciones  de cualquier clase5"
             }
         ],
         "vehiculos": [
@@ -21944,367 +22233,6 @@
             {
                 "descripcion": "TOYOTA YARIS",
                 "fecha": "03-06-2016"
-            }
-        ]
-    },
-    {
-        "bienes": [
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "VIVIENDA",
-                "derecho_titulo": "GANANCIALES+ COMPRAVENTA",
-                "fecha": "JULIO-1988",
-                "situacion": "ALAVA"
-            },
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "VIVIENDA",
-                "derecho_titulo": "GANANCIALES+ COMPRAVENTA",
-                "fecha": "ENERO-2008",
-                "situacion": "NAVARRA"
-            },
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "PLAZA APARCAMIENTO",
-                "derecho_titulo": "GANANCIALES+ COMPRAVENTA",
-                "fecha": "JULIO-1988",
-                "situacion": "ALAVA"
-            },
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "PLAZA APARCAMIENTO",
-                "derecho_titulo": "GANANCIALES+ COMPRAVENTA",
-                "fecha": "JULIO-1987",
-                "situacion": "ALAVA"
-            },
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "LOCAL COMERCIAL",
-                "derecho_titulo": "25% PLENO DOMINIO- COMPRAVENTA",
-                "fecha": "MAYO-1996",
-                "situacion": "ALAVA"
-            }
-        ],
-        "cantidad_pagada_por_irpf": "25489,05 €",
-        "depositos": [
-            {
-                "depositos": "(4) C.C.EN DISTINTAS ENTIDADES BANCARIAS (2) DEPOSITOS FONDOS DE INVERSION",
-                "saldo": "492976,50 100237,76"
-            }
-        ],
-        "details": {
-            "circunscripcion": "Parlamento Vasco",
-            "estado_civil": "CASADA",
-            "fecha_eleccion": "24 de septiembre de 2020",
-            "fecha_entrada": "25/09/2020",
-            "regimen_matrimonial": "GANANCIALES"
-        },
-        "deudas": [
-            {
-                "fecha": "",
-                "importe_concedido": "",
-                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
-                "saldo_pendiente": ""
-            }
-        ],
-        "name": "ESTEFANÍA BELTRÁN DE HEREDIA ARRONIZ",
-        "otros": [
-            {
-                "descripcion": "PLANES DE PENSIONES",
-                "valor": "89622,51"
-            }
-        ],
-        "otros_bienes": [],
-        "rentas": [
-            {
-                "concepto": "RENTAS DE TRABAJO- RETRIBUCION CARGO PUBLICO-",
-                "euros": "92372,49",
-                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
-            },
-            {
-                "concepto": "INTERESES  NETOS FONDOS DE INVERSION",
-                "euros": "2850,67",
-                "procedencia": "Intereses  o  rendimientos  de  cuentas,  depósitos  y  activos  financieros"
-            }
-        ],
-        "vehiculos": [
-            {
-                "descripcion": "VEHICULO MARCA MERCEDES BENZ C-200",
-                "fecha": "AGOSTO 2012"
-            }
-        ]
-    },
-    {
-        "bienes": [
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "Piso",
-                "derecho_titulo": "Pleno Dominio (50%). Compraventa",
-                "fecha": "2017",
-                "situacion": "Sevilla"
-            }
-        ],
-        "cantidad_pagada_por_irpf": "38.042,20€ €",
-        "depositos": [
-            {
-                "depositos": "3 cuentas corrientes",
-                "saldo": "33.090,19€"
-            }
-        ],
-        "details": {
-            "circunscripcion": "Parlamento de Andalucía",
-            "estado_civil": "CASADO",
-            "fecha_eleccion": "17 de junio de 2020",
-            "fecha_entrada": "23/06/2020",
-            "regimen_matrimonial": "SEPARACIÓN DE BIENES"
-        },
-        "deudas": [
-            {
-                "fecha": "Noviembre 2017",
-                "importe_concedido": "332.000€",
-                "prestamos": "Hipoteca (50%)",
-                "saldo_pendiente": "307.098,02€"
-            },
-            {
-                "fecha": "Noviembre 2017",
-                "importe_concedido": "60.000€",
-                "prestamos": "Préstamo personal (50%)",
-                "saldo_pendiente": "37.467,54€"
-            },
-            {
-                "fecha": "",
-                "importe_concedido": "",
-                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
-                "saldo_pendiente": ""
-            }
-        ],
-        "name": "FRANCISCO JAVIER HERVÍAS CHIROSA",
-        "otros": [],
-        "otros_bienes": [
-            {
-                "clase": "Deuda  pública, obligaciones,  bonos,  certificados  de  depósito,  pagarés,  y  demás  valores equivalentes.   y  participaciones  Acciones  en  todo  tipo  de  sociedades,  entidades  con  valor  económico  y cooperativas.",
-                "descripcion": "La Fábrica de Discursos S.L. (20% del total)",
-                "valor": "30.000€ (valor de compra)"
-            },
-            {
-                "clase": "Deuda  pública, obligaciones,  bonos,  certificados  de  depósito,  pagarés,  y  demás  valores equivalentes.   y  participaciones  Acciones  en  todo  tipo  de  sociedades,  entidades  con  valor  económico  y cooperativas.",
-                "descripcion": "31 acciones Banco Santander",
-                "valor": "68,02€"
-            }
-        ],
-        "rentas": [
-            {
-                "concepto": "Retribución Ciudadanos - Partido de la Ciudadanía",
-                "euros": "39.435,03€",
-                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
-            },
-            {
-                "concepto": "Banco Santander y CaixaBank",
-                "euros": "49,64€",
-                "procedencia": "Intereses  o  rendimientos  de  cuentas,  depósitos  y  activos  financieros"
-            },
-            {
-                "concepto": "Alquiler vivienda (50%)",
-                "euros": "15.000€",
-                "procedencia": "OTRAS  rentas  o  percepciones  de cualquier clase5"
-            }
-        ],
-        "vehiculos": [
-            {
-                "descripcion": "Mazda 3",
-                "fecha": "2014"
-            }
-        ]
-    },
-    {
-        "bienes": [
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "VIVIENDA",
-                "derecho_titulo": "GANANCIAL COMPRAVENTA",
-                "fecha": "2009",
-                "situacion": "HUELVA"
-            },
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "VIVIENDA",
-                "derecho_titulo": "GANANCIAL COMPRAVENTA",
-                "fecha": "2013",
-                "situacion": "HUELVA"
-            }
-        ],
-        "cantidad_pagada_por_irpf": "4.274,17 €",
-        "depositos": [
-            {
-                "depositos": "CUENTAS BANCARIAS (2)",
-                "saldo": "30232,17"
-            }
-        ],
-        "details": {
-            "circunscripcion": "Parlamento de Andalucía",
-            "estado_civil": "CASADA",
-            "fecha_eleccion": "17 de junio de 2020",
-            "fecha_entrada": "24/06/2020",
-            "regimen_matrimonial": "GANANCIALES"
-        },
-        "deudas": [
-            {
-                "fecha": "2009",
-                "importe_concedido": "225000",
-                "prestamos": "PRESTAMO HIPOTECARIO BBVA",
-                "saldo_pendiente": "174.226,19"
-            },
-            {
-                "fecha": "2013",
-                "importe_concedido": "82500",
-                "prestamos": "PRESTAMO HIPOTECARIO BBVA",
-                "saldo_pendiente": "59.558,78"
-            },
-            {
-                "fecha": "",
-                "importe_concedido": "",
-                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
-                "saldo_pendiente": ""
-            }
-        ],
-        "name": "MARÍA PONCE GALLARDO",
-        "observaciones": "EN CANTIDAD PAGADA POR IRPF SE HA TOMADO COMO REFERENCIA LA CASILLA 587 DE LA DECLARACIÓN DE IRPF DE 2019",
-        "otros": [],
-        "otros_bienes": [],
-        "rentas": [
-            {
-                "concepto": "Diputación de Huelva",
-                "euros": "24508,35",
-                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
-            },
-            {
-                "concepto": "Ayuntamiento de Aljaraque",
-                "euros": "6915",
-                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
-            }
-        ],
-        "vehiculos": [
-            {
-                "descripcion": "VOLSKWAGEN PASSAT",
-                "fecha": "2009"
-            },
-            {
-                "descripcion": "MERCEDES BENZ C220",
-                "fecha": "2016"
-            }
-        ]
-    },
-    {
-        "bienes": [
-            {
-                "bienes": "Bienes   Inmuebles  de naturaleza  urbana.",
-                "clase": "CASA",
-                "derecho_titulo": "HERENCIA 50%",
-                "fecha": "28/04/16",
-                "situacion": "OURENSE"
-            },
-            {
-                "bienes": "Bienes   Inmuebles   de naturaleza  rústica.",
-                "clase": "RUSTICO",
-                "derecho_titulo": "COMPRA-VENTA 100%",
-                "fecha": "1996",
-                "situacion": "OURENSE"
-            },
-            {
-                "bienes": "Bienes   Inmuebles   de naturaleza  rústica.",
-                "clase": "RUSTICO",
-                "derecho_titulo": "HERENCIA 50%",
-                "fecha": "28/04/2016",
-                "situacion": "OURENSE"
-            },
-            {
-                "bienes": "Bienes   Inmuebles   de naturaleza  rústica.",
-                "clase": "RUSTICO",
-                "derecho_titulo": "HERENCIA 50%",
-                "fecha": "28/04/2016",
-                "situacion": "OURENSE"
-            },
-            {
-                "bienes": "Bienes  inmuebles  propiedad  de  una  sociedad,  comunidad  o  entidad  que  no  cotiza  en  Bolsa  y  de  la  que  el  declarante  tiene  acciones  o participaciones.",
-                "clase": "RUSTICO",
-                "derecho_titulo": "HERENCIA 50%",
-                "fecha": "28/04/2016",
-                "situacion": "OURENSE"
-            },
-            {
-                "bienes": "Bienes  inmuebles  propiedad  de  una  sociedad,  comunidad  o  entidad  que  no  cotiza  en  Bolsa  y  de  la  que  el  declarante  tiene  acciones  o participaciones.",
-                "clase": "RUSTICO",
-                "derecho_titulo": "HERENCIA 50%",
-                "fecha": "28/04/2016",
-                "situacion": "OURENSE"
-            },
-            {
-                "bienes": "Bienes  inmuebles  propiedad  de  una  sociedad,  comunidad  o  entidad  que  no  cotiza  en  Bolsa  y  de  la  que  el  declarante  tiene  acciones  o participaciones.",
-                "clase": "RUSTICO",
-                "derecho_titulo": "HERENCIA 50%",
-                "fecha": "28/04/2016",
-                "situacion": "OURENSE"
-            },
-            {
-                "bienes": "Bienes  inmuebles  propiedad  de  una  sociedad,  comunidad  o  entidad  que  no  cotiza  en  Bolsa  y  de  la  que  el  declarante  tiene  acciones  o participaciones.",
-                "clase": "RUSTICO",
-                "derecho_titulo": "HERENCIA 50%",
-                "fecha": "28/04/2016",
-                "situacion": "OURENSE"
-            }
-        ],
-        "cantidad_pagada_por_irpf": "3.485,37 €",
-        "depositos": [
-            {
-                "depositos": "Cuenta corriente",
-                "saldo": "6.027,69"
-            }
-        ],
-        "details": {
-            "circunscripcion": "Ourense",
-            "estado_civil": "CASADO",
-            "fecha_eleccion": "10 de noviembre de 2019",
-            "fecha_entrada": "28/07/2020",
-            "regimen_matrimonial": "SEPARACIÓN DE BIENES"
-        },
-        "deudas": [
-            {
-                "fecha": "26/10/1998",
-                "importe_concedido": "72.121,45",
-                "prestamos": "HIPOTECARIO 50%  BBVA",
-                "saldo_pendiente": "34.632,07"
-            },
-            {
-                "fecha": "17/04/2018",
-                "importe_concedido": "21.770,00",
-                "prestamos": "PERSONAL BBVA",
-                "saldo_pendiente": "15.302,88"
-            },
-            {
-                "fecha": "",
-                "importe_concedido": "",
-                "prestamos": "Otras deudas y obligaciones  derivadas de contratos, sentencias o cualquier otro título.",
-                "saldo_pendiente": ""
-            }
-        ],
-        "name": "MIGUEL BAUTISTA CARBALLO",
-        "otros": [],
-        "otros_bienes": [],
-        "rentas": [
-            {
-                "concepto": "Diputado Provincial y Prestación desempleo",
-                "euros": "27.434,75",
-                "procedencia": "Percepciones  netas  de  tipo  salarial,  sueldos,  honorarios,  aranceles  y    otras  retribuciones,  cualquiera  que  sea su denominación.4"
-            }
-        ],
-        "vehiculos": [
-            {
-                "descripcion": "KIA SPORGATE",
-                "fecha": "2017"
-            },
-            {
-                "descripcion": "FORD MONDEO",
-                "fecha": "2004"
             }
         ]
     }

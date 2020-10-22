@@ -23,7 +23,7 @@
               <!-- INFO -->
               <div class="col-md-8 chart-col" v-if="showInfo">
                 <div class="boxed-container description-container">
-                  <h1>INTEGRITY WATCH SPAIN – DIPUTADOS</h1>
+                  <h1>INTEGRITY WATCH SPAIN – CONGRESO DE LOS DIPUTADOS</h1>
                   <p>Esta plataforma contiene una base de datos interactiva de uso fácil que ofrece una visión general de las declaraciones de bienes y rentas de los Diputados Legislatura XIV. Al hacer click en los gráficos y la tabla final, los usuarios pueden clasificar, ordenar y filtrar a los parlamentarios del Congreso de los Diputados. 
                     <a href="./about.php">Más información</a>.
                   </p>
@@ -87,6 +87,18 @@
               <div class="chart-inner" id="gender_chart"></div>
             </div>
           </div>
+          <div class="col-md-3 chart-col" v-show="showAllCharts">
+            <div class="boxed-container chart-container tab_a_8">
+              <chart-header :title="charts.irpf.title" :info="charts.irpf.info" ></chart-header>
+              <div class="chart-inner" id="irpf_chart"></div>
+            </div>
+          </div>
+          <div class="col-md-3 chart-col" v-show="showAllCharts">
+            <div class="boxed-container chart-container tab_a_8">
+              <chart-header :title="charts.depositos.title" :info="charts.depositos.info" ></chart-header>
+              <div class="chart-inner" id="depositos_chart"></div>
+            </div>
+          </div>
           
           <!-- TABLE -->
           <div class="col-12 chart-col">
@@ -109,6 +121,9 @@
               </div>
             </div>
           </div>
+
+          <div class="last-update">Last updated on: 23/10/2020</div>
+
         </div>
       </div>
       <!-- DETAILS MODAL -->
@@ -127,10 +142,13 @@
             <div class="modal-body">
               <div class="container">
                 <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-8">
                     <div class="details-line" v-if="selectedElement.declaration"><span class="details-line-title">Circonscripción:</span> {{ selectedElement.declaration.electoral_disctrict }}</div>
-                    <div class="details-line"><span class="details-line-title">Biografía:</span> <a :href="selectedElement.congress_page" target="_blank">{{ selectedElement.congress_page }}</a></div>
+                    <div class="details-line"><a :href="selectedElement.congress_page" target="_blank"><span class="details-line-title">Biografía</span></a></div>
                     <div class="details-line" v-if="selectedElement.declaration && selectedElement.declaration['cantidad pagada por irpf']"><span class="details-line-title">Cantidad pagada IPRF:</span> {{ selectedElement.declaration["cantidad pagada por irpf"][0].taxes_value }}</div>
+                  </div>
+                  <div class="col-md-4">
+                    <img v-if="selectedElement.photoInfo && selectedElement.photoInfo.photoUrl" :src="selectedElement.photoInfo.photoUrl" class="photo">
                   </div>
                   <div class="col-md-12" v-if="selectedElement.declaration">
                     <!-- Divider -->
@@ -266,7 +284,6 @@
             </div>
           </div>
         </div>
-        <!-- Reset filters -->
         <button class="reset-btn"><i class="material-icons">settings_backup_restore</i><span class="reset-btn-text">Reset</span></button>
         <div class="footer-buttons-right">
           <button @click="downloadDataset"><i class="material-icons">cloud_download</i></button>

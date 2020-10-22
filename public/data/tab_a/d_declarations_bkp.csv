@@ -553,15 +553,15 @@ IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,rentas,OTRAS rentas o percepcione
 IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,cantidad pagada por irpf,,,,,"65,633.06 €",,,,,,,,,,,,,,,,,,,,,,
 IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Piso,Madrid,6/5/2019,propiedad compra-venta,,,,,,,,,,,,,,,,,
 IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Garaje,Madrid,6/5/2019,propiedad compra-venta,,,,,,,,,,,,,,,,,
-IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Vivienda,Palencia,6/3/2015,"Propiedad1/6 herencia, 5/6 ",,,,,,,,,,,,,,,,,
-urbana. ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"compra derechos""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Vivienda,Palencia,6/3/2015,"Propiedad1/6 herencia, 5/6 
+urbana. 
+compra derechos",,,,,,,,,,,,,,,,,
 IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,1/5 de 5 pisos,Valladolid,28/7/2017,propiedad herencia ,,,,,,,,,,,,,,,,,
 IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,1/5 de 5 locales comerciales,Valladolid,28/7/2017,propiedad herencia ,,,,,,,,,,,,,,,,,
-IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,1/20 parcela,,,,,,,,,,,,,,,,,,,,
-"1 parcela""",Valladolid,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"Valladolid""",28/7/2017,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"6/3/2015""","propiedad herencia propiedad 1/6 herencia, 5/6 compra",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,"1/20 parcela
+1 parcela","Valladolid
+Valladolid","28/7/2017
+6/3/2015","propiedad herencia propiedad 1/6 herencia, 5/6 compra",,,,,,,,,,,,,,,,,
 IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza rústica,3 parcelas rústicas,Palencia,6/3/2015,"propiedad 1/6 herencia, 5/6 compra derechos",,,,,,,,,,,,,,,,,
 IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,"Bienes inmuebles propiedad de una sociedad, comunidad o entidad que no cotiza en Bolsa y de la que el declarante tiene acciones o participaciones. ",18 pisos Isabel La Católica SL cuyo 20% es propiedad de la declarante,Valladolid,diciembre 1991 y 1993 y 1996,"10 participaciones a la constitución, resto compra-venta",,,,,,,,,,,,,,,,,
 IsabelGarcíaTejerina,ISABEL GARCÍA TEJERINA,,bienes patrimoniales,,,,,,"Bienes inmuebles propiedad de una sociedad, comunidad o entidad que no cotiza en Bolsa y de la que el declarante tiene acciones o participaciones. ",7 pisos y 3 locales comerciales Huerta del Rey SL cuyo 20% es propiedad de la declarante,Valladolid,1/2/1988,"Donación una participación, resto compra-venta ",,,,,,,,,,,,,,,,,
@@ -826,7 +826,7 @@ JoséMaríaEspejo-SaavedraConesa,JOSE MARIA ESPEJO-SAAVEDRA CONESA,,otros bienes
 JoséMaríaEspejo-SaavedraConesa,JOSE MARIA ESPEJO-SAAVEDRA CONESA,,vehículos,,,,,,,,,,,,,,,,,,7/7/1905,Vehículo Hyundai i20. Cilindrada 1.400 cc ,,,,,,,,
 JoséMaríaEspejo-SaavedraConesa,JOSE MARIA ESPEJO-SAAVEDRA CONESA,,vehículos,,,,,,,,,,,,,,,,,,10/7/1905,Motocicleta Suzuki V-Strom. Cilindrada 650 cc ,,,,,,,,
 JoséMaríaEspejo-SaavedraConesa,JOSE MARIA ESPEJO-SAAVEDRA CONESA,,vehículos,,,,,,,,,,,,,,,,,,11/7/1905,Vehículo Nissan Xtrai. Cilindrada 1.600 cc,,,,,,,,
-JoséMaríaEspejo-SaavedraConesa,JOSE MARIA ESPEJO-SAAVEDRA CONESA,,otros  ,,,,,,,,,,,,,,,,,,,,#ERROR!,"91,411.00 €",,,,,,
+JoséMaríaEspejo-SaavedraConesa,JOSE MARIA ESPEJO-SAAVEDRA CONESA,,otros  ,,,,,,,,,,,,,,,,,,,,"-Plan de Pensiones Empleo Caixabank, S.A. ","91,411.00 €",,,,,,
 JoséMaríaEspejo-SaavedraConesa,JOSE MARIA ESPEJO-SAAVEDRA CONESA,,deudas,,,,,,,,,,,,,,,,,,,,,,Préstamo hipotecario para adquisición de vivienda concedido por Caixabank ,17/6/2010,"238,901 €","187,829 €",,
 JoséMaríaEspejo-SaavedraConesa,JOSE MARIA ESPEJO-SAAVEDRA CONESA,,deudas,,,,,,,,,,,,,,,,,,,,,,Préstamo hipotecario para adquisición de vivienda concedido por Caixabank ,17/6/2010,"106,099 €","71,145 €",,
 IsmaelCortésGómez,ISMAEL CORTÉS GÓMEZ,TARRAGONA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",Diputado en el Congreso ,,0.00 €,,,,,,,,,,,,,,,,,,,,,,,
@@ -981,7 +981,7 @@ OmarAnguitaPérez,OMAR ANGUITA PÉREZ,,bienes patrimoniales,,,,,,Bienes Inmueble
 OmarAnguitaPérez,OMAR ANGUITA PÉREZ,,depositos,,,,,,,,,,,CUENTA CORRIENTE CAJAMAR ,5500,"5,500.00 €",,,,,,,,,,,,,,
 OmarAnguitaPérez,OMAR ANGUITA PÉREZ,,vehículos,,,,,,,,,,,,,,,,,,11/7/1905,VEHICULO: BMW 5200 ,,,,,,,,
 OmarAnguitaPérez,OMAR ANGUITA PÉREZ,,vehículos,,,,,,,,,,,,,,,,,,10/7/1905,MOTOCICLETA: KEEWAY CILINDRADA: 125CC ,,,,,,,,
-OmarAnguitaPérez,OMAR ANGUITA PÉREZ,,deudas,,,,,,,,,,,,,,,,,,,,,,Préstamo hipotecario concedido por el Banco CAJAMAR ,22/11/2011,123035.63,"95,215 €",,
+OmarAnguitaPérez,OMAR ANGUITA PÉREZ,,deudas,,,,,,,,,,,,,,,,,,,,,,Préstamo hipotecario concedido por el Banco CAJAMAR ,22/11/2011,123035.63 ,"95,215 €",,
 OmarAnguitaPérez,OMAR ANGUITA PÉREZ,,deudas,,,,,,,,,,,,,,,,,,,,,,Préstamo personal concedido por el Banco SANTANDER, 27-11-2019 ,"20,000 €","19,500 €",,
 RosaMaríaMedelPérez,ROSA MARÍA MEDEL PÉREZ,VALENCIA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",TOTAL INGRESOS COMPUTABLES ,70723.47,"70,723.47 €",,,,,,,,,,,,,,,,,,,,,,,
 RosaMaríaMedelPérez,ROSA MARÍA MEDEL PÉREZ,,cantidad pagada por irpf,,,,,"20,847.15 €",,,,,,,,,,,,,,,,,,,,,,
@@ -1021,8 +1021,8 @@ JuanBernardoFuentesCurbelo,JUAN BERNARDO FUENTES CURBELO,,depositos,,,,,,,,,,,Cu
 JuanBernardoFuentesCurbelo,JUAN BERNARDO FUENTES CURBELO,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",Aportaciones Cajamar ,732.00 €,732.00 €,,,,,,,,,,
 JuanBernardoFuentesCurbelo,JUAN BERNARDO FUENTES CURBELO,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",Asesoría Tetir SL Ganadería Tetir SL ,"7.000,00 50.000,00 ","57,000.00 €",,,,,,,,,,
 JuanBernardoFuentesCurbelo,JUAN BERNARDO FUENTES CURBELO,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",Quesos de Tetir SL. Promociones Verol SL ,"15.000,00 12.020,04 ","27,020.04 €",,,,,,,,,,
-JuanBernardoFuentesCurbelo,JUAN BERNARDO FUENTES CURBELO,,otros bienes o derechos,,,,,,,,,,,,,,"Sociedades participadas en mas de un 5% por otras sociedades o entidades q ue sean propiedad, en todo o en parte,d el p arlamentario declarante. ",Asesoría Tetir SL. Administrador Ganadería Tetir SL. 50% de participación Quesos de Tetir SL . 30% de participación. Sin ejercer administración Promociones Verol SL . Administrador. 50% de participación Travel Trend Group. Administrador. 3% de participación ,,,,,,,,,,,,
-"TISMECA SL. Administrador. 5% de participación  """,,,,,,,,,,,,"La vivienda se encuentra enclavada en la finca rústica número 421 del polígono 11 del término municipal de Puerto del Rosario. En ella se encuentra un a explotación ganadera de caprino con 400 cabezas de ganado. Código REGA E-GC-017-02658. Esta explotación esta gestionada por dos sociedades familiares, Ganadería Tetir SL. y Quesos de Tetir SL. ",,,,,,,,,,,,,,,,,,
+JuanBernardoFuentesCurbelo,JUAN BERNARDO FUENTES CURBELO,,otros bienes o derechos,,,,,,,,,,,,,,"Sociedades participadas en mas de un 5% por otras sociedades o entidades q ue sean propiedad, en todo o en parte,d el p arlamentario declarante. ","Asesoría Tetir SL. Administrador Ganadería Tetir SL. 50% de participación Quesos de Tetir SL . 30% de participación. Sin ejercer administración Promociones Verol SL . Administrador. 50% de participación Travel Trend Group. Administrador. 3% de participación 
+TISMECA SL. Administrador. 5% de participación  ",,,,,,,,,,,,"La vivienda se encuentra enclavada en la finca rústica número 421 del polígono 11 del término municipal de Puerto del Rosario. En ella se encuentra un a explotación ganadera de caprino con 400 cabezas de ganado. Código REGA E-GC-017-02658. Esta explotación esta gestionada por dos sociedades familiares, Ganadería Tetir SL. y Quesos de Tetir SL. "
 JuanBernardoFuentesCurbelo,JUAN BERNARDO FUENTES CURBELO,,vehículos,,,,,,,,,,,,,,,,,,26/6/1905,Toyota Land Cruiser 8516 CRP ,,,,,,,,Ganadería Tetir y Quesos Tetir reciben subvenciones contempladas en el POSEI: 
 JuanBernardoFuentesCurbelo,JUAN BERNARDO FUENTES CURBELO,,vehículos,,,,,,,,,,,,,,,,,,26/6/1905,Toyota Hi Lux 2156 CRP,,,,,,,,"- Ganadería Tetir. 213,13 €/Tm de leche producida para el productor. Total percibido en 2019: 32.540,77 € "
 JuanBernardoFuentesCurbelo,JUAN BERNARDO FUENTES CURBELO,,otros  ,,,,,,,,,,,,,,,,,,,,Seguro Colectivo de Vida - Plan de previsión social empresarial de las Cortes Generales ,"3,208.80 €",,,,,,"- Quesos Tetir. 48,00 €/Tm producidas. Total percibido en 2019: 7.320,75 € "
@@ -1272,8 +1272,8 @@ SantosCerdánLeón,SANTOS CERDÁN LEÓN ,,cantidad pagada por irpf,,,,,"32,286.6
 SantosCerdánLeón,SANTOS CERDÁN LEÓN ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,VIVIENDA ,NAVARRA ,16/6/1905,GANANCIALES PLENO DOMINIO COMPRAVENTA ,,,,,,,,,,,,,,,,,
 SantosCerdánLeón,SANTOS CERDÁN LEÓN ,,depositos,,,,,,,,,,,LIBRETA DE AHORRO ,22000,"22,000.00 €",,,,,,,,,,,,,,
 SantosCerdánLeón,SANTOS CERDÁN LEÓN ,,vehículos,,,,,,,,,,,,,,,,,,30/4/2019,VOLVOXC60 ,,,,,,,,
-SantosCerdánLeón,SANTOS CERDÁN LEÓN ,,deudas,,,,,,,,,,,,,,,,,,,,,,PRÉSTAMO HIPOTECARIO ,,,,,
-", 17/11/2003,53","218 €""","31,094 €",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SantosCerdánLeón,SANTOS CERDÁN LEÓN ,,deudas,,,,,,,,,,,,,,,,,,,,,,"PRÉSTAMO HIPOTECARIO 
+", 17/11/2003,"53,218 €","31,094 €",,
 SantosCerdánLeón,SANTOS CERDÁN LEÓN ,,deudas,,,,,,,,,,,,,,,,,,,,,,PRESTAMO VOLVO-CETELEM ,30/4/2019,"41,800 €","37,000 €",,
 RodrigoJiménezRevuelta,RODRIGO JIMENEZ REVUELTA ,SEGOVIA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",RENDIMIENTO DE ACTIVIDADES ECONÓMICAS,35844.89,"35,844.89 €",,,,,,,,,,,,,,,,,,,,,,,
 RodrigoJiménezRevuelta,RODRIGO JIMENEZ REVUELTA ,,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",RENDIMIENTOS DE CAPITAL MOBILIARIO,0.01,0.01 €,,,,,,,,,,,,,,,,,,,,,,,
@@ -1674,8 +1674,8 @@ MaríaElviraRodríguezHerrer,Maria Elvira Rodríguez Herrer,,bienes patrimoniale
 MaríaElviraRodríguezHerrer,Maria Elvira Rodríguez Herrer,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Apartamento 50% ,Madrid ,18/6/1905,Pleno dominio Compraventa ,,,,,,,,,,,,,,,,,
 MaríaElviraRodríguezHerrer,Maria Elvira Rodríguez Herrer,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Plaza de garaje ,Madrid ,9/6/1905,Pleno dominio Compraventa ,,,,,,,,,,,,,,,,,
 MaríaElviraRodríguezHerrer,Maria Elvira Rodríguez Herrer,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Piso 10% ,Madrid ,1/7/1905,Nudapropiedad Herencia ,,,,,,,,,,,,,,,,,
-MaríaElviraRodríguezHerrer,Maria Elvira Rodríguez Herrer,,depositos,,,,,,,,,,,Cuentas corrientes Cuentas corrientes ,,,,,,,,,,,,,,,,
-"Depósitos plazo ""","102222,11 355363,78","457,585.89 €",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MaríaElviraRodríguezHerrer,Maria Elvira Rodríguez Herrer,,depositos,,,,,,,,,,,"Cuentas corrientes Cuentas corrientes 
+Depósitos plazo ","102222,11 355363,78","457,585.89 €",,,,,,,,,,,,,,
 MaríaElviraRodríguezHerrer,Maria Elvira Rodríguez Herrer,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",Acciones Emerson ElectJic (Cotización 15/11) ,"82,467.00 €","82,467.00 €",,,,,,,,,,
 MaríaElviraRodríguezHerrer,Maria Elvira Rodríguez Herrer,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",Acciones telefónica (cotización 18/11) ,"2,775.00 €","2,775.00 €",,,,,,,,,,
 MaríaElviraRodríguezHerrer,Maria Elvira Rodríguez Herrer,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",Acciones Santander (cotización 18/11) ,"1,378.00 €","1,378.00 €",,,,,,,,,,
@@ -1693,7 +1693,7 @@ SandraGuaitaEsteruelas,SANDRA GUAITA ESTERUELAS ,,bienes patrimoniales,,,,,,Bien
 SandraGuaitaEsteruelas,SANDRA GUAITA ESTERUELAS ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,INMUEBLE,TARRAGONA ,28/4/2015,Pleno dominio Compraventa 50% del declarante ,,,,,,,,,,,,,,,,,
 SandraGuaitaEsteruelas,SANDRA GUAITA ESTERUELAS ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,INMUEBLE,TARRAGONA ,28/4/2015,Pleno dominio Compraventa 50% del declarante ,,,,,,,,,,,,,,,,,
 SandraGuaitaEsteruelas,SANDRA GUAITA ESTERUELAS ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,INMUEBLE,TARRAGONA ,28/4/2005,Pleno dominio Compraventa 25% del declarante ,,,,,,,,,,,,,,,,,
-SandraGuaitaEsteruelas,SANDRA GUAITA ESTERUELAS ,,depositos,,,,,,,,,,,CUENTAS DE AHORROS Y PLAN DE PENSIONES ,15205.95,"15,205.95 €",,,,,,,,,,,,,,
+SandraGuaitaEsteruelas,SANDRA GUAITA ESTERUELAS ,,depositos,,,,,,,,,,,CUENTAS DE AHORROS Y PLAN DE PENSIONES ,15205.95 ,"15,205.95 €",,,,,,,,,,,,,,
 SandraGuaitaEsteruelas,SANDRA GUAITA ESTERUELAS ,,vehículos,,,,,,,,,,,,,,,,,,24/6/1905,FORO FOCUS ,,,,,,,,
 SandraGuaitaEsteruelas,SANDRA GUAITA ESTERUELAS ,,deudas,,,,,,,,,,,,,,,,,,,,,,PRÉSTAMO HIPOTECARIO CONCEDIDO POR BANKINTER ,19/12/2007,"180,000 €","106,782 €",,
 JoanRuizICarbonell,Joan RUIZ i CARBONELL ,TARRAGONA,cantidad pagada por irpf,,,,,"13,053.33 €",,,,,,,,,,,,,,,,,,,,,,
@@ -1770,7 +1770,7 @@ EdmundoBalFrancés,EDMUNDO BAL FRANCÉS ,,vehículos,,,,,,,,,,,,,,,,,,6/7/1905,A
 EdmundoBalFrancés,EDMUNDO BAL FRANCÉS ,,vehículos,,,,,,,,,,,,,,,,,,11/7/1905,Motocicleta UM Classic Renegade 125 ce. ,,,,,,,,
 EdmundoBalFrancés,EDMUNDO BAL FRANCÉS ,,deudas,,,,,,,,,,,,,,,,,,,,,,Hipotecario ,4/2/2002,"304,943 €","7,604 €",,
 EdmundoBalFrancés,EDMUNDO BAL FRANCÉS ,,deudas,,,,,,,,,,,,,,,,,,,,,,"Hipotecario, el declarante es deudor del 50% de lo que se consigna ",29/3/2006,"180,000 €","65,576 €",,
-JoséLuisRamosRodríguez,JOS E LUIS RAMOS RODRIGUEZ ,HUELVA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",RETRIBUCION EJERCICIO 2018 PRESIDENTE DE LA AUTORIDAD PORTURARIA DE HUELVA ,87332.09,"87,332.09 €",,,,,,,,,,,,,,,,,,,,,,,
+JoséLuisRamosRodríguez,JOS E LUIS RAMOS RODRIGUEZ ,HUELVA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",RETRIBUCION EJERCICIO 2018 PRESIDENTE DE LA AUTORIDAD PORTURARIA DE HUELVA ,87332.09 ,"87,332.09 €",,,,,,,,,,,,,,,,,,,,,,,
 JoséLuisRamosRodríguez,JOS E LUIS RAMOS RODRIGUEZ ,,cantidad pagada por irpf,,,,,"23,177.40 €",,,,,,,,,,,,,,,,,,,,,,
 JoséLuisRamosRodríguez,JOS E LUIS RAMOS RODRIGUEZ ,,depositos,,,,,,,,,,,CUENTA CORRIENTE ,45000,"45,000.00 €",,,,,,,,,,,,,,
 JoséLuisRamosRodríguez,JOS E LUIS RAMOS RODRIGUEZ ,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",FONDOS DE INVERSION ,"80,000.00 €","80,000.00 €",,,,,,,,,,
@@ -2233,40 +2233,40 @@ ConcepciónGamarraRuiz-Clavijo,Concepción Gamarra Ruiz-Clavijo ,,bienes patrimo
 ConcepciónGamarraRuiz-Clavijo,Concepción Gamarra Ruiz-Clavijo ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,PLAZA DE GARAJE. Logrono , La Rioja ,23/2/2018,Pleno Dominio Compraventa ,,,,,,,,,,,,,,,,,
 ConcepciónGamarraRuiz-Clavijo,Concepción Gamarra Ruiz-Clavijo ,,depositos,,,,,,,,,,,"Banco de Santander. Cuenta a la vista, depositos de valores y fondos de inversión: 40.264,74 euros lbercaja. Cuentas y Plan de Pensiones: 48.745,72 euros ",89010.46,"89,010.46 €",,,,,,,,,,,,,,
 ConcepciónGamarraRuiz-Clavijo,Concepción Gamarra Ruiz-Clavijo ,,deudas,,,,,,,,,,,,,,,,,,,,,,Hipoteca Ahora ,23/2/2018,"229,000 €","217,837 €",,
-JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,Burgos,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",Mis percepciones en el ano 2018 procedieron de mi condicion de Diputado,,,,,,,,,,,,,,,,,,,,,,,,,
-"Nacional por Burgos.""",,0.00 €,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,Burgos,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación","Mis percepciones en el ano 2018 procedieron de mi condicion de Diputado
+Nacional por Burgos.",,0.00 €,,,,,,,,,,,,,,,,,,,,,,,
 JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,,cantidad pagada por irpf,,,,,"16,188.23 €",,,,,,,,,,,,,,,,,,,,,,
-JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Trastero,Madrid,22/12/2006,50% ganancial.,,,,,,,,,,,,,,,,,
-"Compraventa.""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Trastero,Madrid,22/12/2006,"50% ganancial.
+Compraventa.",,,,,,,,,,,,,,,,,
 JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,,depositos,,,,,,,,,,,"Saldos en cuentas corrientes: Titularidad del 50% del total de 351793,5 Depositos bancarios Titularidad del 50% del total y del 100% 430000",781793.48,"781,793.48 €",,,,,,,,,,,,,,
-JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",80 acciones de Telefonica S.A.,,,,,,,,,,,,
-Valor segun cotizacion del dia 19 de Noviembre de 2019,6,"747 €""","539,76 €",539.76 €,,,,,,,,,,,,,,,,,,,,,,,,,,
+JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ","80 acciones de Telefonica S.A.
+Valor segun cotizacion del dia 19 de Noviembre de 2019,6,747 €","539,76 €",539.76 €,,,,,,,,,,
 JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,,vehículos,,,,,,,,,,,,,,,,,,28/6/1905,Wolkswagen Golf 1.9 TDI (50%) del Total,,,,,,,,
 JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,,vehículos,,,,,,,,,,,,,,,,,,10/7/1905,Audi Q3 TDI en RENTING,,,,,,,,
 JaimeMiguelMateuIstúriz,Jaime Miguel Mateu Isturiz,,otros  ,,,,,,,,,,,,,,,,,,,,"Plan de prevision social empresarial,Tomador Cortes Generales con valor asegurado al vecimiento 05/06/2022.",417.60 €,,,,,,
 ÍñigoErrejónGalván,JOSE ORTIZ GALVAN,CADIZ,cantidad pagada por irpf,,,,,"22,770.17 €",,,,,,,,,,,,,,,,,,,,,,
-ÍñigoErrejónGalván,JOSE ORTIZ GALVAN,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,VIVIENDA (PISO),CADIZ,JUNIO DE 2017,PLENO DOMINIO REG.,,,,,,,,,,,,,,,,,
- DE GANANCIALES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"ADQUIRIDO COMPRAVE""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-ÍñigoErrejónGalván,JOSE ORTIZ GALVAN,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,GARAJE,CADIZ,JUNIO DE 2018,PLENO DOMINIO REG.,,,,,,,,,,,,,,,,,
- DE GANANCIALES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"ADQUIRIDO COMPRAVE""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ÍñigoErrejónGalván,JOSE ORTIZ GALVAN,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,VIVIENDA (PISO),CADIZ,JUNIO DE 2017,"PLENO DOMINIO REG.
+"" DE GANANCIALES
+ADQUIRIDO COMPRAVE",,,,,,,,,,,,,,,,,
+ÍñigoErrejónGalván,JOSE ORTIZ GALVAN,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,GARAJE,CADIZ,JUNIO DE 2018,"PLENO DOMINIO REG.
+"" DE GANANCIALES
+ADQUIRIDO COMPRAVE",,,,,,,,,,,,,,,,,
 ÍñigoErrejónGalván,JOSE ORTIZ GALVAN,,depositos,,,,,,,,,,,2 CUENTAS CORRIENTES,"3.325,00 €","3,325.00 €",,,,,,,,,,,,,,
 ÍñigoErrejónGalván,JOSE ORTIZ GALVAN,,vehículos,,,,,,,,,,,,,,,,,,DICIEMBRE 2015,VEHICULO PEUGEOT 308,,,,,,,,
 ÍñigoErrejónGalván,JOSE ORTIZ GALVAN,,deudas,,,,,,,,,,,,,,,,,,,,,,PRESTAMO HIPOTECARIO ÁDQUISICION VIVIENDA - LA CAIXA,JULIO 2017,"115,000 €","109,000 €",,
-JuanLuisSteegmannOlmedillas,JUAN LUIS STEEGMANN OLMEDlLLAS,MADRID,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",RETRIBUCIONES DINERARIAS EJERCICIO 2018. Total ingresos íntegros,,,,,,,,,,,,,,,,,,,,,,,,,
-"compulables""","79.695,70","79,695.70 €",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+JuanLuisSteegmannOlmedillas,JUAN LUIS STEEGMANN OLMEDlLLAS,MADRID,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación","RETRIBUCIONES DINERARIAS EJERCICIO 2018. Total ingresos íntegros
+compulables","79.695,70","79,695.70 €",,,,,,,,,,,,,,,,,,,,,,,
 JuanLuisSteegmannOlmedillas,JUAN LUIS STEEGMANN OLMEDlLLAS,,cantidad pagada por irpf,,,,,"23,111.58 €",,,,,,,,,,,,,,,,,,,,,,
-JuanLuisSteegmannOlmedillas,JUAN LUIS STEEGMANN OLMEDlLLAS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,VIVIENDA UNIFAMILIAR,SEGOVIA,5-ENERO-1995,50% PLENO DOMINIO,,,,,,,,,,,,,,,,,
-"COMPRAVENTA""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+JuanLuisSteegmannOlmedillas,JUAN LUIS STEEGMANN OLMEDlLLAS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,VIVIENDA UNIFAMILIAR,SEGOVIA,5-ENERO-1995,"50% PLENO DOMINIO
+COMPRAVENTA",,,,,,,,,,,,,,,,,
 JuanLuisSteegmannOlmedillas,JUAN LUIS STEEGMANN OLMEDlLLAS,,depositos,,,,,,,,,,,CUENTAS CORRIENTES,302000,"302,000.00 €",,,,,,,,,,,,,,
 JuanLuisSteegmannOlmedillas,JUAN LUIS STEEGMANN OLMEDlLLAS,,vehículos,,,,,,,,,,,,,,,,,,15/6/1905,BMW320i,,,,,,,,
 JuanLuisSteegmannOlmedillas,JUAN LUIS STEEGMANN OLMEDlLLAS,,otros  ,,,,,,,,,,,,,,,,,,,,PLANES DE PENSIONES,"7,000.00 €",,,,,,
 MaríaGuijarroCeballos,María Guijarro Ceballos,BIZKAIA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",Retribución por cargo público Diputación Bizkaia,"57.819,7","57,819.70 €",,,,,,,,,,,,,,,,,,,,,,,
 MaríaGuijarroCeballos,María Guijarro Ceballos,,rentas,"Intereses o rendimientos de cuentas, depósitos y activos financieros",Intereses por rendimiento de una cuenta,"6,65",6.65 €,,,,,,,,,,,,,,,,,,,,,,,
 MaríaGuijarroCeballos,María Guijarro Ceballos,,cantidad pagada por irpf,,,,,"18,350.76 €",,,,,,,,,,,,,,,,,,,,,,
-MaríaGuijarroCeballos,María Guijarro Ceballos,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Vivienda con plaza de garaje,Bizkaia,4/4/2005,Pleno dominio al 50%,,,,,,,,,,,,,,,,,
-"declarante""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MaríaGuijarroCeballos,María Guijarro Ceballos,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Vivienda con plaza de garaje,Bizkaia,4/4/2005,"Pleno dominio al 50%
+declarante",,,,,,,,,,,,,,,,,
 MaríaGuijarroCeballos,María Guijarro Ceballos,,depositos,,,,,,,,,,,4 cuentas corrientes en diferentes entidades bancarias,"23.418,5","23.418,5",,,,,,,,,,,,,,
 MaríaGuijarroCeballos,María Guijarro Ceballos,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",Micro-crédito al PSOE,500.00 €,500.00 €,,,,,,,,,,
 MaríaGuijarroCeballos,María Guijarro Ceballos,,otros  ,,,,,,,,,,,,,,,,,,,,Planes de pensiones,7.86 €,,,,,,
@@ -2279,30 +2279,30 @@ YolandaSevaRuiz,YOLANDA SEVA RUIZ,,cantidad pagada por irpf,,,,,"4,964.24 €",,
 YolandaSevaRuiz,YOLANDA SEVA RUIZ,,vehículos,,,,,,,,,,,,,,,,,,2/7/1905,RENAUL T CLlO,,,,,,,,
 YolandaSevaRuiz,YOLANDA SEVA RUIZ,,vehículos,,,,,,,,,,,,,,,,,,8/7/1905,RENAUL T CAPTURE,,,,,,,,
 YolandaSevaRuiz,YOLANDA SEVA RUIZ,,deudas,,,,,,,,,,,,,,,,,,,,,,CRÉDITO HIPOTECARIO,28/6/1905,"60,000 €","10,692 €",,
-YolandaSevaRuiz,YOLANDA SEVA RUIZ,,deudas,,,,,,,,,,,,,,,,,,,,,,CRÉDITO PERSONAL,7/7/1905,"19,135 €","10,299 €",,"EN EL APARTADO DE DEUDAS Y OBLIGACIONES PATRIMONIALES, Asl COMO EN EL DE VEHlcULOS , SE"
-REFLEJA EL IMPORTE TOTAL DE LOS MISMOS, SI BIEN SON OPERACONES INCOADAS DENTRO DEL,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-RÉGIMEN DE GANANCIALES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-EL PRÉSTAMO HIPOTECARIO QUE APARECE EN ESTA DECLARACiÓN CORRESPONDE A LA COMPRA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-FALLIDA DE UNA VIVIENDA FAMILIAR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-EN CUANTO A LOS IMPORTES," ESTÁN ACTUALIZADOS A FECHA 25 DE SEPTIEMBRE DE 2019""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+YolandaSevaRuiz,YOLANDA SEVA RUIZ,,deudas,,,,,,,,,,,,,,,,,,,,,,CRÉDITO PERSONAL,7/7/1905,"19,135 €","10,299 €",,"EN EL APARTADO DE DEUDAS Y OBLIGACIONES PATRIMONIALES, Asl COMO EN EL DE VEHlcULOS , SE
+REFLEJA EL IMPORTE TOTAL DE LOS MISMOS, SI BIEN SON OPERACONES INCOADAS DENTRO DEL
+RÉGIMEN DE GANANCIALES
+EL PRÉSTAMO HIPOTECARIO QUE APARECE EN ESTA DECLARACiÓN CORRESPONDE A LA COMPRA
+FALLIDA DE UNA VIVIENDA FAMILIAR
+EN CUANTO A LOS IMPORTES, ESTÁN ACTUALIZADOS A FECHA 25 DE SEPTIEMBRE DE 2019"
 ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,MADRID,rentas,"Intereses o rendimientos de cuentas, depósitos y activos financieros",DE TODAS LAS CUENTAS CASILLA 271RPF 100 - DECLARACiÓN 2018,"74,44",74.44 €,,,,,,,,,,,,,,,,,,,,,,,
 ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,cantidad pagada por irpf,,,,,"10,794.34 €",,,,,,,,,,,,,,,,,,,,,,
 ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,VIVIENDA HABITUAL (PISO),MADRID,FEBRERO 2018,50% GANANCIALES,,,,,,,,,,,,,,,,,
 ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,bienes patrimoniales,,,,,,,TRASTERO,MADRID,FEBRERO 2019,50% GANANCIALES,,,,,,,,,,,,,,,,,
 ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,bienes patrimoniales,,,,,,,GARAJE (2/12),MADRID,FEBRERO 2020,50% GANANCIALES,,,,,,,,,,,,,,,,,
-ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,depositos,,,,,,,,,,,"CUENTA SIN NÓMINA- 2.287,39",,,,,,,,,,,,,,,,
-CUENTA SIN NÓMINA COMÚN- 640,77,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-CUENTA NARANJA- 69,97,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-CUENTA IMPUESTOS 0- 93,7,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-CUENTA VINCULACiÓN PLUS- 8.350,"32""","11.441,52","11.441,52",,,,,,,,,,,,,,,,,,,,,,,,,,,
+ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,depositos,,,,,,,,,,,"CUENTA SIN NÓMINA- 2.287,39
+CUENTA SIN NÓMINA COMÚN- 640,77
+CUENTA NARANJA- 69,97
+CUENTA IMPUESTOS 0- 93,07
+CUENTA VINCULACiÓN PLUS- 8.350,32","11.441,52","11.441,52",,,,,,,,,,,,,,
 ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",DEPÓSITO DE VALORES ING ACCIONES BBVA A 22 DE NOVIEMBRE 2019,"5.844,57","5,844.57 €",,,,,,,,,,
 ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,vehículos,,,,,,,,,,,,,,,,,,30/6/1905,PEUGEOT308,,,,,,,,
 ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,otros  ,,,,,,,,,,,,,,,,,,,,MICROCRÉDITO AL PSOE,500.00 €,,,,,,
 ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,otros  ,,,,,,,,,,,,,,,,,,,,MICROCRÉDITO AL PSOE,500.00 €,,,,,,
 ZaidaCanteraDeCastro,ZAIDA CANTERA DE CASTRO,,deudas,,,,,,,,,,,,,,,,,,,,,,PRÉSTAMO HIPOTECARIO KUTXA BANK 50% DEL TOTAL,FEB.2018,"400,000 €","257,879 €",,"PLAN DE PENSIONES ASOCIADO AL PRÉSTAMO HIPOTECARIO 2.202,24€"
-JavierMerinoMartínez,JAVIER MERINO MARTíNEZ,LA RIOJA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",RETRIBUCiÓN NETA PERCIBIDA EN EL EJERCICIO 2018 POR EL ,,,,,,,,,,,,,,,,,,,,,,,,,
-EXCMO. AYUNTAMIENTO DE LOGROÑO EN CONCEPTO DE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-CONCEJAL DE ALCALDíA," DEPORTES Y JUVENTUD""","40.295,99.€","40,295.99 €",,,,,,,,,,,,,,,,,,,,,,,,,,,
+JavierMerinoMartínez,JAVIER MERINO MARTíNEZ,LA RIOJA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación","RETRIBUCiÓN NETA PERCIBIDA EN EL EJERCICIO 2018 POR EL 
+EXCMO. AYUNTAMIENTO DE LOGROÑO EN CONCEPTO DE
+CONCEJAL DE ALCALDíA, DEPORTES Y JUVENTUD","40.295,99.€","40,295.99 €",,,,,,,,,,,,,,,,,,,,,,,
 JavierMerinoMartínez,JAVIER MERINO MARTíNEZ,,cantidad pagada por irpf,,,,,"7,585.25 €",,,,,,,,,,,,,,,,,,,,,,
 JavierMerinoMartínez,JAVIER MERINO MARTíNEZ,,depositos,,,,,,,,,,,CUENTAS CORRIENTES,3755,"3,755.00 €",,,,,,,,,,,,,,
 JavierMerinoMartínez,JAVIER MERINO MARTíNEZ,,vehículos,,,,,,,,,,,,,,,,,,30/6/2017,PEUGEOT 308 5P ALLURE 1.6. BLUE HDI,,,,,,,,
@@ -2316,14 +2316,14 @@ IoneBelarraUrteaga,IONE BELARRA URTEAGA,NAVARRA,rentas,"Percepciones netas de ti
 IoneBelarraUrteaga,IONE BELARRA URTEAGA,,rentas,"Dividendos y participación en beneficios de sociedades, comunidades o entidades de cualquier clase ",CAIXABANK,"38,64",38.64 €,,,,,,,,,,,,,,,,,,,,,,,
 IoneBelarraUrteaga,IONE BELARRA URTEAGA,,rentas,"Intereses o rendimientos de cuentas, depósitos y activos financieros",BANCA POPOLARE ETICA,"16,20",16.20 €,,,,,,,,,,,,,,,,,,,,,,,
 IoneBelarraUrteaga,IONE BELARRA URTEAGA,,cantidad pagada por irpf,,,,,"23,446.37 €",,,,,,,,,,,,,,,,,,,,,,
-IoneBelarraUrteaga,IONE BELARRA URTEAGA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,MITAD INDIVISA VIVIENDA,MADRID,1/10/2019,PROPIEDAD POR,,,,,,,,,,,,,,,,,
-"COMPRAVENTA""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+IoneBelarraUrteaga,IONE BELARRA URTEAGA,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,MITAD INDIVISA VIVIENDA,MADRID,1/10/2019,"PROPIEDAD POR
+COMPRAVENTA",,,,,,,,,,,,,,,,,
 IoneBelarraUrteaga,IONE BELARRA URTEAGA,,bienes patrimoniales,,,,,,,,,,100000,,,,,,,,,,,,,,,,,
 IoneBelarraUrteaga,IONE BELARRA URTEAGA,,depositos,,,,,,,,,,,CUENTAS DE AHORRO SALDO A 15-11-2019,42719.49,"42,719.49 €",,,,,,,,,,,,,,
 IoneBelarraUrteaga,IONE BELARRA URTEAGA,,deudas,,,,,,,,,,,,,,,,,,,,,,"PRESTAMO HIPOTECARIO CAJA DE CREDITO DE LOS INGENIEROS, SOCo COOP.",1/10/2019,"70,700 €","70,700 €",,
 MagdalenaValerioCordero,Magdalena Valerio Cordero,,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",Retribuciones como Ministra desde 07 de Junio al31 de diciembre de 2018,"45.525,44","45,525.44 €",,,,,,,,,,,,,,,,,,,,,,,
-MagdalenaValerioCordero,Magdalena Valerio Cordero,,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",Retribuciones como funcionaria de la Junta de Comunidades de Castilla La ,,,,,,,,,,,,,,,,,,,,,,,,,
- Mancha," incluidos trienios desde 1 de Enero a 6 de Junio de 2018""","23.532,97","23,532.97 €",,,,,,,,,,,,,,,,,,,,,,,,,,,
+MagdalenaValerioCordero,Magdalena Valerio Cordero,,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación","Retribuciones como funcionaria de la Junta de Comunidades de Castilla La 
+ Mancha, incluidos trienios desde 1 de Enero a 6 de Junio de 2018","23.532,97","23,532.97 €",,,,,,,,,,,,,,,,,,,,,,,
 MagdalenaValerioCordero,Magdalena Valerio Cordero,,cantidad pagada por irpf,,,,,"14,594.40 €",,,,,,,,,,,,,,,,,,,,,,
 MagdalenaValerioCordero,Magdalena Valerio Cordero,,depositos,,,,,,,,,,,Saldo en dos cuentas corrientes,"44.938,15","44.938,15",,,,,,,,,,,,,,
 MagdalenaValerioCordero,Magdalena Valerio Cordero,,otros  ,,,,,,,,,,,,,,,,,,,,Seguros de vida y accidente,"333,400.00 €",,,,,,
@@ -2332,26 +2332,26 @@ MireiaBorrásPabón,MIREIA BORRÁS PABÓN,,rentas,"Percepciones netas de tipo sa
 MireiaBorrásPabón,MIREIA BORRÁS PABÓN,,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",COLABORADOR SHINE IBERIA,1.500 EUR,"1,500.00 €",,,,,,,,,,,,,,,,,,,,,,,
 MireiaBorrásPabón,MIREIA BORRÁS PABÓN,,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",CONSULTORíA,3000 EUR,"3,000.00 €",,,,,,,,,,,,,,,,,,,,,,,
 MireiaBorrásPabón,MIREIA BORRÁS PABÓN,,cantidad pagada por irpf,,,,,5.16 €,,,,,,,,,,,,,,,,,,,,,,
-MireiaBorrásPabón,MIREIA BORRÁS PABÓN,,depositos,,,,,,,,,,,ING DIRECT,,,,,,,,,,,,,,,,
-"BANCO SANTANDER""",6.000 EUROS,"6,000.00 €",,,,,,,,,,,,,,,,,,,,,,,,,,,,
-MireiaBorrásPabón,MIREIA BORRÁS PABÓN,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ","PARTICIPACIONES 51 %-GOIPLUG SPAIN SL -, VALORANDO CAPITAL +",,,,,,,,,,,,
-"RESERVAS + INVERSIONES EN DESARROLLO DE MARCA Y PRODUCTO""",APROXIMADO: 15.000 EUROS,"15,000.00 €",,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MireiaBorrásPabón,MIREIA BORRÁS PABÓN,,depositos,,,,,,,,,,,"ING DIRECT
+BANCO SANTANDER",6.000 EUROS,"6,000.00 €",,,,,,,,,,,,,,
+MireiaBorrásPabón,MIREIA BORRÁS PABÓN,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ","PARTICIPACIONES 51 %-GOIPLUG SPAIN SL -, VALORANDO CAPITAL +
+RESERVAS + INVERSIONES EN DESARROLLO DE MARCA Y PRODUCTO",APROXIMADO: 15.000 EUROS,"15,000.00 €",,,,,,,,,,
 MireiaBorrásPabón,MIREIA BORRÁS PABÓN,,vehículos,,,,,,,,,,,,,,,,,,6/7/1905,SMART FOR TWO NEGRO,,,,,,,,
 MireiaBorrásPabón,MIREIA BORRÁS PABÓN,,vehículos,,,,,,,,,,,,,,,,,,11/7/1905,SMART FOR TWO GRIS,,,,,,,,
 PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,MADRID,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",DIPUTADA XII LEGISLATURA (IRPF 2018),,0.00 €,,,,,,,,,,,,,,,,,,,,,,,
 PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,rentas,"Dividendos y participación en beneficios de sociedades, comunidades o entidades de cualquier clase ",CASILLA0411RPF2018,2.669,"2,669.00 €",,,,,,,,,,,,,,,,,,,,,,,
 PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,cantidad pagada por irpf,,,,,"11,296.00 €",,,,,,,,,,,,,,,,,,,,,,
-PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,bienes patrimoniales,,,,,,PISO,MADRID,1992,PLENO DOMINIO,,,,,,,,,,,,,,,,,,
-"GANANCIALES 50%""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,bienes patrimoniales,,,,,,PISO,MADRID,1960 (aprox),NUDA PROPIEDAD,,,,,,,,,,,,,,,,,,
-"HERENCIA 16%""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,bienes patrimoniales,,,,,,PLAZA GARAJE,MADRID,1990 (aprox),NUDA PROPIEDAD,,,,,,,,,,,,,,,,,,
-"HERENCIA 16%""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,bienes patrimoniales,,,,,,Bienes,,,,,,,,,,,,,,,,,,,,,
-Inmuebles,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-de naturaleza,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"urbana.""",VIVIENDA UNIFAMILIAR,MADRID,1990 (aprox),PLENO DOMINIO,,,,,,,,,,,,,,,,,,,,,,,,,,
-"GANANCIALES 50%""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,bienes patrimoniales,,,,,,PISO,MADRID,1992,"PLENO DOMINIO
+GANANCIALES 50%",,,,,,,,,,,,,,,,,,
+PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,bienes patrimoniales,,,,,,PISO,MADRID,1960 (aprox),"NUDA PROPIEDAD
+HERENCIA 16%",,,,,,,,,,,,,,,,,,
+PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,bienes patrimoniales,,,,,,PLAZA GARAJE,MADRID,1990 (aprox),"NUDA PROPIEDAD
+HERENCIA 16%",,,,,,,,,,,,,,,,,,
+PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,bienes patrimoniales,,,,,,"Bienes
+Inmuebles
+de naturaleza
+urbana.",VIVIENDA UNIFAMILIAR,MADRID,1990 (aprox),"PLENO DOMINIO
+GANANCIALES 50%",,,,,,,,,,,,,,,,,
 PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,depositos,,,,,,,,,,,DEPÓSITOS A LA VISTA (GANANCIALES),32000,"32,000.00 €",,,,,,,,,,,,,,
 PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",CIONES BOLSA MADRID (GANANCIALES),"52,000.00 €","52,000.00 €",,,,,,,,,,
 PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",ACCIONES BOLSA MADRID (NUDA PROPIEDAD HERENCIA),"133,000.00 €","133,000.00 €",,,,,,,,,,
@@ -2363,11 +2363,11 @@ PilarMarcosDomínguez,PILAR MARCOS DOMíNGUEZ,,vehículos,,,,,,,,,,,,,,,,,,10/7/
 AlejandroSolerMur,ALEJANDRO SOLER MUR,,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",NÓMINA SEPES 2019,24268,"24,268.00 €",,,,,,,,,,,,,,,,,,,,,,,
 AlejandroSolerMur,ALEJANDRO SOLER MUR,,rentas,OTRAS rentas o percepciones de cualquier clase,ALQUILER VIVIENDA,700€/MES,"8,400.00 €",,,,,,,,,,,,,,,,,,,,,,,
 AlejandroSolerMur,ALEJANDRO SOLER MUR,,cantidad pagada por irpf,,,,,"24,016.43 €",,,,,,,,,,,,,,,,,,,,,,
-AlejandroSolerMur,ALEJANDRO SOLER MUR,,bienes patrimoniales,,,,,,Bienes,,,,,,,,,,,,,,,,,,,,,
-Inmuebles,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-de naturaleza,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"urbana.""",VIVIENDA 160mt2,ELCHE (ALICANTE),DICIEMBRE/2019,PLENO DOMINIO,,,,,,,,,,,,,,,,,,,,,,,,,,
-"COMPRAVENTA""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AlejandroSolerMur,ALEJANDRO SOLER MUR,,bienes patrimoniales,,,,,,"Bienes
+Inmuebles
+de naturaleza
+urbana.",VIVIENDA 160mt2,ELCHE (ALICANTE),DICIEMBRE/2019,"PLENO DOMINIO
+COMPRAVENTA",,,,,,,,,,,,,,,,,
 AlejandroSolerMur,ALEJANDRO SOLER MUR,,depositos,,,,,,,,,,,CUENTA BANKIA,7422,"7,422.00 €",,,,,,,,,,,,,,
 AlejandroSolerMur,ALEJANDRO SOLER MUR,,vehículos,,,,,,,,,,,,,,,,,,4/7/1905,RANGE ROVER SPORT,,,,,,,,
 AlejandroSolerMur,ALEJANDRO SOLER MUR,,otros  ,,,,,,,,,,,,,,,,,,,,PLAN PENSIONES BANKIA,"16,822.00 €",,,,,,
@@ -2376,8 +2376,8 @@ AlejandroSolerMur,ALEJANDRO SOLER MUR,,deudas,,,,,,,,,,,,,,,,,,,,,,PRÉSTAMO PER
 AlejandroSolerMur,ALEJANDRO SOLER MUR,,deudas,,,,,,,,,,,,,,,,,,,,,,PRÉSTAMO PERSONAL BANKIA,11/7/1905,"18,000 €","17,145 €",,
 AlejandroSolerMur,ALEJANDRO SOLER MUR,,deudas,,,,,,,,,,,,,,,,,,,,,,PRÉSTAMO PERSONAL MARIAN PARRA FERNÁNDEZ,11/7/1905,"33,000 €","31,000 €",,
 AlejandroSolerMur,ALEJANDRO SOLER MUR,,deudas,,,,,,,,,,,,,,,,,,,,,,HIPOTECA BANKIA,11/7/1905,"132,000 €","131,561 €",,
-AlejandroSolerMur,ALEJANDRO SOLER MUR,,deudas,,,,,,,,,,,,,,,,,,,,,,,,,,PRÉSTAMO PERSONAL CRISTINA SOLER MUR 2019 19000 18000,"EL MOTIVO DE LA MODIFICACiÓN DE LA DECLARACiÓN, ES LA CONSIGNACION POR"
-"PERCEPCIONES RECIBIDAS EN EL EJERCICIO 2019.""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AlejandroSolerMur,ALEJANDRO SOLER MUR,,deudas,,,,,,,,,,,,,,,,,,,,,,,,,,PRÉSTAMO PERSONAL CRISTINA SOLER MUR 2019 19000 18000,"EL MOTIVO DE LA MODIFICACiÓN DE LA DECLARACiÓN, ES LA CONSIGNACION POR
+PERCEPCIONES RECIBIDAS EN EL EJERCICIO 2019."
 Pedro  FernándezHernández,PEDRO FERNANDEZ HERNANDEZ,ZARAGOZA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",DOCENCIA,2250,"2,250.00 €",,,,,,,,,,,,,,,,,,,,,,,
 Pedro  FernándezHernández,PEDRO FERNANDEZ HERNANDEZ,,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",ABOGACíA,30600,"30,600.00 €",,,,,,,,,,,,,,,,,,,,,,,
 Pedro  FernándezHernández,PEDRO FERNANDEZ HERNANDEZ,,rentas,"Intereses o rendimientos de cuentas, depósitos y activos financieros",CUENTAS BANCARIAS,25.03,25.03 €,,,,,,,,,,,,,,,,,,,,,,,
@@ -2392,15 +2392,15 @@ Pedro  FernándezHernández,PEDRO FERNANDEZ HERNANDEZ,,deudas,,,,,,,,,,,,,,,,,
 ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,ALBACETE / CONGRESO,rentas,"Dividendos y participación en beneficios de sociedades, comunidades o entidades de cualquier clase ",ACCIONES DIVIDENDO,"73,83",73.83 €,,,,,,,,,,,,,,,,,,,,,,,
 ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,rentas,"Intereses o rendimientos de cuentas, depósitos y activos financieros",INTERÉS CUENTA CORRIENTE,"0,90",0.90 €,,,,,,,,,,,,,,,,,,,,,,,
 ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,cantidad pagada por irpf,,,,,"16,372.08 €",,,,,,,,,,,,,,,,,,,,,,
-ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,PISO (75 M2),,,,,,,,,,,,,,,,,,,,
-"VALOR CATASTRAL: 65.831""",ALBACETE,21/1/1993,GANANCIALES (50%),,,,,,,,,,,,,,,,,,,,,,,,,,,
-"COMPRAVENTA""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,VIVIENDA HABITUAL:236 M2,,,,,,,,,,,,,,,,,,,,
-"VALOR CATASTRAL: 135.308""",ALBACETE,1/6/2005,PLENO DOMINIO,,,,,,,,,,,,,,,,,,,,,,,,,,,
-"COMPRAVENTA""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,SOLAR URBANO: 354 M2 ,,,,,,,,,,,,,,,,,,,,
-VALOR CATASTRAL: 20.313,"45""",TINAJEROS (ALBACETE),23/11/2006,PLENO DOMINIO,,,,,,,,,,,,,,,,,,,,,,,,,,
-"COMPRAVENTA""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,"PISO (75 M2)
+VALOR CATASTRAL: 65.831",ALBACETE,21/1/1993,"GANANCIALES (50%)
+COMPRAVENTA",,,,,,,,,,,,,,,,,
+ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,"VIVIENDA HABITUAL:236 M2
+VALOR CATASTRAL: 135.308",ALBACETE,1/6/2005,"PLENO DOMINIO
+COMPRAVENTA",,,,,,,,,,,,,,,,,
+ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,"SOLAR URBANO: 354 M2 
+VALOR CATASTRAL: 20.313,45",TINAJEROS (ALBACETE),23/11/2006,"PLENO DOMINIO
+COMPRAVENTA",,,,,,,,,,,,,,,,,
 ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,depositos,,,,,,,,,,,CUENTAS CORRIENTES (SALDO SEMIANTERIOR A LA DECLARACiÓN),5315,"5,315.00 €",,,,,,,,,,,,,,
 ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",ACCIONES,"829,33",829.33 €,,,,,,,,,,
 ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,vehículos,,,,,,,,,,,,,,,,,,9/10/2017,MOTO 125 ce,,,,,,,,
@@ -2408,22 +2408,12 @@ ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,vehículos,,,,,,,,,,,,,,,,,,
 ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,otros  ,,,,,,,,,,,,,,,,,,,,MICROCRÉDITO Al PSOE,500.00 €,,,,,,
 ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,deudas,,,,,,,,,,,,,,,,,,,,,,PRÉSTAMO HIPOTECARIO BANCO SANTANDER,1/6/2005,"264,000 €",186 €,,
 ManuelGabrielGonzálezRamos,MANUEL GONZÁLEZ RAMOS,,deudas,,,,,,,,,,,,,,,,,,,,,,PRÉSTAMO HIPOTECARIO BANKINTER,28/11/2016,"40,000 €",33 €,,
-DiegoTaiboMonelos,DIEGO TAIBO MONELOS,CORUÑA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",DIETAS CONCEJAL,21763,21763,,,,,,,,,,,,,,,,,,,,,,,
-DiegoTaiboMonelos,DIEGO TAIBO MONELOS,,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",INGRESOS PROFESIONALES (ABOGADO),26995,26995,,,,,,,,,,,,,,,,,,,,,,,
-DiegoTaiboMonelos,DIEGO TAIBO MONELOS,,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",RENDIMIENTO CAPITAL INMOBILIARIO,16800,16800,,,,,,,,,,,,,,,,,,,,,,,
-DiegoTaiboMonelos,DIEGO TAIBO MONELOS,,cantidad pagada por irpf,,,,,,,,,,,,,,,,,,,,,,,,,,,
-DiegoTaiboMonelos,DIEGO TAIBO MONELOS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,PISO,A CORUÑA,2005,PLENO DOMINIO,,,,,,,,,,,,,,,,,
-DiegoTaiboMonelos,DIEGO TAIBO MONELOS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,VIVIENDA,A CORUÑA,2012,PLENO DOMINIO,,,,,,,,,,,,,,,,,
-DiegoTaiboMonelos,DIEGO TAIBO MONELOS,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,PISO,A CORUÑA,2019,PLENO DOMINIO,,,,,,,,,,,,,,,,,
-DiegoTaiboMonelos,DIEGO TAIBO MONELOS,,depositos,,,,,,,,,,,deposito a la vista,36890,36890,,,,,,,,,,,,,,
-DiegoTaiboMonelos,DIEGO TAIBO MONELOS,,vehículos,,,,,,,,,,,,,,,,,,2018,vehiculo turismo (tarjeta eco) - land rover discovery sport,,,,,,,,
-DiegoTaiboMonelos,DIEGO TAIBO MONELOS,,deudas,,,,,,,,,,,,,,,,,,,,,,pretamo hipotecario en abanca,2007,90000,9893,,
-UxíaTizónVázquez,UXÍA  TIZÓN VÁZQUEZ,OURENSE,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",salario neto  ,4493.15,4493.15,,,,,,,,,,,,,,,,,,,,,,,
-UxíaTizónVázquez,UXÍA  TIZÓN VÁZQUEZ,,cantidad pagada por irpf,,,,,160.75,,,,,,,,,,,,,,,,,,,,,,
-UxíaTizónVázquez,UXÍA  TIZÓN VÁZQUEZ,,depositos,,,,,,,,,,,cuenta corriente a fecha 27 de julio de 2020,19370.09,19370.09,,,,,,,,,,,,,,
+DiegoTaiboMonelos,DIEGO TAIBO MONELOS,CORUÑA,NO PRESENTO DECLARACIÓN - NO DISPONIBLE EN LA WEB Y LISTADO QUE NOS ENVIARON,,,,,,,,,,,,,,,,,,,,,,,,,,,
+UxíaTizónVázquez,UXÍA  TIZÓN VÁZQUEZ,OURENSE,NO PRESENTO DECLARACIÓN - NO DISPONIBLE EN LA WEB Y LISTADO QUE NOS ENVIARON,,,,,,,,,,,,,,,,,,,,,,,,,,,
 LuisCarlosSahuquilloGarcía,LUIS CARLOS SAHUQUILLO GARCIA ,CUENCA ,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",TRIENIOS COMO FUNCIONARIO DE LA JUNTA DE COMUNIDADES DE CASTILLA-LA MANCHA,3319.68,"3,319.68 €",,,,,,,,,,,,,,,,,,,,,,,
 LuisCarlosSahuquilloGarcía,LUIS CARLOS SAHUQUILLO GARCIA ,,cantidad pagada por irpf,,,,,"9,450.42 €",,,,,,,,,,,,,,,,,,,,,,
-LuisCarlosSahuquilloGarcía,LUIS CARLOS SAHUQUILLO GARCIA ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,PISO (118 M2),,,,,,,,,,,,,,,,,,,,
+LuisCarlosSahuquilloGarcía,LUIS CARLOS SAHUQUILLO GARCIA ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,"PISO (118 M2)
+VALOR CATASTRAL 85.599,53",CUENCA ,SEPTIEMBRE DE 1999 ,PLENO DOMINIO 50 % COMPRAVENTA ,,,,,,,,,,,,,,,,,
 LuisCarlosSahuquilloGarcía,LUIS CARLOS SAHUQUILLO GARCIA ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,"PLAZA GARAJE (25,55 M2) VALOR CATASTRAL 5.351,99 ",CUENCA ,SEPTIEMBRE DE 1999 ,PLENO DOMINIO 50 % COMPRAVENTA ,,,,,,,,,,,,,,,,,
 LuisCarlosSahuquilloGarcía,LUIS CARLOS SAHUQUILLO GARCIA ,,depositos,,,,,,,,,,,"PLAZO FIJO CON MIS HIJOS VENCIMIENTO SEMESTRAL CUENTAS DE AHORRO EN ENTIDADES FINANCIARAS, A FECHA DE HOY ","40000 37397,3","77,397.30 €",,,,,,,,,,,,,,
 LuisCarlosSahuquilloGarcía,LUIS CARLOS SAHUQUILLO GARCIA ,,vehículos,,,,,,,,,,,,,,,,,,10/7/2014,VEHíCULO AUDI A6 TD12.0 (MATRICULADO AGOSTO DE 2010) ,,,,,,,,
@@ -2452,10 +2442,10 @@ MarianaDeGraciaCanalesDuque,MARIANA DE GRACIA CANALES DUQUE ,,deudas,,,,,,,,,,,,
 AntidioFagúndezCampo,ANTIDIO FAGÚNDEZ CAMPO ,ZAMORA,rentas,OTRAS rentas o percepciones de cualquier clase,ARRENDAMIENTO DE VIVIENDA ,3.600 €BRUTOS AÑO,"3,600.00 €",,,,,,,,,,,,,,,,,,,,,,,
 AntidioFagúndezCampo,ANTIDIO FAGÚNDEZ CAMPO ,,cantidad pagada por irpf,,,,,"9,661.08 €",,,,,,,,,,,,,,,,,,,,,,
 AntidioFagúndezCampo,ANTIDIO FAGÚNDEZ CAMPO ,,bienes patrimoniales,,,,,,,,,,,,,,,,,,,,,,,,,,,
-AntidioFagúndezCampo,ANTIDIO FAGÚNDEZ CAMPO ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,"VIVIENDA, PLAZA DE GARAJE Y TRASTERO ",ZAMORA,30/8/2008,,,,,,,,,,,,,,,,,,
-Pleno dominio Compraventa,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-50% del declarante,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-",,,,,,,,,,,,,,,,,",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AntidioFagúndezCampo,ANTIDIO FAGÚNDEZ CAMPO ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,"VIVIENDA, PLAZA DE GARAJE Y TRASTERO ",ZAMORA,30/8/2008,"
+Pleno dominio Compraventa
+50% del declarante
+",,,,,,,,,,,,,,,,,
 AntidioFagúndezCampo,ANTIDIO FAGÚNDEZ CAMPO ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,"VIVIENDA, PLAZA DE GARAJE Y TRASTERO ",ZAMORA,13/2/2003,Pleno dominio Compraventa ,,,,,,,,,,,,,,,,,
 AntidioFagúndezCampo,ANTIDIO FAGÚNDEZ CAMPO ,,Depositos,,,,,,,,,,,CUENTAS CORRIENTES ,25500,"25,500.00 €",,,,,,,,,,,,,,
 AntidioFagúndezCampo,ANTIDIO FAGÚNDEZ CAMPO ,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",119.754 ACCIONES DE LA SOCIEDAD SOMA REHABILITACiÓN S.L. QUE NO COTIZA EN BOLSA ,"119,754.00 €","119,754.00 €",,,,,,,,,,
@@ -2655,8 +2645,8 @@ AgustínZamarrónMoreno,AGUSTíN JAVIER LORENZO ZAMARRON MORENO ,,otros bienes 
 AgustínZamarrónMoreno,AGUSTíN JAVIER LORENZO ZAMARRON MORENO ,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",FONDO IBEX 35  ,"3,750.00 €","3,750.00 €",,,,,,,,,,
 AgustínZamarrónMoreno,AGUSTíN JAVIER LORENZO ZAMARRON MORENO ,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",FONDO EUROSTOK 50,"7,300.00 €","7,300.00 €",,,,,,,,,,
 AgustínZamarrónMoreno,AGUSTíN JAVIER LORENZO ZAMARRON MORENO ,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",FONDO FIDELlTY WORLD,"4,400.00 €","4,400.00 €",,,,,,,,,,
-AgustínZamarrónMoreno,AGUSTíN JAVIER LORENZO ZAMARRON MORENO ,,otros bienes o derechos,,,,,,,,,,,,,,,,,,,,,,,,,,,
-",,,,,Deuda pública", obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades," entidades con valor económico y cooperativas. """,1878 ACCIONES IBERDROLA,"17,300.00 €","17,300.00 €",,,,,,,,,,,,,,,,,,,,,
+AgustínZamarrónMoreno,AGUSTíN JAVIER LORENZO ZAMARRON MORENO ,,otros bienes o derechos,,,,,,,,,"
+",,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",1878 ACCIONES IBERDROLA,"17,300.00 €","17,300.00 €",,,,,,,,,,
 AgustínZamarrónMoreno,AGUSTíN JAVIER LORENZO ZAMARRON MORENO ,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",497 ACCIONES SANTANDER,"1,750.00 €","1,750.00 €",,,,,,,,,,
 AgustínZamarrónMoreno,AGUSTíN JAVIER LORENZO ZAMARRON MORENO ,,vehículos,,,,,,,,,,,,,,,,,,,,,,,,,,,
 AgustínZamarrónMoreno,AGUSTíN JAVIER LORENZO ZAMARRON MORENO ,,vehículos,,,,,,,,,,,,,,,,,,6/7/1905,TOYOTARAV4 ,,,,,,,,
@@ -2893,7 +2883,7 @@ AdolfoSuárezIllana,ADOLFO SUAREZ ILLANA ,,Observaciones,,,,,,,,,,,,,,,,,,,,,,,,
 AdolfoSuárezIllana,ADOLFO SUAREZ ILLANA ,,Observaciones,,,,,,,,,,,,,,,,,,,,,,,,,,,"(3) En relación a los terrenos rústicos declarados, el primero de ellos (recibido en herencia en el 2001) tiene un valor catastral de 7.553,00 euros. Mi participación sobre ellos es del 10% "
 AdolfoSuárezIllana,ADOLFO SUAREZ ILLANA ,,Observaciones,,,,,,,,,,,,,,,,,,,,,,,,,,,"(4) Los otros catorce (estos fueron recibidos en herencia en el 2014), suman un valor catastral conjunto de 1.005,00 euros. Mi participación sobre ellos es del 6,6% "
 JavierCerqueiroGonzález,JAVIER CERQUEIRO GONZALEZ ,LUGO,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",PERCEPCION NETA SALARIAL COMO ASESOR POLlTICO EN LA DEPUTACION DE LUGO ,25778.95,"25,778.95 €",,,,,,,,,,,,,,,,,,,,,,,
-JavierCerqueiroGonzález,JAVIER CERQUEIRO GONZALEZ ,,rentas,"Intereses o rendimientos de cuentas, depósitos y activos financieros",RENDIMIENTOS DE CUENTA DE PLAZO FIJO ,1.14,1.14 €,,,,,,,,,,,,,,,,,,,,,,,
+JavierCerqueiroGonzález,JAVIER CERQUEIRO GONZALEZ ,,rentas,"Intereses o rendimientos de cuentas, depósitos y activos financieros",RENDIMIENTOS DE CUENTA DE PLAZO FIJO ,1.14 ,1.14 €,,,,,,,,,,,,,,,,,,,,,,,
 JavierCerqueiroGonzález,JAVIER CERQUEIRO GONZALEZ ,,rentas,OTRAS rentas o percepciones de cualquier clase,ABANCA CORPORACION BANCARIA S.A: PLAN DE PENSIONES ,12393.22,"12,393.22 €",,,,,,,,,,,,,,,,,,,,,,,
 JavierCerqueiroGonzález,JAVIER CERQUEIRO GONZALEZ ,,cantidad pagada por irpf,,,,,"6,003.86 €",,,,,,,,,,,,,,,,,,,,,,
 JavierCerqueiroGonzález,JAVIER CERQUEIRO GONZALEZ ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,"VIVIENDA unifamiliar de 162,15m2 que dispone de un local para caldera de 36m2, sita en finca de 1400m2 ",LUGO ,4/7/1905,COMPRAVENTA PLENO DOMINIO 50% ,,,,,,,,,,,,,,,,,
@@ -3073,9 +3063,9 @@ MiguelÁngelCastellónRubio,MIGUEL ÁNGEL CASTELLÓN RUBIO ,,vehículos,,,,,,,
 MiguelÁngelCastellónRubio,MIGUEL ÁNGEL CASTELLÓN RUBIO ,,otros  ,,,,,,,,,,,,,,,,,,,,RENTA ARRENDAMIENTO DE VIVIENDA ,"4,500.00 €",,,,,,
 MiguelÁngelCastellónRubio,MIGUEL ÁNGEL CASTELLÓN RUBIO ,,deudas,,,,,,,,,,,,,,,,,,,,,,HIPOTECA BANCO ,30/6/1905,"145,500 €","94,000 €",,
 MiguelÁngelCastellónRubio,MIGUEL ÁNGEL CASTELLÓN RUBIO ,,deudas,,,,,,,,,,,,,,,,,,,,,,SANTANDER HIPOTECA UNICAJA,11/7/1905,"152,000 €","148,000 €",,
-PatriciaRuedaPerelló,PATRICIA RUEDA PERELLÓ ,MÁLAGA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",Rendimiento neto de rentas del trabajo ,"59,908.05","59,908.05 €",,,,,,,,,,,,,,,,,,,,,,,
-PatriciaRuedaPerelló,PATRICIA RUEDA PERELLÓ ,,rentas,"Intereses o rendimientos de cuentas, depósitos y activos financieros",Intereses de cuentas bancarias ,24.42,24.42 €,,,,,,,,,,,,,,,,,,,,,,,
-PatriciaRuedaPerelló,PATRICIA RUEDA PERELLÓ ,,rentas,OTRAS rentas o percepciones de cualquier clase,INGRESOS POR ALQUILER DE INMUEBLE ,850.5,850.50 €,,,,,,,,,,,,,,,,,,,,,,,
+PatriciaRuedaPerelló,PATRICIA RUEDA PERELLÓ ,MÁLAGA,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",Rendimiento neto de rentas del trabajo ,"59,908.05 ","59,908.05 €",,,,,,,,,,,,,,,,,,,,,,,
+PatriciaRuedaPerelló,PATRICIA RUEDA PERELLÓ ,,rentas,"Intereses o rendimientos de cuentas, depósitos y activos financieros",Intereses de cuentas bancarias ,24.42 ,24.42 €,,,,,,,,,,,,,,,,,,,,,,,
+PatriciaRuedaPerelló,PATRICIA RUEDA PERELLÓ ,,rentas,OTRAS rentas o percepciones de cualquier clase,INGRESOS POR ALQUILER DE INMUEBLE ,850.50 ,850.50 €,,,,,,,,,,,,,,,,,,,,,,,
 PatriciaRuedaPerelló,PATRICIA RUEDA PERELLÓ ,,cantidad pagada por irpf,,,,,"16,102.35 €",,,,,,,,,,,,,,,,,,,,,,
 PatriciaRuedaPerelló,PATRICIA RUEDA PERELLÓ ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,PISO ,MALAGA,1/11/2004,50% del pleno dominio por compraventa ,,,,,,,,,,,,,,,,,
 PatriciaRuedaPerelló,PATRICIA RUEDA PERELLÓ ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,VIVII::NUA HASII UAL ,MALAGA,1/10/2005,50% del pleno dominio por compraventa ,,,,,,,,,,,,,,,,,
@@ -3321,7 +3311,7 @@ AndrésLoriteLorite,ANDRÉS LORITE LORITE ,,rentas,"Percepciones netas de tipo 
 AndrésLoriteLorite,ANDRÉS LORITE LORITE ,,cantidad pagada por irpf,,,,,"10,396.49 €",,,,,,,,,,,,,,,,,,,,,,
 AndrésLoriteLorite,ANDRÉS LORITE LORITE ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Piso ,cordoba,29/6/1905,Porcentaje de propiedad: 33% Compraventa ,,,,,,,,,,,,,,,,,
 AndrésLoriteLorite,ANDRÉS LORITE LORITE ,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,Plaza de aparcamiento ,cordoba,29/6/1905,Porcentaje de propiedad: 33% Compraventa ,,,,,,,,,,,,,,,,,
-AndrésLoriteLorite,ANDRÉS LORITE LORITE ,,depositos,,,,,,,,,,,"Cuenta corriente en BBVA (porcentaje de propiedad 50%), Saldo a 18/11/20193.093,62 euros ; Cuenta corriente en ABANCA (porcentaje de propiedad 33%),  Saldo a 18/11/2019 495,59 euro; Cuenta corriente en EVO Banco (porcentaje de propiedad 50%), Saldo a 18/11/2019 327,33 euros. ","3,916.54","3,916.54 €",,,,,,,,,,,,,,
+AndrésLoriteLorite,ANDRÉS LORITE LORITE ,,depositos,,,,,,,,,,,"Cuenta corriente en BBVA (porcentaje de propiedad 50%), Saldo a 18/11/20193.093,62 euros ; Cuenta corriente en ABANCA (porcentaje de propiedad 33%),  Saldo a 18/11/2019 495,59 euro; Cuenta corriente en EVO Banco (porcentaje de propiedad 50%), Saldo a 18/11/2019 327,33 euros. ","3,916.54  ","3,916.54 €",,,,,,,,,,,,,,
 AndrésLoriteLorite,ANDRÉS LORITE LORITE ,,vehículos,,,,,,,,,,,,,,,,,,5/7/1905,Vehículo turismo modelo Toyota Avensis ,,,,,,,,
 AndrésLoriteLorite,ANDRÉS LORITE LORITE ,,deudas,,,,,,,,,,,,,,,,,,,,,,Préstamo hipotecario. Entidad acreedora: ABANCA ,13/3/2007,"278,400 €","183,506 €",,
 AndreaFernándezBenéitez,ANDREA FERNANDEZ BENÉITEZ ,LEON,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",NÓMINA AST S.l. (DE ACUERDO CON LA DECLARACiÓN DE IRPF DEL EJERCICIO 2018) ,986.18,986.18 €,,,,,,,,,,,,,,,,,,,,,,,
@@ -3715,13 +3705,3 @@ MiguelAngelGutierrezVivas,MIGUEL ANGEL GUTIERREZ VIVAS,,vehículos,,,,,,,,,,,,,,
 MiguelAngelGutierrezVivas,MIGUEL ANGEL GUTIERREZ VIVAS,,deudas,,,,,,,,,,,,,,,,,,,,,,,,,,PENSION POR ALIMENTOS SEGÚN ACUERDO JUDICIAL DE 4800 AÑO CONTRATO DE ALQUILER 18000 AÑO,
 VicenteTiradoOchoa,VICENTE TIRADO OCHOA ,,deudas,,,,,,,,,,,,,,,,,,,,,,,,,,,
 VicenteTiradoOchoa,VICENTE TIRADO OCHOA ,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Otras deudas y obligaciones derivadas de contratos, sentencias o cualquier otro título. ",
-GabrielElorriagaPisarik,GABRIEL ELORRIAGA PISARIK,MADRID,rentas,"Percepciones netas de tipo salarial, sueldos, honorarios, aranceles y otras retribuciones, cualquiera que sea su denominación",SALARIOS,145858,145858,,,,,,,,,,,,,,,,,,,,,,,
-GabrielElorriagaPisarik,GABRIEL ELORRIAGA PISARIK,,rentas,"Dividendos y participación en beneficios de sociedades, comunidades o entidades de cualquier clase ",Dividendos ,59,59,,,,,,,,,,,,,,,,,,,,,,,
-GabrielElorriagaPisarik,GABRIEL ELORRIAGA PISARIK,,cantidad pagada por irpf,,,,,44492,,,,,,,,,,,,,,,,,,,,,,
-GabrielElorriagaPisarik,GABRIEL ELORRIAGA PISARIK,,bienes patrimoniales,,,,,,Bienes Inmuebles de naturaleza urbana,vivienda con plazas de garaje,Madrid ,1/9/1996,50% PROPIEDAD COMPRAVENTA ,,,,,,,,,,,,,,,,,
-GabrielElorriagaPisarik,GABRIEL ELORRIAGA PISARIK,,depositos,,,,,,,,,,,saldo cuentas corrientes 15/7/2020,27250,27250,,,,,,,,,,,,,,
-GabrielElorriagaPisarik,GABRIEL ELORRIAGA PISARIK,,otros bienes o derechos,,,,,,,,,,,,,,"Deuda pública, obligaciones, bonos, certificados d e depósito, pagarés, y demás valores equivalentes. Acciones y participaciones en todo tipo de sociedades, entidades con valor económico y cooperativas. ",acciones cotizadas (15/7/2020),512,,,,,,,,,,,
-GabrielElorriagaPisarik,GABRIEL ELORRIAGA PISARIK,,vehículos,,,,,,,,,,,,,,,,,,2012,WV JETTA,,,,,,,,
-GabrielElorriagaPisarik,GABRIEL ELORRIAGA PISARIK,,vehículos,,,,,,,,,,,,,,,,,,2011,NISSAN QASHQAI,,,,,,,,
-GabrielElorriagaPisarik,GABRIEL ELORRIAGA PISARIK,,otros,,,,,,,,,,,,,,,,,,,,fondos de inversión (saldo a 15/7/2020),21362,,,,,,
-GabrielElorriagaPisarik,GABRIEL ELORRIAGA PISARIK,,otros,,,,,,,,,,,,,,,,,,,,plan de pensiones,44933,,,,,,

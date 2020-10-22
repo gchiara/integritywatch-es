@@ -1,45 +1,78 @@
 /* VARS */
 //$color_TI: #3b95d0;
 //$color_TI: #368dcb;
-$color_TI: #154277;
+$color_TI: #3694d1;
 $color_TI_darker: darken( $color_TI, 20% );
 //$color_TI_darker: #264796;
 $color_lobby: #449188;
 
+#app {
+  padding-top: 70px;
+  &.tabA, &.tabB {
+    @media only screen and (min-width: 992px) {
+      padding-top: 150px;
+    }
+  }
+}
+
 /* HEADER */
 
 #iw-nav {
+  background: #3694d1;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+  height: 70px;
   padding: 5px 25px;
   .navbar-brand {
     img {
       height: 50px;
+      @media only screen and (max-width: 769px) {
+        height: 35px;
+      }
     }
   }
   a {
     font-weight: bold;
-    color: $color_TI;
+    color: #fff;
     &.active, &:hover {
-      color: #3695d8;
+      color: #0f4c79;
     }
+    @media only screen and (max-width: 769px) {
+      font-size: 14px;
+    }
+  }
+  .dropdown-item {
+    color: $color_TI;
   }
   .icon-btn {
     vertical-align: middle;
     cursor: pointer;
     &.info-btn {
-      color: $color_TI;
+      color: #fff;
       &.active {
         color: #42b983;
       }
     }
     &.share-btn {
-      color: $color_TI;
+      color: #fff;
       &.active {
         color: #42b983;
       }
     }
   }
-  .donate-btn-img {
-    width: 150px;
+}
+
+.navbar-collapse {
+  @media only screen and (max-width: 991px) {
+    background: $color_TI;
+    width: 100%;
+    margin-top: 5px;
+    margin-right: -25px;
+    margin-left: -25px;
   }
 }
 
@@ -64,7 +97,7 @@ $color_lobby: #449188;
   overflow: hidden;
 }
 .description-container {
-  background: $color_TI;
+  background: #3694d1;
   color: #fff;
   text-align: left;
   padding: 30px 70px 20px 20px;
@@ -247,26 +280,21 @@ $color_lobby: #449188;
 /* FOOTER BAR */ 
 
 .footer-bar {
-  background: rgba($color_TI,0.98);
+  background: #0f4c79;
   position: fixed;
   bottom: 0;
   left: 0;
   position: fixed;
   box-shadow: 0px -2px 2px rgba(0,0,0,0.1); 
-  z-index: 10000;
+  z-index: 1000;
+  @media only screen and (min-width: 992px) {
+    bottom: auto;
+    top: 70px;
+  }
   .footer-col {
     height: 80px;
   }
   .footer-input {
-    /*
-    position: absolute;
-    top: 50%;
-    left: 25px;
-    width: 80%;
-    -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-    */
     position: relative;
     top: 50%;
     width: 260px;
@@ -275,8 +303,18 @@ $color_lobby: #449188;
           transform: translateY(-50%);
     float: left;
     margin-left: 10px;
+    @media only screen and (min-width: 900px) {
+      width: 400px;
+    }
     @media only screen and (max-width: 767px) {
-      width: 200px;
+      width: 400px;
+      margin-left: 0px;
+      top: 12px;
+      left: -5px;
+      max-width: 80%;
+      -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
     }
     i {
       vertical-align: middle;
@@ -295,16 +333,28 @@ $color_lobby: #449188;
       background: rgba(0,0,0,0.2);
       border: none;
       padding: 15px 10px 15px 50px;
-      font-size: 18px;
+      font-size: 17px;
       color: #fff;
+      @media only screen and (max-width: 767px) {
+        padding: 10px 10px 10px 50px;
+      }
       &:focus {
         outline-color: #fff;
       }
       &::placeholder {
         color: #fff;
+        text-transform: uppercase;
         @media only screen and (max-width: 767px) {
           opacity: 0;
         }
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #fff;
+        text-transform: uppercase;
+      }
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: #fff;
+        text-transform: uppercase;
       }
     }
   }
@@ -324,13 +374,10 @@ $color_lobby: #449188;
         display: none;
       }
       &.count-box-income {
-        width: 180px;
+        width: 200px;
         @media only screen and (max-width: 1280px) {
           display: none;
         }
-      }
-      &.count-box-agendas {
-        width: 200px;
       }
       &:first-child {
         margin-left: 10px;
@@ -340,7 +387,7 @@ $color_lobby: #449188;
       }
       .filter-count {
         color: #fff;
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 400;
         display:block;
         margin: 7px auto 10px auto;
@@ -362,11 +409,19 @@ $color_lobby: #449188;
     color: #fff;
     padding: 15px 20px;
     cursor: pointer;
-    background: #e25e6c;
+    background: rgb(226, 94, 108);
     transition: all .4s;
     &:hover, &:focus, &.active {
-      background: #d24e5c;
+      background: rgb(206, 74, 88);
       outline: none;
+    }
+    @media only screen and (max-width: 767px) {
+      right: 10px;
+      top: 12px;
+      -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+      padding: 10px 15px;
     }
     .reset-btn-text {
       @media only screen and (max-width: 767px) {
@@ -388,6 +443,12 @@ $color_lobby: #449188;
     -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+          @media only screen and (max-width: 767px) {
+      position: relative;
+      width: 100%;
+      right: 0;
+      top: auto;
+    }
     button {
       color: #fff;
       background: none;
@@ -398,10 +459,16 @@ $color_lobby: #449188;
       i {
         font-size: 35px;
         vertical-align: middle;
+        @media only screen and (max-width: 767px) {
+          font-size: 23px;
+        }
       }
       img {
         height: 25px;
         vertical-align: middle;
+        @media only screen and (max-width: 767px) {
+          height: 18px;
+        }
       }
       &.btn-twitter {
         img {
@@ -411,11 +478,17 @@ $color_lobby: #449188;
       &.btn-fb {
         img {
           height: 29px;
+          @media only screen and (max-width: 767px) {
+            height: 21px;
+          }
         }
       }
       &.btn-linkedin {
         img {
           height: 29px;
+          @media only screen and (max-width: 767px) {
+            height: 18px;
+          }
         }
       }
     }
@@ -858,4 +931,12 @@ table.dataTable tbody tr:hover {
 .comunidad path, .province path {
   stroke-width: 1px;
   stroke: #fff;
+}
+.photo {
+  max-width: 200px;
+}
+
+.last-update {
+  padding: 0 15px;
+  font-size: 13px;
 }

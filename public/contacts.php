@@ -31,28 +31,29 @@
                     <div class="form-container">
                       <form id="contactForm" action="form.php">
                         <div class="form-group">
-                          <label for="formInput1">Nome *</label>
+                          <label for="formInput1">Nombre *</label>
                           <input type="text" class="form-control" name="name" id="formInput1" placeholder="" required>
                         </div>
                         <div class="form-group">
-                          <label for="formInput2">Email address *</label>
+                          <label for="formInput2">Correo electrónico *</label>
                           <input type="email" class="form-control" name="email" id="formInput2" placeholder="" required>
                         </div>
                         <div class="form-group">
-                          <label for="formInput3">Message *</label>
+                          <label for="formInput3">Mensaje *</label>
                           <textarea class="form-control" id="formInput3" name="message" rows="6" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2 form-submit-btn">Send</button>
+                        <button type="submit" class="btn btn-primary mb-2 form-submit-btn">Enviar</button>
                       </form>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <p><strong>Integrity Watch Spain team:</strong></p>
                     <p>Seniors Project Advisors: Prof. Dr. Manuel Villoria / Prof. Dra. Silvina Bacigalupo (pro bono).<br />
-                    Integrity Watch Spain Project Manager: David Martínez García<br />
-                    Integrity Watch Spain Researcher: Constanza Cervetti Vieites</p>
-                    <p>
-                    <strong>Transparency International Spain</strong></p>
+                    IW-Spain Project Manager: David Martínez García<br />
+                    IW-Spain Researcher: Constanza Cervetti Vieites<br />
+                    IW-Spain Comms Manager: Andreina Monasterio</p>
+                    <p><strong>Transparency International Spain</strong></p>
+                    C/Fortuny 53, CP 28010, Madrid, España<br /><br />
                     <p><a href="mailto:integrity.watch@transparencia.org.es">integrity.watch@transparencia.org.es</a><br />
                     +34-91-700 4106<br />
                     Contacto de comunicación y prensa: <a href="mailto:comunicacion@transparencia.org.es">comunicacion@transparencia.org.es</a><br />

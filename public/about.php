@@ -75,22 +75,35 @@
               </div>
             </div>
           </div>
-          <!-- CONTACTS -->
-          <div class="panel panel-default panel-static">
+          <!-- BLOCK 4 -->
+          <div class="panel panel-default">
             <div class="panel-heading">
-              <h2 class="panel-title">
-                <a href="#">Contacts</a>
-              </h2>
+              <h1 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">4. NORMATIVA APLICABLE</a>
+              </h1>
             </div>
-            <div id="contact" class="panel-collapse">
+            <div id="collapse4" class="panel-collapse collapse in">
               <div class="panel-body">
-              <p>
-                <strong>Transparency International Spain</strong><br /><br />
-                Address here<br /><br />
-                Email: <a href="mailto:info@transparency.lt">info@transparency.es</a><br />
-                Tel: 123
-              </p>
-            </div>
+              <p>La Constitución Española regula en el Título III “De las Cortes Generales” los aspectos básicos, o esenciales de las Cortes Generales que luego son desarrollados en otras disposiciones propias de la Constitución, así como en normas de rango inferior.</p>
+                <p>La normativa aplicable con relación a las declaraciones de bienes y rentas de los Diputados y Senadores se regula en los artículos 157 a 160 de la Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General y la Ley Orgánica 7/2011, de 15 de julio, de modificación del artículo 160 la Ley Orgánica 5/1985.</p>
+                <p>El Reglamento del Congreso de los Diputados establece en su artículo 18 la obligación de formular la declaración de sus bienes patrimoniales en los términos previstos en la LOREG.</p>
+                <p>El Reglamento del Senado, establece en su artículo 26 como requisito para la perfección de la condición de Senador presentar la declaración de bienes patrimoniales, tanto al inicio del mandato, así como en el plazo de 30 días naturales siguientes a la pérdida de su condición o de la modificación de las circunstancias inicialmente declaradas.</p>
+                <p>También se regula por Acuerdo de las Mesas del Congreso de los Diputados y del Senado, de 21 de diciembre de 2009, por el que se aprueban normas en materia de registro de intereses, y Acuerdo de las Mesas del Congreso de los Diputados y del Senado, de 19 de julio de 2011, de modificación del acuerdo de 21 de diciembre de 2009, por el que se aprueban Normas en materia de Registro de Intereses para dar cumplimiento a lo establecido en la reforma del artículo 160.2 de la LOREG.</p>
+                <p>Enlaces a la normativa:</p>
+                <p>Constitución Española: <a href="https://www.boe.es/eli/es/c/1978/12/27/(1)/con" target="_blank">https://www.boe.es/eli/es/c/1978/12/27/(1)/con</a></p>
+                <p>Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672" target="_blank">https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672</a></p>
+                <p>Ley Orgánica 7/2011, de 15 de julio, de modificación del artículo 160 la Ley Orgánica 5/1985: <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2011-12266" target="_blank">https://www.boe.es/buscar/doc.php?id=BOE-A-2011-12266</a></p>
+                <p>Reglamento del Congreso de los Diputados: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Hist_Normas/Norm/Reglam" target="_blank">http://www.congreso.es/portal/page/portal/Congreso/Congreso/Hist_Normas/Norm/Reglam</a></p>
+                <p>Reglamentos del Senado: <a href="https://www.senado.es/web/conocersenado/normas/reglamentootrasnormassenado/index.html" target="_blank">https://www.senado.es/web/conocersenado/normas/reglamentootrasnormassenado/index.html</a></p>
+                <p>Acuerdo de las Mesas del Congreso de los Diputados y del Senado, de 21 de diciembre de 2009, por el que se aprueban normas en materia de registro de intereses:<br />
+                <a href="http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A247.PDF" target="_blank">http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A247.PDF</a><br />
+                <a href="https://www.senado.es/legis9/publicaciones/pdf/cortes/bocg/CG_A247.PDF" target="_blank">https://www.senado.es/legis9/publicaciones/pdf/cortes/bocg/CG_A247.PDF</a>
+                </p>
+                <p>Acuerdo de las Mesas del Congreso de los Diputados y del Senado, de 19 de julio de 2011, de modificación del acuerdo de 21 de diciembre de 2009, por el que se aprueban Normas en materia de Registro de Intereses para dar cumplimiento a lo establecido en la reforma del artículo 160.2 de la LOREG:<br />
+                <a href="http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A455.PDF" target="_blank">http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A455.PDF</a><br />
+                <a href="http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A455.PDF#page=2" target="_blank">http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A455.PDF#page=2</a>
+                </p>
+              </div>
             </div>
           </div>
 

@@ -1,15 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="iw-nav">
-  <a class="navbar-brand" href="https://transparency.eu/" target="_blank"><img src="./images/to-es-logo.jpg" alt="" /> </a>
+<nav class="navbar navbar-expand-lg navbar-light" id="iw-nav">
+  <a class="navbar-brand" href="https://transparencia.org.es/" target="_blank"><img src="./images/ti_es_logo.png" alt="" /> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a href="./" class="nav-link" :class="{active: page == 'tabA'}">Diputados</a>
+        <a href="./" class="nav-link" :class="{active: page == 'tabA'}">Congreso de los Diputados</a>
       </li>
       <li class="nav-item">
-        <a href="./senadores.php" class="nav-link" :class="{active: page == 'tabB'}">Senadores</a>
+        <a href="./senadores.php" class="nav-link" :class="{active: page == 'tabB'}">Senado</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -27,9 +27,6 @@
       </li>
       <li class="nav-item">
         <a href="./about.php" class="nav-link">Sobre Integrity Watch</a>
-      </li>
-      <li class="nav-item">
-        <a href="./normativa.php" class="nav-link">Normativa aplicable</a>
       </li>
       <li class="nav-item">
         <a href="./contacts.php" class="nav-link">Contáctenos</a>
