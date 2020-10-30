@@ -46804,11 +46804,11 @@ var vuedata = (_vuedata = {
     },
     irpf: {
       title: 'IRPF',
-      info: ''
+      info: 'Distribución de Diputados según la cantidad pagada por IRPF. Haga clic en los diferentes rangos para ver el número de Diputados incluidos en dicho rango.'
     },
     depositos: {
       title: 'Depositos',
-      info: ''
+      info: 'Distribución de Diputados según el saldo de sus depósitos. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     mainTable: {
       chart: null,
@@ -47073,7 +47073,7 @@ var calcPieSize = function calcPieSize(divId) {
 
 var resizeGraphs = function resizeGraphs() {
   for (var c in charts) {
-    if (c == 'vehicles' && vuedata.showAllCharts == false) {} else {
+    if ((c == 'vehicles' || c == 'irpf' || c == 'depositos') && vuedata.showAllCharts == false) {} else {
       var sizes = calcPieSize(charts[c].divId);
       var newWidth = recalcWidth(charts[c].divId);
       var charsLength = recalcCharsLength(newWidth);
@@ -47879,6 +47879,7 @@ for (var i = 0; i < 5; i++) {
 
 
       $('#canaries').click(function () {
+        $('.map-buttons button').removeClass('active');
         $(this).addClass('active');
         var p1 = 'province:las palmas';
         var p2 = 'province:santa cruz de tenerife';
@@ -47888,6 +47889,78 @@ for (var i = 0; i < 5; i++) {
           } else {
             return false;
           }
+        });
+        dc.redrawAll();
+        RefreshTable();
+        $('#map_chart svg .layer0 .departement').each(function (i) {
+          $(this).removeClass('selected');
+          $(this).addClass('deselected');
+        });
+      }); //Ceuta button
+
+      $('#tenerife').click(function () {
+        $('.map-buttons button').removeClass('active');
+        $(this).addClass('active');
+        searchDimension.filter(function (d) {
+          if (d.indexOf('province:santa cruz de tenerife') > -1) {
+            return true;
+          }
+
+          return false;
+        });
+        dc.redrawAll();
+        RefreshTable();
+        $('#map_chart svg .layer0 .departement').each(function (i) {
+          $(this).removeClass('selected');
+          $(this).addClass('deselected');
+        });
+      }); //Ceuta button
+
+      $('#laspalmas').click(function () {
+        $('.map-buttons button').removeClass('active');
+        $(this).addClass('active');
+        searchDimension.filter(function (d) {
+          if (d.indexOf('province:las palmas') > -1) {
+            return true;
+          }
+
+          return false;
+        });
+        dc.redrawAll();
+        RefreshTable();
+        $('#map_chart svg .layer0 .departement').each(function (i) {
+          $(this).removeClass('selected');
+          $(this).addClass('deselected');
+        });
+      }); //Ceuta button
+
+      $('#ceuta').click(function () {
+        $('.map-buttons button').removeClass('active');
+        $(this).addClass('active');
+        searchDimension.filter(function (d) {
+          if (d.indexOf('province:ceuta') > -1) {
+            return true;
+          }
+
+          return false;
+        });
+        dc.redrawAll();
+        RefreshTable();
+        $('#map_chart svg .layer0 .departement').each(function (i) {
+          $(this).removeClass('selected');
+          $(this).addClass('deselected');
+        });
+      }); //Melilla button
+
+      $('#melilla').click(function () {
+        $('.map-buttons button').removeClass('active');
+        $(this).addClass('active');
+        searchDimension.filter(function (d) {
+          if (d.indexOf('province:melilla') > -1) {
+            return true;
+          }
+
+          return false;
         });
         dc.redrawAll();
         RefreshTable();
@@ -48021,7 +48094,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63470" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59896" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -68,11 +68,11 @@ var vuedata = {
     },
     irpf: {
       title: 'IRPF',
-      info: ''
+      info: 'Distribución de Diputados según la cantidad pagada por IRPF. Haga clic en los diferentes rangos para ver el número de Diputados incluidos en dicho rango.'
     },
     depositos: {
       title: 'Depositos',
-      info: ''
+      info: 'Distribución de Diputados según el saldo de sus depósitos. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     mainTable: {
       chart: null,
@@ -90,7 +90,7 @@ var vuedata = {
     "Barcelona": "Cataluña",
     "Menorca": "Islas Baleares",
     "Tarragona": "Cataluña",
-    "Melilla": "Ceuta y Melilla",
+    "Melilla": "Melilla",
     "Salamanca": "Castilla y León",
     "Soria": "Castilla y León",
     "Badajoz": "Extremadura",
@@ -113,7 +113,7 @@ var vuedata = {
     "Parlamento de La Rioja": "La Rioja",
     "Alicante/Alacant": "Comunidad Valenciana",
     "Ávila": "Castilla y León",
-    "Ceuta": "Ceuta y Melilla",
+    "Ceuta": "Ceuta",
     "Junta General del Principado de Asturias": "Principado de Asturias",
     "Parlamento de las Illes Balears": "Islas Baleares",
     "Parlamento de Andalucía": "Andalucía",
@@ -355,7 +355,7 @@ var calcPieSize = function(divId) {
 };
 var resizeGraphs = function() {
   for (var c in charts) {
-    if((c == 'vehicles') && vuedata.showAllCharts == false){
+    if((c == 'vehicles' || c == 'irpf' || c == 'depositos') && vuedata.showAllCharts == false){
       
     } else {
       var sizes = calcPieSize(charts[c].divId);
@@ -1218,6 +1218,7 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
 
         //Canaries button
         $('#canaries').click(function () {
+          $('.map-buttons button').removeClass('active');
           $(this).addClass('active');
           var cProvinces = ['gran canaria','la palma','parlamento de canarias','tenerife','fuerteventura'];
           searchDimension.filter(function (d) { 
@@ -1226,6 +1227,38 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
               if(d.indexOf('province:'+i) > -1) { match = true; }
             });
             return match;
+          });
+          dc.redrawAll();
+          RefreshTable();
+          $('#map_chart svg .layer0 .departement').each(function(i) {
+            $(this).removeClass('selected');
+            $(this).addClass('deselected');
+          });
+        });
+
+        //Ceuta button
+        $('#ceuta').click(function () {
+          $('.map-buttons button').removeClass('active');
+          $(this).addClass('active');
+          searchDimension.filter(function (d) { 
+            if(d.indexOf('province:ceuta') > -1) { return true; }
+            return false;
+          });
+          dc.redrawAll();
+          RefreshTable();
+          $('#map_chart svg .layer0 .departement').each(function(i) {
+            $(this).removeClass('selected');
+            $(this).addClass('deselected');
+          });
+        });
+
+        //Melilla button
+        $('#melilla').click(function () {
+          $('.map-buttons button').removeClass('active');
+          $(this).addClass('active');
+          searchDimension.filter(function (d) { 
+            if(d.indexOf('province:melilla') > -1) { return true; }
+            return false;
           });
           dc.redrawAll();
           RefreshTable();
@@ -1246,6 +1279,7 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
           $('#search-input').val('');
           dc.redrawAll();
           RefreshTable();
+          $('#canaries').removeClass('active');
         }
         $('.reset-btn').click(function(){
           resetGraphs();

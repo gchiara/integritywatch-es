@@ -37,15 +37,24 @@
             <div class="boxed-container chart-container tab_a_1">
               <chart-header :title="charts.map.title" :info="charts.map.info" ></chart-header>
               <div class="map-buttons">
-                <button id="canaries">Canary Islands</button>
+                <button id="melilla">Melilla</button>
+                <button id="ceuta">Ceuta</button>
+                <button id="laspalmas">Las Palmas</button>
+                <button id="tenerife">Santa Cruz de Tenerife</button>
               </div>
               <div class="chart-inner" id="map_chart"></div>
             </div>
           </div>
-          <div class="col-md-6 chart-col">
+          <div class="col-md-3 chart-col">
             <div class="boxed-container chart-container tab_a_2">
               <chart-header :title="charts.groups.title" :info="charts.groups.info" ></chart-header>
               <div class="chart-inner" id="groups_chart"></div>
+            </div>
+          </div>
+          <div class="col-md-3 chart-col">
+            <div class="boxed-container chart-container tab_a_8">
+              <chart-header :title="charts.gender.title" :info="charts.gender.info" ></chart-header>
+              <div class="chart-inner" id="gender_chart"></div>
             </div>
           </div>
           <!-- CHARTS SECOND ROW -->
@@ -78,25 +87,19 @@
             <button class="toggle-btn" id="charts-toggle-btn" @click="showAllCharts = !showAllCharts">Otros gráficos</button>
           </div>
           <!-- CHARTS THIRD ROW - TOGGLABLE -->
-          <div class="col-md-3 chart-col" v-show="showAllCharts">
+          <div class="col-md-4 chart-col" v-show="showAllCharts">
             <div class="boxed-container chart-container tab_a_7">
               <chart-header :title="charts.vehicles.title" :info="charts.vehicles.info" ></chart-header>
               <div class="chart-inner" id="vehicles_chart"></div>
             </div>
           </div>
-          <div class="col-md-3 chart-col" v-show="showAllCharts">
-            <div class="boxed-container chart-container tab_a_8">
-              <chart-header :title="charts.gender.title" :info="charts.gender.info" ></chart-header>
-              <div class="chart-inner" id="gender_chart"></div>
-            </div>
-          </div>
-          <div class="col-md-3 chart-col" v-show="showAllCharts">
+          <div class="col-md-4 chart-col" v-show="showAllCharts">
             <div class="boxed-container chart-container tab_a_8">
               <chart-header :title="charts.irpf.title" :info="charts.irpf.info" ></chart-header>
               <div class="chart-inner" id="irpf_chart"></div>
             </div>
           </div>
-          <div class="col-md-3 chart-col" v-show="showAllCharts">
+          <div class="col-md-4 chart-col" v-show="showAllCharts">
             <div class="boxed-container chart-container tab_a_8">
               <chart-header :title="charts.depositos.title" :info="charts.depositos.info" ></chart-header>
               <div class="chart-inner" id="depositos_chart"></div>
@@ -112,7 +115,7 @@
                   <thead>
                     <tr class="header">
                       <th class="header">Nr</th> 
-                      <th class="header">Nombre y apellidos</th>
+                      <th class="header">Appellidos y Nombre</th>
                       <th class="header">Grupo parlamentario</th>
                       <th class="header">Rentas percibidas</th>
                       <th class="header">Bienes inmuebles</th>
