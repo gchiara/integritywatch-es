@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IW ES</title>
     <!-- Add twitter and og meta here -->
+    <meta property="og:url" content="https://www.integritywatch.es" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Integrity Watch Spain" />
+    <meta property="og:description" content="Esta plataforma permite visualizar todos los datos declarados por Diputados y Senadores de la Legislatura XIV en sus declaraciones de bienes y rentas en una única base de datos interactiva." />
+    <meta property="og:image" content="https://www.integritywatch.es/images/thumbnail.png" />
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -37,9 +42,9 @@
             <div class="boxed-container chart-container tab_a_1">
               <chart-header :title="charts.map.title" :info="charts.map.info" ></chart-header>
               <div class="map-buttons">
-                <button id="melilla">Melilla</button>
-                <button id="ceuta">Ceuta</button>
                 <button id="canaries">Islas Canarias</button>
+                <button id="ceuta">Ceuta</button>
+                <button id="melilla">Melilla</button>
               </div>
               <div class="chart-inner" id="map_chart"></div>
             </div>
@@ -86,20 +91,20 @@
             <button class="toggle-btn" id="charts-toggle-btn" @click="showAllCharts = !showAllCharts">Otros gráficos</button>
           </div>
           <!-- CHARTS THIRD ROW - TOGGLABLE -->
-          <div class="col-md-4 chart-col" v-show="showAllCharts">
+          <div class="col-md-3 chart-col" v-show="showAllCharts">
             <div class="boxed-container chart-container tab_a_7">
               <chart-header :title="charts.vehicles.title" :info="charts.vehicles.info" ></chart-header>
               <div class="chart-inner" id="vehicles_chart"></div>
             </div>
           </div>
-          <div class="col-md-4 chart-col" v-show="showAllCharts">
-            <div class="boxed-container chart-container tab_a_8">
+          <div class="col-md-3 chart-col" v-show="showAllCharts">
+            <div class="boxed-container chart-container tab_a_9">
               <chart-header :title="charts.irpf.title" :info="charts.irpf.info" ></chart-header>
               <div class="chart-inner" id="irpf_chart"></div>
             </div>
           </div>
-          <div class="col-md-4 chart-col" v-show="showAllCharts">
-            <div class="boxed-container chart-container tab_a_8">
+          <div class="col-md-3 chart-col" v-show="showAllCharts">
+            <div class="boxed-container chart-container tab_a_10">
               <chart-header :title="charts.depositos.title" :info="charts.depositos.info" ></chart-header>
               <div class="chart-inner" id="depositos_chart"></div>
             </div>
@@ -138,8 +143,8 @@
             <!-- Modal Header -->
             <div class="modal-header">
               <div class="modal-title">
-                <div>{{ selectedElement.name }}</div>
-                <div>{{ selectedElement.group }}</div>
+                <div>{{ selectedElement.Name }}</div>
+                <div>{{ selectedElement.Group }}</div>
               </div>
               <button type="button" class="close" data-dismiss="modal"><i class="material-icons">close</i></button>
             </div>
@@ -148,9 +153,9 @@
               <div class="container">
                 <div class="row">
                   <div class="col-md-8">
-                    <div class="details-line" v-if="selectedElement.details"><span class="details-line-title">Circonscripción:</span> {{ selectedElement.details.circunscripcion }}</div>
-                    <div class="details-line" v-if="selectedElement.groupData"><a :href="selectedElement.groupData.Link" target="_blank"><span class="details-line-title">Biografía</span></a></div>
-                    <div class="details-line" ><span class="details-line-title">Cantidad pagada IPRF:</span> {{ selectedElement.cantidad_pagada_por_irpf }}</div>
+                    <div class="details-line" v-if="selectedElement.declaration && selectedElement.declaration.details"><span class="details-line-title">Circunscripción:</span> {{ selectedElement.declaration.details.circunscripcion }}</div>
+                    <div class="details-line"><a :href="selectedElement.Link" target="_blank"><span class="details-line-title">Biografía</span></a></div>
+                    <div class="details-line" v-if="selectedElement.declaration && selectedElement.declaration.cantidad_pagada_por_irpf"><span class="details-line-title">Cantidad pagada IPRF:</span> {{ selectedElement.declaration.cantidad_pagada_por_irpf }}</div>
                   </div>
                   <div class="col-md-4">
                     <img v-if="selectedElement.photoInfo && selectedElement.photoInfo.photoUrl" :src="selectedElement.photoInfo.photoUrl" class="photo">
@@ -161,8 +166,8 @@
                     <div class="details-tables-buttons">
                       <button @click="modalShowTable = 'a'">RENTAS PERCIBIDAS</button>
                       <button @click="modalShowTable = 'b'">BIENES PATRIMONIALES</button>
-                      <button @click="modalShowTable = 'c'">DEPOSITOS</button>
-                      <button @click="modalShowTable = 'd'">OTRO BIENES O DERECHO</button>
+                      <button @click="modalShowTable = 'c'">DEPÓSITOS</button>
+                      <button @click="modalShowTable = 'd'">OTROS BIENES O DERECHOS</button>
                       <button @click="modalShowTable = 'e'">VEHÍCULOS, EMBARCACIONES Y AERONAVES</button>
                       <button @click="modalShowTable = 'f'">DEUDAS Y OBLIGACIONES PATRIMONIALES</button>
                       <button @click="modalShowTable = 'g'">OBSERVACIONES</button>
@@ -170,10 +175,10 @@
                     <!-- Sub-Table 1 -->
                     <div v-show="modalShowTable == 'a'">
                       <div class="modal-table-title">RENTAS PERCIBIDAS</div>
-                      <table class="modal-table" v-if="selectedElement.rentas && selectedElement.rentas.length > 0">
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.rentas && selectedElement.declaration.rentas.length > 0">
                         <thead><tr><th>CONCEPTO</th><th>PROCEDENCIA</th><th>SALDO</th></tr></thead>
                         <tbody>
-                          <tr v-for="el in selectedElement.rentas">
+                          <tr v-for="el in selectedElement.declaration.rentas">
                             <td>{{ el.concepto }}</td>
                             <td>{{ el.procedencia }}</td>
                             <td>{{ el.euros }}</td>
@@ -185,10 +190,10 @@
                     <!-- Sub-Table 2 -->
                     <div v-show="modalShowTable == 'b'">
                       <div class="modal-table-title">BIENES PATRIMONIALES</div>
-                      <table class="modal-table" v-if="selectedElement.bienes && selectedElement.bienes.length > 0">
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.bienes && selectedElement.declaration.bienes.length > 0">
                         <thead><tr><th>TIPO DE BIENES</th><th>CLASE Y CARACTERISTICAS</th><th>SITUACION</th><th>FECHA DE ADQUISICION</th><th>DERECHO Y TITULO</th></tr></thead>
                         <tbody>
-                          <tr v-for="el in selectedElement.bienes">
+                          <tr v-for="el in selectedElement.declaration.bienes">
                             <td>{{ el.bienes }}</td>
                             <td>{{ el.clase }}</td>
                             <td>{{ el.situacion }}</td>
@@ -201,11 +206,11 @@
                     </div>
                     <!-- Sub-Table 3 -->
                     <div v-show="modalShowTable == 'c'">
-                      <div class="modal-table-title">DEPOSITOS</div>
-                      <table class="modal-table" v-if="selectedElement.depositos && selectedElement.depositos.length > 0">
+                      <div class="modal-table-title">DEPÓSITOS</div>
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.depositos && selectedElement.declaration.depositos.length > 0">
                         <thead><tr><th>DESCRIPCION</th><th>SALDO</th></tr></thead>
                         <tbody>
-                          <tr v-for="el in selectedElement.depositos">
+                          <tr v-for="el in selectedElement.declaration.depositos">
                             <td>{{ el.depositos }}</td>
                             <td>{{ el.saldo }}</td>
                           </tr>
@@ -215,11 +220,11 @@
                     </div>
                     <!-- Sub-Table 4 -->
                     <div v-show="modalShowTable == 'd'">
-                      <div class="modal-table-title">OTRO BIENES O DERECHO</div>
-                      <table class="modal-table" v-if="selectedElement.otros_bienes && selectedElement.otros_bienes.length > 0">
+                      <div class="modal-table-title">OTROS BIENES O DERECHOS</div>
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.otros_bienes && selectedElement.declaration.otros_bienes.length > 0">
                         <thead><tr><th>CLASE</th><th>DESCRIPCION</th><th>VALOR</th></tr></thead>
                         <tbody>
-                          <tr v-for="el in selectedElement.otros_bienes">
+                          <tr v-for="el in selectedElement.declaration.otros_bienes">
                             <td>{{ el.clase }}</td>
                             <td>{{ el.descripcion }}</td>
                             <td>{{ el.valor }}</td>
@@ -231,10 +236,10 @@
                     <!-- Sub-Table 5 -->
                     <div v-show="modalShowTable == 'e'">
                       <div class="modal-table-title">VEHÍCULOS, EMBARCACIONES Y AERONAVES</div>
-                      <table class="modal-table" v-if="selectedElement.vehiculos && selectedElement.vehiculos.length > 0">
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.vehiculos && selectedElement.declaration.vehiculos.length > 0">
                         <thead><tr><th>DESCRIPCION</th><th>FECHA DE ADQUISICION</th></tr></thead>
                         <tbody>
-                          <tr v-for="el in selectedElement.vehiculos">
+                          <tr v-for="el in selectedElement.declaration.vehiculos">
                             <td>{{ el.descripcion }}</td>
                             <td>{{ el.fecha }}</td>
                           </tr>
@@ -245,10 +250,10 @@
                     <!-- Sub-Table 6 -->
                     <div v-show="modalShowTable == 'f'">
                       <div class="modal-table-title">DEUDAS Y OBLIGACIONES PATRIMONIALES</div>
-                      <table class="modal-table" v-if="selectedElement.deudas && selectedElement.deudas.length > 0">
+                      <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.deudas && selectedElement.declaration.deudas.length > 0">
                         <thead><tr><th>PRESTAMOS</th><th>FECHA DE CONCESION</th><th>IMPORTE CONCIDO</th><th>SALDO PENDIENTE</th></tr></thead>
                         <tbody>
-                          <tr v-for="el in selectedElement.deudas">
+                          <tr v-for="el in selectedElement.declaration.deudas">
                             <td>{{ el.prestamos }}</td>
                             <td>{{ el.fecha }}</td>
                             <td>{{ el.importe_concedido }}</td>
@@ -261,8 +266,8 @@
                     <!-- Sub-Table 7 -->
                     <div v-show="modalShowTable == 'g'">
                       <div class="modal-table-title">OBSERVACIONES</div>
-                      <div class="modal-section-container" v-if="selectedElement.observaciones">
-                        {{ selectedElement.observaciones }}
+                      <div class="modal-section-container" v-if="selectedElement.declaration && selectedElement.declaration.observaciones">
+                        {{ selectedElement.declaration.observaciones }}
                       </div>
                       <div class="modal-section-container" v-else>/</div>
                     </div>
@@ -278,7 +283,7 @@
         <div class="row">
           <div class="footer-col col-12 col-sm-12 footer-counts">
             <div class="dc-data-count count-box count-box-main">
-              <div class="filter-count">0</div>desde <strong class="total-count">0</strong> Diputados
+              <div class="filter-count">0</div>desde <strong class="total-count">0</strong> Senadores
             </div>
             <div class="dc-data-count count-box count-box-income">
               <div class="filter-count nbincome">0</div>desde <strong class="total-count">0</strong> ingreso

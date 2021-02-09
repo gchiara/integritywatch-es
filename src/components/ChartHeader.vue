@@ -32,11 +32,11 @@ $color_TI_darker: darken( $color_TI, 20% );
     font-size: 16px;
     text-align: left;
     color: $color_TI_darker;
-    @media only screen and (max-width: 1400px) {
-      font-size: 16px;
+    @media only screen and (max-width: 1490px) {
+      font-size: 14px;
     }
     @media only screen and (max-width: 1250px) {
-      font-size: 15px;
+      font-size: 14px;
     }
     @media only screen and (max-width: 767px) {
       font-size: 20px;

@@ -4,6 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About</title>
+    <!-- Add twitter and og meta here -->
+    <meta property="og:url" content="https://www.integritywatch.es" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Integrity Watch Spain" />
+    <meta property="og:description" content="Esta plataforma permite visualizar todos los datos declarados por Diputados y Senadores de la Legislatura XIV en sus declaraciones de bienes y rentas en una única base de datos interactiva." />
+    <meta property="og:image" content="https://www.integritywatch.es/images/thumbnail.png" />
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,8 +34,7 @@
                 <p>La rendición de cuentas, la transparencia y la integridad parlamentaria son principios fundamentales de todo Estado de Derecho, que dotan de legitimidad al sistema democrático y, como consecuencia de ello, refuerzan la confianza entre los ciudadanos y el poder legislativo desempeñado por las Cámaras del Congreso de los Diputados y del Senado.</p>
                 <p>Una de las fuentes de información de transparencia parlamentaria más importante es, ciertamente, la Declaración de Bienes y Rentas de Diputados y Senadores, que resulta de especial importancia y a la que se presta gran atención al inicio de cada legislatura. Sin embargo, se ha podido constatar que este mecanismo de control presenta numerosas deficiencias: insuficiente información, especial dificultad para la accesibilidad, la interoperabilidad, la investigación y la monitorización de la información por parte de la ciudadanía. El acceso a la información en esta materia forma parte y cumple una trascendente importancia en la rendición de cuentas de los parlamentarios.</p> 
                 <p>En este estudio se ha podido constatar que la dificultad para acceder a esta información tiene su origen en diversas causas: (i) las limitaciones del modelo actual del formulario de declaración; (ii) el escaso cumplimiento de las instrucciones que contiene el propio formulario para su correcta cumplimentación; (iii) la falta de directrices detalladas que tienen los parlamentarios para rellenar el formulario, generando una gran heterogeneidad de las declaraciones y, a su vez, discrepancia de la información brindada y (iv) la no disponibilidad de las declaraciones en formatos reutilizables.</p>
-                <p><strong>(Extracto del Resumen Ejecutivo)</strong></p>
-                <p><i><a href="" target="_blank">Descargue el informe completo aquí</a></i></p>
+                <p><i>SAVE THE DATE: ¡Presentación del informe nacional el 15 de febrero a las 16hs CET!</i></p>
               </div>
             </div>
           </div>

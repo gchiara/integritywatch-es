@@ -68,7 +68,10 @@ $("#contactForm").submit(function(e) {
     data: form.serialize(), // serializes the form's elements.
     success: function(data)
     {
-        alert(data); // show response from the php script.
+      $(".mail-result").html(data);
+      $("#formInput1").val("");
+      $("#formInput2").val("");
+      $("#formInput3").val("");
     }
   });
 });

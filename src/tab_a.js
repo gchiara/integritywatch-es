@@ -39,7 +39,7 @@ var vuedata = {
       info: 'Provincias. Haga clic en la Provincia que le interese para ver el número de Diputados por Provincias elegidos para la XIV Legislatura.'
     },
     groups: {
-      title: 'Grupos Parlementarios',
+      title: 'Grupos Parlamentarios',
       info: 'Distribución de Diputados según los grupos parlamentarios del Congreso. Haga clic en los diferentes grupos para ver el número de Diputados por cada grupo.'
     },
     income: {
@@ -47,7 +47,7 @@ var vuedata = {
       info: 'Distribución de Diputados según el valor de rentas percibidas. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     properties: {
-      title: 'Cantidad the bienes inmuebles',
+      title: 'Cantidad de bienes inmuebles',
       info: 'Distribución de Diputados según la cantidad de bienes inmuebles. Haga clic en los diferentes valores de cantidad para ver el número de Diputados incluidos.'
     },
     financial: {
@@ -55,7 +55,7 @@ var vuedata = {
       info: 'Distribución de Diputados según el valor de participaciones financieras. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     debt: {
-      title: 'Valor de deudas y obligaciones patrimoniales',
+      title: 'Valor de deudas y obligaciones patrimoniales (saldo pendiente)',
       info: 'Distribución de Diputados según el valor de deudas y obligaciones patrimoniales. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     vehicles: {
@@ -71,7 +71,7 @@ var vuedata = {
       info: 'Distribución de Diputados según la cantidad pagada por IRPF. Haga clic en los diferentes rangos para ver el número de Diputados incluidos en dicho rango.'
     },
     depositos: {
-      title: 'Depositos',
+      title: 'Depósitos',
       info: 'Distribución de Diputados según el saldo de sus depósitos. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     mainTable: {
@@ -134,8 +134,8 @@ var vuedata = {
     "GUADALAJARA": "Guadalajara",
     "HUELVA": "Huelva",
     "HUESCA": "Huesca",
-    "ILLES BALEARS": "Illes Balears",
-    "ISLAS BALEARES": "Illes Balears",
+    "ILLES BALEARS": "Islas Baleares",
+    "ISLAS BALEARES": "Islas Baleares",
     "JAEN": "Jaén",
     "JAÉN": "Jaén",
     "LA CORUÑA": "La Coruña",
@@ -200,7 +200,14 @@ var vuedata = {
       "10 - 20": "#2b90b8",
       "5 - 10": "#3aa2cb",
       "1 - 5": "#55bbe4",
-      "Sin bienes inmuebles": "#ccc",
+      "Sin bienes inmuebles": "#ccc"
+    },
+    vehiclesRange: {
+      "5+": "#0d506b",
+      "4": "#1d7598",
+      "3": "#2b90b8",
+      "2": "#3aa2cb",
+      "1": "#55bbe4",
       "Sin vehículos": "#ccc"
     },
     gender: {
@@ -221,7 +228,7 @@ var vuedata = {
       "5000€ - 20000€": "#3aa2cb",
       "1000€ - 5000€": "#47afd8",
       "1€ - 1000€": "#55bbe4",
-      "Ningun": "#ccc"
+      "Sin depósitos": "#ccc"
     },
     groups2: {
       "GS":"#E9202C",
@@ -266,13 +273,13 @@ new Vue({
     share: function (platform) {
       if(platform == 'twitter'){
         var thisPage = window.location.href.split('?')[0];
-        var shareText = 'Share text here ' + thisPage;
+        var shareText = 'Te invitamos a conocer la nueva plataforma donde podrás encontrar todos los datos declarados por los Diputados y Senadores de la Legislatura XIV en una única base de datos interactiva gracias a #IntegrityWatchEspaña ' + thisPage;
         var shareURL = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText);
         window.open(shareURL, '_blank');
         return;
       }
       if(platform == 'facebook'){
-        var toShareUrl = 'https://integritywatch.lt';
+        var toShareUrl = 'https://integritywatch.es';
         var shareURL = 'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(toShareUrl);
         window.open(shareURL, '_blank', 'toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250,top=300,left=300');
         return;
@@ -472,6 +479,20 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
       return ((a < b) ? 1 : ((a > b) ? -1 : 0));
   }
 });
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+  "alphabet-accent-pre": function (name) {
+    if(name[0] == "Á"){
+      name = "A" + name.substring(1);
+    }
+      return name;
+  },
+  "alphabet-accent-asc": function ( a, b ) {
+      return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+  },
+  "alphabet-accent-desc": function ( a, b ) {
+      return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+  }
+});
 
 function calcIncomeTot(el, type) {
   var tot = 0;
@@ -488,7 +509,7 @@ function calcIncomeTot(el, type) {
     }
     if(thisAmt) {
       //var amt = parseFloat(thisAmt.replace(".","").replace(",",".").replace(" €","").trim());
-      var amt = parseFloat(thisAmt.replace(",","").replace(" €","").trim());
+      var amt = parseFloat(thisAmt.replace(",","").replace(" €","").replace("€","").trim());
       tot += amt;
     }
   });
@@ -523,16 +544,24 @@ function calcPropertiesRange(el, type) {
   var range = "Sin bienes inmuebles";
   if(type == "vehicles") {
     range = "Sin vehículos";
-  }
-  if(el && el.length > 0) {
-    if(el.length > 20) {
-      range = "> 20";
-    } else if(el.length > 10) {
-      range = "10 - 20";
-    } else if(el.length > 5) {
-      range = "5 - 10";
-    } else if(el.length >= 1) {
-      range = "1 - 5";
+    if(el && el.length > 0) {
+      if(el.length >= 5) {
+        range = "5+";
+      } else {
+        range = el.length.toString();
+      }
+    }
+  } else {
+    if(el && el.length > 0) {
+      if(el.length > 20) {
+        range = "> 20";
+      } else if(el.length > 10) {
+        range = "10 - 20";
+      } else if(el.length > 5) {
+        range = "5 - 10";
+      } else if(el.length >= 1) {
+        range = "1 - 5";
+      }
     }
   }
   return range;
@@ -556,13 +585,13 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         //Check if name exists in diputados, if name doesn't exists, add it 
         //Check if type esists, if it doesn't, create type array
         //Push entry to type array (only push non keys): loop through keys and if value not null, add key and value to entry
-        var cleanName = d.unique_id.trim();
-        var cleanCategory = d.category_declaration.trim();
+        var cleanName = d.unique_id.trim().toLowerCase();
+        var cleanCategory = d.category_declaration.trim().toLowerCase();
         if(!declarations[cleanName]) {
           declarations[cleanName]  = {};
         }
-        if(d.electoral_disctrict !== null && d.electoral_disctrict !== "") {
-          declarations[cleanName]['electoral_disctrict'] = d.electoral_disctrict;
+        if(d.electoral_district !== null && d.electoral_district !== "") {
+          declarations[cleanName]['electoral_district'] = d.electoral_district;
         }
         if(d.taxes_value !== null && d.taxes_value !== "") {
           declarations[cleanName]['taxes_value'] = d.taxes_value;
@@ -575,7 +604,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         }
         var newEntry = {};
         for (var key in d) {
-          if(key !== "unique_id" && key !== "full_name" && key !== "category_declaration" && key !== "electoral_disctrict" && key !== "comments" && d[key] !== null && d[key] !== "") {
+          if(key !== "unique_id" && key !== "full_name" && key !== "category_declaration" && key !== "electoral_district" && key !== "comments" && d[key] !== null && d[key] !== "") {
             newEntry[key] = d[key].trim();
           }
         }
@@ -584,22 +613,26 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         if(d.comments && d.comments !== "") {
           declarations[cleanName]['comments'].push(d.comments);
         }
-        
       });
+      console.log(declarations);
       //Loop through list, get declaration and do calculations for charts
       _.each(diputados, function (d) {
         d.declaration = {};
-        if(declarations[d.unique_id]) {
-          d.declaration = declarations[d.unique_id];
+        var thisId = d.unique_id.trim().toLowerCase();
+        if(declarations[thisId]) {
+          d.declaration = declarations[thisId];
+        } else {
+          console.log("No dec: " +d.unique_id);
         }
         //Get photo
         d.photoInfo = _.find(photosData, function(a){ return a.name.trim() == d.full_name.trim()});
         //Get province
         d.province = "";
-        if(d.declaration && d.declaration.electoral_disctrict) {
-          d.province = vuedata.provinces[d.declaration.electoral_disctrict.trim()];
+        if(d.declaration && d.declaration.electoral_district) {
+          if(d.declaration.electoral_district == "AUSTURIES") { d.declaration.electoral_district = "ASTURIAS" }
+          d.province = vuedata.provinces[d.declaration.electoral_district.trim()];
           if(!d.province) {
-            console.log(d.province + " - " + d.declaration.electoral_disctrict);
+            console.log(d.province + " - " + d.declaration.electoral_district);
           }
         }
         //IRPF range
@@ -642,7 +675,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         d.declaration.vehiclesRange = calcPropertiesRange(d.declaration["vehículos"], 'vehicles');
         //Deposits Tot
         d.declaration.depositsTot = 0;
-        d.depositsRange = "Ningun";
+        d.depositsRange = "Sin depósitos";
         if(d.declaration.depositos) {
           d.declaration.depositsTot = calcIncomeTot(d.declaration.depositos, 'deposits');
           if(d.declaration.depositsTot > 50000) {
@@ -938,7 +971,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         var group = dimension.group().reduceSum(function (d) { 
           return 1; 
         });
-        var order = ['Sin vehículos','1 - 5','5 - 10','10 - 20','> 20'];
+        var order = ['Sin vehículos','1','2','3','4','5+'];
         var sizes = calcPieSize(charts.vehicles.divId);
         chart
           .width(sizes.width)
@@ -961,7 +994,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
           })
           .dimension(dimension)
           .colorCalculator(function(d, i) {
-            return vuedata.colors.propertiesRange[d.key];
+            return vuedata.colors.vehiclesRange[d.key];
           })
           .group(group);
 
@@ -1053,7 +1086,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
         var group = dimension.group().reduceSum(function (d) { 
           return 1; 
         });
-        var order = ['Ningun','1€ - 1000€','1000€ - 5000€','5000€ - 20000€','20000€ - 50000€', '>50000€'];
+        var order = ['Sin depósitos','1€ - 1000€','1000€ - 5000€','5000€ - 20000€','20000€ - 50000€', '>50000€'];
         var sizes = calcPieSize(charts.depositos.divId);
         chart
           .width(sizes.width)
@@ -1112,9 +1145,9 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
               "orderable": true,
               "targets": 1,
               "defaultContent":"N/D",
+              "type": "alphabet-accent",
               "data": function(d) {
-                return d.last_name.trim() + " " + d.first_name.trim();
-                return d.full_name;
+                return d.last_name.trim().toUpperCase() + ", " + d.first_name.trim();
               }
             },
             {
@@ -1123,7 +1156,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
               "targets": 2,
               "defaultContent":"N/D",
               "data": function(d) {
-                return d.political_group;
+                return d.political_group.trim();
               }
             },
             {
@@ -1414,7 +1447,8 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
       }
       drawCustomCounters();
       
-
+      //Show disclaimer modal
+      $('#disclaimerModal').modal();
 
       //Window resize function
       window.onresize = function(event) {

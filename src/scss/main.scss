@@ -211,21 +211,48 @@ $color_lobby: #449188;
   }
   &.tab_a_3 {
     height: 530px;
+    @media only screen and (max-width: 1490px) {
+      height: 590px;
+    }
   }
   &.tab_a_4 {
     height: 530px;
+    @media only screen and (max-width: 1490px) {
+      height: 590px;
+    }
   }
   &.tab_a_5 {
     height: 530px;
+    @media only screen and (max-width: 1490px) {
+      height: 590px;
+    }
   }
   &.tab_a_6 {
     height: 530px;
+    @media only screen and (max-width: 1490px) {
+      height: 590px;
+    }
   }
   &.tab_a_7 {
     height: 500px;
+    @media only screen and (max-width: 1490px) {
+      height: 570px;
+    }
   }
   &.tab_a_8 {
     height: 500px;
+  }
+  &.tab_a_9 {
+    height: 500px;
+    @media only screen and (max-width: 1490px) {
+      height: 570px;
+    }
+  }
+  &.tab_a_10 {
+    height: 500px;
+    @media only screen and (max-width: 1490px) {
+      height: 570px;
+    }
   }
   &.tab_b_1 {
     height: 505px;
@@ -496,7 +523,6 @@ $color_lobby: #449188;
 }
 
 /* MODAL */
-
 .modal-open {
   padding-right: 0 !important;
 }
@@ -966,6 +992,67 @@ table.dataTable tbody tr:hover {
     cursor: pointer;
     &.active {
       background: #2a7aae;
+    }
+  }
+}
+
+
+/* Announcement modal */
+#disclaimerModal {
+  .modal-dialog {
+    max-width: 1000px;
+  }
+  .modal-body {
+    text-align: left;
+    a {
+      text-decoration: underline;
+      color: #3694d1;
+    }
+  }
+  .intro-image {
+    display: block;
+    margin: 0px auto;
+    max-width: 80%;
+  }
+  .center {
+    text-align: center;
+  }
+  .announcement-title {
+    color: #3694d1;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .announcement-subtitle {
+    color: #222;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 700px;
+    margin: 15px auto 0 auto;
+  }
+  .announcement-date {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #555;
+    font-style: italic;
+    font-weight: bold;
+  }
+  table {
+    margin: 20px auto;
+    td {
+      padding: 5px;
+      &:first-child {
+        min-width: 200px;
+        font-weight: bold;
+        font-size: 17px;
+      }
+    }
+    tr {
+      background: #eee;
+    }
+    tr:nth-child(even) {
+      background: #fff;
     }
   }
 }

@@ -97,7 +97,7 @@
     },
     {
         "name": "ANTONIO JULIÁN RODRÍGUEZ ESQUERDO",
-        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14090.jpg"
+        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14274.jpg"
     },
     {
         "name": "ANTONIO MAGDALENO ALEGRÍA",
@@ -190,10 +190,6 @@
     {
         "name": "CRISTINA AYALA SANTAMARÍA",
         "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14071.jpg"
-    },
-    {
-        "name": "DAVID ERGUIDO CANO",
-        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14005.jpg"
     },
     {
         "name": "DAVID JUAN MUÑOZ ARBONA",
@@ -304,10 +300,6 @@
         "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14179.jpg"
     },
     {
-        "name": "FRANCISCO JOSÉ CARRILLO GUERRERO",
-        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14041.jpg"
-    },
-    {
         "name": "FRANCISCO JOSÉ FERNÁNDEZ PÉREZ",
         "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14060.jpg"
     },
@@ -341,7 +333,7 @@
     },
     {
         "name": "IDURRE BIDEGUREN GABANTXO",
-        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14124.jpg"
+        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14275.jpg"
     },
     {
         "name": "IMANOL LANDA JÁUREGUI",
@@ -402,10 +394,6 @@
     {
         "name": "JOAQUÍN EGEA SERRANO",
         "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14095.jpg"
-    },
-    {
-        "name": "JOKIN BILDARRATZ SORRON",
-        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14036.jpg"
     },
     {
         "name": "JORDI LÓPEZ RAVANALS",
@@ -534,10 +522,6 @@
     {
         "name": "JUAN ANTONIO GILABERT SÁNCHEZ",
         "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14055.jpg"
-    },
-    {
-        "name": "JUAN CARLOS FRANCISCO RIVERA",
-        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14065.jpg"
     },
     {
         "name": "JUAN CARLOS MEDINA MARTÍNEZ",
@@ -718,10 +702,6 @@
     {
         "name": "MARÍA LUISA BUSTINDUY BARRERO",
         "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14188.jpg"
-    },
-    {
-        "name": "MARÍA MAR HORMIGO LEÓN",
-        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14025.jpg"
     },
     {
         "name": "MARÍA MARGARITA PEREGRINA ADRIO TARACIDO",
@@ -1044,7 +1024,7 @@
         "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14128.jpg"
     },
     {
-        "name": "ANTONIO MARTINEZ RODRIGUEZ",
+        "name": "ANTONIO MARTÍNEZ RODRÍGUEZ",
         "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14267.jpg"
     },
     {
@@ -1054,5 +1034,25 @@
     {
         "name": "ABELARDO VICO RUIZ",
         "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14266.jpg"
+    },
+    {
+        "name": "ESTEFANÍA BELTRÁN DE HEREDIA ARRONIZ",
+        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14273.jpg"
+    },
+    {
+        "name": "ASSUMPCIÓ CASTELLVÍ AUVÍ",
+        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14269.jpg"
+    },
+    {
+        "name": "MIGUEL BAUTISTA CARBALLO",
+        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14272.jpg"
+    },
+    {
+        "name": "MARÍA PONCE GALLARDO",
+        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14271.jpg"
+    },
+    {
+        "name": "FRANCISCO JAVIER HERVÍAS CHIROSA",
+        "photoUrl": "https://www.senado.es/legis14/senadores/fotos/S14270.jpg"
     }
 ]

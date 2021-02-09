@@ -39,7 +39,7 @@ var vuedata = {
       info: 'Provincias. Haga clic en la Provincia que le interese para ver el número de Senadores por Provincias elegidos para la XIV Legislatura.'
     },
     groups: {
-      title: 'Grupos Parlementarios',
+      title: 'Grupos Parlamentarios',
       info: 'Distribución de Senadores según los grupos parlamentarios del Senado. Haga clic en los diferentes grupos para ver el número de Senadores por cada grupo.'
     },
     income: {
@@ -47,7 +47,7 @@ var vuedata = {
       info: 'Distribución de Senadores según el valor de rentas percibidas. Haga clic en los diferentes rangos y valores para ver el número de Senadores incluidos.'
     },
     properties: {
-      title: 'Cantidad the bienes inmuebles',
+      title: 'Cantidad de bienes inmuebles',
       info: 'Distribución de Senadores según la cantidad de bienes inmuebles. Haga clic en los diferentes valores de cantidad para ver el número de Senadores incluidos.'
     },
     financial: {
@@ -71,7 +71,7 @@ var vuedata = {
       info: 'Distribución de Diputados según la cantidad pagada por IRPF. Haga clic en los diferentes rangos para ver el número de Diputados incluidos en dicho rango.'
     },
     depositos: {
-      title: 'Depositos',
+      title: 'Depósitos',
       info: 'Distribución de Diputados según el saldo de sus depósitos. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     mainTable: {
@@ -161,6 +161,17 @@ var vuedata = {
     "El Hierro": "",
     "Eivissa-Formentera": "Islas Baleares"
   },
+  groups: {
+    "GP. IZQUIERDA CONFEDERAL": "GPIC",
+    "GP. POPULAR": "GPP",
+    "GP. CIUDADANOS": "GPCs",
+    "GP. ESQUERRA REPUBLICANA-EUSKAL HERRIA BILDU": "GPERB",
+    "GP. MIXTO": "GPMX",
+    "GP. NACIONALISTA EN EL SEANDO JUNTS PER CATALUNYA-COALICIÓN CANARIA / PARTIDO NACIONALISTA CANARIO": "GPN",
+    "GP. NACIONALISTA EN EL SENADO JUNTS PER CATALUNYA-COALICIÓN CANARIA / PARTIDO NACIONALISTA CANARIO": "GPN",
+    "GP. SOCIALISTA": "GPS",
+    "GP. VASCO": "GPV"
+  },
   colors: {
     generic: ["#3b95d0", "#4081ae", "#406a95", "#395a75" ],
     default1: "#2b90b8",
@@ -204,7 +215,7 @@ var vuedata = {
       "5000€ - 20000€": "#3aa2cb",
       "1000€ - 5000€": "#47afd8",
       "1€ - 1000€": "#55bbe4",
-      "Ningun": "#ccc"
+      "Sin depósitos": "#ccc"
     },
     groups: {
       "GP. ESQUERRA REPUBLICANA-EUSKAL HERRIA BILDU":"#FFDC67",
@@ -214,7 +225,7 @@ var vuedata = {
       "GP. VASCO":"#19AA63",
       "GP. IZQUIERDA CONFEDERAL":"#794877",
       "GP. CIUDADANOS":"#606060",
-      "GP. NACIONALISTA EN EL SEANDO JUNTS PER CATALUNYA-COALICIÓN CANARIA / PARTIDO NACIONALISTA CANARIO":"#FF2EEE",
+      "GP. NACIONALISTA EN EL SENADO JUNTS PER CATALUNYA-COALICIÓN CANARIA / PARTIDO NACIONALISTA CANARIO":"#FF2EEE",
       "":"#bbb",
       "N/A":"#bbb"
     }
@@ -237,13 +248,13 @@ new Vue({
     share: function (platform) {
       if(platform == 'twitter'){
         var thisPage = window.location.href.split('?')[0];
-        var shareText = 'Share text here ' + thisPage;
+        var shareText = 'Te invitamos a conocer la nueva plataforma donde podrás encontrar todos los datos declarados por los Diputados y Senadores de la Legislatura XIV en una única base de datos interactiva gracias a #IntegrityWatchEspaña ' + thisPage;
         var shareURL = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText);
         window.open(shareURL, '_blank');
         return;
       }
       if(platform == 'facebook'){
-        var toShareUrl = 'https://integritywatch.lt';
+        var toShareUrl = 'https://integritywatch.es';
         var shareURL = 'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(toShareUrl);
         window.open(shareURL, '_blank', 'toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250,top=300,left=300');
         return;
@@ -501,7 +512,7 @@ function calcIncomeRange(amt, type) {
     range = "Sin deudas";
   }
   if(type == 'deposits') {
-    range = "Ningun";
+    range = "Sin depósitos";
     if(amt && amt > 0) {
       if(amt > 50000) {
         range = ">50000€";
@@ -556,6 +567,52 @@ function calcPropertiesRange(el, type) {
   return range;
 }
 
+//Generate data for values csv, for manual values fixing, for rentas, deudas and depositos
+function getCsvValues(declarations) {
+  var csvEntries = [["name","type","value_string"]];
+  _.each(declarations, function (d) {
+    if(d.rentas) {
+      _.each(d.rentas, function (x) {
+        var entry = [
+          '"' + d.name + '"',
+          '"rentas"',
+          '"' + x.euros + '"'];
+          csvEntries.push(entry);
+      });
+    }
+    if(d.deudas) {
+      _.each(d.deudas, function (x) {
+        var entry = [
+          '"' + d.name + '"',
+          '"deudas"',
+          '"' + x.saldo_pendiente + '"'];
+          csvEntries.push(entry);
+      });
+    }
+    if(d.depositos) {
+      _.each(d.depositos, function (x) {
+        var entry = [
+          '"' + d.name + '"',
+          '"depositos"',
+          '"' + x.saldo + '"'];
+          csvEntries.push(entry);
+      });
+    }
+  });
+  var csvContent = "data:text/csv;charset=utf-8,";
+  csvEntries.forEach(function(rowArray) {
+    var row = rowArray.join(",");
+    csvContent += row + "\r\n";
+  });
+  var encodedUri = encodeURI(csvContent);
+  var link = document.createElement("a");
+  link.setAttribute("href", encodedUri);
+  link.setAttribute("download", "senators_values.csv");
+  document.body.appendChild(link);
+  link.click();
+  return;
+}
+
 //Generate random parameter for dynamic dataset loading (to avoid caching)
 var randomPar = '';
 var randomCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -564,46 +621,48 @@ for ( var i = 0; i < 5; i++ ) {
 }
 //Load data and generate charts
 json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
-  csv('./data/tab_b/groups.csv?' + randomPar, (err, senatorsGroups) => {
+  csv('./data/tab_b/senators_list.csv?' + randomPar, (err, senatorsList) => {
     csv('./data/tab_b/clean_values.csv?' + randomPar, (err, amountsData) => {
       json('./data/tab_b/senators_photos.json?' + randomPar, (err, photosData) => {
         //Loop through data to aply fixes and calculations
         var totIncome = 0;
         var declarations = {};
         var areas = [];
-        //Loop through data to apply fixes
-        _.each(senators, function (d) {
-          //Get photo
-          d.photoInfo = _.find(photosData, function(a){ return a.name.trim() == d.name.trim()});
-          //Get province/area
-          if(areas.indexOf(d.details.circunscripcion) == -1) {
-            areas.push(d.details.circunscripcion);
+        //getCsvValues(senators);
+
+        _.each(senatorsList, function (d) {
+          //Get declaration
+          d.declaration = {};
+          var thisDeclaration = _.find(senators, function(a){ return a.name.trim() == d.Name.trim()});
+          if(thisDeclaration && thisDeclaration !== null) {
+            d.declaration = thisDeclaration;
           }
+          //Get photo
+          d.photoInfo = _.find(photosData, function(a){ return a.name.trim() == d.Name.trim()});
+          //Get province/area
           d.province = "";
-          if(d.details && d.details.circunscripcion) {
-            d.province = vuedata.provinces[d.details.circunscripcion.trim()];
-            if(!d.province) {
-              console.log(d.province + " - " + d.details.circunscripcion);
+          if(d.declaration.details) {
+            if(areas.indexOf(d.declaration.details.circunscripcion) == -1) {
+              areas.push(d.declaration.details.circunscripcion);
+            }
+            if(d.declaration.details && d.declaration.details.circunscripcion) {
+              d.province = vuedata.provinces[d.declaration.details.circunscripcion.trim()];
+              if(!d.province) {
+                console.log(d.province + " - " + d.declaration.details.circunscripcion);
+              }
             }
           }
-          //Find groups data
-          d.group = "";
-          d.gender = "";
-          d.groupData = _.find(senatorsGroups, function(a){ return a.Name == d.name});
-          if(d.groupData) {
-            d.group = d.groupData.Group;
-            d.gender = d.groupData.Gender;
-          }
           //Find rentas, depositos and deudas with fixed amounts, then calc totals and ranges
-          d.fixedRentas = _.filter(amountsData, function(a){ return a.name == d.name && a.type.trim() == "rentas"});
-          d.fixedDepositos = _.filter(amountsData, function(a){ return a.name == d.name && a.type.trim() == "depositos"});
-          d.fixedDeudas = _.filter(amountsData, function(a){ return a.name == d.name && a.type.trim() == "deudas"});
+          d.fixedRentas = _.filter(amountsData, function(a){ return a.name.trim() == d.Name.trim() && a.type.trim() == "rentas"});
+          d.fixedDepositos = _.filter(amountsData, function(a){ return a.name.trim() == d.Name.trim() && a.type.trim() == "depositos"});
+          d.fixedDeudas = _.filter(amountsData, function(a){ return a.name.trim() == d.Name.trim() && a.type.trim() == "deudas"});
           d.incomeTot = 0;
           d.depositsTot = 0;
           d.debtTot = 0;
           _.each(d.fixedRentas, function (a) {
             d.incomeTot += parseFloat(a.value);
           });
+          totIncome += d.incomeTot;
           _.each(d.fixedDepositos, function (a) {
             d.depositsTot += parseFloat(a.value);
           });
@@ -614,18 +673,18 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
           d.depositsRange = calcIncomeRange(d.depositsTot, 'deposits');
           d.debtRange = calcIncomeRange(d.debtTot, 'debt');
           //Financial: count entries instead of value sum
-          d.financialNumRange = calcPropertiesRange(d.otros_bienes, 'financial');
+          d.financialNumRange = calcPropertiesRange(d.declaration.otros_bienes, 'financial');
           //Properties
-          d.propertiesRange = calcPropertiesRange(d.bienes, 'properties');
+          d.propertiesRange = calcPropertiesRange(d.declaration.bienes, 'properties');
           //Otros bienes
-          d.otherPropertiesRange = calcPropertiesRange(d.otros_bienes, 'other_properties');
+          d.otherPropertiesRange = calcPropertiesRange(d.declaration.otros_bienes, 'other_properties');
           //Vehicles
-          d.vehiclesRange = calcPropertiesRange(d.vehiculos, 'vehicles');
+          d.vehiclesRange = calcPropertiesRange(d.declaration.vehiculos, 'vehicles');
           //Irpf
           var irpfNum = 0;
           d.irpfRange = "0 €";
-          if(d.cantidad_pagada_por_irpf) {
-            irpfNum = parseFloat(d.cantidad_pagada_por_irpf.replace(".","").replace(",",".").replace(" €","").trim());
+          if(d.declaration.cantidad_pagada_por_irpf) {
+            irpfNum = parseFloat(d.declaration.cantidad_pagada_por_irpf.replace(".","").replace(",",".").replace(" €","").trim());
             if(irpfNum > 20000) {
               d.irpfRange = ">20000€";
             } else if(irpfNum > 10000) {
@@ -640,13 +699,10 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
           }
         });
 
-        //Set totals for custom counters
-        $('.count-box-income .total-count').html(totIncome);
-
         //Set dc main vars. The second crossfilter is used to handle the travels stacked bar chart.
-        var ndx = crossfilter(senators);
+        var ndx = crossfilter(senatorsList);
         var searchDimension = ndx.dimension(function (d) {
-            var entryString = d.name + ' province:'+d.province;
+            var entryString = d.Name + ' province:'+d.province;
             return entryString.toLowerCase();
         });
 
@@ -712,7 +768,7 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
         var createGroupsChart = function() {
           var chart = charts.groups.chart;
           var dimension = ndx.dimension(function (d) {
-            return d.group;
+            return d.Group;
           });
           var group = dimension.group().reduceSum(function (d) {
               return 1;
@@ -956,7 +1012,7 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
         var createGenderChart = function() {
           var chart = charts.gender.chart;
           var dimension = ndx.dimension(function (d) {
-            return d.gender;
+            return d.Gender;
           });
           var group = dimension.group().reduceSum(function (d) { 
             return 1; 
@@ -1037,7 +1093,7 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
           var group = dimension.group().reduceSum(function (d) { 
             return 1; 
           });
-          var order = ['Ningun','1€ - 1000€','1000€ - 5000€','5000€ - 20000€','20000€ - 50000€', '>50000€'];
+          var order = ['Sin depósitos','1€ - 1000€','1000€ - 5000€','5000€ - 20000€','20000€ - 50000€', '>50000€'];
           var sizes = calcPieSize(charts.depositos.divId);
           chart
             .width(sizes.width)
@@ -1097,7 +1153,7 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
                 "targets": 1,
                 "defaultContent":"N/D",
                 "data": function(d) {
-                  return d.name;
+                  return d.Name;
                 }
               },
               {
@@ -1106,7 +1162,10 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
                 "targets": 2,
                 "defaultContent":"N/D",
                 "data": function(d) {
-                  return d.group;
+                  if(vuedata.groups[d.Group]) {
+                    return vuedata.groups[d.Group];
+                  }
+                  return d.Group;
                 }
               },
               {
@@ -1115,7 +1174,7 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
                 "targets": 3,
                 "defaultContent":"N/D",
                 "data": function(d) {
-                  return d.incomeTot;
+                  return d.incomeTot.toFixed(2);
                 }
               },
               {
@@ -1124,8 +1183,8 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
                 "targets": 4,
                 "defaultContent":"N/D",
                 "data": function(d) {
-                  if(d.bienes) {
-                    return d.bienes.length;
+                  if(d.declaration && d.declaration.bienes && d.declaration.bienes.length > 0) {
+                    return d.declaration.bienes.length;
                   }
                   return "N/D";
                 }
@@ -1136,7 +1195,7 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
                 "targets": 5,
                 "defaultContent":"N/D",
                 "data": function(d) {
-                  return d.depositsTot;
+                  return d.depositsTot.toFixed(2);
                 }
               },
               {
@@ -1145,8 +1204,8 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
                 "targets": 6,
                 "defaultContent":"N/D",
                 "data": function(d) {
-                  if(d.otros_bienes){
-                    return d.otros_bienes.length;
+                  if(d.declaration.otros_bienes){
+                    return d.declaration.otros_bienes.length;
                   }
                   return "N/D";
                 }
@@ -1327,7 +1386,7 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
         //Custom counters
         function drawCustomCounters() {
           var dim = ndx.dimension (function(d) {
-            return d.name;
+            return d.Name;
           });
           var group = dim.group().reduce(
             function(p,d) {  
@@ -1359,6 +1418,8 @@ json('./data/tab_b/senators.json?' + randomPar, (err, senators) => {
           }})
           .renderlet(function (chart) {
             $(".nbincome").text(income.toFixed(2));
+            //Set totals for custom counters
+            $('.count-box-income .total-count').html(totIncome.toFixed(2));
           });
           counter.render();
         }

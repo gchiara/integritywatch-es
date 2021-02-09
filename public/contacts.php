@@ -4,6 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About</title>
+    <!-- Add twitter and og meta here -->
+    <meta property="og:url" content="https://www.integritywatch.es" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Integrity Watch Spain" />
+    <meta property="og:description" content="Esta plataforma permite visualizar todos los datos declarados por Diputados y Senadores de la Legislatura XIV en sus declaraciones de bienes y rentas en una única base de datos interactiva." />
+    <meta property="og:image" content="https://www.integritywatch.es/images/thumbnail.png" />
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -44,6 +50,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary mb-2 form-submit-btn">Enviar</button>
                       </form>
+                      <div class="mail-result"></div>
                     </div>
                   </div>
                   <div class="col-md-6">

@@ -2,7 +2,7 @@
 
 if (!empty($_POST)) {
 
-  $to      = 'girardelli.chiara@gmail.com';
+  $to      = 'integrity.watch@transparencia.org.es';
   $subject = 'Message from IW ES contact page';
   $name = $_POST["name"];
   $email_from = $_POST["email"];
@@ -13,9 +13,9 @@ if (!empty($_POST)) {
   $email_body = "Message from: $name.\n".
                 "Message:\n $message";
 
-  mail($to, $subject, $message, $headers);
+  mail($to, $subject,  $email_body, $headers);
 
-  echo 'mailed';
+  echo 'Message sent';
 
 }
 
