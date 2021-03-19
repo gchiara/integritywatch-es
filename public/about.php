@@ -26,30 +26,12 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h1 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">1. INFORME NACIONAL DE INTEGRITY WATCH ESPAÑA</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">1. Acerca de Integrity Watch España</a>
               </h1>
             </div>
             <div id="collapse1" class="panel-collapse in">
               <div class="panel-body">
-                <p>La rendición de cuentas, la transparencia y la integridad parlamentaria son principios fundamentales de todo Estado de Derecho, que dotan de legitimidad al sistema democrático y, como consecuencia de ello, refuerzan la confianza entre los ciudadanos y el poder legislativo desempeñado por las Cámaras del Congreso de los Diputados y del Senado.</p>
-                <p>Una de las fuentes de información de transparencia parlamentaria más importante es, ciertamente, la Declaración de Bienes y Rentas de Diputados y Senadores, que resulta de especial importancia y a la que se presta gran atención al inicio de cada legislatura. Sin embargo, se ha podido constatar que este mecanismo de control presenta numerosas deficiencias: insuficiente información, especial dificultad para la accesibilidad, la interoperabilidad, la investigación y la monitorización de la información por parte de la ciudadanía. El acceso a la información en esta materia forma parte y cumple una trascendente importancia en la rendición de cuentas de los parlamentarios.</p> 
-                <p>En este estudio se ha podido constatar que la dificultad para acceder a esta información tiene su origen en diversas causas: (i) las limitaciones del modelo actual del formulario de declaración; (ii) el escaso cumplimiento de las instrucciones que contiene el propio formulario para su correcta cumplimentación; (iii) la falta de directrices detalladas que tienen los parlamentarios para rellenar el formulario, generando una gran heterogeneidad de las declaraciones y, a su vez, discrepancia de la información brindada y (iv) la no disponibilidad de las declaraciones en formatos reutilizables.</p>
-                <p><i>SAVE THE DATE: ¡Presentación del informe nacional el 15 de febrero a las 16hs CET!</i></p>
-              </div>
-            </div>
-          </div>
-          <!-- BLOCK 2 -->
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h1 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">2. ACERCA DE INTEGRITY WATCH ESPAÑA </a>
-              </h1>
-            </div>
-            <div id="collapse2" class="panel-collapse collapse in">
-              <div class="panel-body">
-                <p>Integrity Watch España forma parte del proyecto europeo “Integrity Watch: online tools for the fight against political corruption in Europe” y tiene como propósito principal fortalecer la integridad y transparencia del Congreso de los Diputados y del Senado. Su objetivo es hacer que los datos públicos que a menudo se encuentran dispersos y son de difícil acceso, se recojan, armonicen y pongan a disposición de todos los usuarios a través de una plataforma que está diseñada para ser un centro de herramientas online que permita a los ciudadanos, periodistas y sociedad civil identificar, clasificar, visualizar, comparar y filtrar la información de las Declaraciones de Bienes y Rentas del Congreso de los Diputados y Senadores de la Legislatura XIV.</p>
-                <p>Este sitio web contiene actualmente los datos de las declaraciones de bienes y rentas de los parlamentarios de los 350 diputados del Congreso de los Diputados y los 264 Senadores del Senado de la Legislatura XIV.</p> 
-                <p>Los datos utilizados en Integrity Watch España se recuperan de las páginas y fuentes oficiales del Congreso de los Diputados y del Senado.</p>
+                <p>Integrity Watch España forma parte del proyecto europeo “Integrity Watch: online tools for the fight against political corruption in Europe” y tiene como propósito principal fortalecer la integridad y transparencia del Congreso de los Diputados y del Senado. Su objetivo es hacer que los datos públicos que a menudo se encuentran dispersos y son de difícil acceso, se recojan, armonicen y pongan a disposición de todos los usuarios a través de una plataforma que está diseñada para ser una bases de datos online que permita a los ciudadanos, periodistas, y sociedad civil identificar, clasificar, visualizar y filtrar la información de las Declaraciones de Bienes y Rentas del Congreso de los 350 Diputados y 264 Senadores de la Legislatura XIV.</p>
                 <div class="about-eu-funding">
                   <img class="logo" src="./images/flag_yellow_low.jpg" />
                   <p style="font-family: Arial">This online platform was funded by the European Union’s Internal Security Fund – Police</p>
@@ -59,24 +41,40 @@
               </div>
             </div>
           </div>
+          <!-- BLOCK 2 -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">2. ¿Cómo funciona la plataforma?</a>
+              </h1>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <p>Para ver una video de presentación, click <a href="https://www.youtube.com/watch?v=xhFk0o3hvzY" target="_blank">aquí</a></p>
+              </div>
+            </div>
+          </div>
           <!-- BLOCK 3 -->
           <div class="panel panel-default">
             <div class="panel-heading">
               <h1 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">3. DISCLAIMERS / DESCARGO DE RESPONSABILIDADES</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">3. Informe Nacional Integrity Watch España</a>
               </h1>
             </div>
             <div id="collapse3" class="panel-collapse collapse in">
               <div class="panel-body">
-                <p>Integrity Watch es un proyecto cofinanciado por la Comisión Europea, no obstante, ni las Instituciones y Organismos de la Unión Europea ni ninguna persona que actué en su nombre podrán ser considerados responsables del uso que pueda hacerse de la información contenida en esta plataforma.</p>
-                <p>Toda la información y los datos utilizados por Integrity Watch España sobre las declaraciones de bienes y rentas de la Legislatura XIV se recogen de las páginas y fuentes oficiales del Congreso de los Diputados y del Senado.</p>
-                <p>Transparency International España no se responsabiliza de la exactitud de los datos originales, ya que sólo reproducimos la información que está disponible públicamente en los sitios web mencionados. 
-                <p>Antes de publicar cualquier dato basado en los resultados del presente proyecto, por favor se ruega revisar los últimos datos publicados en los sitios web oficiales del Congreso de los Diputados y del Senado.</p>
-                <p>Descargo de responsabilidad sobre las declaraciones de bienes y rentas del Congreso de los Diputados y del Senado.</p>
-                <p>Toda la información contenida en la declaración original es responsabilidad exclusiva del parlamentario del Congreso de los Diputados y del Senado. En cada perfil de los miembros parlamentarios se encuentra el link del sitio web del Congreso de los Diputados y Senado, donde se puede comprobar y verificar la declaración original.</p>
-                <p>Todos los datos reflejados en la plataforma fueron extraídos de los sitios web y fuentes oficiales del Congreso de los Diputados y Senado. Integrity Watch España extrae de manera manual una a una las declaraciones de bienes y rentas del Congreso de los Diputados, al encontrarse en formato de documento portátil (PDF) escaneado, y del Senado bajo softwares extractivos y analizadores sintácticos (parsers), al encontrarse publicados en formatos PDF electrónico, con lo cual, al haberse recopilado así la información es posible que exista algún error o algún dato inexacto.</p>
-                <p>Si encuentra información inexacta, incorrecta o engañosa, por favor pónganse en contacto con <a href="mailto:integrity.watch@transparencia.org.es">integrity.watch@transparencia.org.es</a></p>
-                <p>La fecha de la última actualización aparece en la página web.</p>
+                <p>La rendición de cuentas, la transparencia y la integridad parlamentaria forman parte de los principios fundamentales de todo Estado de Derecho que dotan de legitimidad al sistema democrático reforzando la confianza entre los ciudadanos y el poder legislativo desempeñado por las Cortes Generales.</p>
+                <p>La Declaración de Bienes y Rentas de Diputados y Senadores es, sin duda, una de las fuentes de información de transparencia parlamentaria más importante y a la que se presta gran atención al inicio de cada legislatura. Sin embargo, tal y como se encuentra concebido en la actualidad, se ha podido constatar que este mecanismo de control presenta numerosas deficiencias: información insuficiente, especial dificultad para la accesibilidad, la interoperabilidad, la investigación y la monitorización de la información por parte de la ciudadanía. El acceso a la información en esta materia forma parte y cumple una trascendente importancia en la rendición de cuentas de los parlamentarios.</p>
+                <p>En este estudio se ha podido comprobar que la dificultad para acceder a esta información tiene su origen en diversas causas: (i) las limitaciones del modelo actual del formulario de declaración; (ii) el escaso cumplimiento de las instrucciones que contiene el propio formulario para su correcta cumplimentación; (iii) la falta de directrices detalladas que tienen los parlamentarios para rellenar el formulario, generando una gran heterogeneidad de las declaraciones y, a su vez, discrepancia de la información brindada y (iv) la no disponibilidad de las declaraciones en formatos reutilizables.</p>
+                <p>Transparency International España, en aras de la mejora de la transparencia y la rendición de cuentas de los parlamentarios, emite una serie de recomendaciones de lege ferenga, lege lata y para la actualización del formulario de la declaración de bienes y rentas. Aquí podemos resaltar las cinco principales:</p>
+                <ul>
+                <li>Modificar el formato de publicidad de las declaraciones por formatos de datos abiertos y reutilizables.</li>
+                <li>Crear una autoridad independiente de control, seguimiento y monitoreo de las declaraciones de bienes y rentas de los parlamentarios, con el objetivo de verificar: (i) que el formulario fue completado de la manera correcta, (ii) la veracidad de la información, y (iii) cruzar la información con los registros oficiales para poder detectar posibles conflictos de interés y enriquecimiento ilícito.</li>
+                <li>Actualizar el marco normativo y regulatorio en materia de transparencia parlamentaria.</li> 
+                <li>Mejorar y actualizar el formulario con categorías claras, completas y detalladas y elaborar y publicar una guía detallada con directrices concretas para cumplimentar adecuadamente el modelo de declaración.</li>
+                <li>Tomar todas las medidas necesarias para asegurar la plena implementación del Código de Conducta de las Cortes Generales que se podrán recoger en un Plan Integral de Implementación para lograr un efectivo cumplimiento a lo establecido en el informe de Evaluación de la Cuarta Ronda de España GRECO.</li>
+                </ul>
+                <p>Para descargar el Informe completo haga clíck <a href="https://transparencia.org.es/wp-content/uploads/2021/02/Informe-Final-Integrity-Watch-Spain.pdf" target="_blank">aquí</a></p>
               </div>
             </div>
           </div>
@@ -84,30 +82,48 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h1 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">4. NORMATIVA APLICABLE</a>
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">4. Jornada “Avances y retos en transparencia e integridad en el Congreso de los Diputados y el Senado” (15/02/21)</a>
               </h1>
             </div>
             <div id="collapse4" class="panel-collapse collapse in">
               <div class="panel-body">
-              <p>La Constitución Española regula en el Título III “De las Cortes Generales” los aspectos básicos, o esenciales de las Cortes Generales que luego son desarrollados en otras disposiciones propias de la Constitución, así como en normas de rango inferior.</p>
-                <p>La normativa aplicable con relación a las declaraciones de bienes y rentas de los Diputados y Senadores se regula en los artículos 157 a 160 de la Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General y la Ley Orgánica 7/2011, de 15 de julio, de modificación del artículo 160 la Ley Orgánica 5/1985.</p>
-                <p>El Reglamento del Congreso de los Diputados establece en su artículo 18 la obligación de formular la declaración de sus bienes patrimoniales en los términos previstos en la LOREG.</p>
-                <p>El Reglamento del Senado, establece en su artículo 26 como requisito para la perfección de la condición de Senador presentar la declaración de bienes patrimoniales, tanto al inicio del mandato, así como en el plazo de 30 días naturales siguientes a la pérdida de su condición o de la modificación de las circunstancias inicialmente declaradas.</p>
-                <p>También se regula por Acuerdo de las Mesas del Congreso de los Diputados y del Senado, de 21 de diciembre de 2009, por el que se aprueban normas en materia de registro de intereses, y Acuerdo de las Mesas del Congreso de los Diputados y del Senado, de 19 de julio de 2011, de modificación del acuerdo de 21 de diciembre de 2009, por el que se aprueban Normas en materia de Registro de Intereses para dar cumplimiento a lo establecido en la reforma del artículo 160.2 de la LOREG.</p>
-                <p>Enlaces a la normativa:</p>
-                <p>Constitución Española: <a href="https://www.boe.es/eli/es/c/1978/12/27/(1)/con" target="_blank">https://www.boe.es/eli/es/c/1978/12/27/(1)/con</a></p>
-                <p>Ley Orgánica 5/1985, de 19 de junio, del Régimen Electoral General: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672" target="_blank">https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672</a></p>
-                <p>Ley Orgánica 7/2011, de 15 de julio, de modificación del artículo 160 la Ley Orgánica 5/1985: <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2011-12266" target="_blank">https://www.boe.es/buscar/doc.php?id=BOE-A-2011-12266</a></p>
-                <p>Reglamento del Congreso de los Diputados: <a href="http://www.congreso.es/portal/page/portal/Congreso/Congreso/Hist_Normas/Norm/Reglam" target="_blank">http://www.congreso.es/portal/page/portal/Congreso/Congreso/Hist_Normas/Norm/Reglam</a></p>
-                <p>Reglamentos del Senado: <a href="https://www.senado.es/web/conocersenado/normas/reglamentootrasnormassenado/index.html" target="_blank">https://www.senado.es/web/conocersenado/normas/reglamentootrasnormassenado/index.html</a></p>
-                <p>Acuerdo de las Mesas del Congreso de los Diputados y del Senado, de 21 de diciembre de 2009, por el que se aprueban normas en materia de registro de intereses:<br />
-                <a href="http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A247.PDF" target="_blank">http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A247.PDF</a><br />
-                <a href="https://www.senado.es/legis9/publicaciones/pdf/cortes/bocg/CG_A247.PDF" target="_blank">https://www.senado.es/legis9/publicaciones/pdf/cortes/bocg/CG_A247.PDF</a>
-                </p>
-                <p>Acuerdo de las Mesas del Congreso de los Diputados y del Senado, de 19 de julio de 2011, de modificación del acuerdo de 21 de diciembre de 2009, por el que se aprueban Normas en materia de Registro de Intereses para dar cumplimiento a lo establecido en la reforma del artículo 160.2 de la LOREG:<br />
-                <a href="http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A455.PDF" target="_blank">http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A455.PDF</a><br />
-                <a href="http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A455.PDF#page=2" target="_blank">http://www.congreso.es/public_oficiales/L9/CORT/BOCG/A/CG_A455.PDF#page=2</a>
-                </p>
+                <p>El lunes 15 de febrero de 2021 se celebró la jornada” Avances y retos en transparencia e integridad en el Congreso de los Diputados y el Senado de España” (en formato online), en la que se presentó el Informe Nacional con los resultados de la investigación del proyecto Integrity Watch Spain y las recomendaciones finales de Transparency International España.</p>
+                <p>La Jornada se articuló en dos mesas redondas. Una Primera Mesa Redonda donde se presentaron los principales resultados del proyecto Integrity Watch Spain y las recomendaciones de TI-España y que contó con la participación del equipo del proyecto a nivel nacional y europeo. Y una Segunda Mesa Redonda que contó con la participación de diputados de 7 Grupos Parlamentarios y tuvó como principal objetivo debatir sobre los avances y desafíos en materia de integridad y transparencia parlamentaria.</p>  
+                <p>Asimismo, la Jornada contó con la presencia del Comité de Dirección de TI-España: Prof. Dra. Silvina Bacigalupo, Prof. Dr. Manuel Villoria y D. Jesús Sánchez Lambás; y con una intervención de la Excma. Sra. Presidenta del Congreso de los Diputados Meritxell Batet Lamaña.</p> 
+                <p>Para ver el programa completo de la Jornada haga click <a href="https://transparencia.org.es/wp-content/uploads/2021/02/Programa-Avances-y-retos-en-transparencia-e-integridad-en-el-Congreso-de-los-Diputados-y-el-Senado-de-Espana-1.pdf" target="_blank">aquí</a>.</p>
+                <p>Para descargar la presentación del equipo de IW-España haga click <a href="https://transparencia.org.es/wp-content/uploads/2021/02/IW-Spain_Avances-y-retos-en-la-transparencia-e-integridad-en-el-Congreso-de-los-Diputados-y-el-Senado-de-Espan%CC%83a-2.pdf" target="_blank">aquí</a>.</p>
+                <p>Para ver la grabación completa de la Jornada haga click <a href="https://www.youtube.com/watch?v=ecAk9mw6UR8" target="_blank">aquí</a>.</p>
+              </div>
+            </div>
+          </div>
+          <!-- BLOCK 5 -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">5. Disclaimers / Descargo de responsabilidades</a>
+              </h1>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <p>Integrity Watch es un proyecto cofinanciado por la Comisión Europea. Ni las Instituciones y Organismos de la Unión Europea ni ninguna persona que actué en su nombre podrán ser considerados responsables del uso que pueda hacerse de la información contenida en esta plataforma.</p>
+                <p>Toda la información y los datos utilizados por Integrity Watch España sobre las declaraciones de bienes y rentas de la Legislatura XIV se recogen de las páginas y fuentes oficiales del Congreso de los Diputados y del Senado.</p>
+                <p>Transparency International España no se responsabiliza de la exactitud de los datos originales, ya que sólo reproducimos la información que está disponible públicamente en los sitios web mencionados.</p>
+                <p>Todos los datos reflejados en la plataforma fueron extraídos de los sitios web del Congreso de los Diputados y Senado y fuentes oficiales. El equipo de investigación de Integrity Watch España trasladó de manera manual toda la información contenida en las declaraciones de bienes y rentas del Congreso de los Diputados (al encontrarse éstas en formato de documento portátil (PDF) escaneado) y del Senado bajo softwares extractivos y analizadores sintácticos (parsers), al encontrarse publicados en formatos PDF electrónico. Es posible, por tanto, que pueda existir algún error o dato inexacto fruto de la transcripción manual.</p>
+                <p>Antes de publicar cualquier dato basado en los resultados del presente proyecto, por favor se ruega revisar los últimos datos publicados en los sitios web oficiales del Congreso de los Diputados y del Senado.</p>
+                <p>Si encuentra información inexacta o incompleta o tiene alguna consulta favor de dirigirse a la sección “Contáctenos” de esta plataforma o escribir al correo <a href="mailto:integrity.watch@transparencia.org.es">integrity.watch@transparencia.org.es</a>.</p>
+              </div>
+            </div>
+          </div>
+          <!-- BLOCK 6 -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">6. Fecha de actualización de la base de datos de la plataforma: </a>
+              </h1>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <p>Última actualización: 23/10/2020.</p>
               </div>
             </div>
           </div>

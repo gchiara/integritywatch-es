@@ -268,7 +268,7 @@ new Vue({
   methods: {
     //Share
     downloadDataset: function () {
-      window.open('./data/tab_a/finance.csv');
+      window.open('./data/tab_a/d_declarations.csv');
     },
     share: function (platform) {
       if(platform == 'twitter'){
@@ -1448,7 +1448,7 @@ csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => 
       drawCustomCounters();
       
       //Show disclaimer modal
-      $('#disclaimerModal').modal();
+      //$('#disclaimerModal').modal();
 
       //Window resize function
       window.onresize = function(event) {

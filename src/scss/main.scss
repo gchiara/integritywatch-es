@@ -999,6 +999,7 @@ table.dataTable tbody tr:hover {
 
 /* Announcement modal */
 #disclaimerModal {
+  padding: 0;
   .modal-dialog {
     max-width: 1000px;
   }
@@ -1053,6 +1054,27 @@ table.dataTable tbody tr:hover {
     }
     tr:nth-child(even) {
       background: #fff;
+    }
+  }
+  .event-program-desktop {
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .event-program-mobile {
+    display: none;
+    margin-bottom: 20px;
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
+    .event-program-time {
+      margin: 20px auto 10px auto;
+      padding: 15px auto;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .event-program-desc {
+
     }
   }
 }

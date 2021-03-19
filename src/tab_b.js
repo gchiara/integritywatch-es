@@ -243,7 +243,7 @@ new Vue({
   methods: {
     //Share
     downloadDataset: function () {
-      window.open('./data/tab_a/finance.csv');
+      window.open('./data/tab_b/senators.json');
     },
     share: function (platform) {
       if(platform == 'twitter'){
