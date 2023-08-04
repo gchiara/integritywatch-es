@@ -33,7 +33,6 @@ var vuedata = {
   showAllCharts: true,
   chartMargin: 40,
   modalShowTable: 'a',
-  modalShowUpdatedData: false,
   charts: {
     map: {
       title: 'Mapa',
@@ -43,37 +42,29 @@ var vuedata = {
       title: 'Grupos Parlamentarios',
       info: 'Distribución de Diputados según los grupos parlamentarios del Congreso. Haga clic en los diferentes grupos para ver el número de Diputados por cada grupo.'
     },
-    income: {
-      title: 'Rentas Percibidas',
-      info: 'Distribución de Diputados según el valor de rentas percibidas. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
-    },
-    properties: {
-      title: 'Cantidad de bienes inmuebles',
-      info: 'Distribución de Diputados según la cantidad de bienes inmuebles. Haga clic en los diferentes valores de cantidad para ver el número de Diputados incluidos.'
-    },
-    financial: {
-      title: 'Valor de las acciones y participaciones',
-      info: 'Distribución de Diputados según el valor de participaciones financieras. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
-    },
-    debt: {
-      title: 'Valor de deudas y obligaciones patrimoniales (saldo pendiente)',
-      info: 'Distribución de Diputados según el valor de deudas y obligaciones patrimoniales. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
-    },
-    vehicles: {
-      title: 'Cantidad de vehículos, embarcaciones y aeronaves',
-      info: 'Distribución de Diputados según la cantidad de vehículos, embarcaciones y aeronaves. Haga clic en los diferentes valores de cantidad para ver el número de Diputados incluidos.'
-    },
     gender: {
       title: 'Género',
       info: 'Porcentaje de mujeres y hombres según la composición del Congreso de los Diputados.'
     },
-    irpf: {
-      title: 'IRPF',
-      info: 'Distribución de Diputados según la cantidad pagada por IRPF. Haga clic en los diferentes rangos para ver el número de Diputados incluidos en dicho rango.'
+    activities: {
+      title: 'Actividades actuales',
+      info: 'Lorem ipsum'
     },
-    depositos: {
-      title: 'Depósitos',
-      info: 'Distribución de Diputados según el saldo de sus depósitos. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
+    activitiesPast: {
+      title: 'Actividades pasadas',
+      info: 'Lorem ipsum'
+    },
+    foundations: {
+      title: 'Fundaciones y otras asociaciones',
+      info: 'Lorem ipsum'
+    },
+    donations: {
+      title: 'Donaciones, obseuios y otros beneficios no remunerados',
+      info: 'Lorem ipsum'
+    },
+    observations: {
+      title: 'Otros intereses a declarar / Observaciones',
+      info: 'Lorem ipsum'
     },
     mainTable: {
       chart: null,
@@ -83,7 +74,6 @@ var vuedata = {
     }
   },
   selectedElement: { "P": "", "Sub": ""},
-  selectedElDecDataToDisplay: null,
   modalShowTable: '',
   provinces: {
     "A CORUÑA": "A Coruña",
@@ -93,18 +83,18 @@ var vuedata = {
     "ÁLAVA": "Araba/Álava",
     "Álava": "Araba/Álava",
     "ÁLAVA": "Araba/Álava",
+    "Araba/Álava": "Araba/Álava",
     "ÁLAVA-ARABA": "Araba/Álava",
     "ALBACETE": "Albacete",
     "ALBACETE / CONGRESO": "Albacete",
     "ALICANTE": "Alacant/Alicante",
+    "Alicante/Alacant": "Alacant/Alicante",
     "ALMERIA": "Almería",
     "ALMERÍA": "Almería",
-    "ANDALUCIA": "Andalucía",
     "ASTURIAS": "Asturias",
     "AUSTURIES": "Asturias",
     "ÁVILA": "Ávila",
     "Ávila": "Ávila",
-    "Ávila": "Ávila",
     "BADAJOZ": "Badajoz",
     "BARCELONA": "Barcelona",
     "Bizkaia": "Bizkaia/Vizcaya",
@@ -121,13 +111,15 @@ var vuedata = {
     "CASTELLÓ": "Castelló/Castellón",
     "CASTELLON": "Castelló/Castellón",
     "castellón": "Castelló/Castellón",
+    "Castellón/Castelló": "Castelló/Castellón",
     "CEUTA": "Ceuta",
     "CIUDAD REAL": "Ciudad Real",
     "CORDOBA": "Córdoba",
     "CÓRDOBA": "Córdoba",
     "CÓRDOBA": "Córdoba",
     "CORDOBNCONGRESOSA": "Córdoba",
-    "CORUÑA": "La Coruña",
+    "CORUÑA": "A Coruña",
+    "Coruña (A)": "A Coruña",
     "CUENCA": "Cuenca",
     "ELCHE (ALICANTE)": "Alicante",
     "GIPUZKOA": "Gipuzkoa/Guipúzcoa",
@@ -140,16 +132,21 @@ var vuedata = {
     "HUESCA": "Huesca",
     "ILLES BALEARS": "Islas Baleares",
     "ISLAS BALEARES": "Islas Baleares",
+    "Balears (Illes)": "Islas Baleares",
     "JAEN": "Jaén",
     "JAÉN": "Jaén",
-    "LA CORUÑA": "La Coruña",
+    "Jaén": "Jaén",
+    "LA CORUÑA": "A Coruña",
     "LA RIOJA": "La Rioja",
+    "Rioja (La)": "La Rioja",
     "LAS PALMAS": "Las Palmas",
+    "Palmas (Las)": "Las Palmas",
     "LEON": "León",
     "LEÓN": "León",
     "LLEIDA": "Lleida",
     "LUGO": "Lugo",
     "MADRID": "Madrid",
+    "Madrid": "Madrid",
     "MALAGA": "Málaga",
     "MÁLAGA": "Málaga",
     "MÁLAGA": "Málaga",
@@ -167,6 +164,7 @@ var vuedata = {
     "SANTA CRUZ DE TENERIFE": "Santa Cruz de Tenerife",
     "Santa Cruz de Tenerife": "Santa Cruz de Tenerife",
     "santa cruz de tenerife": "Santa Cruz de Tenerife",
+    "S/C Tenerife": "Santa Cruz de Tenerife",
     "SANTANDER": "Santander",
     "SEGOVIA": "Segovia",
     "SEVILLA": "Sevilla",
@@ -178,6 +176,7 @@ var vuedata = {
     "TINAJEROS (ALBACETE)": "Albacete",
     "TOLEDO": "Toledo",
     "VALENCIA": "València/Valencia",
+    "Valencia/València": "València/Valencia",
     "VALLADOLID": "Valladolid",
     "VIZCAYA": "Bizkaia/Vizcaya",
     "ZAMORA": "Zamora",
@@ -186,7 +185,7 @@ var vuedata = {
   },
   colors: {
     generic: ["#3b95d0", "#4081ae", "#406a95", "#395a75" ],
-    default1: "#2b90b8",
+    default1: "#3b95d0",
     default2: "#449188",
     incomeRange: {
       "> 100.000€": "#0d506b",
@@ -270,15 +269,6 @@ new Vue({
   el: '#app',
   data: vuedata,
   methods: {
-    //Toggle old or updated declaration data
-    toggleUpdatedDeclarationData: function() {
-      vuedata.modalShowUpdatedData = !vuedata.modalShowUpdatedData;
-      if(vuedata.modalShowUpdatedData) {
-        vuedata.selectedElDecDataToDisplay = vuedata.selectedElement.declarationUpdated;
-      } else {
-        vuedata.selectedElDecDataToDisplay = vuedata.selectedElement.declaration;
-      }
-    },
     //Share
     downloadDataset: function () {
       window.open('./data/tab_a/d_declarations.csv');
@@ -318,45 +308,35 @@ var charts = {
     type: 'row',
     divId: 'groups_chart'
   },
-  income: {
-    chart: dc.pieChart("#income_chart"),
-    type: 'pie',
-    divId: 'income_chart'
-  },
-  properties: {
-    chart: dc.pieChart("#properties_chart"),
-    type: 'pie',
-    divId: 'properties_chart'
-  },
-  financial: {
-    chart: dc.pieChart("#financial_chart"),
-    type: 'pie',
-    divId: 'financial_chart'
-  },
-  debt: {
-    chart: dc.pieChart("#debt_chart"),
-    type: 'pie',
-    divId: 'debt_chart'
-  },
-  vehicles: {
-    chart: dc.pieChart("#vehicles_chart"),
-    type: 'pie',
-    divId: 'vehicles_chart'
-  },
   gender: {
     chart: dc.pieChart("#gender_chart"),
     type: 'pie',
     divId: 'gender_chart'
   },
-  irpf: {
-    chart: dc.pieChart("#irpf_chart"),
+  activities: {
+    chart: dc.pieChart("#activities_chart"),
     type: 'pie',
-    divId: 'irpf_chart'
+    divId: 'activities_chart'
   },
-  depositos: {
-    chart: dc.pieChart("#depositos_chart"),
+  activitiesPast: {
+    chart: dc.pieChart("#activitiespast_chart"),
     type: 'pie',
-    divId: 'depositos_chart'
+    divId: 'activitiespast_chart'
+  },
+  foundations: {
+    chart: dc.pieChart("#foundations_chart"),
+    type: 'pie',
+    divId: 'foundations_chart'
+  },
+  donations: {
+    chart: dc.pieChart("#donations_chart"),
+    type: 'pie',
+    divId: 'donations_chart'
+  },
+  observations: {
+    chart: dc.pieChart("#observations_chart"),
+    type: 'pie',
+    divId: 'observations_chart'
   },
   mainTable: {
     chart: null,
@@ -469,6 +449,21 @@ var resizeGraphs = function() {
   }
 };
 
+//Get range
+function getNumRange(num) {
+  var range = 0;
+  if(num == 0) {
+    range = '0';
+  } else if(num <= 2) {
+    range = '1 - 2';
+  } else if(num <= 5) {
+    range = '3 - 5';
+  } else if(num > 5) {
+    range = '> 5';
+  } 
+  return range;
+}
+
 //Add commas to thousands
 function addcommas(x){
   if(parseInt(x)){
@@ -507,79 +502,6 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
   }
 });
 
-function calcIncomeTot(el, type) {
-  var tot = 0;
-  _.each(el, function (d) {
-    var thisAmt = d.income_value_clean;
-    if(type == 'financial') {
-      thisAmt = d.other_financial_clean;
-    }
-    if(type == 'debt') {
-      thisAmt = d.debt_amount_remain;
-    }
-    if(type == 'deposits') {
-      thisAmt = d.deposits_value_clean;
-    }
-    if(thisAmt) {
-      //var amt = parseFloat(thisAmt.replace(".","").replace(",",".").replace(" €","").trim());
-      var amt = parseFloat(thisAmt.replace(",","").replace(" €","").replace("€","").trim());
-      tot += amt;
-    }
-  });
-  return tot.toFixed(2);
-}
-function calcIncomeRange(amt, type) {
-  var range = "Sin rentas";
-  if(type == 'financial') {
-    range = "Sin participationes";
-  }
-  if(type == 'debt') {
-    range = "Sin deudas";
-  }
-  if(amt && amt > 0) {
-    if(amt > 100000) {
-      range = "> 100.000€";
-    } else if(amt > 50000) {
-      range = "50.001€ - 100.000€";
-    } else if(amt > 10000) {
-      range = "10.001€ - 50.000€";
-    } else if(amt > 5000) {
-      range = "5.001 - 10.000€";
-    } else if(amt > 1000) {
-      range = "1.001 - 5.000€";
-    } else if(amt > 0) {
-      range = "1€ - 1.000€";
-    }
-  }
-  return range;
-}
-function calcPropertiesRange(el, type) {
-  var range = "Sin bienes inmuebles";
-  if(type == "vehicles") {
-    range = "Sin vehículos";
-    if(el && el.length > 0) {
-      if(el.length >= 5) {
-        range = "5+";
-      } else {
-        range = el.length.toString();
-      }
-    }
-  } else {
-    if(el && el.length > 0) {
-      if(el.length > 20) {
-        range = "> 20";
-      } else if(el.length > 10) {
-        range = "10 - 20";
-      } else if(el.length > 5) {
-        range = "5 - 10";
-      } else if(el.length >= 1) {
-        range = "1 - 5";
-      }
-    }
-  }
-  return range;
-}
-
 //Generate random parameter for dynamic dataset loading (to avoid caching)
 var randomPar = '';
 var randomCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -587,173 +509,109 @@ for ( var i = 0; i < 5; i++ ) {
   randomPar += randomCharacters.charAt(Math.floor(Math.random() * randomCharacters.length));
 }
 //Load data and generate charts
-csv('./data/tab_a/d_declarations.csv?' + randomPar, (err, declarationsTable) => {
-csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTableUpdate) => {
-  csv('./data/tab_a/diputados_list.csv?' + randomPar, (err, diputados) => {
+json('./data/tab_a2/docacteco.json?' + randomPar, (err, declarations) => {
+  json('./data/tab_a2/DiputadosActivos.json?' + randomPar, (err, diputados) => {
     json('./data/tab_a/deputees_photos.json?' + randomPar, (err, photosData) => {
-      //Loop through data to aply fixes and calculations
-      var totIncome = 0;
-      var declarations = {};
-      var declarationsUpdated = {};
-      //Loop through data to apply fixes
-      _.each(declarationsTable, function (d) {
-        //Check if name exists in diputados, if name doesn't exists, add it 
-        //Check if type esists, if it doesn't, create type array
-        //Push entry to type array (only push non keys): loop through keys and if value not null, add key and value to entry
-        var cleanName = d.unique_id.trim().toLowerCase();
-        var cleanCategory = d.category_declaration.trim().toLowerCase();
-        if(!declarations[cleanName]) {
-          declarations[cleanName]  = {};
-        }
-        if(d.electoral_district !== null && d.electoral_district !== "") {
-          declarations[cleanName]['electoral_district'] = d.electoral_district;
-        }
-        if(d.taxes_value !== null && d.taxes_value !== "") {
-          declarations[cleanName]['taxes_value'] = d.taxes_value;
-        }
-        if(!declarations[cleanName][cleanCategory]) {
-          declarations[cleanName][cleanCategory] = [];
-        }
-        if(!declarations[cleanName]['comments']) {
-          declarations[cleanName]['comments']  = [];
-        }
-        var newEntry = {};
-        for (var key in d) {
-          if(key !== "unique_id" && key !== "full_name" && key !== "category_declaration" && key !== "electoral_district" && key !== "comments" && d[key] !== null && d[key] !== "") {
-            newEntry[key] = d[key].trim();
-          }
-        }
-        declarations[cleanName][cleanCategory].push(newEntry);
-        //Sort comments
-        if(d.comments && d.comments !== "") {
-          declarations[cleanName]['comments'].push(d.comments);
-        }
-      });
-      //console.log(declarations);
-      //Loop through new declarations data (2023), apply fixes. Some of these declarations are going to be used in modals for mps that already had a full declaration, and as main declaration for ones who didn't have one.
-      _.each(declarationsTableUpdate, function (d) {
-        //Check if name exists in diputados, if name doesn't exists, add it 
-        //Check if type esists, if it doesn't, create type array
-        //Push entry to type array (only push non keys): loop through keys and if value not null, add key and value to entry
-        var cleanName = d.unique_id.trim().toLowerCase();
-        var cleanCategory = d.category_declaration.trim().toLowerCase();
-        if(!declarationsUpdated[cleanName]) {
-          declarationsUpdated[cleanName]  = {};
-        }
-        if(d.electoral_district !== null && d.electoral_district !== "") {
-          declarationsUpdated[cleanName]['electoral_district'] = d.electoral_district;
-        }
-        if(d.taxes_value !== null && d.taxes_value !== "") {
-          declarationsUpdated[cleanName]['taxes_value'] = d.taxes_value;
-        }
-        if(!declarationsUpdated[cleanName][cleanCategory]) {
-          declarationsUpdated[cleanName][cleanCategory] = [];
-        }
-        if(!declarationsUpdated[cleanName]['comments']) {
-          declarationsUpdated[cleanName]['comments']  = [];
-        }
-        var newEntry = {};
-        for (var key in d) {
-          if(key !== "unique_id" && key !== "full_name" && key !== "category_declaration" && key !== "electoral_district" && key !== "comments" && d[key] !== null && d[key] !== "") {
-            newEntry[key] = d[key].trim();
-          }
-        }
-        declarationsUpdated[cleanName][cleanCategory].push(newEntry);
-        //Sort comments
-        if(d.comments && d.comments !== "") {
-          declarationsUpdated[cleanName]['comments'].push(d.comments);
-        }
-      });
-      
+      var missingProvinces = [];
+      var noActivitiesString1 = 'Durante el plazo señalado, además de lo anteriormente declarado, no he desarrollado otras actividades que puedan considerarse relevantes y que hayan podido condicionar el desarrollo de mi función política o parlamentaria, o que se encuentren dentro del ámbito de aplicación del Código de Conducta de las Cortes Generales';
+      var noActivitiesString2 = 'Ninguna de las actividades desarrollada por mí durante los cinco años anteriores a la obtención del mandato parlamentario podrá condicionar mi actividad política en tanto en cuanto esta se desarrollará siempre al servicio del interés superior de España y de los españoles con lealtad a la Constitución y al resto del ordenamiento jurídico vigente tal y como juré en la sesión constitutiva del Congreso de los Diputados. En cuanto a las actividades que me hayan proporcionado ingresos económicos me remito a lo consignado en mis respectivas declaraciones de actividades y bienes formalizadas en el momento de acreditarme ante la Cámara de conformidad con lo establecido en la Constitución y en el Reglamento y que son de información pública a través de los procedimientos de difusión dependientes del Congreso de los Diputados';
+      var noFoundationsString = 'Además de las anteriormente declaradas, durante el periodo señalado no he realizado otras colaboraciones o aportaciones económicas, ni de cualquier otro tipo, a fundaciones y otras asociaciones que puedan considerarse relevantes en relación con el desarrollo de mi actividad política o parlamentaria o que se encuentren dentro del ámbito de aplicación del Código de Conducta de las Cortes Generales.';
+      var noDonationsString = 'Adicionalmente y durante el plazo señalado, además de lo anteriormente declarado, he recibido regalos u obsequios normales dentro de los usos familiares y sociales, que no han condicionado mi actividad política y no constituyen un conflicto de interés conforme al Código de Conducta de las Cortes Generales.';
+      //Temporary lists to manually assign gender until we get that data
+      var maleNames = ["Anguita Pérez, Omar", "Asens Llodrà, Jaume", "Cerdán León, Santos", "Diouf Dioh, Luc Andre", "Echenique Robba, Pablo", "Fagúndez Campo, Antidio", "González Coello de Portugal, Víctor", "González Muñoz, Ángel Luis", "Gómez-Reino Varela, Antonio", "Matute García de Jalón, Oskar", "Mazón Ramos, José María", "Pisarello Prados, Gerardo", "Rufián Romero, Gabriel", "Serrano Martínez, Juan Francisco", "Sánchez García, José María", "Zaragoza Alonso, José"];
+      var femaleNames = ["Álvarez Fanjul, Beatriz", "Berja Vega, Laura", "Cantera de Castro, Zaida", "Crespín Rubio, Rafaela", "Faneca López, María Luisa", "Fernández Benéitez, Andrea", "Fernández Casero, Ana Belén", "Fernández Pérez, María", "Garrido Gutiérrez, Pilar", "Muñoz Dalda, Lucía", "Nasarre Oliva, Begoña", "Nogueras i Camero, Míriam", "Rosique i Saltor, Marta", "Toscano de Balbín, Carla", "Velasco Morillo, Elvira", "Vidal Sáez, Aina"];
       //Loop through list, get declaration and do calculations for charts
       _.each(diputados, function (d) {
-        d.declaration = {};
-        var thisId = d.unique_id.trim().toLowerCase();
-        if(declarations[thisId]) {
-          d.declaration = declarations[thisId];
-          if(declarationsUpdated[thisId]) {
-            d.declarationUpdated = declarationsUpdated[thisId]
-          }
-        } else if(declarationsUpdated[thisId]) {
-          d.declaration = declarationsUpdated[thisId];
-          d.newDecOnly = true;
-          //console.log("NEW DEC ONLY: " +d.unique_id);
-        } else {
-          console.log("No dec: " +d.unique_id);
-        }
-        //Get photo
-        d.photoInfo = _.find(photosData, function(a){ return a.name.trim() == d.full_name.trim()});
-        //Get province
-        d.province = "";
-        if(d.declaration && d.declaration.electoral_district) {
-          if(d.declaration.electoral_district == "AUSTURIES") { d.declaration.electoral_district = "ASTURIAS" }
-          d.province = vuedata.provinces[d.declaration.electoral_district.trim()];
-          if(!d.province) {
-            console.log(d.province + " - " + d.declaration.electoral_district);
+        d.nameInverted = d.NOMBRE.split(', ')[1] + ' ' + d.NOMBRE.split(', ')[0];
+        //Get gender
+        d.gender = 'N/A';
+        if(d.BIOGRAFIA) {
+          if(d.BIOGRAFIA.includes('Casado') || d.BIOGRAFIA.includes('Graduado') || d.BIOGRAFIA.includes('Licenciado')) {
+            d.gender = 'M';
+          } else if(d.BIOGRAFIA.includes('Casada') || d.BIOGRAFIA.includes('Graduada') || d.BIOGRAFIA.includes('Licenciada')) {
+            d.gender = 'F';
           }
         }
-        //IRPF range
-        d.irpfRange = "0 €";
-        if(d.declaration.taxes_value) {
-          var irpfNum = parseFloat(d.declaration.taxes_value.replace(",","").replace(" €","").trim());
-          if(irpfNum > 20000) {
-            d.irpfRange = ">20000€";
-          } else if(irpfNum > 10000) {
-            d.irpfRange = "10000€ - 20000€";
-          } else if(irpfNum > 5000) {
-            d.irpfRange = "5000€ - 10000€";
-          } else if(irpfNum > 1000) {
-            d.irpfRange = "1000€ - 5000€";
-          } else if(irpfNum > 0) {
-            d.irpfRange = "1€ - 1000€";
-          }
+        if(d.gender == 'N/A') {
+          if(maleNames.indexOf(d.NOMBRE) > -1) { d.gender = 'M'; }
+          if(femaleNames.indexOf(d.NOMBRE) > -1) { d.gender = 'F'; }
         }
-        //Income Tot and Range
-        d.declaration.incomeTot = 0;
-        if(d.declaration.rentas) {
-          d.declaration.incomeTot = calcIncomeTot(d.declaration.rentas, 'income');
+        d.declarations = _.filter(declarations, function(a){ 
+          return a.NOMBRE.trim() == d.NOMBRE.replace(', ',',').trim()
+        });
+        if(!d.declarations) {
+          console.log("No declarations: " + d.NOMBRE);
+          d.declarations = [];
         }
-        if(isNaN(d.declaration.incomeTot)) {
-          console.log("NAN INCOME: " + d.declaration.incomeTot + " - " + d.unique_id);
-        }
-        d.declaration.incomeRange = calcIncomeRange(d.declaration.incomeTot, 'income');
-        //Properties
-        d.declaration.propertiesRange = calcPropertiesRange(d.declaration["bienes patrimoniales"], 'properties');
-        //Financial participations Tot and Range
-        d.declaration.financialTot = 0;
-        if(d.declaration["otros bienes o derechos"]) {
-          d.declaration.financialTot = calcIncomeTot(d.declaration["otros bienes o derechos"], 'financial');
-        }
-        d.declaration.financialRange = calcIncomeRange(d.declaration.financialTot, 'financial');
-        //Debt Tot and Range
-        d.declaration.debtTot = 0;
-        if(d.declaration.deudas) {
-          d.declaration.debtTot = calcIncomeTot(d.declaration.deudas, 'debt');
-        }
-        d.declaration.debtRange = calcIncomeRange(d.declaration.debtTot, 'debt');
-        //Vehicles
-        d.declaration.vehiclesRange = calcPropertiesRange(d.declaration["vehículos"], 'vehicles');
-        //Deposits Tot
-        d.declaration.depositsTot = 0;
-        d.depositsRange = "Sin depósitos";
-        if(d.declaration.depositos) {
-          d.declaration.depositsTot = calcIncomeTot(d.declaration.depositos, 'deposits');
-          if(d.declaration.depositsTot > 50000) {
-            d.depositsRange = ">50000€";
-          } else if(d.declaration.depositsTot > 20000) {
-            d.depositsRange = "20000€ - 50000€";
-          } else if(d.declaration.depositsTot > 5000) {
-            d.depositsRange = "5000€ - 20000€";
-          } else if(d.declaration.depositsTot > 1000) {
-            d.depositsRange = "1000€ - 5000€";
-          } else if(d.declaration.depositsTot > 0) {
-            d.depositsRange = "1€ - 1000€";
-          }
-        }
-      });
+        d.donationsTot = 0;
+        d.foundationsTot = 0;
+        d.activitiesCurrentTot = 0;
+        d.activitiesPastTot = 0;
+        d.activitiesFlag = false;
+        d.activities = [];
+        d.foundations = [];
+        d.donations = [];
+        d.observations = [];
+        _.each(d.declarations, function (dec) {
+          if(dec.TIPO == 'ACTIVIDAD') {
+            d.activities.push(dec);
+            if(dec.DESCRIPCION && dec.DESCRIPCION.includes(noActivitiesString1)) {
 
-      //Set totals for custom counters
-      $('.count-box-income .total-count').html(totIncome);
+            } else if(dec.DESCRIPCION && dec.DESCRIPCION.includes(noActivitiesString2)) {
+              d.activitiesFlag = true;
+            } else if(dec.PERIODO) {
+              if(dec.PERIODO.includes('actualidad') || dec.PERIODO.includes('Actualidad')) {
+                d.activitiesCurrentTot ++;
+              } else {
+                d.activitiesPastTot ++;
+              }
+            } else {
+              //console.log(dec);
+            }
+          }
+          if(dec.TIPO == 'FUNDACIONES') {
+            d.foundations.push(dec);
+            if(dec.DESCRIPCION && dec.DESCRIPCION.includes(noFoundationsString)) {
+
+            } else {
+              d.foundationsTot ++;
+            }
+          }
+          if(dec.TIPO == 'DONACION') {
+            d.donations.push(dec);
+            if(dec.DESCRIPCION && dec.DESCRIPCION.includes(noDonationsString)) {
+
+            } else {
+              d.donationsTot ++;
+            }
+          }
+          if(dec.TIPO == 'OBSERVACIONES') {
+            d.observations.push(dec.OBSERVACIONES);
+          }
+        });
+        //Get photo
+        d.photoInfo = _.find(photosData, function(a){ 
+          var nameAcleaned = a.name.replaceAll('  ',' ').replaceAll(' ','').trim().toLowerCase().replaceAll(' ','');
+          var nameDcleaned = d.nameInverted.trim().toLowerCase().replaceAll(' ','')
+          return nameAcleaned  == nameDcleaned
+        });
+        //Get province
+        d.province = d.CIRCUNSCRIPCION;
+        if(d.province == "AUSTURIES") { d.province = "ASTURIAS"; }
+        if(vuedata.provinces[d.province]) {
+          d.province = vuedata.provinces[d.province];
+        } else {
+          if(missingProvinces.indexOf(d.province) == -1) { missingProvinces.push(d.province) }
+        }
+        /*
+        d.province = vuedata.provinces[d.province.trim()];
+        if(!d.province) {
+          console.log(d.province + " - " + d.CIRCUNSCRIPCION);
+        }
+        */
+        
+      });
+      console.log(missingProvinces);
 
       //Set dc main vars. The second crossfilter is used to handle the travels stacked bar chart.
       var ndx = crossfilter(diputados);
@@ -801,7 +659,10 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
             .projection(projection)
             .colors(d3.scaleQuantize().range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]))
             .colorDomain([1, 20])
-            .colorCalculator(function (d) { return d == 0 ? '#eee' : chart.colors()(d);})
+            .colorCalculator(function (d) { 
+              if(d == 0 || !d) { return '#eee' }
+              return chart.colors()(d);
+            })
             //.overlayGeoJson(prov, "province", function (d) { console.log(d); return d.properties.name; })
             //objects - spain-provinces
             .overlayGeoJson(jsonmap.features, 'province', function(d) {
@@ -823,7 +684,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
         var chart = charts.groups.chart;
         var dimension = ndx.dimension(function (d) {
           //return d.political_group;
-          return d.political_group_IW;
+          return d.GRUPOPARLAMENTARIO;
         });
         var group = dimension.group().reduceSum(function (d) {
             return 1;
@@ -858,7 +719,11 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
               return d.key + ': ' + d.value.toFixed(2);
           })
           .colorCalculator(function(d, i) {
-            return vuedata.colors.groups[d.key.trim()];
+            if(vuedata.colors.groups[d.key.trim()] ) {
+
+              return vuedata.colors.groups[d.key.trim()];
+            }
+            return vuedata.colors.default1;
           })
           .elasticX(true)
           .xAxis().ticks(4);
@@ -867,201 +732,6 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
       }
 
       //CHART 3
-      var createIncomeChart = function() {
-        var chart = charts.income.chart;
-        var dimension = ndx.dimension(function (d) {
-          return d.declaration.incomeRange;
-        });
-        var group = dimension.group().reduceSum(function (d) { 
-          return 1; 
-        });
-        var order = ['Sin rentas','1€ - 1.000€','1.001 - 5.000€','5.001 - 10.000€','10.001€ - 50.000€','50.001€ - 100.000€','> 100.000€'];
-        var sizes = calcPieSize(charts.income.divId);
-        chart
-          .width(sizes.width)
-          .height(sizes.height)
-          .ordering(function(d) {return order.indexOf(d.key)})
-          .cy(sizes.cy)
-          .innerRadius(sizes.innerRadius)
-          .radius(sizes.radius)
-          .cap(10)
-          .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
-            var thisKey = d.name;
-            if(thisKey.length > 40){
-              return thisKey.substring(0,40) + '...';
-            }
-            return thisKey;
-          }))
-          .title(function(d){
-            var thisKey = d.key;
-            return thisKey + ': ' + d.value;
-          })
-          .dimension(dimension)
-          .colorCalculator(function(d, i) {
-            return vuedata.colors.incomeRange[d.key];
-          })
-          .group(group);
-
-        chart.render();
-      }
-
-      //CHART 4
-      var createPropertiesChart = function() {
-        var chart = charts.properties.chart;
-        var dimension = ndx.dimension(function (d) {
-          return d.declaration.propertiesRange;
-        });
-        var group = dimension.group().reduceSum(function (d) { 
-          return 1; 
-        });
-        var order = ['Sin bienes inmuebles','1 - 5','5 - 10','10 - 20'];
-        var sizes = calcPieSize(charts.properties.divId);
-        chart
-          .width(sizes.width)
-          .height(sizes.height)
-          .ordering(function(d) {return order.indexOf(d.key)})
-          .cy(sizes.cy)
-          .innerRadius(sizes.innerRadius)
-          .radius(sizes.radius)
-          .cap(10)
-          .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
-            var thisKey = d.name;
-            if(thisKey.length > 40){
-              return thisKey.substring(0,40) + '...';
-            }
-            return thisKey;
-          }))
-          .title(function(d){
-            var thisKey = d.key;
-            return thisKey + ': ' + d.value;
-          })
-          .dimension(dimension)
-          .colorCalculator(function(d, i) {
-            return vuedata.colors.propertiesRange[d.key];
-          })
-          .group(group);
-
-        chart.render();
-      }
-
-      //CHART 5
-      var createFinancialParticipationsChart = function() {
-        var chart = charts.financial.chart;
-        var dimension = ndx.dimension(function (d) {
-          return d.declaration.financialRange;
-        });
-        var group = dimension.group().reduceSum(function (d) { 
-          return 1; 
-        });
-        var order = ['Sin participationes','1€ - 1.000€','1.001 - 5.000€','5.001 - 10.000€','10.001€ - 50.000€','50.001€ - 100.000€','> 100.000€'];
-        var sizes = calcPieSize(charts.financial.divId);
-        chart
-          .width(sizes.width)
-          .height(sizes.height)
-          .ordering(function(d) {return order.indexOf(d.key)})
-          .cy(sizes.cy)
-          .innerRadius(sizes.innerRadius)
-          .radius(sizes.radius)
-          .cap(10)
-          .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
-            var thisKey = d.name;
-            if(thisKey.length > 40){
-              return thisKey.substring(0,40) + '...';
-            }
-            return thisKey;
-          }))
-          .title(function(d){
-            var thisKey = d.key;
-            return thisKey + ': ' + d.value;
-          })
-          .dimension(dimension)
-          .colorCalculator(function(d, i) {
-            return vuedata.colors.incomeRange[d.key];
-          })
-          .group(group);
-
-        chart.render();
-      }
-
-      //CHART 6
-      var createDebtChart = function() {
-        var chart = charts.debt.chart;
-        var dimension = ndx.dimension(function (d) {
-          return d.declaration.debtRange;
-        });
-        var group = dimension.group().reduceSum(function (d) { 
-          return 1; 
-        });
-        var order = ['Sin deudas','1€ - 1.000€','1.001 - 5.000€','5.001 - 10.000€','10.001€ - 50.000€','50.001€ - 100.000€','> 100.000€'];
-        var sizes = calcPieSize(charts.debt.divId);
-        chart
-          .width(sizes.width)
-          .height(sizes.height)
-          .ordering(function(d) {return order.indexOf(d.key)})
-          .cy(sizes.cy)
-          .innerRadius(sizes.innerRadius)
-          .radius(sizes.radius)
-          .cap(10)
-          .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
-            var thisKey = d.name;
-            if(thisKey.length > 40){
-              return thisKey.substring(0,40) + '...';
-            }
-            return thisKey;
-          }))
-          .title(function(d){
-            var thisKey = d.key;
-            return thisKey + ': ' + d.value;
-          })
-          .dimension(dimension)
-          .colorCalculator(function(d, i) {
-            return vuedata.colors.incomeRange[d.key];
-          })
-          .group(group);
-
-        chart.render();
-      }
-
-      //CHART 7
-      var createVehiclesChart = function() {
-        var chart = charts.vehicles.chart;
-        var dimension = ndx.dimension(function (d) {
-          return d.declaration.vehiclesRange;
-        });
-        var group = dimension.group().reduceSum(function (d) { 
-          return 1; 
-        });
-        var order = ['Sin vehículos','1','2','3','4','5+'];
-        var sizes = calcPieSize(charts.vehicles.divId);
-        chart
-          .width(sizes.width)
-          .height(sizes.height)
-          .ordering(function(d) {return order.indexOf(d.key)})
-          .cy(sizes.cy)
-          .innerRadius(sizes.innerRadius)
-          .radius(sizes.radius)
-          .cap(10)
-          .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
-            var thisKey = d.name;
-            if(thisKey.length > 40){
-              return thisKey.substring(0,40) + '...';
-            }
-            return thisKey;
-          }))
-          .title(function(d){
-            var thisKey = d.key;
-            return thisKey + ': ' + d.value;
-          })
-          .dimension(dimension)
-          .colorCalculator(function(d, i) {
-            return vuedata.colors.vehiclesRange[d.key];
-          })
-          .group(group);
-
-        chart.render();
-      }
-
-      //CHART 8
       var createGenderChart = function() {
         var chart = charts.gender.chart;
         var dimension = ndx.dimension(function (d) {
@@ -1091,28 +761,29 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
           })
           .dimension(dimension)
           .colorCalculator(function(d, i) {
-            return vuedata.colors.gender[d.key];
+            if(vuedata.colors.gender[d.key]) {
+              return vuedata.colors.gender[d.key];
+            }
+            return '#ccc';
           })
           .group(group);
 
         chart.render();
       }
 
-      //CHART 9
-      var createIRPFChart = function() {
-        var chart = charts.irpf.chart;
+      //CHART 4
+      var createActivitiesChart = function() {
+        var chart = charts.activities.chart;
         var dimension = ndx.dimension(function (d) {
-          return d.irpfRange;
+          return getNumRange(d.activitiesCurrentTot);
         });
         var group = dimension.group().reduceSum(function (d) { 
           return 1; 
         });
-        var order = ['0 €','1€ - 1000€','1000€ - 5000€','5000€ - 10000€','10000€ - 20000€', '>20000€'];
-        var sizes = calcPieSize(charts.irpf.divId);
+        var sizes = calcPieSize(charts.activities.divId);
         chart
           .width(sizes.width)
           .height(sizes.height)
-          .ordering(function(d) {return order.indexOf(d.key)})
           .cy(sizes.cy)
           .innerRadius(sizes.innerRadius)
           .radius(sizes.radius)
@@ -1130,28 +801,65 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
           })
           .dimension(dimension)
           .colorCalculator(function(d, i) {
-            return vuedata.colors.irpf[d.key];
+            return vuedata.colors.generic[i];
           })
           .group(group);
 
         chart.render();
       }
 
-      //CHART 10
-      var createDepositosChart = function() {
-        var chart = charts.depositos.chart;
+      //CHART 5
+      var createActivitiesPastChart = function() {
+        var chart = charts.activitiesPast.chart;
         var dimension = ndx.dimension(function (d) {
-          return d.depositsRange;
+          return getNumRange(d.activitiesPastTot);
         });
         var group = dimension.group().reduceSum(function (d) { 
           return 1; 
         });
-        var order = ['Sin depósitos','1€ - 1000€','1000€ - 5000€','5000€ - 20000€','20000€ - 50000€', '>50000€'];
-        var sizes = calcPieSize(charts.depositos.divId);
+        var sizes = calcPieSize(charts.activitiesPast.divId);
+        var order = ['0','1 - 2', '3 - 5', '> 5'];
         chart
           .width(sizes.width)
           .height(sizes.height)
+          .cy(sizes.cy)
           .ordering(function(d) {return order.indexOf(d.key)})
+          .innerRadius(sizes.innerRadius)
+          .radius(sizes.radius)
+          .cap(10)
+          .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
+            var thisKey = d.name;
+            if(thisKey.length > 40){
+              return thisKey.substring(0,40) + '...';
+            }
+            return thisKey;
+          }))
+          .title(function(d){
+            var thisKey = d.key;
+            return thisKey + ': ' + d.value;
+          })
+          .dimension(dimension)
+          .colorCalculator(function(d, i) {
+            return vuedata.colors.generic[i];
+          })
+          .group(group);
+
+        chart.render();
+      }
+
+      //CHART 6
+      var createFoundationsChart = function() {
+        var chart = charts.foundations.chart;
+        var dimension = ndx.dimension(function (d) {
+          return getNumRange(d.foundationsTot);
+        });
+        var group = dimension.group().reduceSum(function (d) { 
+          return 1; 
+        });
+        var sizes = calcPieSize(charts.foundations.divId);
+        chart
+          .width(sizes.width)
+          .height(sizes.height)
           .cy(sizes.cy)
           .innerRadius(sizes.innerRadius)
           .radius(sizes.radius)
@@ -1169,7 +877,89 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
           })
           .dimension(dimension)
           .colorCalculator(function(d, i) {
-            return vuedata.colors.deposits[d.key];
+            return vuedata.colors.generic[i];
+          })
+          .group(group);
+
+        chart.render();
+      }
+
+      //CHART 7
+      var createDonationsChart = function() {
+        var chart = charts.donations.chart;
+        var dimension = ndx.dimension(function (d) {
+          return getNumRange(d.donationsTot);
+        });
+        var group = dimension.group().reduceSum(function (d) { 
+          return 1; 
+        });
+        var order = ['0','1 - 2','3 - 5','> 5'];
+        var sizes = calcPieSize(charts.donations.divId);
+        chart
+          .width(sizes.width)
+          .height(sizes.height)
+          .cy(sizes.cy)
+          .innerRadius(sizes.innerRadius)
+          .ordering(function(d) {return order.indexOf(d.key)})
+          .radius(sizes.radius)
+          .cap(10)
+          .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
+            var thisKey = d.name;
+            if(thisKey.length > 40){
+              return thisKey.substring(0,40) + '...';
+            }
+            return thisKey;
+          }))
+          .title(function(d){
+            var thisKey = d.key;
+            return thisKey + ': ' + d.value;
+          })
+          .dimension(dimension)
+          .colorCalculator(function(d, i) {
+            return vuedata.colors.generic[i];
+          })
+          .group(group);
+
+        chart.render();
+      }
+
+      //CHART 8
+      var createObservationsChart = function() {
+        var chart = charts.observations.chart;
+        var dimension = ndx.dimension(function (d) {
+          if(d.observations && d.observations.length > 0) {
+            return 'Si';
+          }
+          return 'No';
+        });
+        var group = dimension.group().reduceSum(function (d) { 
+          return 1; 
+        });
+        var sizes = calcPieSize(charts.observations.divId);
+        chart
+          .width(sizes.width)
+          .height(sizes.height)
+          .cy(sizes.cy)
+          .innerRadius(sizes.innerRadius)
+          .radius(sizes.radius)
+          .cap(10)
+          .legend(dc.legend().x(0).y(sizes.legendY).gap(10).legendText(function(d) { 
+            var thisKey = d.name;
+            if(thisKey.length > 40){
+              return thisKey.substring(0,40) + '...';
+            }
+            return thisKey;
+          }))
+          .title(function(d){
+            var thisKey = d.key;
+            return thisKey + ': ' + d.value;
+          })
+          .dimension(dimension)
+          .colorCalculator(function(d, i) {
+            if(d.key == 'Si') {
+              return vuedata.colors.default1;
+            }
+            return '#ccc';
           })
           .group(group);
 
@@ -1207,7 +997,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
               "defaultContent":"N/D",
               "type": "alphabet-accent",
               "data": function(d) {
-                return d.last_name.trim().toUpperCase() + ", " + d.first_name.trim();
+                return d.NOMBRE;
               }
             },
             {
@@ -1216,7 +1006,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
               "targets": 2,
               "defaultContent":"N/D",
               "data": function(d) {
-                return d.political_group.trim();
+                return d.GRUPOPARLAMENTARIO;
               }
             },
             {
@@ -1225,7 +1015,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
               "targets": 3,
               "defaultContent":"N/D",
               "data": function(d) {
-                return d.declaration.incomeTot;
+                return d.CIRCUNSCRIPCION;
               }
             },
             {
@@ -1234,10 +1024,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
               "targets": 4,
               "defaultContent":"N/D",
               "data": function(d) {
-                if(d.declaration["bienes patrimoniales"]) {
-                  return d.declaration["bienes patrimoniales"].length;
-                }
-                return "N/D";
+                return d.activitiesCurrentTot;
               }
             },
             {
@@ -1246,7 +1033,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
               "targets": 5,
               "defaultContent":"N/D",
               "data": function(d) {
-                return d.declaration.depositsTot;
+                return d.activitiesPastTot;
               }
             },
             {
@@ -1255,10 +1042,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
               "targets": 6,
               "defaultContent":"N/D",
               "data": function(d) {
-                if(d.declaration["otros bienes o derechos"]){
-                  return d.declaration["otros bienes o derechos"].length;
-                }
-                return "N/D";
+                return d.foundationsTot;
               }
             },
             {
@@ -1267,10 +1051,20 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
               "targets": 7,
               "defaultContent":"N/D",
               "data": function(d) {
-                if(d.declarationUpdated || d.newDecOnly == true){
-                  return "Si";
+                return d.donationsTot;
+              }
+            },
+            {
+              "searchable": false,
+              "orderable": true,
+              "targets": 8,
+              "defaultContent":"N/D",
+              "class": "col-small-text",
+              "data": function(d) {
+                if(d.activitiesFlag) {
+                  return "<b>No activities declared red flag.</b> " + d.observations.join(' - ');
                 }
-                return "No";
+                return d.observations.join(' - ');
               }
             }
           ],
@@ -1298,8 +1092,6 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
         $('#dc-data-table tbody').on('click', 'tr', function () {
           var data = datatable.DataTable().row( this ).data();
           vuedata.selectedElement = data;
-          vuedata.selectedElDecDataToDisplay = vuedata.selectedElement.declaration;
-          vuedata.modalShowUpdatedData = false;
           $('#detailsModal').modal();
         });
       }
@@ -1361,7 +1153,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
         });
       });
 
-      //Ceuta button
+      //Tenerife button
       $('#tenerife').click(function () {
         $('.map-buttons button').removeClass('active');
         $(this).addClass('active');
@@ -1377,7 +1169,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
         });
       });
 
-      //Ceuta button
+      //Laspalmas button
       $('#laspalmas').click(function () {
         $('.map-buttons button').removeClass('active');
         $(this).addClass('active');
@@ -1445,14 +1237,12 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
       //Render charts
       createMapChart();
       createGroupsChart();
-      createIncomeChart();
-      createPropertiesChart();
-      createFinancialParticipationsChart();
-      createDebtChart();
-      createVehiclesChart();
       createGenderChart();
-      createIRPFChart();
-      createDepositosChart();
+      createActivitiesChart();
+      createActivitiesPastChart();
+      createFoundationsChart();
+      createDonationsChart();
+      createObservationsChart();
       createTable();
 
       $('.dataTables_wrapper').append($('.dataTables_length'));
@@ -1479,47 +1269,6 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
       counter.on("renderlet.resetall", function(c) {
         RefreshTable();
       });
-
-      
-      //Custom counters
-      function drawCustomCounters() {
-        var dim = ndx.dimension (function(d) {
-          return d.full_name;
-        });
-        var group = dim.group().reduce(
-          function(p,d) {  
-            p.nb +=1;
-            p.income += parseFloat(d.declaration.incomeTot);
-            return p;
-          },
-          function(p,d) {  
-            p.nb -=1;
-            p.income -= parseFloat(d.declaration.incomeTot);
-            return p;
-          },
-          function(p,d) {  
-            return {nb: 0, income: 0}; 
-          }
-        );
-        group.order(function(p){ return p.nb });
-        var income = 0;
-        var counter = dc.dataCount(".count-box-income")
-        .dimension(group)
-        .group({value: function() {
-          income = 0;
-          return group.all().filter(function(kv) {
-            if (kv.value.nb >0) {
-              income += +kv.value.income;
-            }
-            return kv.value.nb > 0; 
-          }).length;
-        }})
-        .renderlet(function (chart) {
-          $(".nbincome").text(income.toFixed(2));
-        });
-        counter.render();
-      }
-      drawCustomCounters();
       
       //Show disclaimer modal
       //$('#disclaimerModal').modal();
@@ -1530,5 +1279,4 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
       };
     })
   })
-})
 })

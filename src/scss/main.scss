@@ -697,6 +697,9 @@ table.dataTable thead .sorting_desc_disabled {
   }
   td {
     text-align: left;
+    &.col-small-text {
+      font-size: 12px;
+    }
   }
   .dataTables_info {
     width: 40%;
@@ -846,7 +849,7 @@ table.dataTable tbody tr:hover {
 
 /* MEPS INFO MODAL STYLING */
 #detailsModal {
-  margin-bottom: 80px;
+  //margin-bottom: 80px;
   a {
     color: #2e7db0;
     font-weight: 600;
@@ -904,7 +907,7 @@ table.dataTable tbody tr:hover {
   .modal-table-else {
     text-align: left;
   }
-  .details-tables-buttons {
+  .details-tables-buttons, .details-tables-buttons-update {
     text-align: left;
     button {
       border: none;
@@ -918,6 +921,18 @@ table.dataTable tbody tr:hover {
       cursor: pointer;
       transition: all .4s;
       &:hover {
+        background: #1a6a9e;
+      }
+    }
+  }
+  .details-tables-buttons-update {
+    margin-bottom: 15px;
+    button {
+      background: #ccc;
+      &:hover {
+        background: #bbb;
+      }
+      &.active {
         background: #1a6a9e;
       }
     }
@@ -1075,6 +1090,20 @@ table.dataTable tbody tr:hover {
     }
     .event-program-desc {
 
+    }
+  }
+}
+
+/* DC legend vertical alignment fix */
+.dc-legend{
+  .dc-legend-item {
+    rect  {
+      y: -5px !important;
+    }
+    @supports (-moz-appearance:none) {
+      rect  {
+        y: 0px !important;
+      }
     }
   }
 }

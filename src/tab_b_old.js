@@ -135,7 +135,7 @@ var vuedata = {
     "Guadalajara": "Castilla-La Mancha",
     "Valencia/València": "Comunidad Valenciana",
     "Cortes de Castilla y León": "Castilla y León",
-    "La Gomera": "La Gomera",
+    "La Gomera": "",
     "Ourense": "Galicia",
     "Murcia": "Región de Murcia",
     "Jaén": "Andalucía",
@@ -158,7 +158,7 @@ var vuedata = {
     "Lanzarote": "",
     "Asamblea Regional de Murcia": "Región de Murcia",
     "Huesca": "Aragón",
-    "El Hierro": "El Hierro",
+    "El Hierro": "",
     "Eivissa-Formentera": "Islas Baleares"
   },
   groups: {
@@ -221,15 +221,11 @@ var vuedata = {
       "GP. ESQUERRA REPUBLICANA-EUSKAL HERRIA BILDU":"#FFDC67",
       "GP. MIXTO":"#797979",
       "GP. POPULAR":"#0BB2FF",
-      "GP. POPULAR EN EL SENADO":"#0BB2FF",
       "GP. SOCIALISTA":"#E2001A",
       "GP. VASCO":"#19AA63",
-      "GP. VASCO EN EL SENADO (EAJ-PNV)":"#19AA63",
       "GP. IZQUIERDA CONFEDERAL":"#794877",
       "GP. CIUDADANOS":"#606060",
       "GP. NACIONALISTA EN EL SENADO JUNTS PER CATALUNYA-COALICIÓN CANARIA / PARTIDO NACIONALISTA CANARIO":"#FF2EEE",
-      "GP. NACIONALISTA EN EL SENADO JUNTS PER CATALUNYA-COALICIÓN CANARIA/PARTIDO NACIONALISTA CANARIO":"#FF2EEE",
-      "GP. DEMOCRÁTICO (CIUDADANOS, AGRUPACIÓN DE ELECTORES": "#C2CE0C",
       "":"#bbb",
       "N/A":"#bbb"
     }
@@ -638,10 +634,10 @@ for ( var i = 0; i < 5; i++ ) {
   randomPar += randomCharacters.charAt(Math.floor(Math.random() * randomCharacters.length));
 }
 //Load data and generate charts
-json('./data/tab_b/new/senators.json?' + randomPar, (err, senators) => {
-  csv('./data/tab_b/new/senators_list.csv?' + randomPar, (err, senatorsList) => {
-    csv('./data/tab_b/new/clean_values.csv?' + randomPar, (err, amountsData) => {
-      json('./data/tab_b/new/senators_photos.json?' + randomPar, (err, photosData) => {
+json('./data/tab_b/old/senators.json?' + randomPar, (err, senators) => {
+  csv('./data/tab_b/old/senators_list.csv?' + randomPar, (err, senatorsList) => {
+    csv('./data/tab_b/old/clean_values.csv?' + randomPar, (err, amountsData) => {
+      json('./data/tab_b/old/senators_photos.json?' + randomPar, (err, photosData) => {
         //Loop through data to aply fixes and calculations
         var totIncome = 0;
         var declarations = {};
@@ -649,50 +645,14 @@ json('./data/tab_b/new/senators.json?' + randomPar, (err, senators) => {
         //getCsvValues(senators);
 
         _.each(senatorsList, function (d) {
-          //Name
-          d.NameComma = d.Name;
-          var nameParts = d.Name.split(',');
-          d.Name = nameParts[1].trim() + ' ' + nameParts[0].trim();
-          //Name fixes for matching with declarations data
-          if(d.Name == 'PAU FURRIOL FORNELLS') { d.Name = 'PAU FURRIOL I FORNELLS'; }
-          if(d.Name == 'KOLDO MARTÍNEZ URIONABARRENETXEA') { d.Name = 'JOSEBA KOLDOBIKA MARTÍNEZ URIONABARRENETXEA'; }
-          if(d.Name == 'ANTONIO POVEDA ZAPATA') { d.Name = 'ANTONI POVEDA ZAPATA'; }
-          //Gender
-          if(d.Gender == 'M') {
-            d.Gender = 'F';
-          }
-          if(d.Gender == 'V') {
-            d.Gender = 'M';
-          }
-          //Group
-          d.GroupFull = d.Group;
-          d.Group = d.Group.replace('GRUPO PARLAMENTARIO', 'GP.');
-          if(d.Group.indexOf('DE IZQUIERDA CONFEDERAL') > -1) {
-            d.Group = 'GP. IZQUIERDA CONFEDERAL';
-          }
-          //Get declaration (Also try removing second first name)
+          //Get declaration
           d.declaration = {};
-          var thisDeclaration = _.find(senators, function(a){ return a.name.trim() == d.Name.trim() || a.name.trim() == d.Name.replace('É','E').trim()});
+          var thisDeclaration = _.find(senators, function(a){ return a.name.trim() == d.Name.trim()});
           if(thisDeclaration && thisDeclaration !== null) {
             d.declaration = thisDeclaration;
-          } else {
-            //Try removing second first name
-            var shortenedName = d.Name.split(' ');
-            shortenedName.splice(1,1);
-            shortenedName = shortenedName.join(' ');
-            thisDeclaration = _.find(senators, function(a){ return a.name.trim() == shortenedName.trim()});
-            if(thisDeclaration && thisDeclaration !== null) {
-              d.declaration = thisDeclaration;
-            } else {
-              console.log('missing declaration: ' + d.Name);
-            }
-          }
-          d.nameForFixedAmountsMatching = d.Name;
-          if(thisDeclaration && thisDeclaration !== null) {
-            d.nameForFixedAmountsMatching = thisDeclaration.name;
           }
           //Get photo
-          d.photoInfo = _.find(photosData, function(a){ return a.name.trim() == d.NameComma.trim()});
+          d.photoInfo = _.find(photosData, function(a){ return a.name.trim() == d.Name.trim()});
           //Get province/area
           d.province = "";
           if(d.declaration.details) {
@@ -703,32 +663,25 @@ json('./data/tab_b/new/senators.json?' + randomPar, (err, senators) => {
               d.province = vuedata.provinces[d.declaration.details.circunscripcion.trim()];
               if(!d.province) {
                 console.log(d.province + " - " + d.declaration.details.circunscripcion);
-                d.province = "";
               }
             }
           }
           //Find rentas, depositos and deudas with fixed amounts, then calc totals and ranges
-          d.fixedRentas = _.filter(amountsData, function(a){ return a.name.trim() == d.nameForFixedAmountsMatching.trim() && a.type.trim() == "rentas"});
-          d.fixedDepositos = _.filter(amountsData, function(a){ return a.name.trim() == d.nameForFixedAmountsMatching.trim() && a.type.trim() == "depositos"});
-          d.fixedDeudas = _.filter(amountsData, function(a){ return a.name.trim() == d.nameForFixedAmountsMatching.trim() && a.type.trim() == "deudas"});
+          d.fixedRentas = _.filter(amountsData, function(a){ return a.name.trim() == d.Name.trim() && a.type.trim() == "rentas"});
+          d.fixedDepositos = _.filter(amountsData, function(a){ return a.name.trim() == d.Name.trim() && a.type.trim() == "depositos"});
+          d.fixedDeudas = _.filter(amountsData, function(a){ return a.name.trim() == d.Name.trim() && a.type.trim() == "deudas"});
           d.incomeTot = 0;
           d.depositsTot = 0;
           d.debtTot = 0;
           _.each(d.fixedRentas, function (a) {
-            if(a.value && a.value !== '') {
-              d.incomeTot += parseFloat(a.value);
-            }
+            d.incomeTot += parseFloat(a.value);
           });
           totIncome += d.incomeTot;
           _.each(d.fixedDepositos, function (a) {
-            if(a.value && a.value !== '') {
-              d.depositsTot += parseFloat(a.value);
-            }
+            d.depositsTot += parseFloat(a.value);
           });
           _.each(d.fixedDeudas, function (a) {
-            if(a.value && a.value !== '') {
-              d.debtTot += parseFloat(a.value);
-            }
+            d.debtTot += parseFloat(a.value);
           });
           d.incomeRange = calcIncomeRange(d.incomeTot, 'income');
           d.depositsRange = calcIncomeRange(d.depositsTot, 'deposits');
@@ -1340,7 +1293,7 @@ json('./data/tab_b/new/senators.json?' + randomPar, (err, senators) => {
         $('#canaries').click(function () {
           $('.map-buttons button').removeClass('active');
           $(this).addClass('active');
-          var cProvinces = ['gran canaria','la palma','parlamento de canarias','tenerife','fuerteventura', 'el hierro', 'la gomera'];
+          var cProvinces = ['gran canaria','la palma','parlamento de canarias','tenerife','fuerteventura'];
           searchDimension.filter(function (d) { 
             var match = false;
             _.each(cProvinces, function (i) {

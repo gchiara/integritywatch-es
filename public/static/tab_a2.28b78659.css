@@ -1002,9 +1002,6 @@ table.dataTable thead .sorting_desc_disabled {
 .dataTables_wrapper td {
   text-align: left;
 }
-.dataTables_wrapper td.col-small-text {
-  font-size: 12px;
-}
 .dataTables_wrapper .dataTables_info {
   width: 40%;
   display: inline-block;
@@ -1151,6 +1148,9 @@ table.dataTable tbody tr:hover {
 }
 
 /* MEPS INFO MODAL STYLING */
+#detailsModal {
+  margin-bottom: 80px;
+}
 #detailsModal a {
   color: #2e7db0;
   font-weight: 600;
@@ -1202,10 +1202,10 @@ table.dataTable tbody tr:hover {
 #detailsModal .modal-table-else {
   text-align: left;
 }
-#detailsModal .details-tables-buttons, #detailsModal .details-tables-buttons-update {
+#detailsModal .details-tables-buttons {
   text-align: left;
 }
-#detailsModal .details-tables-buttons button, #detailsModal .details-tables-buttons-update button {
+#detailsModal .details-tables-buttons button {
   border: none;
   color: #fff;
   background: #2a7aae;
@@ -1217,19 +1217,7 @@ table.dataTable tbody tr:hover {
   cursor: pointer;
   transition: all 0.4s;
 }
-#detailsModal .details-tables-buttons button:hover, #detailsModal .details-tables-buttons-update button:hover {
-  background: #1a6a9e;
-}
-#detailsModal .details-tables-buttons-update {
-  margin-bottom: 15px;
-}
-#detailsModal .details-tables-buttons-update button {
-  background: #ccc;
-}
-#detailsModal .details-tables-buttons-update button:hover {
-  background: #bbb;
-}
-#detailsModal .details-tables-buttons-update button.active {
+#detailsModal .details-tables-buttons button:hover {
   background: #1a6a9e;
 }
 
@@ -1379,15 +1367,6 @@ table.dataTable tbody tr:hover {
   padding: 15px auto;
   font-weight: 600;
   font-size: 20px;
-}
-/* DC legend vertical alignment fix */
-.dc-legend .dc-legend-item rect {
-  y: -5px !important;
-}
-@supports (-moz-appearance: none) {
-  .dc-legend .dc-legend-item rect {
-    y: 0px !important;
-  }
 }.overlay[data-v-a4052e] {
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 10001;
