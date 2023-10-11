@@ -412,21 +412,14 @@ var resizeGraphs = function() {
         charts[c].chart.size(recalcWidthWordcloud());
         charts[c].chart.redraw();
       } else if(charts[c].type == 'map') {
-        if(window.innerWidth <= 768) {
-          var newProjection = d3.geoMercator()
-          .center([11,45]) //theorically, 50°7′2.23″N 9°14′51.97″E but this works
-          .translate([newWidth + 170, 0])
-          .scale(newWidth*3.5);
-          charts[c].chart.height(500);
-        } else {
-          var newProjection = d3.geoMercator()
-          .center([11,45]) //theorically, 50°7′2.23″N 9°14′51.97″E but this works
-          .scale(newWidth*3)
-          .translate([newWidth + 140, -40]);
-          //.translate([newWidth - 50, 220])
-          //.scale(newWidth*3);
-          charts[c].chart.height(800);
-        }
+        var newProjection = d3.geoMercator()
+        .center([11,45]) //theorically, 50°7′2.23″N 9°14′51.97″E but this works
+        .scale(newWidth*3)
+        charts[c].chart.height(400);
+        newProjection.fitSize([newWidth,400],{"type": "FeatureCollection","features":vuedata.mapFeatures})
+        charts[c].chart.width(newWidth);
+        charts[c].chart.projection(newProjection);
+        charts[c].chart.redraw();
         charts[c].chart.width(newWidth);
         charts[c].chart.projection(newProjection);
         charts[c].chart.redraw();
@@ -778,6 +771,7 @@ json('./data/tab_b/new/senators.json?' + randomPar, (err, senators) => {
             });
             var chart = charts.map.chart;
             var width = recalcWidth(charts.map.divId);
+            var height = 400;
             var mapDimension = ndx.dimension(function (d) {
               return d.province;
               return "ff";
@@ -790,16 +784,20 @@ json('./data/tab_b/new/senators.json?' + randomPar, (err, senators) => {
             var group = mapDimension.group().reduceSum(function (d) { return 1; });
             //var prov = topojson.feature(jsonmap, jsonmap.objects["spain-provinces"]).features;
             var area = topojson.feature(jsonmap, jsonmap.objects.ESP_adm1).features;
+            vuedata.mapFeatures = area;
             var scale = width*3;
-            var translate = [width + 140, -40];
+            //var translate = [width + 140, -40];
+            var translate = [0, 0];
             if(window.innerWidth <= 678) {
               scale = width*3.5;
-              translate = [width + 170, 0];
+              //translate = [width + 170, 0];
+              translate = [0, 0];
             }
             var projection = d3.geoMercator()
               .center([11,45])
               .scale(scale)
               .translate(translate);
+            projection.fitSize([width,height],{"type": "FeatureCollection","features":area})
             var centered;
             function clicked(d) {
             }
@@ -1296,7 +1294,7 @@ json('./data/tab_b/new/senators.json?' + randomPar, (err, senators) => {
           $('#dc-data-table tbody').on('click', 'tr', function () {
             var data = datatable.DataTable().row( this ).data();
             vuedata.selectedElement = data;
-            $('#detailsModal').modal();
+            $('#detailsModal').modal({keyboard: true});
           });
         }
         //REFRESH TABLE
@@ -1478,9 +1476,9 @@ json('./data/tab_b/new/senators.json?' + randomPar, (err, senators) => {
             }).length;
           }})
           .renderlet(function (chart) {
-            $(".nbincome").text(income.toFixed(2));
+            $(".nbincome").text('€ ' + income.toFixed(2));
             //Set totals for custom counters
-            $('.count-box-income .total-count').html(totIncome.toFixed(2));
+            $('.count-box-income .total-count').html('€ ' + totIncome.toFixed(2));
           });
           counter.render();
         }

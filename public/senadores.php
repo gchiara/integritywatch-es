@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
-    <link rel="stylesheet" href="static/tab_b.css">
+    <link rel="stylesheet" href="static/tab_b.css?v=2">
 </head>
 <body>
     <div id="app" class="tabB">   
@@ -26,16 +26,21 @@
           <div class="col-md-12">
             <div class="row">
               <!-- INFO -->
-              <div class="col-md-8 chart-col" v-if="showInfo">
+              <div class="col-md-9 chart-col" v-if="showInfo">
                 <div class="boxed-container description-container">
-                  <h1>INTEGRITY WATCH SPAIN – SENADO</h1>
-                  <p>Esta plataforma contiene una base de datos interactiva de uso fácil que ofrece una visión general de las declaraciones de bienes y rentas de los Senadores de la Legislatura XIV. Al hacer click en los gráficos y la tabla final, los usuarios pueden clasificar, ordenar y filtrar a los parlamentarios del Senado.  
-                    <a href="./about.php">Más información</a>.
-                  </p>
+                  <h1>INTEGRITY WATCH SPAIN – SENADO - DECLARACIONES DE BIENES Y RENTAS</h1>
+                  <p>Esta plataforma contiene una base de datos interactiva de uso fácil que ofrece la información contenida en las declaraciones de bienes y rentas de los Senadores y Senadoras de la Legislatura XIV, actualizada a fecha de 31 de marzo de 2023. Todas las personas que consulten la plataforma pueden clasificar, ordenar y filtrar a los parlamentarios del Congreso de los Diputados a través de los gráficos y la tabla general.</p>
+                  <p>Todos los datos reflejados en la plataforma fueron extraídos de los sitios web del Congreso de los Diputados y del Senado y fuentes oficiales. Respecto a las declaraciones de bienes y rentas del Senado la información se sustrajo a través de softwares extractivos y analizadores sintácticos (parsers), al encontrarse publicados en formatos PDF electrónico y no en formato abierto. Cualquier inexactitud o error en la información podría deberse a la información contenida en estas fuentes oficiales, como también, a alguna dificultad en el proceso de volcado de los datos.</p>
+                  <p>Para más información haga click <a href="./about.php">aquí</a>.</p>
                   <i class="material-icons close-btn" @click="showInfo = false">close</i>
                 </div>
               </div>
             </div>
+          </div>
+          <!-- OLD/NEW SELECTOR -->
+          <div class="col-md-12 chart-col mandate-select-container">
+            <a href="./senadores.php" class="link-button active">Declaraciones</a>
+            <a href="./senadores_old.php" class="link-button">Declaraciones (Old)</a>
           </div>
           <!-- CHARTS FIRST ROW -->
           <div class="col-md-6 chart-col">
@@ -121,9 +126,9 @@
                       <th class="header">Nr</th> 
                       <th class="header">Nombre y apellidos</th>
                       <th class="header">Grupo parlamentario</th>
-                      <th class="header">Rentas percibidas</th>
+                      <th class="header">Rentas percibidas (€)</th>
                       <th class="header">Bienes inmuebles</th>
-                      <th class="header">Valor de los depósitos</th>
+                      <th class="header">Valor de los depósitos (€)</th>
                       <th class="header">Otros bienes de tipo financiero</th>
                     </tr>
                   </thead>
@@ -132,12 +137,12 @@
             </div>
           </div>
 
-          <div class="last-update">Last updated on: 23/10/2020</div>
+          <div class="last-update">Última actualización: 31/03/2023</div>
 
         </div>
       </div>
       <!-- DETAILS MODAL -->
-      <div class="modal" id="detailsModal">
+      <div class="modal" id="detailsModal" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">
             <!-- Modal Header -->
@@ -176,7 +181,7 @@
                     <div v-show="modalShowTable == 'a'">
                       <div class="modal-table-title">RENTAS PERCIBIDAS</div>
                       <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.rentas && selectedElement.declaration.rentas.length > 0">
-                        <thead><tr><th>CONCEPTO</th><th>PROCEDENCIA</th><th>SALDO</th></tr></thead>
+                        <thead><tr><th>CONCEPTO</th><th>PROCEDENCIA</th><th>SALDO (€)</th></tr></thead>
                         <tbody>
                           <tr v-for="el in selectedElement.declaration.rentas">
                             <td>{{ el.concepto }}</td>
@@ -208,7 +213,7 @@
                     <div v-show="modalShowTable == 'c'">
                       <div class="modal-table-title">DEPÓSITOS</div>
                       <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.depositos && selectedElement.declaration.depositos.length > 0">
-                        <thead><tr><th>DESCRIPCION</th><th>SALDO</th></tr></thead>
+                        <thead><tr><th>DESCRIPCION</th><th>SALDO (€)</th></tr></thead>
                         <tbody>
                           <tr v-for="el in selectedElement.declaration.depositos">
                             <td>{{ el.depositos }}</td>
@@ -222,7 +227,7 @@
                     <div v-show="modalShowTable == 'd'">
                       <div class="modal-table-title">OTROS BIENES O DERECHOS</div>
                       <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.otros_bienes && selectedElement.declaration.otros_bienes.length > 0">
-                        <thead><tr><th>CLASE</th><th>DESCRIPCION</th><th>VALOR</th></tr></thead>
+                        <thead><tr><th>CLASE</th><th>DESCRIPCION</th><th>VALOR (€)</th></tr></thead>
                         <tbody>
                           <tr v-for="el in selectedElement.declaration.otros_bienes">
                             <td>{{ el.clase }}</td>
@@ -251,7 +256,7 @@
                     <div v-show="modalShowTable == 'f'">
                       <div class="modal-table-title">DEUDAS Y OBLIGACIONES PATRIMONIALES</div>
                       <table class="modal-table" v-if="selectedElement.declaration && selectedElement.declaration.deudas && selectedElement.declaration.deudas.length > 0">
-                        <thead><tr><th>PRESTAMOS</th><th>FECHA DE CONCESION</th><th>IMPORTE CONCIDO</th><th>SALDO PENDIENTE</th></tr></thead>
+                        <thead><tr><th>PRESTAMOS</th><th>FECHA DE CONCESION</th><th>IMPORTE CONCEDIDO (€)</th><th>SALDO PENDIENTE (€)</th></tr></thead>
                         <tbody>
                           <tr v-for="el in selectedElement.declaration.deudas">
                             <td>{{ el.prestamos }}</td>
@@ -272,6 +277,7 @@
                       <div class="modal-section-container" v-else>/</div>
                     </div>
                   </div>
+                  <div class="modal-footnote">*La falta de información en alguna ventana se debe a que el parlamentario no declaró datos respecto de determinado ítem</div>
                 </div>
               </div>
             </div>
@@ -312,7 +318,7 @@
     <script type="text/javascript" src="vendor/js/dc.js"></script>
     <script type="text/javascript" src="vendor/js/dc.cloud.js"></script>
     <script type="text/javascript" src="vendor/js/topojson.v1.min.js"></script>
-    <script src="static/tab_b.js"></script>
+    <script src="static/tab_b.js?v=2"></script>
 
  
 </body>

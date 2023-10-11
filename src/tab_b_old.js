@@ -1249,7 +1249,7 @@ json('./data/tab_b/old/senators.json?' + randomPar, (err, senators) => {
           $('#dc-data-table tbody').on('click', 'tr', function () {
             var data = datatable.DataTable().row( this ).data();
             vuedata.selectedElement = data;
-            $('#detailsModal').modal();
+            $('#detailsModal').modal({keyboard: true});
           });
         }
         //REFRESH TABLE
@@ -1431,9 +1431,9 @@ json('./data/tab_b/old/senators.json?' + randomPar, (err, senators) => {
             }).length;
           }})
           .renderlet(function (chart) {
-            $(".nbincome").text(income.toFixed(2));
+            $(".nbincome").text('€ ' + income.toFixed(2));
             //Set totals for custom counters
-            $('.count-box-income .total-count').html(totIncome.toFixed(2));
+            $('.count-box-income .total-count').html('€ ' + totIncome.toFixed(2));
           });
           counter.render();
         }

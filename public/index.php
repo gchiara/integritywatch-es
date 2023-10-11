@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
-    <link rel="stylesheet" href="static/tab_a.css?v=1">
+    <link rel="stylesheet" href="static/tab_a.css?v=3">
     <script>
       if (typeof Object.assign !== 'function') {
         // Must be writable: true, enumerable: false, configurable: true
@@ -57,12 +57,12 @@
           <div class="col-md-12">
             <div class="row">
               <!-- INFO -->
-              <div class="col-md-8 chart-col" v-if="showInfo">
+              <div class="col-md-9 chart-col" v-if="showInfo">
                 <div class="boxed-container description-container">
-                  <h1>INTEGRITY WATCH SPAIN – CONGRESO DE LOS DIPUTADOS - ASSETS DECLARATIONS</h1>
-                  <p>Esta plataforma contiene una base de datos interactiva de uso fácil que ofrece una visión general de las declaraciones de bienes y rentas de los Diputados Legislatura XIV. Al hacer click en los gráficos y la tabla final, los usuarios pueden clasificar, ordenar y filtrar a los parlamentarios del Congreso de los Diputados. 
-                    <a href="./about.php">Más información</a>.
-                  </p>
+                  <h1>INTEGRITY WATCH SPAIN – CONGRESO DE LOS DIPUTADOS - DECLARACIONES DE BIENES Y RENTAS</h1>
+                  <p>Esta plataforma contiene una base de datos interactiva de uso fácil que ofrece la información contenida en las declaraciones de bienes y rentas de los Diputados y Diputadas de la Legislatura XIV, actualizada a fecha de 31 de marzo de 2023. Todas las personas que consulten la plataforma pueden clasificar, ordenar y filtrar a las/os parlamentarios del Congreso de los Diputados a través de los gráficos y la tabla general.</p>
+                  <p>Todos los datos reflejados en la plataforma fueron extraídos de los sitios web del Congreso de los Diputados y Senado, y fuentes oficiales. Respecto a las declaraciones de bienes y rentas del Congreso de Diputados, cabe aclarar que el equipo de investigación de Integrity Watch España trasladó de manera manual toda la información contenida en estas declaraciones (al encontrarse en formato de documento portátil (PDF) escaneado) por lo que puede contener algún error fruto de la transcripción manual y del volcado de los datos.</p>
+                  <p>Para más información haga click <a href="./about.php">aquí</a>.</p>
                   <i class="material-icons close-btn" @click="showInfo = false">close</i>
                 </div>
               </div>
@@ -153,9 +153,9 @@
                       <th class="header">Nr</th> 
                       <th class="header">Apellidos y Nombre</th>
                       <th class="header">Grupo parlamentario</th>
-                      <th class="header">Rentas percibidas</th>
+                      <th class="header">Rentas percibidas (€)</th>
                       <th class="header">Bienes inmuebles</th>
-                      <th class="header">Valor de los depósitos</th>
+                      <th class="header">Valor de los depósitos (€)</th>
                       <th class="header">Otros bienes de tipo financiero</th>
                       <th class="header">¿Actualizada?</th>
                     </tr>
@@ -165,12 +165,12 @@
             </div>
           </div>
 
-          <div class="last-update">Last updated on: 23/10/2020</div>
+          <div class="last-update">Última actualización: 31/03/2023</div>
 
         </div>
       </div>
       <!-- DETAILS MODAL -->
-      <div class="modal" id="detailsModal">
+      <div class="modal" id="detailsModal" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">
             <!-- Modal Header -->
@@ -197,7 +197,8 @@
                     <!-- Divider -->
                     <div class="modal-divider"></div>
                     <div class="details-tables-buttons-update" v-if="selectedElement.declaration && selectedElement.declarationUpdated">
-                      <button @click="toggleUpdatedDeclarationData()" :class="{active: modalShowUpdatedData}">ACTUALIZACIÓN</button>
+                      <button @click="toggleUpdatedDeclarationData(true)" :class="{active: modalShowUpdatedData}">ACTUALIZACIÓN</button>
+                      <button @click="toggleUpdatedDeclarationData(false)" :class="{active: !modalShowUpdatedData}">DECLARATION</button>
                     </div>
                     <div class="details-tables-buttons">
                       <button @click="modalShowTable = 'a'">RENTAS PERCIBIDAS</button>
@@ -212,7 +213,7 @@
                     <div v-show="modalShowTable == 'a'">
                       <div class="modal-table-title">RENTAS PERCIBIDAS</div>
                       <table class="modal-table" v-if="selectedElDecDataToDisplay && selectedElDecDataToDisplay.rentas && selectedElDecDataToDisplay.rentas.length > 0">
-                        <thead><tr><th>PROCENDIA</th><th>CONCEPTO</th><th>SALDO</th></tr></thead>
+                        <thead><tr><th>PROCEDENCIA</th><th>CONCEPTO</th><th>SALDO (€)</th></tr></thead>
                         <tbody>
                           <tr v-for="el in selectedElDecDataToDisplay.rentas">
                             <td>{{ el.income_category }}</td>
@@ -244,7 +245,7 @@
                     <div v-show="modalShowTable == 'c'">
                       <div class="modal-table-title">DEPÓSITOS</div>
                       <table class="modal-table" v-if="selectedElDecDataToDisplay && selectedElDecDataToDisplay.depositos && selectedElDecDataToDisplay.depositos.length > 0">
-                        <thead><tr><th>DESCRIPCION</th><th>SALDO</th></tr></thead>
+                        <thead><tr><th>DESCRIPCION</th><th>SALDO (€)</th></tr></thead>
                         <tbody>
                           <tr v-for="el in selectedElDecDataToDisplay.depositos">
                             <td>{{ el.deposits_description }}</td>
@@ -256,9 +257,9 @@
                     </div>
                     <!-- Sub-Table 4 -->
                     <div v-show="modalShowTable == 'd'">
-                      <div class="modal-table-title">OTRO BIENES O DERECHO</div>
+                      <div class="modal-table-title">OTRO BIENES O DERECHOS</div>
                       <table class="modal-table" v-if="selectedElDecDataToDisplay && selectedElDecDataToDisplay['otros bienes o derechos'] && selectedElDecDataToDisplay['otros bienes o derechos'].length > 0">
-                        <thead><tr><th>CLASE</th><th>DESCRIPCION</th><th>VALOR</th></tr></thead>
+                        <thead><tr><th>CLASE</th><th>DESCRIPCION</th><th>VALOR (€)</th></tr></thead>
                         <tbody>
                           <tr v-for="el in selectedElDecDataToDisplay['otros bienes o derechos']">
                             <td>{{ el.other_financial_category }}</td>
@@ -287,7 +288,7 @@
                     <div v-show="modalShowTable == 'f'">
                       <div class="modal-table-title">DEUDAS Y OBLIGACIONES PATRIMONIALES</div>
                       <table class="modal-table" v-if="selectedElDecDataToDisplay && selectedElDecDataToDisplay.deudas && selectedElDecDataToDisplay.deudas.length > 0">
-                        <thead><tr><th>PRESTAMOS</th><th>FECHA DE CONCESION</th><th>IMPORTE CONCIDO</th><th>SALDO PENDIENTE</th></tr></thead>
+                        <thead><tr><th>PRESTAMOS</th><th>FECHA DE CONCESION</th><th>IMPORTE CONCEDIDO (€)</th><th>SALDO PENDIENTE (€)</th></tr></thead>
                         <tbody>
                           <tr v-for="el in selectedElDecDataToDisplay.deudas">
                             <td>{{ el.debt_institution }}</td>
@@ -308,6 +309,7 @@
                       <div class="modal-section-container" v-else>/</div>
                     </div>
                   </div>
+                  <div class="modal-footnote">*La falta de información en alguna ventana se debe a que el parlamentario no declaró datos respecto de determinado ítem</div>
                 </div>
               </div>
             </div>
@@ -321,8 +323,8 @@
             <div class="dc-data-count count-box count-box-main">
               <div class="filter-count">0</div>desde <strong class="total-count">0</strong> Diputados
             </div>
-            <div class="dc-data-count count-box count-box-income">
-              <div class="filter-count nbincome">0</div>desde <strong class="total-count">0</strong> ingreso
+            <div class="count-box count-box-income">
+              <div class="filter-count nbincome">0</div>desde <strong class="total-count-income">0</strong> ingreso
             </div>
             <div class="footer-input">
               <input type="text" id="search-input" placeholder="BUSCAR">
@@ -347,7 +349,7 @@
     <script type="text/javascript" src="vendor/js/dc.js"></script>
     <script type="text/javascript" src="vendor/js/dc.cloud.js"></script>
     <script type="text/javascript" src="vendor/js/topojson.v1.min.js"></script>
-    <script src="static/tab_a.js?v=1"></script>
+    <script src="static/tab_a.js?v=3"></script>
 
  
 </body>

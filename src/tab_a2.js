@@ -48,29 +48,29 @@ var vuedata = {
     },
     activities: {
       title: 'Actividades actuales',
-      info: 'Lorem ipsum'
+      info: 'Distribución de Diputados según Actividades Actuales. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     activitiesPast: {
       title: 'Actividades pasadas',
-      info: 'Lorem ipsum'
+      info: 'Distribución de Diputados según Actividades Pasadas. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos'
     },
     foundations: {
       title: 'Fundaciones y otras asociaciones',
-      info: 'Lorem ipsum'
+      info: 'Distribución de Diputados según fundaciones y otras asociaciones a las que hagan aportes. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     donations: {
-      title: 'Donaciones, obseuios y otros beneficios no remunerados',
-      info: 'Lorem ipsum'
+      title: 'Donaciones, obsequios y otros beneficios no remunerados',
+      info: 'Distribución de Diputados según donaciones, obsequios y otros beneficios no remunerados que hayan declarado. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     observations: {
       title: 'Otros intereses a declarar / Observaciones',
-      info: 'Lorem ipsum'
+      info: 'Distribución de Diputados según antecedentes que los parlamentarios consideraron relevantes a efectos de un posible conflicto de interés. Haga clic en los diferentes rangos y valores para ver el número de Diputados incluidos.'
     },
     mainTable: {
       chart: null,
       type: 'table',
-      title: 'Tabla',
-      info: 'Haga clic en cualquier Diputado o Senador para ver los datos de su última declaración de bienes y rentas de cada parlamentario de la Legislatura XIV.'
+      title: 'Renta',
+      info: 'Haga clic en cualquier Diputado o Senador para ver los datos de su última declaración de intereses económicos de cada parlamentario de la Legislatura XIV.'
     }
   },
   selectedElement: { "P": "", "Sub": ""},
@@ -177,6 +177,7 @@ var vuedata = {
     "TOLEDO": "Toledo",
     "VALENCIA": "València/Valencia",
     "Valencia/València": "València/Valencia",
+    "Valencia": "València/Valencia",
     "VALLADOLID": "Valladolid",
     "VIZCAYA": "Bizkaia/Vizcaya",
     "ZAMORA": "Zamora",
@@ -255,7 +256,10 @@ var vuedata = {
       "GP. Ciudadanos":"#008000",
       "GP. Confederal De Unidas Podemos-En Comú Podem-Galicia En Común":"#672F6C",
       "GP. Republicano":"#FFB232",
-      "GP. Mixto":"#A2A9B1"
+      "GP. Mixto":"#A2A9B1",
+      "Grupo Parlamentario Popular en el Congreso": "#0BB2FF",
+      "Grupo Parlamentario Plurinacional SUMAR": "#e51c55",
+      "Grupo Parlamentario Junts per Catalunya": "#00C4B2"
     }
   }
 }
@@ -426,21 +430,16 @@ var resizeGraphs = function() {
         charts[c].chart.size(recalcWidthWordcloud());
         charts[c].chart.redraw();
       } else if(charts[c].type == 'map') {
-        if(window.innerWidth <= 768) {
-          var newProjection = d3.geoMercator()
-          .center([11,45]) //theorically, 50°7′2.23″N 9°14′51.97″E but this works
-          .translate([newWidth + 170, 0])
-          .scale(newWidth*3.5);
-          charts[c].chart.height(500);
-        } else {
-          var newProjection = d3.geoMercator()
-          .center([11,45]) //theorically, 50°7′2.23″N 9°14′51.97″E but this works
-          .scale(newWidth*3)
-          .translate([newWidth + 140, -40]);
-          //.translate([newWidth - 50, 220])
-          //.scale(newWidth*3);
-          charts[c].chart.height(800);
-        }
+        var newProjection = d3.geoMercator()
+        .center([11,45]) //theorically, 50°7′2.23″N 9°14′51.97″E but this works
+        .scale(newWidth*3)
+        .translate([0, 0]);
+        //.scale(newWidth*3);
+        charts[c].chart.height(400);
+        newProjection.fitSize([newWidth,400],{"type": "FeatureCollection","features":vuedata.mapFeatures})
+        charts[c].chart.width(newWidth);
+        charts[c].chart.projection(newProjection);
+        charts[c].chart.redraw();
         charts[c].chart.width(newWidth);
         charts[c].chart.projection(newProjection);
         charts[c].chart.redraw();
@@ -603,6 +602,7 @@ json('./data/tab_a2/docacteco.json?' + randomPar, (err, declarations) => {
         } else {
           if(missingProvinces.indexOf(d.province) == -1) { missingProvinces.push(d.province) }
         }
+        if(d.CIRCUNSCRIPCION == "Valencia/València") { d.CIRCUNSCRIPCION = "Valencia"; }
         /*
         d.province = vuedata.provinces[d.province.trim()];
         if(!d.province) {
@@ -622,7 +622,7 @@ json('./data/tab_a2/docacteco.json?' + randomPar, (err, declarations) => {
 
       //MAP CHART
       var createMapChart = function() {
-        json('./data/spain-provinces.geo.json', (err, jsonmap) => {
+        json('./data/spain-provinces-edited.geo.json', (err, jsonmap) => {
           //jsonmap.features
           var mapProvinces = [];
           _.each(jsonmap.features, function (p) {
@@ -630,23 +630,28 @@ json('./data/tab_a2/docacteco.json?' + randomPar, (err, declarations) => {
               mapProvinces.push(p.properties.name);
             }
           });
+          vuedata.mapFeatures = jsonmap.features;
           var chart = charts.map.chart;
           var width = recalcWidth(charts.map.divId);
+          var height = 400;
           var mapDimension = ndx.dimension(function (d) {
             return d.province;
           });
           var group = mapDimension.group().reduceSum(function (d) { return 1; });
           //var prov = topojson.feature(jsonmap, jsonmap.objects["spain-provinces"]).features;
           var scale = width*3;
-          var translate = [width + 140, -40];
+          var translate = [0, 0];
+          //width + 140
           if(window.innerWidth <= 678) {
             scale = width*3.5;
-            translate = [width + 170, 0];
+            //translate = [width + 170, 0];
+            translate = [0, 0];
           }
           var projection = d3.geoMercator()
             .center([11,45])
             .scale(scale)
             .translate(translate);
+          projection.fitSize([width,height],{"type": "FeatureCollection","features":jsonmap.features})
           var centered;
           function clicked(d) {
           }
@@ -719,9 +724,10 @@ json('./data/tab_a2/docacteco.json?' + randomPar, (err, declarations) => {
               return d.key + ': ' + d.value.toFixed(2);
           })
           .colorCalculator(function(d, i) {
-            if(vuedata.colors.groups[d.key.trim()] ) {
-
+            if(vuedata.colors.groups[d.key.trim()]) {
               return vuedata.colors.groups[d.key.trim()];
+            } else if(vuedata.colors.groups[d.key.replace('Grupo Parlamentario', 'GP.').trim()]) {
+              return vuedata.colors.groups[d.key.replace('Grupo Parlamentario', 'GP.').trim()]
             }
             return vuedata.colors.default1;
           })
@@ -1092,7 +1098,7 @@ json('./data/tab_a2/docacteco.json?' + randomPar, (err, declarations) => {
         $('#dc-data-table tbody').on('click', 'tr', function () {
           var data = datatable.DataTable().row( this ).data();
           vuedata.selectedElement = data;
-          $('#detailsModal').modal();
+          $('#detailsModal').modal({keyboard: true});
         });
       }
       //REFRESH TABLE

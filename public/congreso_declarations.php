@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
-    <link rel="stylesheet" href="static/tab_a2.css?v=1">
+    <link rel="stylesheet" href="static/tab_a2.css?v=3">
     <script>
       if (typeof Object.assign !== 'function') {
         // Must be writable: true, enumerable: false, configurable: true
@@ -57,12 +57,12 @@
           <div class="col-md-12">
             <div class="row">
               <!-- INFO -->
-              <div class="col-md-8 chart-col" v-if="showInfo">
+              <div class="col-md-9 chart-col" v-if="showInfo">
                 <div class="boxed-container description-container">
-                  <h1>INTEGRITY WATCH SPAIN – CONGRESO DE LOS DIPUTADOS - INTERESTS DECLARATIONS</h1>
-                  <p>Esta plataforma contiene una base de datos interactiva de uso fácil que ofrece una visión general de las declaraciones de interesses de los Diputados. Al hacer click en los gráficos y la tabla final, los usuarios pueden clasificar, ordenar y filtrar a los parlamentarios del Congreso de los Diputados. 
-                    <a href="./about.php">Más información</a>.
-                  </p>
+                  <h1>INTEGRITY WATCH SPAIN – CONGRESO DE LOS DIPUTADOS - DECLARACIONES DE INTERESES ECONÓMICOS</h1>
+                  <p>Esta plataforma contiene una base de datos interactiva de uso fácil que ofrece la información contenida en las declaraciones de intereses económicos de los Diputados y Diputadas de la Legislatura XIV, actualizada a fecha de 31 de marzo de 2023. Todas las personas que consulten la plataforma pueden clasificar, ordenar y filtrar a las/os parlamentarios del Congreso de los Diputados a través de los gráficos y la tabla general.</p>
+                  <p>Todos los datos reflejados en la plataforma fueron extraídos de los sitios web del Congreso de los Diputados y del Senado y fuentes oficiales. Respecto a las declaraciones de intereses económicos del Congreso de los Diputados, a diferencia de las declaraciones de bienes y rentas, al encontrarse en formatos abiertos fue posible el volcado automático de los datos en la plataforma.</p>
+                  <p>Para más información haga click <a href="./about.php">aquí</a>.</p>
                   <i class="material-icons close-btn" @click="showInfo = false">close</i>
                 </div>
               </div>
@@ -149,12 +149,12 @@
             </div>
           </div>
 
-          <div class="last-update">Last updated on: 23/10/2020</div>
+          <div class="last-update">Última actualización: 31/03/2023</div>
 
         </div>
       </div>
       <!-- DETAILS MODAL -->
-      <div class="modal" id="detailsModal">
+      <div class="modal" id="detailsModal" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">
             <!-- Modal Header -->
@@ -223,6 +223,7 @@
                       </table>
                     </div>
                   </div>
+                  <div class="modal-footnote">*La falta de información en alguna ventana se debe a que el parlamentario no declaró datos respecto de determinado ítem</div>
                 </div>
               </div>
             </div>
@@ -259,7 +260,7 @@
     <script type="text/javascript" src="vendor/js/dc.js"></script>
     <script type="text/javascript" src="vendor/js/dc.cloud.js"></script>
     <script type="text/javascript" src="vendor/js/topojson.v1.min.js"></script>
-    <script src="static/tab_a2.js?v=1"></script>
+    <script src="static/tab_a2.js?v=3"></script>
 
  
 </body>

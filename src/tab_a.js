@@ -271,8 +271,12 @@ new Vue({
   data: vuedata,
   methods: {
     //Toggle old or updated declaration data
-    toggleUpdatedDeclarationData: function() {
-      vuedata.modalShowUpdatedData = !vuedata.modalShowUpdatedData;
+    toggleUpdatedDeclarationData: function(activate_update) {
+      if(activate_update) {
+        vuedata.modalShowUpdatedData = true;
+      } else {
+        vuedata.modalShowUpdatedData = false;
+      }
       if(vuedata.modalShowUpdatedData) {
         vuedata.selectedElDecDataToDisplay = vuedata.selectedElement.declarationUpdated;
       } else {
@@ -446,21 +450,18 @@ var resizeGraphs = function() {
         charts[c].chart.size(recalcWidthWordcloud());
         charts[c].chart.redraw();
       } else if(charts[c].type == 'map') {
-        if(window.innerWidth <= 768) {
-          var newProjection = d3.geoMercator()
-          .center([11,45]) //theorically, 50°7′2.23″N 9°14′51.97″E but this works
-          .translate([newWidth + 170, 0])
-          .scale(newWidth*3.5);
-          charts[c].chart.height(500);
-        } else {
-          var newProjection = d3.geoMercator()
-          .center([11,45]) //theorically, 50°7′2.23″N 9°14′51.97″E but this works
-          .scale(newWidth*3)
-          .translate([newWidth + 140, -40]);
-          //.translate([newWidth - 50, 220])
-          //.scale(newWidth*3);
-          charts[c].chart.height(800);
-        }
+        var newProjection = d3.geoMercator()
+        .center([11,45]) //theorically, 50°7′2.23″N 9°14′51.97″E but this works
+        .scale(newWidth*3)
+        //.translate([newWidth + 140, -40]);
+        //.translate([newWidth - 50, 220])
+        .translate([0, 0]);
+        //.scale(newWidth*3);
+        charts[c].chart.height(400);
+        newProjection.fitSize([newWidth,400],{"type": "FeatureCollection","features":vuedata.mapFeatures})
+        charts[c].chart.width(newWidth);
+        charts[c].chart.projection(newProjection);
+        charts[c].chart.redraw();
         charts[c].chart.width(newWidth);
         charts[c].chart.projection(newProjection);
         charts[c].chart.redraw();
@@ -750,10 +751,11 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
             d.depositsRange = "1€ - 1000€";
           }
         }
+        totIncome += parseFloat(d.declaration.incomeTot);
       });
 
       //Set totals for custom counters
-      $('.count-box-income .total-count').html(totIncome);
+      $('.count-box-income .total-count-income').html('€ ' + totIncome.toFixed(2));
 
       //Set dc main vars. The second crossfilter is used to handle the travels stacked bar chart.
       var ndx = crossfilter(diputados);
@@ -764,7 +766,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
 
       //MAP CHART
       var createMapChart = function() {
-        json('./data/spain-provinces.geo.json', (err, jsonmap) => {
+        json('./data/spain-provinces-edited.geo.json', (err, jsonmap) => {
           //jsonmap.features
           var mapProvinces = [];
           _.each(jsonmap.features, function (p) {
@@ -772,23 +774,28 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
               mapProvinces.push(p.properties.name);
             }
           });
+          vuedata.mapFeatures = jsonmap.features;
           var chart = charts.map.chart;
           var width = recalcWidth(charts.map.divId);
+          var height = 400;
           var mapDimension = ndx.dimension(function (d) {
             return d.province;
           });
           var group = mapDimension.group().reduceSum(function (d) { return 1; });
           //var prov = topojson.feature(jsonmap, jsonmap.objects["spain-provinces"]).features;
           var scale = width*3;
-          var translate = [width + 140, -40];
+          var translate = [0, 0];
+          //width + 140
           if(window.innerWidth <= 678) {
             scale = width*3.5;
-            translate = [width + 170, 0];
+            //translate = [width + 170, 0];
+            translate = [0, 0];
           }
           var projection = d3.geoMercator()
             .center([11,45])
             .scale(scale)
             .translate(translate);
+          projection.fitSize([width,height],{"type": "FeatureCollection","features":jsonmap.features})
           var centered;
           function clicked(d) {
           }
@@ -1300,7 +1307,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
           vuedata.selectedElement = data;
           vuedata.selectedElDecDataToDisplay = vuedata.selectedElement.declaration;
           vuedata.modalShowUpdatedData = false;
-          $('#detailsModal').modal();
+          $('#detailsModal').modal({keyboard: true});
         });
       }
       //REFRESH TABLE
@@ -1515,7 +1522,7 @@ csv('./data/tab_a/d_declarations_update.csv?' + randomPar, (err, declarationsTab
           }).length;
         }})
         .renderlet(function (chart) {
-          $(".nbincome").text(income.toFixed(2));
+          $(".nbincome").text('€ ' + income.toFixed(2));
         });
         counter.render();
       }

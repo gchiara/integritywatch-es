@@ -15,8 +15,8 @@
         Congreso de los Diputados
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="./">Assets declarations</a>
-          <a class="dropdown-item" href="./congreso_declarations.php">Interests declatations</a>
+          <a class="dropdown-item" href="./">Declaraciones de bienes y rentas</a>
+          <a class="dropdown-item" href="./congreso_declarations.php">Declaraciones de intereses económicos</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -24,8 +24,7 @@
         Senado
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="./senadores.php">Senado</a>
-          <a class="dropdown-item" href="./senadores_old.php">Senado (Old)</a>
+          <a class="dropdown-item" href="./senadores.php">Declaraciones de bienes y rentas</a>
         </div>
       </li>
     </ul>

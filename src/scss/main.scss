@@ -110,6 +110,9 @@ $color_lobby: #449188;
     color: #eee;
     font-weight: 600;
   }
+  p {
+    font-size: 14px;
+  }
   .close-btn {
     position: absolute;
     top: 10px;
@@ -210,25 +213,25 @@ $color_lobby: #449188;
     height: 500px;
   }
   &.tab_a_3 {
-    height: 530px;
+    height: 550px;
     @media only screen and (max-width: 1490px) {
       height: 590px;
     }
   }
   &.tab_a_4 {
-    height: 530px;
+    height: 550px;
     @media only screen and (max-width: 1490px) {
       height: 590px;
     }
   }
   &.tab_a_5 {
-    height: 530px;
+    height: 550px;
     @media only screen and (max-width: 1490px) {
       height: 590px;
     }
   }
   &.tab_a_6 {
-    height: 530px;
+    height: 550px;
     @media only screen and (max-width: 1490px) {
       height: 590px;
     }
@@ -401,7 +404,7 @@ $color_lobby: #449188;
         display: none;
       }
       &.count-box-income {
-        width: 200px;
+        width: 230px;
         @media only screen and (max-width: 1280px) {
           display: none;
         }
@@ -525,6 +528,11 @@ $color_lobby: #449188;
 /* MODAL */
 .modal-open {
   padding-right: 0 !important;
+}
+.modal-footnote {
+  font-size: 13px;
+  margin-top: 30px;
+  padding: 0 15px;
 }
 #detailsModal {
   padding: 0 10px !important;
@@ -827,11 +835,11 @@ table.dataTable tbody tr:hover {
 }
 
 /* Toggle last row of charts button */
-.toggle-btn-container {
+.toggle-btn-container, .mandate-select-container {
   text-align: left;
   padding: 0px 10px;
   margin-bottom: 20px;
-  button {
+  button, .link-button {
     border: none;
     color: #fff;
     background: #2a7aae;
@@ -843,6 +851,13 @@ table.dataTable tbody tr:hover {
     transition: all .4s;
     &:hover {
       background: #1a6a9e;
+    }
+  }
+  .link-button {
+    text-decoration: none;
+    background: #aaa;
+    &.active {
+      background: #2a7aae;
     }
   }
 }
@@ -927,13 +942,26 @@ table.dataTable tbody tr:hover {
   }
   .details-tables-buttons-update {
     margin-bottom: 15px;
+    border-bottom: 3px solid #1a6a9e;
+    padding-bottom: 0;
+    padding-left: 0;
+    z-index: -1;
     button {
+      padding: 15px 15px;
+      margin-bottom: 0;
       background: #ccc;
+      border-radius: 0px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
       &:hover {
         background: #bbb;
       }
       &.active {
         background: #1a6a9e;
+      }
+      &:active, &:focus {
+        border: none;
+        outline: none;
       }
     }
   }
@@ -983,13 +1011,13 @@ table.dataTable tbody tr:hover {
 }
 
 #map_chart  {
-  margin-top: -50px;
+  margin-top: 0px;
 }
 .map-buttons {
   text-align: right;
   padding: 10px 20px 0 20px;
   z-index: 10;
-  height: 50px;
+  height: auto;
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -998,7 +1026,7 @@ table.dataTable tbody tr:hover {
     border: none;
     color: #fff;
     display: inline-block;
-    margin: 5px 0px 50px 5px;
+    margin: 5px 0px 5px 5px;
     padding: 5px 15px;
     border-radius: 2px;
     font-size: 13px;
@@ -1007,6 +1035,10 @@ table.dataTable tbody tr:hover {
     cursor: pointer;
     &.active {
       background: #2a7aae;
+    }
+    @media only screen and (max-width: 1100px) {
+      font-size: 12px;
+      margin: 2px 0px 5px 2px;
     }
   }
 }
