@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
-    <link rel="stylesheet" href="static/tab_a.css?v=3">
+    <link rel="stylesheet" href="static/tab_a.css?v=5">
     <script>
       if (typeof Object.assign !== 'function') {
         // Must be writable: true, enumerable: false, configurable: true
@@ -349,7 +349,7 @@
     <script type="text/javascript" src="vendor/js/dc.js"></script>
     <script type="text/javascript" src="vendor/js/dc.cloud.js"></script>
     <script type="text/javascript" src="vendor/js/topojson.v1.min.js"></script>
-    <script src="static/tab_a.js?v=3"></script>
+    <script src="static/tab_a.js?v=5"></script>
 
  
 </body>
